@@ -36,3 +36,7 @@ Obaveze studenata na kursu (za svaku pojedinacnu obavezu prag je 40% od broja po
 - - odbrana rada na casu
 -
 - U toku kursa se ocekuje stalna interakcija izmedju studenata, kako kroz uzivo komunikaciju na casu, tako i kroz popunjavanje online formulara i slanja konstruktivnih komentara
+
+- (сличан курс) 	 	 	 	
+Computers in Society, Department of Computer Science, University of Oxford
+https://www.cs.ox.ac.uk/teaching/courses/2021-2022/CIS/
