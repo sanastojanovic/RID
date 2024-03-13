@@ -1,0 +1,19 @@
+Bezbednost nasih lozinki
+
+Razumevanje cestih napada je kljucno zarad sigurnijih praksi pri koriscenju naloga ili osetljivih podataka. Dubljim razumevanjem njih mozemo doci do boljih mera prevencije. 
+Jedan od cescih, i najjednostavnijih nacina napada je "grubom silom". Zastita od ovakve vrste napada je takodje jednostavna, povecavanje broja karaktera u samoj sifri. 
+Jos jedan od metoda koji se zasniva na pogadjanju sifre bez ikakvog rada sa "zrtvom" je dictionary attack. Cest nacin za pravljenje duzih sifara, zarad sprecavanje "brute force" napada, je pravljenje dugackih sifara oblika niza reci. Dictionary attacks su napravljeni da taj tip sifara razotkriju koriscenjem predefinisanih listi cestih reci, fraza, kombinacija karaktera, ili cak sifara iz proslih curenja podataka. Metod prevencije ovog napada ce biti diskutovan na kraju sledece sekcije.
+U svakom racunarskom sistemu najslabija karika sto se tice sigurnosti je covek, stoga se glavni metodi zasnivaju na greskama korisnika.
+Ceste greske su nasedanje na phishing napade (Obmanljivi sajtovi koji izgledaju kao pravi, kojima korisnik onda da sifru), instaliranje keyloggera (malver koji snima i salje sve pritiske tastatura korisnika, cesto su instalirani kroz maliciozne mejlove, datoteke, sajtove...), koriscenje istih sifara na vise mesta, manjak MFA (multi-factor authentication).
+Potencijalno resenje na sve ove probleme (i jos neke koji nisu navedeni) je dobro koriscenje password managera (npr. KeePassXC). Program daje mogucnosti pravljenja enkriptovane baze u kojoj se cuvaju ostale sifre. Baza si pristupa "master sifrom" za koju je ekstremno bitno da bude sto sigurnija moguca. Ovo se dobija time sto KPXC takodje daje opciju za generisanje sifara koriscenjem proizvoljnih skupova karaktera. Jos jedan nacin genersisanja sifre je generisanje "passphrase" sa odabranim brojem reci, separatorom reci, i skupom reci. Moguce je dodavanje dodatnih nacina osiguravanja poput "key file"-a ili yubikey-a. 
+Glavna ideja je da korisnik generise novu jedinstvenu sifru za svaki novi nalog koji pravi, i da ih menja na odredjeni vremenski period. 
+Pored password managera moguce je na odredjenim servisima dodavati 2FA, tj. dvofaktorsku autentikaciju. Pored same sifre, takodje je potreban dodatni vid autentikacije, npr. kod koji je poslat na SMS, TOTP (time based one-time password), hardverska autentikacija (gore pomenuti yubikey).
+Dodata sigurnost dolazi po ceni komfora, tj. lakoce koriscenja. Nabrojani metodi sigurnosti su cesto izbegavani od strane korisnika jer cine logovanje na naloge znacajno komplikovanijim. 
+
+
+//dodatne stvari koje bih spomenuo u finalnoj verziji: gh PAT, spear phishing, FIDO alliance, biometric auth, poznati data breaches, network sniffing
+
+
+
+
+ 
