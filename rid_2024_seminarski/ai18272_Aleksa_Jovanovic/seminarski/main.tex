@@ -1,0 +1,103 @@
+
+
+\documentclass[fleqn, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{tocloft}
+\usepackage[margin=1.1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage[serbian]{babel}
+\renewcommand{\footrulewidth}{1 pt}
+\usepackage{cite}
+\bibliographystyle{plain}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\pagestyle{fancy}
+
+
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+
+\newenvironment{solution}{\textbf{Solution}}
+
+
+\lhead{Aleksa Jovanović}
+\rhead{Računarstvo i društvo} 
+\chead{\textbf{}}
+\lfoot{Prof. Sana Stojanović Đurđević}
+\rfoot{Matematički fakultet, Beograd}
+
+\renewcommand{\contentsname}{Sadržaj}
+\begin{document}
+\input{coverPage}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+\section{Uvod}
+\indent Korišćenje šifara u današnjem digitalnom svetu je (trenutno) nezaobilazna realnost i prva linija odbrane od neželjenog pristupa našim profilima, podacima, finansijama i komunikacijama. Loše prakse pri kreiranju i čuvanju lozinki, i korišćenju interneta olakšavaju zlonamernim akterima pristup privatnim podacima. Ovaj rad će se stoga glavno fokusirati na uvid u potencijalnu štetu koja može biti naneta, prvenstveno na individualnom nivou, kao i na predloge korekcija loših praksa. 
+
+Sekcija 2 je fokusirana na posledice slabih lozinki i potencijalnih postupaka napadača nakon što dobiju pristup nalogu. Metodi razotkrivanja šifara, loše korisničke prakse i mere prevencija su predstavljeni u sekcijama 3 i 4. Dodatni metodi zaštite naloga, njihove prednosti i mane su razrađeni u sekciji 5. 
+
+\section{Uticaj na druge sfere života}
+
+\subsection{Privatnost na internetu}
+\indent Pristup nalozima omogućava zlonamernim akterima da nanesu društvenu štetu žrtvi. Neki od mogućih načina su postavljanje neprimernog sadržaja, obmanljivo slanje privatnih poruka, čitanje i dokumentovanje privatnih poruka.
+
+\subsection{Spam}
+\indent Kompromitovani nalozi su mnogo efikasniji u širenju spam poruka. Sama dinamika širenja tih spam poruka je drugačija od dinamike širenja ``tradicionalnih'' spam poruka. Ovo je posledica toga što primalac te poruke ima iluziju da je poruka poslata od osobe od poverenja, što povećava šansu da i oni sami dalje prošire taj spam. Potpuna automatizacija pomenutog procesa omogućava veoma agresivnu propagaciju. \cite{spam}
+Ovaj tip spama često širi i maliciozne linkove koji kompromituju naloge, što ih uvodi u svoju ``mrežu botova''.
+
+\subsection{Žene}
+\indent Žene su češće mete nefinansijski motivisanih sajber napada poput desimenacije osvetničke pornografije, sajber uhođenja i krađe identiteta. Pored toga, procentualno više žena (u poređenju sa muškarcima) se oseća manje sigurno (35\% i 27\%, respektivno) i manje privatno (53\% i 47\%, respektivno). \cite{zene} \cite{zene2}
+
+
+\newpage
+\section{Česti napadi i greške korisnika}
+
+\subsection{Napad grubom silom}
+\indent Jedan od najosnovnijih napada koji se oslanja na naivno nagađanje šifara kombinovanjem datih karaktera. Glavni adut je jednostavnost implementacije. Ako je dužina šifre nepoznata, započinje se minimalnom dužinom šifre koja se inkrementira nakon iscrpljenja svih kombinacija za tu dužinu, ako nije došlo do pogotka.\cite{napadi}
+
+\subsection{Napad rečnikom}
+\indent Kolekcija reči se koristi za genersianje potencijalnih šifara. Rečnici mogu da budu opšte namene (npr. najčešće reči, imena i prezimena nekog jezika) ili specijalizovani (dodate su prethodno razotkrivene šifre iz skupa šifara koji je napadnut). U rečnike su često dodate sve kombinacije slova, brojeva i specijalnih karaktera do neke predodređene dužine. \cite{napadi}
+
+\subsection{Ponovno korišćenje šifara}
+\indent Česta (loša) praksa je ponovno korišćenje šifara zarad lakšeg pamćenja. Otkrivanje šifre jednog naloga je dovoljno za otkrivanje šifara svih ostalih naloga. Slično tome, male varijacije šifre za različite naloge se smatraju nesigurnim.
+
+\subsection{Ostale loše prakse}
+\indent Neredovno ažuriranje lozinki i njihovo nesigurno čuvanje su takođe faktori koji utiču na sveukupnu sigurnost lozinki. Nesigurno čuvanje podrazumeva njihovo zapisivanje na lako dostupinim papirima ili u neenkriptovane fajlove. Neuažuriranje šifara čini naloge podložne napadima koji koriste prethodna curenja podataka. 
+
+\section{Mere prevencije}
+\subsection{Jačina lozinki}
+\indent Smanjivanje uspešnosti napada grubom silom se dostiže korišćenjem većeg skupa karaktera i dužih reči. Primera radi, postoji 4096000000 mogućih šifara od 6 karaktera i skupom karaktera koji čine mala slova azbuke i cifre od 0 do 9. Korišćenjem extended ASCII karaktera i šifru dužine 15, dobijamo 1.329228e+36 mogućih šifara. 
+
+Osiguravanje od napada rečnikom se može izvesti na dva načina:
+\begin{itemize}
+    \item Izbegavanje korišćenja reči u lozinci. Lozinka bi sadržala veliki broj nasumično generisanih karaktera.
+    \item Veliki broj reči koji formira ``frazu lozinke''.
+\end{itemize}
+
+\subsection{Alati}
+\indent Da bi se pojednostavio proces generisanja jakih nasumičnih lozinki i njihovo sigurno skladištenje, koriste se menaǆeri lozinki (eng. \emph{password manager}) poput KeePassXC i Buttercup. 
+
+\section{Alternative i dodatna zaštita}
+\indent Korišćenje samo šifre često nije dovoljno, te se koriste dotatne mere: 2FA, Yubikey, sigurnosna pitanja, biometrijska autentikacija. Kombinacija ovih mera čini kompromitovanje naloga značajno težim, ali takođe stvara dodatno trenje između korisnika i pristupa njihovom nalogu. Ovo trenje, kao i trenje koje nastaje pri korišćenju menaǆera lozinki, je razlog za česte loše prakse kod velikog broja korisnika. Trenutni ciljevi eksperata sajber sigurnosti nije samo edukacija što šire publike, nego i konstrukcija sigurnih sistema sa minimalnim trenjem. 
+
+\bibliography{bib}
+\end{document}
