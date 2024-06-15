@@ -55,62 +55,72 @@
 \newpage
 
 \section{Uvod}
-\indent Korišćenje šifara u današnjem digitalnom svetu je (trenutno) nezaobilazna realnost i prva linija odbrane od neželjenog pristupa našim profilima, podacima, finansijama i komunikacijama. Sigurnost celokupnog sistema je jaka samo koliko i najslabija karika, koja je pretežno korisnik. Loše prakse pri kreiranju i čuvanju lozinki, i korišćenju interneta olakšavaju zlonamernim akterima pristup privatnim podacima. Ovaj rad će se stoga glavno fokusirati na uvid u potencijalnu štetu koja može biti naneta, prvenstveno na individualnom nivou, kao i na predloge korekcija loših praksa. 
+\indent Korišćenje šifara u današnjem digitalnom svetu je (trenutno) nezaobilazna realnost i prva linija odbrane od neželjenog pristupa našim profilima, podacima, finansijama i komunikacijama (društvenim mrežeama poput Instagram-a, Linkedin-a, X-a, platformama za komunikaciju poput Telegram-a i Signal-a, e-banking aplikacijama banki). Sigurnost celokupnog sistema je jaka samo koliko i najslabija karika, koja je pretežno korisnik. Loše prakse pri kreiranju i čuvanju lozinki, i korišćenju interneta olakšavaju zlonamernim akterima pristup privatnim podacima. Ovaj rad će se pretežno fokusirati na uvid u potencijalnu štetu koja može biti naneta, prvenstveno na individualnom nivou, kao i na predloge korekcija loših praksa. 
 
 Sekcija 2 je fokusirana na posledice slabih lozinki i potencijalnih postupaka napadača nakon što dobiju pristup nalogu. Metodi razotkrivanja šifara, loše korisničke prakse i mere prevencija su predstavljeni u sekcijama 3 i 4. Dodatni metodi zaštite naloga, njihove prednosti i mane su razrađeni u sekciji 5. 
 
 \section{Uticaj na druge sfere života}
 
+Nesigurnost šifara, omogućavanjem lakšeg malicioznog pristupa nalozima, ima brojne štete po žrtvu koje mogu biti društvene prirode (povreda ugleda žrtve, korišćenje njihovog autoriteta na maliciozan način) ili revanšističke (bivši ili ljubomorni romantični partner koji maliciozno pristupa nalozima, napad usled neslaganja na poslu ili u društvenim krugovima).
 \subsection{Privatnost na internetu}
-\indent Pristup nalozima omogućava zlonamernim akterima da nanesu društvenu štetu žrtvi. Neki od mogućih načina su postavljanje neprimernog sadržaja, obmanljivo slanje privatnih poruka, čitanje i dokumentovanje privatnih poruka.
+\indent Pristup nalozima omogućava zlonamernim akterima da nanesu društvenu štetu žrtvi. Neki od mogućih načina su postavljanje neprimernog sadržaja, slanje privatnih poruka tokom kojih primalac ima pogrešnu pretpostavku o tome sa kime komunicira, čitanje i dokumentovanje privatnih poruka.
+
+\indent Slučaj u Njukaslu\cite{newcastle} je ekstreman primer u kojem je ljubomorni muž (student računarstva) neautorizovano pristupio ženinim mejlovima. Nakon otkrića afere kroz mejlove ju je ubio.  
 
 \subsection{Spam}
-\indent Kompromitovani nalozi su mnogo efikasniji u širenju spam poruka. Sama dinamika širenja tih spam poruka je drugačija od dinamike širenja ``tradicionalnih'' spam poruka. Ovo je posledica toga što primalac te poruke ima iluziju da je poruka poslata od osobe od poverenja, što povećava šansu da i oni sami dalje prošire taj spam. Potpuna automatizacija pomenutog procesa omogućava veoma agresivnu propagaciju. \cite{spam}
-Ovaj tip spama često širi i maliciozne linkove koji kompromituju naloge, što ih uvodi u svoju ``mrežu botova''.
+\indent Kompromitovani nalozi su mnogo efikasniji u širenju spam poruka. Sama dinamika širenja tih spam poruka je drugačija od dinamike širenja „tradicionalnih'' spam poruka. Ovo je posledica toga što primalac te poruke ima iluziju da je poruka poslata od osobe od poverenja, što povećava šansu da i oni sami dalje prošire taj spam. Potpuna automatizacija pomenutog procesa omogućava veoma agresivnu propagaciju\cite{spam}. 
+Ovaj tip spama često širi i maliciozne linkove koji kompromituju naloge, što ih uvodi u svoju „mrežu botova''.
 
 \subsection{Žene kao mete sajber napada}
-\indent Žene su češće mete nefinansijski motivisanih sajber napada poput desimenacije osvetničke pornografije, sajber uhođenja i krađe identiteta. Pored toga, procentualno više žena (u poređenju sa muškarcima) se oseća manje sigurno (35\% i 27\%, respektivno) i manje privatno (53\% i 47\%, respektivno). \cite{zene} \cite{zene2}
+\indent Žene su češće mete nefinansijski motivisanih sajber napada poput desimenacije osvetničke pornografije, sajber uhođenja i krađe identiteta. Pored toga, procentualno više žena (u poređenju sa muškarcima) se oseća manje sigurno na internetu (35\% i 27\%, respektivno) i manje pod kontrolom javnih informacija o njima(53\% i 47\%, respektivno)\cite{zene} \cite{zene2}. 
 
 
 \newpage
 \section{Česti napadi i greške korisnika}
+Načini otkrivanja šifara su mnogobrojni i mogu se podeliti na napade korišćenjem računara, greške korisnika i društveni inženjering (eng. \emph{social engineering}). Napadi korišćenjem računara podrazumevaju otkrivanje lozinke ponovnim nagađanjem. Metodi za ovu svrhu podrazumevaju neki tip pretrage prostora mogućih lozinki. Loše prakse poput ponovnog korišćenja šifara ili njihovo nesigurno čuvanje čine sigurnosne propuste koji se mogu iskoristiti od strane malicioznih aktera. Slanje lažnih mejlova sa malicioznim linkovima je podrazumevano u \emph{phising} napade, što je jedan od najzastupljenijih oblika društvenog inženjeringa. Pristupom na te linkove napadač dobija neaturoizovani pristup mejlu i lozinki žrtve.
 
+\indent Za potrebe rada, biće reči samo o prva dva načina napada.
 \subsection{Napad grubom silom}
-\indent Jedan od najosnovnijih napada koji se oslanja na naivno nagađanje šifara kombinovanjem datih karaktera. Glavni adut je jednostavnost implementacije. Ako je dužina šifre nepoznata, započinje se minimalnom dužinom šifre koja se inkrementira nakon iscrpljenja svih kombinacija za tu dužinu, ako nije došlo do pogotka.\cite{napadi}
+\indent Jedan od osnovnih napada koji se oslanja na naivno nagađanje šifara kombinovanjem datih karaktera. Glavni adut je jednostavnost implementacije. Ako je dužina šifre nepoznata, započinje se minimalnom dužinom šifre koja se inkrementira nakon iscrpljenja svih kombinacija za tu dužinu, ukoliko nije došlo do pogotka\cite{napadi}.
 
 \subsection{Napad rečnikom}
-\indent Kolekcija reči se koristi za genersianje potencijalnih šifara. Rečnici mogu da budu opšte namene (npr. najčešće reči, imena i prezimena nekog jezika) ili specijalizovani (dodate su prethodno razotkrivene šifre iz skupa šifara koji je napadnut). U rečnike su često dodate sve kombinacije slova, brojeva i specijalnih karaktera do neke predodređene dužine. \cite{napadi}
+\indent Kolekcija reči se koristi za generisanje potencijalnih šifara. Rečnici mogu da budu opšte namene (npr. najčešće reči, imena i prezimena nekog jezika) ili specijalizovani (dodate su prethodno razotkrivene šifre iz skupa šifara koji je napadnut). U rečnike su često dodate sve kombinacije slova, brojeva i specijalnih karaktera do neke predodređene dužine\cite{napadi}. 
 
 \subsection{Ponovno korišćenje šifara}
-\indent Česta (loša) praksa je ponovno korišćenje šifara zarad lakšeg pamćenja. Otkrivanje šifre jednog naloga je dovoljno za otkrivanje šifara svih ostalih naloga. Slično tome, male varijacije šifre za različite naloge se smatraju nesigurnim.
+\indent Česta praksa je ponovno korišćenje šifara zarad lakšeg pamćenja. Ova praksa je loša jer otkrivanje šifre jednog naloga je dovoljno za otkrivanje šifara svih ostalih naloga. 
+
+\indent Slično tome, male varijacije šifre za različite naloge se smatraju nesigurnim. Hakeri se vode principom malih izmena šifre koja je kandidat, praćenjem nekih pravila npr. dodavanje broja na kraju, kapitalizacija slova, menjanje slova brojevima (i postaje 1, a postaje 4).
 
 \subsection{Ostale loše prakse}
 \indent Neredovno ažuriranje lozinki i njihovo nesigurno čuvanje su takođe faktori koji utiču na sveukupnu sigurnost lozinki. Nesigurno čuvanje podrazumeva njihovo zapisivanje na lako dostupinim papirima ili u neenkriptovane fajlove. Neuažuriranje šifara čini naloge podložne napadima koji koriste prethodna curenja podataka. 
 
-Načini čuvanja šifara ne variraju značajno među demografijama, što nagoveštava  da nivo tehnološkog obrazovanja nije značajan indikator o korišćenju sigurnijih metoda. \cite{pew1}  
+Načini čuvanja šifara ne variraju značajno među demografijama, što nagoveštava  da nivo tehnološkog obrazovanja nije značajan indikator o korišćenju sigurnijih metoda\cite{pew1} .  
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{pew.png}
-    \caption{Načini pamćenja šifara građana SAD-a.\cite{pew1}}
+    \caption{Načini pamćenja šifara građana SAD-a\cite{pew1}}.
     \label{fig:enter-label}
 \end{figure}
 
 \section{Mere prevencije}
+Povećanje nivoa sigurnosti se ostvaruje korišćenjem raznih mera prevencija. Ove mere su od krajnje važnosti - sanacija štete je previše komplikovana i zahteva veliku količinu vremena. Glavni načini povećanja nivoa su korišćenje jakih lozinki i menadžera lozinki.
 \subsection{Jačina lozinki}
 \indent Smanjivanje uspešnosti napada grubom silom se dostiže korišćenjem većeg skupa karaktera i dužih reči. Primera radi, postoji 4096000000 mogućih šifara od 6 karaktera i skupom karaktera koji čine mala slova azbuke i cifre od 0 do 9. Korišćenjem extended ASCII karaktera i šifru dužine 15, dobijamo 1.329228e+36 mogućih šifara. 
 
 Osiguravanje od napada rečnikom se može izvesti na dva načina:
 \begin{itemize}
-    \item Izbegavanje korišćenja reči u lozinci. Lozinka bi sadržala veliki broj nasumično generisanih karaktera.
-    \item Veliki broj reči koji formira ``frazu lozinke''.
+    \item Izbegavanje korišćenja reči u lozinki. Lozinka bi sadržala veliki broj nasumično generisanih karaktera.
+    \item Veliki broj reči koji formira „frazu lozinke''.
 \end{itemize}
+
+Fraza lozinke je lozinka sačinjena od velikog broja realnih reči. Često se koriste kao jednostavan način generisanja dugačkih šifara koje su korisnicima jednostavne za pamćenje. 
 
 \subsection{Alati}
 \indent Da bi se pojednostavio proces generisanja jakih nasumičnih lozinki i njihovo sigurno skladištenje, koriste se menaǆeri lozinki (eng. \emph{password manager}) poput KeePassXC i Buttercup. 
 
-KeePassXC je alat otvorenog koda za enkriptovanje skladištenje i upravljanje korisničkim imenima, šiframa, linkovima i prioleženim fajlovima. Ne postoji ugrađena mogućnost sinhronizacije baze između većeg broja uređaja, ali je korisnicima dozvoljeno i učinjeno jednostavnim da sami urade rešenje po želji. \cite{keepassxc}
+KeePassXC je alat otvorenog koda koji se koristi za enkriptovanje skladištenje i upravljanje korisničkim imenima, šiframa, linkovima i prioleženim fajlovima. Ne postoji ugrađena mogućnost sinhronizacije baze između većeg broja uređaja, ali je korisnicima dozvoljeno i učinjeno jednostavnim da sami urade rešenje po želji \cite{keepassxc}.
 
-U odnosu na KeePassXC, Buttercup ima moderniji interfejs i ugrađenu podršku za sinhronizaciju baze. \cite{buttercup}
+U odnosu na KeePassXC, Buttercup ima moderniji interfejs i ugrađenu podršku za sinhronizaciju baze\cite{buttercup}. 
 
 
 \begin{figure}[h]
@@ -134,10 +144,10 @@ U odnosu na KeePassXC, Buttercup ima moderniji interfejs i ugrađenu podršku za
 
 \newpage
 \section{Alternative i dodatna zaštita}
-\indent Korišćenje samo šifre često nije dovoljno, te se koriste dotatne mere: 2FA, Yubikey, sigurnosna pitanja, biometrijska autentikacija. Kombinacija ovih mera čini kompromitovanje naloga značajno težim, ali takođe stvara dodatno trenje između korisnika i pristupa njihovom nalogu. Ovo trenje, kao i trenje koje nastaje pri korišćenju menaǆera lozinki, je razlog za česte loše prakse kod velikog broja korisnika. Trenutni cilj eksperata sajber sigurnosti nije samo edukacija što šire publike, nego i konstrukcija sigurnih sistema sa minimalnim trenjem. 
+\indent Korišćenje samo šifre često nije dovoljno, te se koriste dotatne mere: 2FA, Yubikey, sigurnosna pitanja, biometrijska autentikacija. Kombinacija ovih mera čini kompromitovanje naloga značajno težim, ali takođe stvara dodatno \emph{trenje} između korisnika i pristupa njihovom nalogu. Pod ovim pojmom podrazumevamo niz koraka i barijera između korisnika i njihovog cilja (u našem slučaju, pristupanju nalogu ili podacima); veliki stepen vidljivih koraka često iritira korisnike, te se oni odlučuju za manje sigurne varijante (primer nevidljive sigurnosti je adaptivna autentikacija o kojoj će biti više reči na kraju poglavlja). Ovo, kao i \emph{trenje} koje nastaje pri korišćenju menaǆera lozinki, je razlog za česte loše prakse kod velikog broja korisnika. Trenutni cilj eksperata sajber sigurnosti nije samo podizanje stepena informatičke pisemnosti šire javnosti, nego i konstrukcija sigurnih sistema sa minimalnim \emph{trenjem}. Asimetrija informatičke pismenosti između ljudi kojima je 
 
 \subsection{Jednokratne lozinke}
-Jedan od najčešćih oblika MFA je OTP (jednokratne lozinke, eng. \emph{one time passwords}). Korisnici mogu da pristupe jednokratnim lozinkama korišćenjem aplikacija (poput 2FAS ili Aegis Authenticator) ili da im budu dostavljene SMS porukama. Lozinke su generisanje korišćenjem konstantog seed-a i pomerajućeg faktora.\cite{OTP} Varijante OTP-a se dele po načinu generisanja pomerajućeg faktora:
+Jedan od najčešćih oblika MFA (višeslojna autentikacija, eng. \emph{Multi-Factor Authentication}) je OTP (jednokratne lozinke, eng. \emph{one time passwords}). Korisnici mogu da pristupe jednokratnim lozinkama korišćenjem aplikacija (poput 2FAS ili Aegis Authenticator) ili da im budu dostavljene SMS porukama. Koriščenje aplikacija od poverenja za pristup jednokratnim lozinkama je sigurnije od korišćenje SMS poruka, zbog podložnosti SMS poruka napadima poput man-in-the-middle napadu. Lozinke su generisane korišćenjem konstantog seed-a i pomerajućeg faktora. Varijante OTP-a se dele po načinu generisanja pomerajućeg faktora:
 \begin{itemize}
     \item HOTP (eng. \emph{Hash-based Message Authentication Code One Time Password})
     \item TOTP (eng. \emph{Time-based One-time Password})
@@ -148,61 +158,63 @@ Osnovna ideja iza HOTP je baziranje pomerajućeg faktora na brojaču koji prati 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{HOTP.png}
-    \caption{Shema rada HOTP sistema.\cite{OTP}}
+    \caption{Shema rada HOTP sistema\cite{OTP}}.
     \label{fig:enter-label}
 \end{figure}
 
-Za razliku od ovog pristupa, TOTP koristi vreme zahteva kao pomerajući faktor. Vremenski korak uglavnom iznosi između 30 i 60 sekundi i ako lozinka nije iskorišćena tokom tog vremena ona prestaje da bude validna. U tom slučaju, potrebno je zahtevati novu lozinku. 
+Za razliku od ovog pristupa, TOTP koristi vreme zahteva kao pomerajući faktor. Vremenski korak uglavnom iznosi između 30 i 60 sekundi i ukoliko lozinka nije iskorišćena tokom tog vremena ona prestaje da bude validna. U tom slučaju, potrebno je zahtevati novu lozinku\cite{OTP}. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{TOTP.png}
-    \caption{Shema rada TOTP sistema.\cite{OTP}}
+    \caption{Shema rada TOTP sistema\cite{OTP}}.
     \label{fig:enter-label}
 \end{figure}
 
-Koriščenje aplikacija od poverenja za pristup jednokratnim lozinkama je sigurnije od korišćenje SMS poruka, zbog podložnosti SMS poruka napadima poput man-in-the-middle napadu.
-
 \newpage
 \subsection{Biometrijska autentikacija}
-\indent Način verifikacije identiteta korišćenjem bioloških karakteristika ili ponašanja korisnika. Biološke karakteristike korišćene za verifikaciju su:
+\indent Biometrijska autentikacija podrazumeva metode verifikacije identiteta korišćenjem bioloških karakteristika ili ponašanja korisnika. Aduti ovog metoda su jednostavnost korišćenja, brzina i činjenice da ne zahtevaju dodatni trud od korisnika, budući da korisnik u svakom trenutku ima svoju „lozinku'' sa sobom. Lozinka u ovom konktekstu može biti bilo koja od sledećih bioloških karakteristika:
 \begin{itemize}
-    \item Sken mrežnjače
-    \item Sken otiska prsta
-    \item Sken lica
-    \item Poklapanje DNK 
+    \item Sken mrežnjače;
+    \item Sken otiska prsta;
+    \item Sken lica;
+    \item Poklapanje DNK. 
 \end{itemize}
 
-Ponašanje korisnika uključuje navike korišćenja miša, tastature ili tač-skrina, koje su analizirane i poređene sa standardnim navikama. 
+Korišćenje biometrijskih metoda autentikacije se ne sme smatrati stopostotno sigurnim, nego samo još jednim delom MFA lanca. Moguće je rekreirati neke od bioloških karakteristika, što potpuno negira prednosti koje ovaj vid zaštite donosi\cite{bio}. Pored toga, dodatne mane leže u:
 
-Korišćenje biometrijskih metoda autentikacije se ne sme smatrati stopostotno sigurnim, nego samo još jednim delom MFA lanca. Moguće je rekreirati neke od bioloških karakteristika, što potpuno negira prednosti koje ovaj vid zaštite donosi. \cite{bio}
+\begin{itemize}
+    \item Nesigurnom čuvanju, što čini trajni rizik (veoma teško je promeniti biološke karakteristike);
+    \item Algoritmi mašinskog učenja korišćeni za autentikaciju često nisu trenirani na dobro konstruisanim skupovima podataka - žene i etničke manjine često nisu adekvatno predstavljeni;
+    \item Porast u korišćenju korisnički generisanog audio i video sadržaja za posledicu ima lak pristup liku i glasu velikog broja ljudi. Pristup već postojećem sadržaju ove vrste je sam po sebi dovoljan za kompromitovanje integriteta sistema, a povrh toga je moguće generisanje lažnih audio i video snimaka putem veštačke inteligencije zarad istog cilja.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{bio.png}
-    \caption{Pozitivne strane biometrijske autentikacije.\cite{bio}}
+    \caption{Pozitivne strane biometrijske autentikacije\cite{bio}}.
     \label{fig:enter-label}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{bio2.png}
-    \caption{Negativne strane biometrijske autentikacije.\cite{bio}}
+    \caption{Negativne strane biometrijske autentikacije\cite{bio}}.
     \label{fig:enter-label}
 \end{figure}
 
 \subsection{Adaptivna autentikacija}
-\indent Jedan od sofisticiranijih načina koji se koristi zarad olakšavanje pristupa nalozima, dok još uvek očuvava zadovoljavajuć nivo sigurnosti. Pri prijavljivanju, razni faktori su analizirani (geolokacija, vreme prijavljivanja, korišćeni uređaj...) i poređeni sa uobičajenim ponašanjima asociranim sa korisnikom. Ovom analizom se kvantifikuje ``rizik'' neovlašćenog pristupanja nalogu, i shodno sa nivoom rizika traži se više slojeva autentikacije. Primera radi, ako se korisnik prijavljuje iz njihovog doma, sa prethodno korišćenih uređaja tokom vremena kada uglavnom koriste dati nalog, kvantifikovani rizik će imati nisku vrednost i dopustiti prijavu korišćenjem samo korisničkog imena i šifre. Ako se isti taj korisnik prijavljuje korišćenjem novog uređaja sa nove lokacije, biće zadražeti dodatni koraci poput OTP. U slučajevima da je procenjeni rizik prevelik, moguće je potpuno blokiranje prijvaljivanja. \cite{adaptive}
+\indent Jedan od sofisticiranijih načina koji se koristi zarad olakšavanja pristupa nalozima, dok još uvek očuvava zadovoljavajuć nivo sigurnosti jeste adaptivna autentikacija. Pri prijavljivanju, razni faktori su analizirani (geolokacija, vreme prijavljivanja, korišćeni uređaj...) i poređeni sa ponašanjima koja se smatraju očekivanim za datog korisnika. Ovom analizom se kvantifikuje „rizik'' neovlašćenog pristupanja nalogu, i shodno sa nivoom rizika traži se više slojeva autentikacije. Primera radi, ako se korisnik prijavljuje iz njihovog doma, sa prethodno korišćenih uređaja tokom vremena kada uglavnom koriste dati nalog, kvantifikovani rizik će imati nisku vrednost i dopustiti prijavu korišćenjem samo korisničkog imena i šifre. Ako se isti taj korisnik prijavljuje korišćenjem novog uređaja sa nove lokacije, biće zatraženi dodatni koraci poput OTP. U slučajevima da je procenjeni rizik prevelik, moguće je potpuno blokiranje prijavljivanja\cite{adaptive}. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{Adaptive.png}
-    \caption{Shema rada sistema adaptive autentikacije.\cite{adaptive}}
+    \caption{Shema rada sistema adaptive autentikacije\cite{adaptive}}.
     \label{fig:enter-label}
 \end{figure}
 
 \newpage
 \section{Zaključak}
-\indent Bez obzira na veliki značaj sigurnosti lozinki, i samim tim naloga, značajan broj ljudi ovu temu olako shvata i drži se ustaljenih loših praksi poput slabih lozinki, manjka MFA, ponovnog korišćenja istih lozinki i nesigurnog njihovog nesigurnog čuvanja. Nivo tehnološkog obrazovanja nije jak indikator boljih sigurnosnih praksi korisnika. Najveći napredak u sigurnosti koji korisnici mogu da naprave je korišćenje menadžera lozinki (npr. KeePassXC) i MFA metoda (poput OTP i biometrijske autentikacije). Fokus eksperata sajber sigurnosti treba biti okrenut ka kreiranju sistema koji su sigurni sa što manje trenja sa korisničke strane, jer je to trenje glavni razlog manje sigurnosti. 
+\indent Bez obzira na veliki značaj sigurnosti lozinki, i samim tim naloga, značajan broj ljudi ovu temu olako shvata i drži se ustaljenih loših praksi poput slabih lozinki, manjka MFA, ponovnog korišćenja istih lozinki i njihovog nesigurnog čuvanja. Nivo tehnološkog obrazovanja nije jak indikator boljih sigurnosnih praksi korisnika. Najveći napredak u sigurnosti koji korisnici mogu da naprave je korišćenje menadžera lozinki (npr. KeePassXC) i MFA metoda (poput OTP i biometrijske autentikacije). Fokus eksperata sajber sigurnosti treba biti okrenut ka kreiranju sistema koji su sigurni sa što manje vidljivih koraka, budući da upravo njihova brojnost demotiviše korisnike da biraju sigurnije metode. 
 \bibliography{bib}
 \end{document}
