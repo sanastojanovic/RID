@@ -18,10 +18,9 @@ sadrzaj rada treba da bude dovoljno detaljan da moze da se shvati o cemu se radi
 
 - [PREGLED SVIH TEMA KURSA]
 - - svaka tema nosi po 3 poena - 7 * 3 = 21
+- - za svaku temu je potrebno navesti predlog teme za seminarski (koji bi mogao da obradi tu temu) i par kljucnih tacaka i primera kroz koje moze da se vidi da razumete tu temu kursa
 - - 9 poena - organizacija dokumenta, preglednost, inovativnost, razumevanje
-
-U samom seminarskom radu napravite očiglednu vezu sa minimum 3 teme kursa, što više to bolje (ali sve ne moze, nije realno). 
-Sve teme kursa predstavite kroz predlog teme za seminarski koji bi mogao da obradi tu temu i par kljucnih tacaka kroz koje moze da se vidi da razumete teme kursa.
+- - U samom seminarskom radu napravite očiglednu vezu sa minimum 3 teme kursa, što više to bolje (ali sve ne moze, nije realno) - ove primere iz prezentacije mozete ponoviti u ovom delu
 
 Preporuceni koraci za izradu seminarskog rada:
 - unesite u tabelu https://docs.google.com/spreadsheets/d/1nRfuVZ9k71Mo6o__q6LTxiP231kEtY6chpx5BEIUl4g/edit?gid=726964761#gid=726964761Vase korisnicko ime sa github-a, 
