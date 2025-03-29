@@ -1,0 +1,38 @@
+PODELA POENA:
+- 40 poena, pisanje seminarskog rada, sa obaveznim naučnim referencama, izmedju 10 i 15 strana
+- 30 poena, održano (snimljeno) predavanje sa unapred pripremljenom prezentacijom, trajanje izmedju 15 i 20 minuta
+- 30 poena, pregled svih tema kursa - u okviru posebne prezentacije ili pdf dokumenta, po temama
+
+DETALJNIJE:
+- [PISANJE SEMINARSKOG RADA]
+- - 10 poena - pronalazenje relevantnih referenci iz naucnih casopisa
+- - 10 poena - ravnomerno koriscenje referenci kroz seminarski
+- - 10 poena - citljivost rada
+- - 10 poena - pracenje uputstava za izradu seminarskog rada 
+podrazumeva se da u radu nema stamparskih gresaka, da nema celave latinice (shvatam ironiju), da su svi pojmovi prethodno uvedeni i detaljno objasnjeni, 
+sadrzaj rada treba da bude dovoljno detaljan da moze da se shvati o cemu se radi, ali ne previse detaljan da svaka stavka bude samo jedan pasus
+
+- [PREDSTAVLJANJE SEMINARSKOG RADA]
+- - 15 poena - spremanje prezentacije, jasnoca, citljivost, celava latinica, relevantne reference i linkovi
+- - 15 poena - kvalitet odrzanog predavanja, pracenje vremenskog okvira, lepa objasnjenja, bez citanja sa slajdova
+
+- [PREGLED SVIH TEMA KURSA]
+- - svaka tema nosi po 3 poena - 7 * 3 = 21
+- - 9 poena - organizacija dokumenta, preglednost, inovativnost, razumevanje
+
+U samom seminarskom radu napravite očiglednu vezu sa minimum 3 teme kursa, što više to bolje (ali sve ne moze, nije realno). 
+Sve teme kursa predstavite kroz predlog teme za seminarski koji bi mogao da obradi tu temu i par kljucnih tacaka kroz koje moze da se vidi da razumete teme kursa.
+
+Preporuceni koraci za izradu seminarskog rada:
+- unesite u tabelu https://docs.google.com/spreadsheets/d/1nRfuVZ9k71Mo6o__q6LTxiP231kEtY6chpx5BEIUl4g/edit?gid=726964761#gid=726964761Vase korisnicko ime sa github-a, 
+i posaljite mi u mail-u da bih Vas odmah dodala
+- cim ubacite neku verziju seminarskog rada ili prezentacije na git, odmah mi javite mail-om da bih pogledala i poslala Vam komentare
+- na linku https://docs.google.com/spreadsheets/d/1nRfuVZ9k71Mo6o__q6LTxiP231kEtY6chpx5BEIUl4g/edit?gid=1553862426#gid=1553862426
+  tab "Seminarski 2024" 
+  mozete naci najcesce koriscene alate za izradu prezentacija i seminarskih radova
+
+- NE PREPORUCUJE SE koriscenje tih alata u potpunosti prilikom izrade seminarskih radove
+- PREPORUCUJE SE (ali nije obavezno) ograniceno koriscenje tih alata u svrhu dobijanja inicijalne inspiracije 
+- - seminarski radite u iteracijama,
+- - nakon svake izmene javljate mi se mail-om, nakon dobijanja mojih komentara postavljate novu verziju na git
+- - NEOPHODNO JE da se sve iteracije zovu identicno (bez imena seminarski_1, seminarski_2... i slicno)
