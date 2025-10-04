@@ -1,6 +1,7 @@
 PODELA POENA:
 - 40 poena, pisanje seminarskog rada, sa obaveznim naučnim referencama, izmedju 10 i 15 strana
-- 30 poena, održano (snimljeno) predavanje sa unapred pripremljenom prezentacijom, trajanje izmedju 15 i 20 minuta
+- 30 poena, održano predavanje sa unapred pripremljenom prezentacijom, trajanje izmedju 15 i 20 minuta
+  (predavanje moze biti odrzano uzivo, online ili snimljeno - javite se radi dogovora)
 - 30 poena, pregled svih tema kursa - u okviru posebne prezentacije ili pdf dokumenta, po temama
 
 DETALJNIJE:
@@ -19,6 +20,7 @@ sadrzaj rada treba da bude dovoljno detaljan da moze da se shvati o cemu se radi
 - [PREGLED SVIH TEMA KURSA]
 - - svaka tema nosi po 3 poena - 7 * 3 = 21
 - - za svaku temu je potrebno navesti predlog teme za seminarski (koji bi mogao da obradi tu temu) i par kljucnih tacaka i primera kroz koje moze da se vidi da razumete tu temu kursa
+- - uz predlog teme za seminarski potrebno je navesti clanak ili link na neki snimak koji Vas je inspirisao da predlozite tu temu
 - - 9 poena - organizacija dokumenta, preglednost, inovativnost, razumevanje
 - - U samom seminarskom radu napravite očiglednu vezu sa minimum 3 teme kursa, što više to bolje (ali sve ne moze, nije realno) - ove primere iz prezentacije mozete ponoviti u ovom delu
 
