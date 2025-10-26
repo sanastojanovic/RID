@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 
 \usepackage[utf8]{inputenc}
@@ -7,6 +7,8 @@
 \usepackage{csquotes}
 \usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % sortiranje referenci po redosledu citiranja
 \addbibresource{literatura.bib} 
+
+
 
 \graphicspath{ {./slike/} }
 
@@ -67,21 +69,25 @@
 
 \section{Uvod}
 
-\subsection{Razvoj generativne veštačke inteligencije}
+\paragraph{}
 Tokom poslednjih decenija, veštačka inteligencija (\textit{eng. artificial intelligence – AI}) doživela je brz razvoj i preoblikovala mnoge oblasti društva.
-Obeležen je značajan napredak u različitim oblastima, uključujući medicinu, robotiku, obrazovanje i autonomnu vožnju, pri čemu se ova tehnologija izdvojila kao glavni pokretač razvoja\cite{montenegro2023impact}. U najširem smislu, AI podrazumeva sposobnost računarskih sistema da imitiraju ponašanje ljudskog mozga kroz primanje informacija, učenje na osnovu podataka i ostvarivanje unapred definisanih ciljeva. Njena primena u obrazovanju pokazala je značajan uticaj, od unapređenja efikasnosti nastavnog procesa i personalizacije učenja, do poboljšanja planiranja obrazovnog sistema i realizacije samog nastavnog procesa\cite{montenegro2023impact}.  
+Obeležen je značajan napredak u različitim oblastima, uključujući medicinu, robotiku, obrazovanje i autonomnu vožnju, pri čemu se ova tehnologija izdvojila kao glavni pokretač razvoja \cite{montenegro2023impact}. U najširem smislu, AI podrazumeva sposobnost računarskih sistema da imitiraju ponašanje ljudskog mozga kroz primanje informacija, učenje na osnovu podataka i ostvarivanje unapred definisanih ciljeva \cite{montenegro2023impact}. Iako je ovo osnovna ideja značajno je napomenuti da većina podoblasti veštačke inteligencije ima drugačiji cilj. Obično je to rešavanje problema u kojima se javlja kombinatorna eksplozija, odnosno u kojima je broj mogućnosti toliko veliki da se ne može sistematično ispitati u razumnom vremenu. Najveći deo zadataka veštačke inteligencije može se opisati u terminima algoritmike, pretrage, deduktivnog i induktivnog zaključivanja, i drugih preciznih matematičkih pojmova. Tek mali deo istraživača bavi se metodama koje pretenduju da dostignu opšte rasuđivanje u stilu čoveka \cite{vestackainteligencija2025}.
+Primena AI-a u obrazovanju pokazala je značajan uticaj, od unapređenja efikasnosti nastavnog procesa i personalizacije učenja, do poboljšanja obrazovnog sistema i realizacije samog nastavnog procesa \cite{montenegro2023impact}.  
 
-Počevši od ranih sistema zasnovanih na pravilima, preko statističkih metoda, pa sve do dubokog učenja, evolucija jezičkih tehnologija pokazuje kako se računari sve više približavaju sposobnosti razumevanja i generisanja ljudskog jezika. Poseban značaj u razvoju generativne veštačke inteligencije (\textit{eng. generative artificial intelligence – generative AI}) dogodio se pojavom velikih jezičkih modela (\textit{eng. large language models – LLMs}), koji su u stanju da proizvode koherentne i kontekstualno relevantne tekstove\cite{montenegro2023impact}.
+Verovatno najveći uspesi mašinskog učenja postignuti su u obradi teksta na prirodnom jeziku. Rani uspesi postignuti su u prepoznavanju sentimenta koji tekst izražava, prepoznavanju vrsti reči i ekstraciji informacija iz teksta koje odgovaraju nekom upitu. Sa razvojem dubokog učenja postalo je moguće trenirati sisteme koji su u stanju da generišu tekst. Daljim razvojem ovakvi sistemi osposobljeni su za vodenje smislenih razgovora sa čovekom, generisanje programskog koda, parsiranje podataka iz teksta, stilsko uobličavanje teksta i razne druge
+poslove. Ovakvi sistemi mnoge poslove ne izvode savršeno. Na primer, mogu davati netačne informacije i često greše u rešavanju matematičkih problema, a neretko traže nezanemarljivu veštinu korisnika u rešavanju drugih složenijih problema. Ipak, ovi sistemi se već koriste u poslovnoj praksi i brzo se dalje unapreduju. Ovi modeli, kao i modeli koji generišu video zapise ili slike nazivaju se generativnim modelima (\textit{eng. generative models}) \cite{vestackainteligencija2025}. 
+
+Poseban značaj u razvoju generativne veštačke inteligencije (\textit{eng. generative artificial intelligence – generative AI}) dogodio se pojavom velikih jezičkih modela (\textit{eng. large language models – LLMs}), koji su u stanju da proizvode koherentne i kontekstualno relevantne tekstove \cite{montenegro2023impact}.
 
 S obzirom na ove trendove, može se očekivati da će se u narednim godinama pojaviti još napredniji modeli sa većom sposobnošću razumevanja jezika, što će dodatno uticati na obrazovanje, automatizaciju i praktične primene AI.
 
 
-\subsection{Pojava ChatGPT-a i njegov značaj}
-Među alatima zasnovanim na jezičkim modelima posebno mesto zauzima \textbf{ChatGPT}, razvijen od strane kompanije OpenAI i predstavljen javnosti krajem 2022. godine\cite{openai2022chatgpt}. ChatGPT se vrlo brzo proširio globalno i postao jedan od najbrže usvojenih digitalnih alata u istoriji\cite{xu2025patterns}. Njegova sposobnost da generiše tekstove različitog tipa, od eseja i istraživačkih pitanja, do tehničkih objašnjenja i programskog koda, učinila ga je posebno privlačnim u obrazovanju.
+\paragraph{} 
+Među alatima zasnovanim na jezičkim modelima posebno mesto zauzima \textbf{ChatGPT}, razvijen od strane kompanije OpenAI i predstavljen javnosti krajem 2022. godine \cite{openai2022chatgpt}. ChatGPT se vrlo brzo proširio globalno i postao jedan od najbrže usvojenih digitalnih alata u istoriji \cite{xu2025patterns}. Njegova sposobnost da generiše tekstove različitog tipa, od eseja i istraživačkih pitanja, do tehničkih objašnjenja i programskog koda, učinila ga je posebno privlačnim u obrazovanju.
 
 Upotreba ChatGPT-a u obrazovanju dovela je do novih pitanja i dilema. Sa jedne strane, mnogi ističu njegov potencijal da pomogne studentima u istraživanju, pisanju i boljem razumevanju kompleksnih pojmova \cite{alsaedi2024chatgpt}. Sa druge strane, prisutne su zabrinutosti u vezi sa pouzdanošću generisanih sadržaja, plagijarizmom i akademskim integritetom \cite{oliveira2025humanai}.
 
-\subsection{Cilj i struktura ovog rada}
+\paragraph{}
 Cilj ovog rada je da istraži kako se ChatGPT koristi u studentskom istraživanju i pisanju, koje su njegove prednosti, ograničenja i etičke implikacije. Rad je strukturiran tako da najpre daje teorijski uvod u osnovne karakteristike ChatGPT-a, zatim analizira njegovu upotrebu u istraživanju i pisanju, potom razmatra izazove vezane za etiku i integritet, i na kraju sagledava regulative i buduće perspektive njegove primene u obrazovanju.
 
 \section{ChatGPT i generativna veštačka inteligencija}
@@ -109,11 +115,11 @@ Za razliku od navedenih alata, ChatGPT kombinuje više funkcionalnosti: sposoban
 
 \subsection{Specifičnosti ChatGPT-a u akademskom pisanju}
 
-Akademsko pisanje zahteva jasnoću, preciznost i konzistentnost u argumentaciji. Mnogi studenti se suočavaju sa teškoćama prilikom strukturiranja teksta i pravilne upotrebe stručne terminologije. ChatGPT može poslužiti kao podrška u ovim procesima kroz generisanje nacrta rada, sugestije u vezi sa strukturom pasusa, kao i kroz pomoć sa gramatikom i pravopisom\cite{alsaedi2024chatgpt}.
+Akademsko pisanje zahteva jasnoću, preciznost i konzistentnost u argumentaciji. Mnogi studenti se suočavaju sa teškoćama prilikom strukturiranja teksta i pravilne upotrebe stručne terminologije. ChatGPT može poslužiti kao podrška u ovim procesima kroz generisanje nacrta rada, sugestije u vezi sa strukturom pasusa, kao i kroz pomoć sa gramatikom i pravopisom \cite{alsaedi2024chatgpt}.
 
-Ipak, ključno je naglasiti da ChatGPT ne može zameniti akademske izvore. Iako može generisati reference, često se dešava da su one netačne ili izmišljene\cite{oliveira2025humanai}. Zbog toga je njegova specifičnost u akademskom pisanju upravo u ulozi asistenta, a ne autora, odnosno student može koristiti ChatGPT za inspiraciju, jezičku pomoć i strukturiranje teksta, ali je neophodno da samostalno proveri činjenice i obezbedi validne naučne izvore.
+Ipak, ključno je naglasiti da ChatGPT ne može zameniti akademske izvore. Iako može generisati reference, često se dešava da su one netačne ili izmišljene \cite{oliveira2025humanai}. Zbog toga je njegova specifičnost u akademskom pisanju upravo u ulozi asistenta, a ne autora, odnosno student može koristiti ChatGPT za inspiraciju, jezičku pomoć i strukturiranje teksta, ali je neophodno da samostalno proveri činjenice i obezbedi validne naučne izvore.
 
-Korišćen na odgovoran način, ChatGPT može doprineti razvoju akademskih veština studenata, ali samo ako se kombinuje sa kritičkim razmišljanjem i adekvatnim istraživanjem\cite{mahapatra2024impact}.
+Korišćen na odgovoran način, ChatGPT može doprineti razvoju akademskih veština studenata, ali samo ako se kombinuje sa kritičkim razmišljanjem i adekvatnim istraživanjem \cite{mahapatra2024impact}.
 
 \section{ChatGPT kao pomoć u studentskom istraživanju}
 \subsection{Pretraživanje i sistematizacija informacija}
@@ -125,12 +131,12 @@ Mnogi studenti se tokom istraživanja suočavaju sa pojmovima i teorijama koje p
 
 Ova fleksibilnost posebno pomaže studentima koji dolaze iz interdisciplinarnih oblasti. Na primer, student informatike koji proučava primenu veštačke inteligencije u biologiji može tražiti od ChatGPT-a da mu objasni biološke termine na pristupačan način \cite{zakova2025exploring}. Time se prevazilazi barijera koja često usporava ili obeshrabruje istraživače početnike \cite{petrovska2024chatgpt}.
 
-Ipak, sva dobijena objašnjenja i sažetke treba uzeti sa rezervom i proveriti kroz preporučenu literaturu kursa ili sertifikovane naučne radove, kako bi se osigurala njihova smislednost i tečnost.
+Ipak, sva dobijena objašnjenja i sažetke treba uzeti sa rezervom i proveriti kroz preporučenu literaturu kursa ili sertifikovane naučne radove, kako bi se osigurala njihova smislenost i tečnost.
 
 \subsection{Korišćenje ChatGPT-a za formulisanje istraživačkih pitanja i hipoteza}
 ChatGPT se može koristiti i u kreativnim fazama istraživačkog procesa. Kada student istražuje određenu temu, model može pomoći u identifikovanju potencijalnih istraživačkih praznina, kao i u formulisanju istraživačkih pitanja i hipoteza \cite{montenegro2023impact, zakova2025exploring}. Na primer, nakon što student prikaže pregled postojeće literature, ChatGPT može predložiti pitanja koja istraživači još nisu dovoljno razmatrali \cite{petrovska2024chatgpt}.
 
-Ovaj proces može biti posebno koristan za studente sa malo iskusta u akademskom pisanju, koji često imaju poteškoća da kvalitetno završe svoje obaveze\cite{alsaedi2024chatgpt}. Ipak, treba imati u vidu da ChatGPT generiše predloge na osnovu postojećih obrazaca i znanja iz svoje baze, samim tim ne može u potpunosti zameniti kritičko mišljenje niti mentorsku podršku \cite{oliveira2025humanai}.
+Ovaj proces može biti posebno koristan za studente sa malo iskusta u akademskom pisanju, koji često imaju poteškoća da kvalitetno završe svoje obaveze \cite{alsaedi2024chatgpt}. Ipak, treba imati u vidu da ChatGPT generiše predloge na osnovu postojećih obrazaca i znanja iz svoje baze, samim tim ne može u potpunosti zameniti kritičko mišljenje niti mentorsku podršku \cite{oliveira2025humanai}.
 
 Sva predložena istraživačka pitanja i hipoteze treba dodatno proveriti i oblikovati uz konsultaciju sa mentorom i korišćenjem relevantne naučne literature.
 
@@ -141,9 +147,9 @@ Međutim, postoje i značajni izazovi. Za razliku od akademskih baza podataka, C
 
 \section{ChatGPT u akademskom pisanju}
 \subsection{Generisanje strukture rada}
-Jedna od najkorisnijih funkcionalnosti ChatGPT-a u akademskom pisanju jeste pomoć pri oblikovanju strukture rada\cite{baig2024systematic}. Studenti često imaju poteškoća u određivanju logičnog toka ideja, pa im ChatGPT može poslužiti kao alat za generisanje osnovnog plana (outline) i draft verzija teksta. Na primer, student može uneti temu rada i tražiti predlog strukture sa uvodom, teorijskim okvirom, analizom i zaključkom. Ovaj proces ubrzava početne faze pisanja i smanjuje takozvanu kreativnu blokadu\cite{gradstudents2024revision}. Ovo omogućava studentu da se fokusira na kreativni deo pisanja, dok ChatGPT pruža strukturiranu osnovu.
+Jedna od najkorisnijih funkcionalnosti ChatGPT-a u akademskom pisanju jeste pomoć pri oblikovanju strukture rada \cite{baig2024systematic}. Studenti često imaju poteškoća u određivanju logičnog toka ideja, pa im ChatGPT može poslužiti kao alat za generisanje osnovnog plana (outline) i draft verzija teksta. Na primer, student može uneti temu rada i tražiti predlog strukture sa uvodom, teorijskim okvirom, analizom i zaključkom. Ovaj proces ubrzava početne faze pisanja i smanjuje takozvanu kreativnu blokadu \cite{gradstudents2024revision}. Ovo omogućava studentu da se fokusira na kreativni deo pisanja, dok ChatGPT pruža strukturiranu osnovu.
 
-Međutim, iako ChatGPT može predložiti logičan raspored poglavlja i potpoglavlja, odgovornost za konačnu organizaciju sadržaja i dalje ostaje na studentu. Automatizovani predlozi moraju se uskladiti sa zahtevima nastavnika, pravilima akademskog pisanja i specifičnostima teme istraživanja\cite{zakova2025exploring}. 
+Međutim, iako ChatGPT može predložiti logičan raspored poglavlja i potpoglavlja, odgovornost za konačnu organizaciju sadržaja i dalje ostaje na studentu. Automatizovani predlozi moraju se uskladiti sa zahtevima nastavnika, pravilima akademskog pisanja i specifičnostima teme istraživanja \cite{zakova2025exploring}. 
 
 Važno je napomenuti da predlozi generisani od strane ChatGPT-a treba da budu samo polazna tačka. Student je odgovoran za proveru relevantnosti, tačnosti i akademskog standarda sadržaja.
 
@@ -158,9 +164,9 @@ Iako je koristan, ChatGPT ima ozbiljna ograničenja. Najpoznatiji problem su tzv
 Još jedno ograničenje je površnost objašnjenja. ChatGPT se oslanja na obrasce iz teksta na kojem je treniran, što znači da često nudi opšte ili pojednostavljene odgovore. Za razliku od stručnih knjiga i naučnih članaka, model ne pruža dubinsku analizu niti kritičku interpretaciju. Stoga ga studenti mogu koristiti samo kao dopunski alat, ali nikako kao primarni izvor znanja \cite{zakova2025exploring}.
 
 \subsection{Zašto ChatGPT ne može zameniti akademske izvore}
-Jedna od ključnih razlika između ChatGPT-a i tradicionalnih izvora jeste način upotrebe citata i referenci. U akademskom pisanju od studenata se zahteva da koriste pouzdane izvore kao što su naučni članci, knjige i recenzirane radove uz jasno navođenje autora i godine objavljivanja\cite{montenegro2023impact}. Međutim, ChatGPT ne može garantovati tačnost ili proverljivost referenci koje generiše. Često se dešava da model „izmišlja“ naslove članaka ili kombinuje podatke iz više različitih izvora\cite{edwards2023chatgpt}.
+Jedna od ključnih razlika između ChatGPT-a i tradicionalnih izvora jeste način upotrebe citata i referenci. U akademskom pisanju od studenata se zahteva da koriste pouzdane izvore kao što su naučni članci, knjige i recenzirane radove uz jasno navođenje autora i godine objavljivanja \cite{montenegro2023impact}. Međutim, ChatGPT ne može garantovati tačnost ili proverljivost referenci koje generiše. Često se dešava da model „izmišlja“ naslove članaka ili kombinuje podatke iz više različitih izvora \cite{edwards2023chatgpt}.
 
-Iz tog razloga, ChatGPT ne može zameniti akademske izvore, već može služiti samo kao pomoćno sredstvo za pronalaženje ideja ili za oblikovanje pitanja koje student kasnije proverava kroz relevantnu literaturu\cite{zakova2025exploring}. Kritička upotreba je od presudne važnosti, studenti treba da koriste ChatGPT za inspiraciju i jezičku podršku, a ne za finalne citate ili reference \cite{xu2025patterns}.
+Iz tog razloga, ChatGPT ne može zameniti akademske izvore, već može služiti samo kao pomoćno sredstvo za pronalaženje ideja ili za oblikovanje pitanja koje student kasnije proverava kroz relevantnu literaturu \cite{zakova2025exploring}. Kritička upotreba je od presudne važnosti, studenti treba da koriste ChatGPT za inspiraciju i jezičku podršku, a ne za finalne citate ili reference \cite{xu2025patterns}.
 
 \section{Etika i akademski integritet}
 
@@ -214,15 +220,15 @@ Ove prakse pokazuju da univerziteti nastoje da pronađu ravnotežu između zabra
 
 U Srbiji i regionu rasprava o institucionalnom pristupu ChatGPT-u je još u začetku. Iako su univerziteti upoznati sa postojanjem ovog alata, zvanične politike još uvek nisu jasno definisane. Najčešće se primenjuju postojeći propisi o plagijarizmu i akademskom integritetu, ali bez eksplicitnog pominjanja veštačke inteligencije.
 
-Pedagoške dileme se odnose na pitanje da li upotreba ChatGPT-a olakšava studentima proces učenja ili ipak upotreba ovog alata ima negativan efekat\cite{montenegro2023impact}. Postoji rizik da studenti koriste AI kao prečicu umesto da razvijaju veštine istraživanja i pisanja. Istovremeno, mogućnost da se ChatGPT koristi kao alat za razumevanje kompleksnih tema i za unapređenje pismenosti ne bi trebalo zanemariti \cite{mahapatra2024impact}.
+Pedagoške dileme se odnose na pitanje da li upotreba ChatGPT-a olakšava studentima proces učenja ili ipak upotreba ovog alata ima negativan efekat \cite{montenegro2023impact}. Postoji rizik da studenti koriste AI kao prečicu umesto da razvijaju veštine istraživanja i pisanja. Istovremeno, mogućnost da se ChatGPT koristi kao alat za razumevanje kompleksnih tema i za unapređenje pismenosti ne bi trebalo zanemariti \cite{mahapatra2024impact}.
 
 Pravne dileme u regionu proizlaze iz šireg nedostatka regulative u vezi sa generativnom veštačkom inteligencijom. Iako postoje zakoni o autorskim pravima i akademskom integritetu, oni ne prepoznaju specifičnosti alata poput ChatGPT-a. Zbog toga je neophodno razviti jasnije okvire, bilo na nivou univerziteta ili kroz nacionalne politike obrazovanja.
 
 \section{Buduće perspektive ChatGPT-a u obrazovanju}
 
-Jedna od najvećih prednosti ChatGPT-a u obrazovanju jeste potencijal za personalizovano učenje. Za razliku od tradicionalnog pristupa, gde se svi studenti prilagođavaju istom tempu predavanja, AI alati mogu prilagoditi objašnjenja nivou znanja i potrebama pojedinca\cite{mahapatra2024impact}. ChatGPT može služiti kao virtuelni tutor koji je dostupan u svakom trenutku, odgovarajući na pitanja, nudeći primere i pomažući studentima da savladaju gradivo sopstvenim tempom.
+Jedna od najvećih prednosti ChatGPT-a u obrazovanju jeste potencijal za personalizovano učenje. Za razliku od tradicionalnog pristupa, gde se svi studenti prilagođavaju istom tempu predavanja, AI alati mogu prilagoditi objašnjenja nivou znanja i potrebama pojedinca \cite{mahapatra2024impact}. ChatGPT može služiti kao virtuelni tutor koji je dostupan u svakom trenutku, odgovarajući na pitanja, nudeći primere i pomažući studentima da savladaju gradivo sopstvenim tempom.
 
-Dodatno, studenti koji imaju poteškoća u razumevanju složenih koncepata mogu koristiti ChatGPT za postavljanje dodatnih pitanja, dok napredniji studenti mogu zatražiti dublja objašnjenja ili kompleksnije zadatke. Ovakav vid personalizacije mogao bi doprineti smanjenju obrazovnih nejednakosti i pružiti podršku studentima koji nemaju pristup dodatnim resursima ili privatnim časovima\cite{baig2024systematic}.
+Dodatno, studenti koji imaju poteškoća u razumevanju složenih koncepata mogu koristiti ChatGPT za postavljanje dodatnih pitanja, dok napredniji studenti mogu zatražiti dublja objašnjenja ili kompleksnije zadatke. Ovakav vid personalizacije mogao bi doprineti smanjenju obrazovnih nejednakosti i pružiti podršku studentima koji nemaju pristup dodatnim resursima ili privatnim časovima \cite{baig2024systematic}.
 
 \subsection{Integracija u obrazovne platforme (Moodle, Canvas)}
 
@@ -245,6 +251,7 @@ Ključna preporuka jeste da ChatGPT bude korišćen kao alat za podršku, a ne k
 
 Zaključno, ChatGPT otvara nove perspektive za unapređenje učenja i istraživanja, ali njegova prava vrednost leži u kombinaciji sa ljudskim znanjem, kritičkim razmišljanjem i odgovornim korišćenjem. 
 
+\newpage
 \printbibliography
 
 \end{document}
