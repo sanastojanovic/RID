@@ -1,0 +1,169 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[serbian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{enumitem}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{bookmark}
+
+\usepackage{fancyhdr}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MidnightBlue,
+  urlcolor=RoyalBlue,
+  citecolor=ForestGreen,
+  pdftitle={Pregled gradiva kursa},
+  pdfpagemode=UseOutlines
+}
+
+\renewcommand{\contentsname}{Sadržaj}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{4pt}
+\setlength{\cftbeforesubsecskip}{2pt}
+
+\titleformat{\section}
+  {\Large\bfseries\sffamily}
+  {\thesection}{0.8em}{}
+  [\vspace{0.3em}\titlerule]
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {\thesubsection}{0.6em}{}
+
+\setlist[itemize]{itemsep=0.25em, topsep=0.3em, leftmargin=1.2cm}
+
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily Računarstvo i društvo}
+\fancyfoot[C]{\sffamily \thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+
+\title{\sffamily Računarstvo i društvo \\[0.5em]\large Pregled gradiva kursa}
+\author{\sffamily Danilo Nikolaš 112/2021}
+\date{\sffamily Novembar 2025}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Istorijski pregled razvoja računarstva}
+\subsection{Pregled gradiva}
+Razvoj računarstva obuhvata prelazak od prvih mehaničkih alata za računanje do modernih digitalnih sistema. Počeci računanja vezani su za abakus i mehaničke kalkulatore, a ideja programabilnog računara pojavila se kod Čarlsa Bebidža i Ade Lavlejs. Razvoj tranzistora, integrisanih kola i mikroprocesora omogućio je širenje računara u svakodnevni život. 
+Pored hardverskog napretka, menjao se i način programiranja: od bušenih kartica i asemblera do visokih jezika, modula i objektno-orijentisanog pristupa. Umrežavanje je omogućilo ARPANET i internet, a Veb je pojednostavio pristup sadržaju i znanju. 
+Danas istorijsku liniju nastavljaju mobilni ekosistemi, cloud i \emph{edge} računanje, kao i veštačka inteligencija i kvantni eksperimenti, uz stalnu miniaturizaciju i energetsku efikasnost koja utiče na dostupnost tehnologije široj populaciji.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Evolucija računara od industrijske revolucije do mobilne ere \\
+  \textbf{Link:} \url{https://www.computerhistory.org/timeline/computers/}
+  \item Računarstvo kao pokretač globalizacije: kako je digitalna tehnologija promenila ekonomiju i društvo \\
+  \textbf{Link:} \url{https://bastakiss.com/blog/our-blog-1/the-history-of-programming-language-standardization-and-why-it-matters-703}
+\end{itemize}
+
+\section{Etika}
+\subsection{Pregled gradiva}
+Etika u informacionim tehnologijama bavi se vrednovanjem ispravnosti postupaka u digitalnom okruženju. Ona obuhvata pitanja privatnosti, pravednosti algoritama, transparentnosti u odlučivanju i odgovornosti programera. Tradicionalne filozofske teorije poput utilitarizma, kantijanizma i etike vrline primenjuju se na probleme prikupljanja podataka, razvoja AI sistema i digitalnog vlasništva. 
+Sa širenjem automatizovanog odlučivanja, javlja se potreba za \emph{objašnjivom AI}, auditima modela i upravljanjem podacima tako da se umanje pristrasnosti i diskriminacija. 
+Etika obuhvata i profesionalnu odgovornost: procenu rizika, poštovanje regulative (npr. GDPR) i balansiranje između tržišnih rokova i bezbednih, održivih rešenja koja štite korisnike i društvo.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Odgovornost algoritama i borba protiv pristrasnosti \\
+  \textbf{Link:} \url{https://www.techtarget.com/searchsecurity/tip/How-AI-is-reshaping-threat-intelligence?int=off&pre=off&Offer=sy_lp10032025GOOGOTHR_GsidsSecurity_Akamai_KTO_IO335417_LI2952645&gad_campaignid=23075048613/}
+  \item Profesionalna etika programera pod pritiskom rokova \\
+  \textbf{Link:} \url{https://medium.com/@JohanneA/effective-deadlines-finishing-your-programming-projects-a366bb6e320e/}
+\end{itemize}
+
+\section{Upotreba interneta, spam i phishing}
+\subsection{Pregled gradiva}
+Internet omogućava komunikaciju, obrazovanje i trgovinu, ali predstavlja i prostor za prevare. Spam poruke preplavljuju komunikacione kanale i često služe kao uvod u fišing napade. Phishing koristi psihološke trikove kao što su hitnost, strah i autoritet da bi prevario korisnika i došao do poverljivih podataka. 
+Uz e-poštu, prevarne poruke se danas šire i kroz SMS, društvene mreže i lažne sajtove koji oponašaju legitimne brendove. 
+Odbrana uključuje kombinaciju tehnika: napredne filtre (statističke i ML pristupe), bezbednosne politike, višefaktorsku autentifikaciju i stalnu edukaciju korisnika kako bi se prepoznali obrasci prevare i smanjile posledice incidenta.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Psihologija phishing prevare i tehnike zaštite \\
+  \textbf{Link:} \url{https://www.coursera.org/gb/articles/types-of-cyber-attacks?campaignid=20882109092&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&creativeid=&assetgroupid=6485735763&targetid=&extensionid=&placement=&gad_campaignid=20875558740/}
+  \item Evolucija antispam sistema i primena mašinskog učenja \\
+  \textbf{Link:} \url{https://www.mimecast.com/content/anti-spam-software/}
+\end{itemize}
+
+\section{Cenzura i sloboda govora, deca i neprikladan sadržaj}
+\subsection{Pregled gradiva}
+Cenzura predstavlja ograničavanje pristupa informacijama, dok sloboda govora podrazumeva pravo na slobodno izražavanje. Na internetu je teško ostvariti potpunu kontrolu zbog decentralizacije i globalnog karaktera mreže, ali države i platforme uvode različite modele moderacije radi zaštite korisnika i javnog interesa. 
+Izazov je postizanje balansa: sprečiti štetan, nezakonit i manipulatvni sadržaj, a istovremeno ne ugušiti legitimnu debatu. 
+Samocenzura je sve prisutnija zbog reputacionog pritiska i algoritamskih preporuka, dok se zaštita dece oslanja na tehničke filtere, roditeljski nadzor i digitalnu pismenost, uz jasne smernice o privatnosti i pristanku.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Moderacija sadržaja i sloboda govora \\
+  \textbf{Link:} \url{https://ecpr.eu/Events/Event/PanelDetails/8462/}
+  \item Deepfake tehnologija i zaštita identiteta \\
+  \textbf{Link:} \url{https://www.fortinet.com/resources/cyberglossary/deepfake/}
+\end{itemize}
+
+\section{Internet prevare i zavisnost od interneta}
+\subsection{Pregled gradiva}
+Internet prevare uključuju lažne investicije, krađu identiteta i manipulaciju korisnicima, često kroz socijalni inženjering i pažljivo osmišljene priče. Uz komercijalne motive, prisutni su i pokušaji uticaja na mišljenje i ponašanje kroz lažne vesti i koordinisane kampanje. 
+Istovremeno, digitalne platforme koriste mehanizme zadržavanja pažnje (notifikacije, beskonačni skrol, varijabilne nagrade) koji mogu doprineti obrascima zavisničkog ponašanja. 
+Prevencija podrazumeva digitalnu higijenu, alate za ograničenje vremena, informisanje o rizicima i razvoj kritičkog odnosa prema sadržaju i izvorima.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Uticaj micro-transakcija i loot-box mehanika u online igrama na razvoj zavisničkog ponašanja \\
+  \textbf{Link:} \url{https://www.tuw.edu/psychology/psychology-behind-microtransactions/}
+  \item Lažne recenzije i manipulacija potrošača \\
+  \textbf{Link:} \url{https://pirg.org/edfund/resources/how-to-recognize-fake-online-reviews-of-products-and-services/}
+\end{itemize}
+
+\section{Bezbednost interneta}
+\subsection{Pregled gradiva}
+Sajber bezbednost štiti sisteme i podatke od napada i zloupotreba. Sigurnost lozinki postiže se korišćenjem heš funkcija, „soljenja“, višefaktorskog logovanja i menadžera lozinki, dok segmentacija sistema, redovna ažuriranja i princip najmanjih privilegija smanjuju površinu napada. 
+Napredne pretnje ciljaju korisnike (phishing) i servise (ransomware, DDoS), pa se odbrana oslanja na kombinaciju tehnologije, procesa i edukacije. 
+CTF takmičenja i obuke za etičko hakovanje omogućavaju praktično razumevanje napadačkih tehnika i izgradnju kompetencija za odgovor na incidente.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Sigurnost lozinki i uloga menadžera lozinki \\
+  \textbf{Link:} \url{https://www.waldenu.edu/programs/information-technology/resource/cybersecurity-101-why-choosing-a-secure-password-in-so-important/}
+  \item Moderne metode autentifikacije (MFA, FIDO2, biometrija) \\
+  \textbf{Link:} \url{https://www.loginradius.com/blog/identity/top-authentication-methods/}
+\end{itemize}
+
+\section{Privatnost na internetu i kolačići}
+\subsection{Pregled gradiva}
+Kolačići omogućavaju praćenje navika korisnika i personalizaciju sadržaja, ali otvaraju i pitanja privatnosti. GDPR propisuje transparentnost i saglasnost korisnika pre prikupljanja podataka, uz pravo na uvid, brisanje i prenosivost podataka. 
+Kretanje industrije ka ukidanju kolačića trećih strana otvara prostor za nove tehnike merenja i oglašavanja (kontekstualne metode, \emph{privacy sandbox} pristupi), ali i za rizike poput \emph{fingerprinting}-a. 
+Zadatak je pronaći ravnotežu između funkcionalnosti servisa, legitimnih poslovnih potreba i zaštite privatnosti korisnika.
+
+\subsection{Predložene teme}
+\begin{itemize}
+  \item Budućnost interneta bez kolačića trećih strana \\
+  \textbf{Link:} \url{https://ignitevisibility.com/web-without-third-party-cookies/}
+  \item Manipulativni dizajn (dark patterns) u cookie banerima \\
+  \textbf{Link:} \url{https://www.nsw.gov.au/departments-and-agencies/fair-trading/dark-patterns/}
+\end{itemize}
+
+\end{document}
