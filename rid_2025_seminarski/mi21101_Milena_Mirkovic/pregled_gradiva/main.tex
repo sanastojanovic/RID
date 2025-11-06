@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 
 \usepackage[utf8]{inputenc}
@@ -8,15 +8,9 @@
 \usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % sortiranje referenci po redosledu citiranja
 \addbibresource{literatura.bib} 
 
+
+
 \graphicspath{ {./slike/} }
-
-\usepackage{titlesec}
-
-% Povećavanje sekcija
-\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
-
 
 
 \usepackage{geometry}
@@ -28,14 +22,48 @@
  right=25mm,
  bottom=25mm
  }
- 
-\title{Računarstvo i društvo -- Pregled gradiva}
-\author{}
-\date{}
+
+
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
 
+\center 
+\textsc{\LARGE Matematički fakultet, Univerzitet u Beogradu}\\[1.5cm]
+\textsc{\Large Računarstvo i društvo}\\[0.5cm] 
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Pregled gradiva}\\[0.4cm] 
+\HRule \\[1.5cm]
+ 
+\begin{minipage}{0.4\textwidth}
+    \begin{flushleft} \large
+    \emph{Student:}\\
+        Mirković Milena 101/2021
+    \end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+    \begin{flushright} \large
+    \emph{Mentor:} \\
+        Dr. Sana Stojanović Đurđević\\
+        Katedra za računarstvo i informatiku
+    \end{flushright}
+\end{minipage}\\[1.5cm]
+
+
+{\large Oktobar 2025}\\[2cm] 
+\includegraphics[width=0.4\textwidth]{matf_logo.png}\\[1cm]
+
+\vfill 
+\end{titlepage}
+
+
+
+
+\newpage
 \tableofcontents
 \newpage
 
@@ -54,17 +82,18 @@ Paralelno se radi i na komunikaciji, od telegrafa i telefona, preko radija i tel
 \begin{enumerate}
     \item Doprinos žena razvoju računarsva i postavljanju temelja programiranja u XX veku
         \begin{description}
-            \item Ada Lovelace kao prva programerka.  \href{https://www.youtube.com/watch?v=IZptxisyVqQ}{link} 
-            \item Žene programeri kompanije ENIAC. \href{https://www.youtube.com/watch?v=Zevt2blQyVs}{link}
+            \item Ada Lovelace kao prva programerka.  
+            \item \url{https://www.youtube.com/watch?v=IZptxisyVqQ}
+            \item Žene programeri kompanije ENIAC. \item \url{https://www.youtube.com/watch?v=Zevt2blQyVs}
         \end{description}
     \item Računari u Jugoslaviji: zaboravljena istorija CER i TARA računara
         \begin{description}
-            \item \href{https://www.youtube.com/watch?v=T8iebSL49NM}{link}
-            \item \href{https://www.rts.rs/lat/magazin/tehnologija/5583359/dan-informaticara-srbije-prvi-racunar-cer10-18-novembar-1960.html}{link}
+            \item \url{https://www.youtube.com/watch?v=T8iebSL49NM}
+            \item \url{https://www.rts.rs/lat/magazin/tehnologija/5583359/dan-informaticara-srbije-prvi-racunar-cer10-18-novembar-1960.html}
         \end{description}
     \item Društveni uticaj računara: od prvog popisa do digitalnog doba
         \begin{description}
-            \item \href{https://www.youtube.com/watch?v=WWzaZWN1IOU}{link}
+            \item \url{https://www.youtube.com/watch?v=WWzaZWN1IOU}
         \end{description}
 \end{enumerate}
 
@@ -76,63 +105,63 @@ Etika je grana filozofije koja proučava moral, sistem pravila koje društvo pro
 
 Etika se sastoji od nekoliko podoblasti:
 \begin{enumerate}
-    \item Meta-etika - bavi se pitanjima o značenju moralnih pojmova i prirodi moralne obaveze
-    \item Normativna etika - postavlja opšta načela i principe
-    \item Primenjena etika - razmatra konkretne situacije i dileme
+    \item Meta-etika - bavi se pitanjima o značenju moralnih pojmova i prirodi moralne obaveze.
+    \item Normativna etika - postavlja opšta načela i principe.
+    \item Primenjena etika - razmatra konkretne situacije i dileme.
 \end{enumerate}
 
 Razmatramo devet etičkih teorija:
 \begin{enumerate}
-    \item Subjektivni realizam - svaki pojedinac sam za sebe odlučuje šta je dobro, a šta loše
-    \item Kulturološki relativizam - značenje dobrog i lošeg zavisi od principa koje definiše konkretno društvo
-    \item Teorija duhovnog komandovanja - nešto je dobro ako je u skladu sa Božijom voljom, a loše ako nije
-    \item Etički egoizam - moralno dobra akcija je ona koja će toj osobi dugoročno gledano doneti maksimalnu dobit
-    \item Kantijanizam - ljudsko delovanje je vođeno moralnim pravilima koja su univerzalna za sve
-    \item Utilitarizam postupka - akcija je dobra do mere u kojoj ona koristi svim uključenim stranama
-    \item Utilitarizam pravila - prihvata ona moralna pravila koja kada bi ih svi pratili povećavaju ukupnu sreću svih uključenih strana
-    \item Teorija socijalnog ugovora - moralnost je skup pravila koja određuju kako se ljudi ponašaju jedni prema drugima koje racionalni ljudi prihvataju zarad opšteg dobrobita pod uslovima da i drugi ta pravila poštuju
-    \item Etika vrline - moralno ispravna akcija je ona koju bi u istim okolnostima izabrala i uradila moralna osoba
+    \item Subjektivni realizam - svaki pojedinac sam za sebe odlučuje šta je dobro, a šta loše.
+    \item Kulturološki relativizam - značenje dobrog i lošeg zavisi od principa koje definiše konkretno društvo.
+    \item Teorija duhovnog komandovanja - nešto je dobro ako je u skladu sa Božijom voljom, a loše ako nije.
+    \item Etički egoizam - moralno dobra akcija je ona koja će toj osobi dugoročno gledano doneti maksimalnu dobit.
+    \item Kantijanizam - ljudsko delovanje je vođeno moralnim pravilima koja su univerzalna za sve.
+    \item Utilitarizam postupka - akcija je dobra do mere u kojoj ona koristi svim uključenim stranama.
+    \item Utilitarizam pravila - prihvata ona moralna pravila koja kada bi ih svi pratili povećavaju ukupnu sreću svih uključenih strana.
+    \item Teorija socijalnog ugovora - moralnost je skup pravila koja određuju kako se ljudi ponašaju jedni prema drugima koje racionalni ljudi prihvataju zarad opšteg dobrobita pod uslovima da i drugi ta pravila poštuju.
+    \item Etika vrline - moralno ispravna akcija je ona koju bi u istim okolnostima izabrala i uradila moralna osoba.
 \end{enumerate}
 
 Razvoj tehnologije stvara nove etičke probleme i kreira stavove koje možemo podeliti na:
 \begin{enumerate}
-    \item Tehnicizam - tehnologija je korisan alat za rešavanje problema velikog potencijala
-    \item Optimizam - tehnologija ima pozitivan uticaj na drušvo
-    \item Skepticizam - tehnologija ima negativan uticaj na društvo
+    \item Tehnicizam - tehnologija je korisan alat za rešavanje problema velikog potencijala.
+    \item Optimizam - tehnologija ima pozitivan uticaj na drušvo.
+    \item Skepticizam - tehnologija ima negativan uticaj na društvo.
 \end{enumerate}
 
 Postoje i različiti pristupi računarkoj etici koji se mogu podeliti na:
 \begin{enumerate}
-    \item Pristup nepostojanja - računarska etika ne postoji kao posebna oblast
-    \item Profesionalni pristup - IT stručnjaci treba da imaju poseban profesionalni kodeks ponašanja
-    \item Radikalni pristup - razvoj tehnologije je stvorio potpuno nove moralne situacije koje klasična etika ne može da objasni
-    \item Konzervativni pristup - razvoj tehnologije nije promenio samu prirodu etičkih problema, već samo kontekst u kojem se oni javljaju
-    \item Inovativni pristup - saglasan je da razvoj tehnologije donosi nove izazove i moralne dileme, ali ne odbacuje potpuno postojeću etiku
+    \item Pristup nepostojanja - računarska etika ne postoji kao posebna oblast.
+    \item Profesionalni pristup - IT stručnjaci treba da imaju poseban profesionalni kodeks ponašanja.
+    \item Radikalni pristup - razvoj tehnologije je stvorio potpuno nove moralne situacije koje klasična etika ne može da objasni.
+    \item Konzervativni pristup - razvoj tehnologije nije promenio samu prirodu etičkih problema, već samo kontekst u kojem se oni javljaju.
+    \item Inovativni pristup - saglasan je da razvoj tehnologije donosi nove izazove i moralne dileme, ali ne odbacuje potpuno postojeću etiku.
 \end{enumerate}
 
 \subsection{Predložene teme}
 \begin{enumerate}
     \item Nadzor i prepoznavanje lica: privatnost, ljudska prava i društvene posledice
         \begin{description}
-            \item \href{https://www.youtube.com/watch?v=2SdpzTZTznw}{link}
-            \item \href{https://www.youtube.com/watch?v=CK-mkq0HQ2w}{link} 
+            \item \url{https://www.youtube.com/watch?v=2SdpzTZTznw}
+            \item \url{https://www.youtube.com/watch?v=CK-mkq0HQ2w}
         \end{description}
     \item Etika lažnih vesti i dezinformacija na internetu
         \begin{description}
-            \item \href{https://journals.publishing.umich.edu/jpe/article/id/6195/}{link}
-            \item \href{https://www.youtube.com/watch?v=uCESQTkxuN0}{link}
+            \item \url{https://journals.publishing.umich.edu/jpe/article/id/6195/}
+            \item \url{https://www.youtube.com/watch?v=uCESQTkxuN0}
         \end{description}
     \item AI-generisana umetnost i kreativnost
         \begin{description}
-            \item \href{https://link.springer.com/article/10.1007/s43681-025-00735-3}{link}
-            \item \href{https://ai-arts.org/}{link}
-            \item \href{https://aifcf.org/}{link}
+            \item \url{https://link.springer.com/article/10.1007/s43681-025-00735-3}
+            \item \url{https://ai-arts.org/}
+            \item \url{https://aifcf.org/}
         \end{description}
 \end{enumerate}
 
 \section{Upotreba interneta, spam poruke}
 \subsection{Pregled gradiva}
-U današnjem svetu sve više ljudi ima mobilni telefon i pristup internetu. Internet mreže omogućavaju bržu komunikaciju i brže obacljanje svakodnevnih poslova. Ipak, uz sve prednosti, moderna komunikacija donosi i niz etičkih izazova i zloupotreba.
+U današnjem svetu sve više ljudi ima mobilni telefon i pristup internetu. Internet mreže omogućavaju bržu komunikaciju i brže obavljanje svakodnevnih poslova. Ipak, uz sve prednosti, moderna komunikacija donosi i niz etičkih izazova i zloupotreba.
 
 Spam poruke su neželjene poruke, koje stvaraju ogromne finansijske i resursne posledice.
 Spam je izuzetno jeftin.  Iako odziv iznosi samo jednu poruku na 12,5 miliona, globalno se godišnje zaradi oko 3,5 miliona dolara, što je dovoljno da spam i dalje opstaje. Najčešće se radi o reklamama, eksplicitnom sadržaju, finansijskim ponudama i prevarama. Spam utiče na ekonomiju firmi i funkcionisanje infrastrukture: zaposleni gube vreme na brisanje poruka, što otežava rad, a Internet i serverski resursi bivaju oštećeni.
@@ -146,13 +175,13 @@ Internet ne služi samo zabavi, već i za online kupovinu, društvene mreže, de
 \begin{enumerate}
     \item Spam i ekološki uticaj digitalnog otpada
         \begin{description}
-            \item \href{https://www.theguardian.com/environment/green-living-blog/2010/oct/21/carbon-footprint-email}{link} 
-            \item \href{https://blog.cabi.org/2011/08/05/ever-wondered-what-the-carbon-footprint-of-your-spam-emails-is/}{link}
+            \item \url{https://www.theguardian.com/environment/green-living-blog/2010/oct/21/carbon-footprint-email} 
+            \item \url{https://blog.cabi.org/2011/08/05/ever-wondered-what-the-carbon-footprint-of-your-spam-emails-is/}
         \end{description}
     \item Etika automatizacije i botova u slanju poruka
         \begin{description}
-            \item \href{https://www.forbes.com/councils/forbescoachescouncil/2024/11/06/ethical-ai-in-marketing-balancing-automation-with-human-values/}{link}
-            \item \href{https://mint.rs/blog/bezbednost/zasto-e-mail-poruke-zavrsavaju-u-spam-folderu/}{link}
+            \item \url{https://www.forbes.com/councils/forbescoachescouncil/2024/11/06/ethical-ai-in-marketing-balancing-automation-with-human-values/}
+            \item \url{https://mint.rs/blog/bezbednost/zasto-e-mail-poruke-zavrsavaju-u-spam-folderu/}
         \end{description}
 \end{enumerate}
 
@@ -167,13 +196,13 @@ Postoje dve osnovne forme:
 
 U današnjem svetu direktna cenzura je i dalje aktivna i ima tri forme:
 \begin{enumerate}
-  \item Monopol nad informacijama od strane slade ili države
-  \item Pregled publikacije
-  \item Licenciranje i registracija
+  \item Monopol nad informacijama od strane vlade ili države,
+  \item Pregled publikacije,
+  \item Licenciranje i registracija.
 \end{enumerate}
 
 
-Internet se često koristi za širenje dezinformacija i manipulacija. Kao odgovor, vlasti i platforme mogu primeniti vidove cenzure, ne uvek u potpunoj zabrani, već u smanjenom vidljivosti određenog sadržaja. Postoje situacije kada je regulacija opravdana, kao u slučaju zaštite dece od neprikladnog sadržaja. Međutim, granica između zaštite i preterane kontrole je često tanka i zahteva pažljivu etičku procenu.
+Internet se često koristi za širenje dezinformacija i manipulacija. Kao odgovor, vlasti i platforme mogu primeniti vidove cenzure, ne uvek u potpunoj zabrani, već u smanjenoj vidljivosti određenog sadržaja. Postoje situacije kada je regulacija opravdana, kao u slučaju zaštite dece od neprikladnog sadržaja. Međutim, granica između zaštite i preterane kontrole je često tanka i zahteva pažljivu etičku procenu.
 
 
 Etika i zakon nisu isto. Zakon sprovode države, etička pravila proizilaze iz društvenih normi. Sa razvojem digitalnih tehnologija, etička pitanja postaju sve kompleksnija. Treba jasno postaviti granice između zaštite i cenzure, uzimajući u obzir ko ima moć, koji je cilj regulacije i koje su posledice po slobodu izražavanja i društvo u celini.
@@ -185,13 +214,13 @@ Još jedan problem dece ili adolescenata na internetu jeste seksting. Seksting p
 \begin{enumerate}
     \item Digitalni trag i privatnost korisnika
         \begin{description}
-            \item \href{https://www.youtube.com/watch?v=cprsK9uoYjk&t=2s}{link}
-            \item \href{https://www.internetsociety.org/blog/2024/10/understanding-digital-footprints/}{link}
+            \item \url{https://www.youtube.com/watch?v=cprsK9uoYjk&t=2s}
+            \item \url{https://www.internetsociety.org/blog/2024/10/understanding-digital-footprints/}
         \end{description}
     \item Cyberbullying i digitalna odgovornost
         \begin{description}
-            \item \href{https://cyberpsychology.eu/article/view/35784}{link}
-            \item \href{https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.861823/full}{link}
+            \item \url{https://cyberpsychology.eu/article/view/35784}
+            \item \url{https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.861823/full}
         \end{description}
 \end{enumerate}
 
@@ -206,73 +235,74 @@ Nigerijska prevara, poznata još iz 1980-ih, bazirana je na lažnim pričama gde
 
 Još jedan vid internet prevara su i netačne informacije. Internet je preplavljen informacijama, kako korisnim i edukativnim tako i onim netačnim. Postoje različiti mehanizmi sortiranja stranica na internetu među kojima je Google ocenjivanje kvaliteta stranica sistemom glasanja.
 
-Među najvećim problemima interneta ubraja se i zavisnost od interneta. U nekim zemljama se ova zavisnost posmatra kao psihička bolest. Ova zavisnost izaziva probleme poput depresije, anksioznosti, promene raspoloženja, usameljenosti, glavobolje, insomnije i slično.
+Među najvećim problemima interneta ubraja se i zavisnost od interneta. U nekim zemljama se ova zavisnost posmatra kao psihička bolest. Ova zavisnost izaziva probleme poput depresije, anksioznosti, promene raspoloženja, usamljenosti, glavobolje, insomnije i slično.
 
 
 \subsection{Predložene teme}
 \begin{enumerate}
     \item Psihologija phishing-a: zašto ljudi klikću i kad znaju da ne bi smeli
         \begin{description}
-            \item \href{https://www.sciencedirect.com/science/article/pii/S0167404823005813}{link} 
-            \item \href{https://www.youtube.com/watch?v=AQLxyjuDTwQ}{link} 
+            \item \url{https://www.sciencedirect.com/science/article/pii/S0167404823005813}
+            \item \url{https://www.youtube.com/watch?v=AQLxyjuDTwQ}
         \end{description}
     \item Digitalna detoksikacija: lečenje zavisnosti od interneta
         \begin{description}
-            \item \href{https://www.youtube.com/watch?v=SKNjQtkeJWg}{link}
-            \item \href{https://www.verywellmind.com/internet-addiction-4157289}{link}
+            \item \url{https://www.youtube.com/watch?v=SKNjQtkeJWg}
+            \item \url{https://www.verywellmind.com/internet-addiction-4157289}
         \end{description}
     \item Digitalna hiperpažnja: deca i vizuelni stimulansi 
         \begin{description}
-            \item \href{https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00961/full}{link}
-            \item \href{https://www.sciencedirect.com/science/article/pii/S0360131521001332}{link}
-            \item \href{https://www.youtube.com/watch?v=3h1T493piLE}{link} 
+            \item \url{https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00961/full}
+            \item \url{https://www.sciencedirect.com/science/article/pii/S0360131521001332}
+            \item \url{https://www.youtube.com/watch?v=3h1T493piLE}
         \end{description}
 \end{enumerate}
 
 \section{Bezbednost interneta}
 
 \subsection{Pregled gradiva}
-Značenje reči haker se menjalo vremenom. U prošlom veku haker je označavao istraživača, osobu koja preuzima rizik, nekoga ko čini da sistem radi nešto novo. Danas se termin haker se vezuje za osobu koja neovlašćeno pristupa računarima i računarskim mrežama.
+Značenje reči haker se menjalo vremenom. U prošlom veku haker je označavao istraživača, osobu koja preuzima rizik, nekoga ko čini da sistem radi nešto novo. Danas se termin haker vezuje za osobu koja neovlašćeno pristupa računarima i računarskim mrežama.
 Među korišćenim tehnikama hakovanja možemo izdvojiti:
 \begin{itemize}
-    \item Metod grube sile - za kratke šifre
-    \item Metod rečnika - za duge šifre
+    \item Metod grube sile - za kratke šifre.
+    \item Metod rečnika - za duge šifre.
 \end{itemize}
 
 Hakovanje u okviru besplatne WiFi mreže je vrsta napada u kome haker pristupi kolačiću koji stranica šalje korisniku. Na osnovu kolačića, haker dobija pristup sajtu i ista prava i mogućnosti kao i registrovani korisnik koji je napadnut. Prema Krivičnom zakoniku Republike Srbije kazne za hakere su novčane ili zatvorske, u zavisnosti od težine krivičnog dela.
+
 Zlonamerni softver je softver dizajniran da nanese štetu ciljnom korisniku. Zlonamerne softvere delimo u više grupa:
 \begin{itemize}
-    \item Virusi - programski kod koji se samoreplicira i deo je drugog programa
+    \item Virusi - programski kod koji se samoreplicira i deo je drugog programa.
     \item Računarski crvi
         \begin{itemize}
-            \item Internet crvi - samostalni program koji se širi računarima u mreži rupa u bezbednosti mreže
-            \item Saser - program koji je isključivao računare neko vreme nakon podizanja sistema Windows XP ili Windows 2000
+            \item Internet crvi - samostalni program koji se širi preko računarske mreže. Crv se širi sam od sebe iskorišćavanjem bezbednosnih rupa na udaljenim računarima.
+            \item Saser - program koji je isključivao računare neko vreme nakon podizanja sistema Windows XP ili Windows 2000.
         \end{itemize}
-    \item Ukrštanje veb lokacija - na stranicama gde korisnici mogu ostaviti komentare, zlonamerni korisnici prave skriptu koja drugim korisnicima prati kolačiće
-    \item Usputno preuzimanje podataka - napad na računar posetioca zaražene veb stranice, tako što se na njegov računar kopiraju zlonamerne datoteke
-    \item Trojanski konj - štetan program, koji je maskiran u program koji je korisan, dok u pozadini izvršava zlonamerne akcije bez znanja korisnika
-    \item Softver za špijuniranje - neželjeni softver koji upada u sistem i krade poverljive informacije
-    \item Mreža botova - kolekcija međusobno povezanih zaraženih uređaja, koji su pod kontrolom istog tipa zlonamernog softvera
+    \item Ukrštanje veb lokacija - na stranicama gde korisnici mogu ostaviti komentare, zlonamerni korisnici prave skriptu koja drugim korisnicima prati kolačiće.
+    \item Usputno preuzimanje podataka - napad na računar posetioca zaražene veb stranice, tako što se na njegov računar kopiraju zlonamerne datoteke.
+    \item Trojanski konj - štetan program, koji je maskiran u program koji je korisan, dok u pozadini izvršava zlonamerne akcije bez znanja korisnika.
+    \item Softver za špijuniranje - neželjeni softver koji upada u sistem i krade poverljive informacije.
+    \item Mreža botova - kolekcija međusobno povezanih zaraženih uređaja, koji su pod kontrolom istog tipa zlonamernog softvera.
 \end{itemize}
 
 Postoji i lista mera koje je poželjno primenjivati kako bi se izbegle gore navedene neprijatnosti. 
 \begin{itemize}
-    \item Bezbednosne zakrpe softvera - ažurirane delove softverskog rešenja koje je u svim prethodnim verzijama imalo bezbedonosne propuste
-    \item Alati za odbranu od zlonamernog softvera - koriste se u preventivne svrhe ili za analizu i otklanjanje zaraženih datoteka
-    \item Zaštitni zidovi - softver za regulisanje mrežnog saobraćaja
+    \item Bezbednosne zakrpe softvera - ažurirane delove softverskog rešenja koje je u svim prethodnim verzijama imalo bezbedonosne propuste.
+    \item Alati za odbranu od zlonamernog softvera - koriste se u preventivne svrhe ili za analizu i otklanjanje zaraženih datoteka.
+    \item Zaštitni zidovi - softver za regulisanje mrežnog saobraćaja.
 \end{itemize}
 \subsection{Predložene teme}
 \begin{enumerate}
     \item Evolucija zlonamerkog softvera 
         \begin{description}
             \item od prvih virusa do AI napada
-            \item \href{https://www.kaspersky.com/resource-center/threats/a-brief-history-of-computer-viruses-and-what-the-future-holds}{link} 
-            \item \href{https://www.forbes.com/councils/forbestechcouncil/2024/03/19/how-ai-driven-cyber-attacks-will-reshape-cyber-protection/}{link}
+            \item \url{https://www.kaspersky.com/resource-center/threats/a-brief-history-of-computer-viruses-and-what-the-future-holds}
+            \item \url{https://www.forbes.com/councils/forbestechcouncil/2024/03/19/how-ai-driven-cyber-attacks-will-reshape-cyber-protection/}
         \end{description}
     \item „Pametni dom“ kao meta hakera
         \begin{description}
-            \item \href{https://www.quectel.com/}{link} 
-            \item \href{https://www.cisco.com/site/us/en/products/security/industrial-security/index.html}{link}
+            \item \url{https://www.quectel.com/} 
+            \item \url{https://www.cisco.com/site/us/en/products/security/industrial-security/index.html}
         \end{description}
 \end{enumerate}
 
@@ -282,22 +312,22 @@ Postoji i lista mera koje je poželjno primenjivati kako bi se izbegle gore nave
 Privatnost je često teško definisati jer obuhvata zaštitu od neovlašćenog nadzora, kontrolu nad sopstvenim telom i informacijama, kao i pravo na slobodu mišljenja i govora. Ključan pojam je „pristup“, odnosno pravo pojedinca da ograniči ko i koliko vidi njegove podatke, ali i balans s pravom drugih da pristupe određenim informacijama.
 Kada govorimo o privatnosti na društvenim mrežama bitno je naglasiti da bez obzira na to koliko neko odluči da deli informacije, to što njegovi prijatelji odluče da dele takođe igra značajnu ulogu, čak i ako pojedinac nema nalog na društvenim mrežama.
 
-Kolčići su male tekstualne datoteke koje sajtovi koriste za pamćenje informacija poput prijava, sadržaja korpe i slično. Postoje sesijski (kratkotrajni) i trajni kolčići, koji imaju rok trajanja i čuvaju se na računaru. Trajni kolačići se dele na kolačiće prve strane, koji se priste samo od strane veb sajtova koji su ih napravili, i na kolačiće treće strane koji prate korisnika na drugim domenima
-Zahvaljujući zakonima, sajtovi moraju da traže direktnu saglasnost za upotrebu kolčića, što korisnici često ne razumeju jer ne čitaju pravila privatnosti.
+Kolačići su male tekstualne datoteke koje sajtovi koriste za pamćenje informacija poput prijava, sadržaja korpe i slično. Postoje sesijski (kratkotrajni) i trajni kolačići, koji imaju rok trajanja i čuvaju se na računaru. Trajni kolačići se dele na kolačiće prve strane, koji se prate samo od strane veb sajtova koji su ih napravili, i na kolačiće treće strane koji prate korisnika na drugim domenima.
+Zahvaljujući zakonima, sajtovi moraju da traže direktnu saglasnost za upotrebu kolačića, što korisnici često ne razumeju jer ne čitaju pravila privatnosti.
 Države koriste nadzor kako bi očuvale sigurnost, ali često prelaze etičke i zakonske granice.
 
 Neki od glavnih tehnoloških mehanizama zaštite su:
 \begin{itemize}
-  \item Enkripcija -  sprečava da podaci budu čitljivi u tranzitu
-  \item Virtualne privatne mreže -  sakrivaju adrese i štite komunikaciju
+  \item Enkripcija -  sprečava da podaci budu čitljivi u tranzitu.
+  \item Virtualne privatne mreže -  sakrivaju adrese i štite komunikaciju.
 \end{itemize}
 
 \subsection{Predložene teme}
 \begin{itemize}
   \item Big Data i etika privatnosti
     \begin{description}
-        \item \href{https://hbr.org/2023/07/the-ethics-of-managing-peoples-data}{link} 
-        \item \href{https://www.youtube.com/watch?v=bAyrObl7TYE}{link}
+        \item \url{https://hbr.org/2023/07/the-ethics-of-managing-peoples-data} 
+        \item \url{https://www.youtube.com/watch?v=bAyrObl7TYE}
     \end{description}
 \end{itemize}
 
