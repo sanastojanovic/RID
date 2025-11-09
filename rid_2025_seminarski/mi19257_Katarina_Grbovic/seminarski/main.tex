@@ -88,7 +88,7 @@ Penetraciono testiranje dolazi u više oblika u zavisnosti od toga \textit{šta}
 Pre nego što kompanija izabere provajdera bitno je biti upućen u tipove bezbednosnih tipova pentestinga. Oni se razlikuju po stavkama na koje se fokusiraju, dubini testiranja i trajanju.
 \subsubsection{Podela prema cilju testiranja}
 \begin{itemize}
-  \item \textbf{Mrežni pentesting} - testira se mrežna infrastruktura na napad \cite{ibm_offensive_security} \\
+  \item \textbf{Mrežni pentesting} - testira se čitava mrežna infrastruktura na potencijalni napad \cite{ibm_offensive_security}. \\
   \item \textbf{Pentestih bežičnih mreža} - ovo je testiranje WAN-a i protokola za bežičnu komunikaciju. \\
   \item \textbf{Pentesting web aplikacija} - otkrivaju se greške u kodu i dizajnu kod web sajtova i aplikacija povezanih na internet. \\ 
   \item \textbf{Pentesting mobilnih aplikacija} - testiranje i proučavanje različitih komponenti mobilne aplikacije koje mogu otkriti potencijalne bezbednosne propuste u izvornom kodu same mobilne aplikacije.
@@ -103,7 +103,7 @@ Klijent definiše količinu poznatih informacija koje će podeliti sa penetracio
 \begin{itemize}
   \item \textbf{Black box} - tester nema interne informacije o sistemu i u potpunosti simulira spoljnog napadača.
   \item \textbf{Gray box} - tester ima delimične informacije o sistemu poput osnovnih tehničkih detalja, korisničkih naloga itd.
-  \item \textbf{White box} - tester ima kompletan uvid u sistem, uključujući izvorni kod, mrežnu arhitekturu, arhitekturu sistema i slično. \cite{types-of-pentesting} 
+  \item \textbf{White box} - tester ima kompletan uvid u sistem, uključujući izvorni kod, mrežnu arhitekturu, arhitekturu sistema i slično \cite{types-of-pentesting}.
 \end{itemize}
 \subsection{Metodologije pentestinga}
 Pentesting metodologije predstavljaju formalan plan koji definiše različite faze i pravila koja osiguravaju da je penetracioni test siguran, ponovljiv i efektivan. 
@@ -134,9 +134,9 @@ Faze pentestinga definisane od strane PTES-a su:
 Za razliku od PTES metodologije čiji je fokus na definisanju i opisivanju koraka za uspešno izvođenje pentesta u praksi, NIST \textit{eng. Technical Guide to Information Security Testing and Assessment (NIST SP 800 115) } \cite{nist1} predstavlja zvanično, zakonski definisano uputstsvo za izvođenje penetracionog testa. Predstavlja formalnu, struktuiranu metodologiju koje su prihvatile mnoge federalne agencije i velike kompanije. 
 NIST deli pentesting proces na četiri osnovne faze: 
 \begin{itemize}
-  \item Planiranje - kreiranje rigorozne dokumentacije testnog plana
-  \item Otkrivanje - koristeći aktivno skeniranje sa prikupljanjem javno dostupnih informacija, sa osvrtom na ručnu potvrdu pronađenih informacija 
-  \item Napad - kontrolisana eksploatacija bezbednosnih propusta unutar unapred određenih, striktnih bezbednosnih ograničenja
+  \item Planiranje - kreiranje rigorozne dokumentacije testnog plana.
+  \item Otkrivanje - koristeći aktivno skeniranje sa prikupljanjem javno dostupnih informacija, sa osvrtom na ručnu potvrdu pronađenih informacija.
+  \item Napad - kontrolisana eksploatacija bezbednosnih propusta unutar unapred određenih, striktnih bezbednosnih ograničenja.
   \item Izveštaj - izveštaj namenjen klijentima kao i tehničkoj publici, sa jasnim smernicama za otklanjanje problema \cite{nist}.
 \end{itemize}
 
@@ -145,7 +145,7 @@ NIST deli pentesting proces na četiri osnovne faze:
 OSSTMM (eng. \textit{Open Source Security Testing Methodology Manual} - \textbf{OSSTMM}) vodi testiranje kroz pet kanala da bi se utvrdilo koliko zaista funkcionišu bezbednosni procesi. Na taj način možemo da saznamo šta se operacije postižu pored toga šta je nama cilj da one postignu. Tih pet kanala su:
 
 \begin{itemize}
-    \item \textbf{Ljudska bezbednost} - procena bezbednosti u medjuljudskim interakcijama i komunikaciji
+    \item \textbf{Ljudska bezbednost} - procena bezbednosti u medjuljudskim interakcijama i komunikaciji.
 
     \item \textbf{Fizička bezbednost} – rigorozno testiranje fizičkih aspekata bezbednosti koji zahtevaju fizički pristup.
 
@@ -153,10 +153,10 @@ OSSTMM (eng. \textit{Open Source Security Testing Methodology Manual} - \textbf{
 
     \item \textbf{Telekomunikacije} - evaluacija digitalnih i analognih telekomunikacionih mreža.
 
-    \item \textbf{Mreže za prenos podataka} - testiranje elektronskih sistema i mreža koje se koriste za komunikaciju.  \cite{osstmm}
+    \item \textbf{Mreže za prenos podataka} - testiranje elektronskih sistema i mreža koje se koriste za komunikaciju \cite{osstmm}.
 \end{itemize}
 
-OSSTMM smatra da ovih pet područja zahteva posebnu pažnju što se tiče bezbednosti. Na ove kanale se primenjuje pentesting da bi se otkrile slabosti i ranjivosti sistema. \cite{osstmm}
+OSSTMM smatra da ovih pet područja zahteva posebnu pažnju što se tiče bezbednosti. Na ove kanale se primenjuje pentesting da bi se otkrile slabosti i ranjivosti sistema \cite{osstmm}.
 
 
 \subsubsection{Open Web Application Security Project}
@@ -186,7 +186,7 @@ Pentesting alati se koriste kao deo penetracionog testiranja kako bi se određen
   \item \textbf{Skeniranje ranjivosti} - traže se poznate slabosti sistema, kao i loša konfiguracija koja može biti zloupotrebljena od strane napadača. 
   \item \textbf{Alati za prisluškivanje mrežnog saobraćaja} - alati koji slušaju mrežni saobraćaj. Korisno prilikom identifikacije da li su podaci u saobraćaju enkriptovani, kao i da se identifikuju potencijalno nebezbedne putanje komunikacije.
   \item \textbf{Veb proksiji} - testeri uz pomoć veb proksija mogu uticati i menjati saobraćaj između pretraživača i veb servera kompanije. 
-  \item \textbf{Pogađanje šifara} - napadom grube sile korisničkih šifara unutar sistema je jedan od najčešćih sajber napada. Omogućava testeru da zaključi da li zaposleni unutar kompanije koriste slabe ili jake lozinke \cite{pentesting-tools} . 
+  \item \textbf{Pogađanje šifara} - napadom grube sile korisničkih šifara unutar sistema je jedan od najčešćih sajber napada. Omogućava testeru da zaključi da li zaposleni unutar kompanije koriste slabe ili jake lozinke \cite{pentesting-tools}. 
 \end{itemize}
 
 \subsection{Eskalacija privilegija}
@@ -199,7 +199,7 @@ Dva tipa eskalacije privilegija su sledeća:
 
 \begin{itemize}
   \item \textbf{Horizontalna eskalacija privilegija} - napadač siri svoje privilegije tako što preuzima drugi nalog i preuzima legitimne privilegije dodeljene tom korisniku.
-    \item \textbf{Vertikalna eskalacija privilegija} - napadač pokušava da preuzme druge privilegije sa nalogom na kom se već nalazi. Npr. napadač se nalazi na regularnom nalogu korisnika, ali pokušava da dobije privilegije administratora ili root-a. \cite{privilege-escalation}
+    \item \textbf{Vertikalna eskalacija privilegija} - napadač pokušava da preuzme druge privilegije sa nalogom na kom se već nalazi. Npr. napadač se nalazi na regularnom nalogu korisnika, ali pokušava da dobije privilegije administratora ili \textit{root} pristup \cite{privilege-escalation}.
 \end{itemize}
 
 Za napadače eskalacija privilegija znači pristup okruženju, nadzor i dubina pristupa kao i druge zlonamerne aktivnosti. Povećanje privilegija otvara napadaču širok spektar novih napada na ciljani sistem. Na primer, sticanje pristupa drugim povezanim sistemima, raspoređivanje dodatnih zlonamernih zahteva na ciljani sistem, izmena bezbednosnih postavki ili privilegija, dobijanje pristupa aplikacijama ili podacima unutar sistema koji su van privilegija prvobitno kompromitovanog naloga. U ekstremnim situacijama dobijanje pristupa root-u sistema ili čitavoj mreži. Ako bezbednosni tim sumnja na moguću eskalaciju privilegija neophodno je da se odradi sveobuhvatno istraživanje čitavog sistema. Znaci da je došlo do eskalacije privilegija na sistemu su malver (eng. \textit{malware}), sumnjiva logovanja i sumnjiv mrežni saobraćaj. \\
@@ -214,7 +214,7 @@ Vektori napada koje napadači koriste kako bi došlo do eskalacije privilegija:
 \begin{itemize}
   \item \textbf{Eskploatacija kredencijala} - Jednofaktorska autentikacija\cite{1fa} je najnebezbednija provera kredencijala korisnika i ostavlja praktično otvorena vrata napadačima za eskalaciju privilegija ukoliko dođu do kredencijala. Čak i ukoliko dođe do detekcije neautorizovanog pristupa sistemu, napadač ima više načina kako da dođe i do resetovane lozinke. Neki od najčešćih načina za vraćanja prvobitnih kredencijala su:
   \begin{itemize}
-    \item \textbf{Password Exposure} - pronalaženje šifre među deljenim fajlovima unutar kompanije 
+    \item \textbf{Password Exposure} - pronalaženje šifre među deljenim fajlovima unutar kompanije.
     \item \textbf{Password guessing} - na osnovu javno dostupnih informacija o korisniku napadač može da logički pogađa koja je korisnikova lozinka.
     \item \textbf{Shoulder surfing} - posmatranje aktivnosti žrtve ili uživo ili putem neautorizovanog pristupa kamerama ili preko keyloggera na njihovim uređajima. 
     \item \textbf{Dictionary attacks} - na osnovu učestalih reči kreiraju se potencijalne šifre korisnika koje se potom redom isprobavaju dok se ne nađe šifra. 
@@ -268,13 +268,15 @@ OSCP (eng. \textit{Offensive Security Certified Professional}) je etički hakers
 
 
 \section{Trendovi i budućnost ofanzivne bezbednosti}
-
+Sa rastom i razvojem tehnologije, ofanzivna bezbednost takođe evoluira. Klasično penetraciono testiranje više nije dovoljno jer su današnji napadi kombinovani, automatizovani i veoma često koriste veštačku inteligenciju. 
+\newline
+Zbog ovoga, pojavljuju se novi koncepti poput \textit{purple teaming}-a i \textit{AI pentesting}-a koji spajaju ofanzivne i defanzivne pristupe i koriste automatizaciju za bržu i dublju detekciju ranjivosti. Cilj nije više samo pronaći slabosti, već neprestano testirati, učiti i unapređivati bezbednosne mehanizme u realnom vremenu.  
 \subsection{Purple teaming}
-Purple team je grupa sajber bezbednosnih profesionalaca koji simuliraju maliciozne napade i pentesting da bi identifikovali ranjivosti i predložili strategije za organizacije u IT infrastrukturi. Izraz je izveden od reci ljubičasto što simbolizuje kombinaciju crveni (ofanzivni) i plavi (defanzivni) tim. Za razliku od tradicionalnog crvenog i plavog tima koji su obično razdvojeni delovi, ljubičasti tim radi u bliskoj koordinaciji, dele informacije i uvid da bi uočili ranjivosti i unapredili sveukupno stanje bezbednosti sistema.\\
-Ljubičasti tim nudi isti benefit kao i crveni i plavi tim. On omogućava organizacijama da aktivno testiraju postojeće sajber bezbednosti i sposobnosti u okruženjima niskog rizika. Ujedinjenje crvenog/plavog tima omogućava organizaciji da identifikuje lošu konfiguraciju i pokriva rupe u postojećim bezbednosnim proizvodima. On ojačava mrežnu bezbednost da detektuju targetirane napade i uspori vreme koje je potrebno napadaču da kompromituje mrežu i raširi se u njoj. Podiže upućenost osoblja u rizike ljudske ranjivosti koji mogu da kompromituju bezbednost organizacije. 
-Ujedinjenje crvenog i plavog tima kao jednu jedinicu nudi dodatne benefite kao što je povećanje zaštite kroz konstantan feedback i znanje podeljeno izmedju ujedinjenog ofanzivnog i defanzivnog tima. Konstantno testiranje preneseno kroz konstantno angažovanje ljubičastog tima. Plavi i crveni tim imaju zajedničke ciljeve \cite{purple-teaming}.
+Purple team je grupa sajber bezbednosnih profesionalaca koji simuliraju maliciozne napade i pentesting da bi identifikovali ranjivosti i predložili strategije za organizacije u IT infrastrukturi. Izraz je izveden od reci ljubičasto što simbolizuje kombinaciju crvenog i plavog tima. Za razliku od tradicionalnog crvenog i plavog tima koji su obično podeljene uloge, ljubičasti tim radi u bliskoj koordinaciji i saradnji, deli informacije i uvid kako bi uočili ranjivosti i unapredili sveukupno stanje bezbednosti sistema.\\
+Ljubičasti tim nudi isti benefit kao i crveni i plavi tim. On omogućava organizacijama da aktivno testiraju postojeće ranjivosti u njihovim sistemima. Ujedinjenje crvenog/plavog tima omogućava organizaciji da identifikuje lošu konfiguraciju i pokriva rupe u postojećim bezbednosnim proizvodima, ojačava mrežnu bezbednost i podiže upućenost osoblja u rizike ljudske ranjivosti koji mogu da kompromituju bezbednost organizacije. 
+Ujedinjenje crvenog i plavog tima kao jednu jedinicu nudi dodatne benefite kao što je povećanje zaštite kroz konstantan fibek i znanje podeljeno izmedju ujedinjenog ofanzivnog i defanzivnog tima. Konstantno testiranje preneseno je kroz konstantno angažovanje ljubičastog tima. \cite{purple-teaming}.
 \subsection{AI u pentesting napadima i odbrani}
-AI pentestiranje obezbedjuje bezbednost veštacke inteligencije sistema tako što simulira napade koji eksploatišu njihove ranjivosti. Za razliku od tradicionalnog pentestinga koji se fokusira na mrežu, aplikacije i infrastrukturu, AI pentesting otkriva slabosti u AI modelima arhitekture, rada sa podacima i procesom donošenja odluke. AI pentesting pomaže u identifikovanju ranjivosti koje mogu da dozvole hakerima da isfiltriraju osetljive podatke. Ovaj pristup otvara AI model mnogim potencijalnim napadima \cite{ai-pentesting}.
+AI pentestiranje obezbeđuje bezbednost veštacke inteligencije sistema tako što simulira napade koji eksploatišu ranjivosti AI modela. Za razliku od tradicionalnog pentestinga koji se fokusira na mrežu, aplikacije i infrastrukturu, AI pentesting otkriva slabosti u AI modelima arhitekture, rada sa podacima i procesom donošenja odluke \cite{ai-pentesting}.
 \begin{itemize}
   \item \textbf{Trovanje podataka} - u ovoj vrsti napada, haker ubacuje zlonamerne podatke u kolekcije podataka za treniranje, korumpirajući model za proces učenja. Kao rezultat, AI sistem prihvata netačne šablone i ponašanja, kompromitujući pouzdanost njegovih izlaza. Validacija podataka i anomalije detektovane pomažu zaštiti treniranih podataka da identifikuju i filtriraju sumnjive ili izmanipulisane ulaze \cite{ai-pentesting}.
   \item \textbf{Prompt injection napad}
