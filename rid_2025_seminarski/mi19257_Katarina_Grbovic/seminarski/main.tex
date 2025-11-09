@@ -33,8 +33,8 @@
 \author{%
 \sffamily
 \begin{tabular}{@{}ll@{}}
-\textbf{Student:} & Katarina Grbović(257/2019) \\
-\textbf{Profesor:} & Dr. Sana Stojanović Durdević \\
+\textbf{Student:} & Katarina Grbović (257/2019) \\
+\textbf{Profesor:} & Dr. Sana Stojanović Đurđević \\
 \end{tabular}
 }
 
@@ -50,40 +50,52 @@
 \newpage
 
 \section{Uvod}
-\textbf{Ofanzivna bezbednost}  (eng. \textit{Offensive security} - \textbf{OffSec}) prestavlja niz bezbednosnih rešenja koja koriste iste taktike kao zlonamerni akteri u stvarnim napadima, ali sa ciljem da se ojača mrežna bezbednost umesto da joj se naškodi. Meteode ofanzivne bezbednosti uključuju \textit{red teaming}, \textit{penetration testing} i \textit{vulnerability assesment}.
+% Skoro svaki aspekt svakodnevnog života današnjice je nemoguće zamisliti bez savremene tehnologije. Uz pomoć računara, telefona i interneta se dopisujemo, plaćamo račune, učimo, obavljamo kupovinu i teško nam je da zamislimo da je moguće nauditi našim telefonima. 
 
-Operacije u okviru ofanzivne bezbednosti izvršavaju \textit{etički hakeri} odnosno eksperti informacione bezbednosti koji koriste veštine hakovanja kako bi pronašli i popravili IT sistemske mane. Etički hakeri uz prethodne dozovle izvršavaju simulirane napade na dati sistem, za razliku od stvarnih sajber kriminalaca koji upadaju u sisteme zarad krađe osetljivih podataka ili pak ostavljanja malvera \cite{ibm_offensive_security}. \\
-U okviru ofanzivne bezbednosti, \textit{red team} \cite{redblue} predstavlja grupu stručnjaka u okviru informacione bezbednosti čija je uloga da se pretvaraju da su napadač sistema kako bi testirali bezbednosne mere tog sistema. Crveni timovi izvršavaju \textit{live fire} vežbe kako bi pomogli organizacijama da bolje razumeju potencijalne napade i kako da ih ubuduće spreče.\\
+U današnje doba, praktično čitav život savremenog čoveka nalazi se na njegovom telefonu i na internetu. Svaki dan listamo socijalne mreže, obavljamo kupovinu i slušamo muziku, a naše podatke držimo u \textit{klaudu} \cite{klaud}. Skoro nam je nezamislivo da neko lako može da naruši bezbednost naših uređaja, kao i da neovlašćeno pristupi našim podacima koje ostavljamo na internetu. \\
+Često kada pomislimo na bezbednost našeg računara ili bezbednost interneta pomislimo na kompjuterske viruse, spam mejlove i hakere - maliciozne napadače koji žele da upadnu u naš sistem. Ovakvi vidovi napada su sada iza nas, međutim hakeri i druge zlonamerne strane su se prilagodile promenama i savremene metode napada su sofisticiranije, opasnije i razornije nego pre. 
+Kako bismo zaštitili sisteme uređaja i mreža od ovakvih napada, razvila se grana informacione bezbednosti (eng. \textit{cybersecurity}) \cite{cybersec}. \\ 
+Informaciona bezbednost se fokusira na zaštitu mreža, aplikacija i informacija od neautorizovanog pristupa ili napada. Međutim, delotvorna odbrana se ne ogleda samo u njenim mehanizmima, već i u razumevanju kako ti mehanizmi odbrane mogu da zakažu - ovim zadatkom se bavi podoblast informacione bezbednosti - ofanzivna bezbednost. 
+\\
+\\
+\textbf{Ofanzivna bezbednost}  (eng. \textit{Offensive security} - \textbf{OffSec}) je grana informacione bezbednosti koja menja način na koji pristupamo zaštiti sistema i računarskih mreža - umesto da se brani sistem od napadača, ideja je da se pretvaramo da smo napadač, ali sa jasno postavljenim legalnim i etičkim granicama. Svrha ofanzivne bezbednosti je da uoči slabosti u sistemima pre samih napadača kroz testiranje i simulaciju realnih napada. Njih izvršavavaju \textit{etički hakeri} 
+\cite{ibm_offensive_security}. \\
 
-\textbf{Defanzivna bezbednost} (eng. \textit{Defensive security}) takođe predstavlja niz bezbednosnih praksi i rešenja koja za cilj imaju zaštitu sistema, mreža i podataka od sajber pretnji i napada kroz prevenciju, detekciju i odgovor. \\
-U odnosu na crveni tim, \textit{blue team} \cite{redblue} čini grupa sajbersekjuriti eksperata čiji je osnovni zadatak da štite sistem od spoljašnjih napada.\\
+U okviru ofanzivne bezbednosti, \textit{red team} \cite{redblue} predstavlja grupu stručnjaka čiji je cilj sveobuhvatno testiranje i simulirani napadi na sisteme kompanije i njenih zaposlenih, kako bi se utvrdilo na koji način kompanija može da uoči, odgovori i oporavi se od stvarnih napada.
+\\
 
-\subsection{Razlika između ofanzivne i defanzivne bezbednosti}
+\textbf{Defanzivna bezbednost} (eng. \textit{Defensive security}) takođe predstavlja niz bezbednosnih praksi i rešenja koja za cilj imaju zaštitu sistema, mreža i podataka od sajber pretnji i napada kroz prevenciju, uočavanje i odgovor. \\
+U odnosu na crveni tim, \textit{blue team} \cite{redblue} čini grupa eksperata čiji je osnovni zadatak da štite sistem kompanije od spoljašnjih napada.\\
 
-Za razliku od ofanzivne, kod defanzivne bezbednosti se bavimo taktikama kako da detektujemo, odgovorimo i odbranimo se od napada na sistem. Defanzivna bezbednost gleda na napadača kao na protivnika od koga se treba odbraniti, dok ofanzivna bezbednost gleda kako može da iskoristi napadačeve taktike i primeni ih u svojim rešenjima. Tipični primeri defanzivne bezbednosti su anti-virus i firewall. \cite{defensive_security}
+% \subsection{Razlika između ofanzivne i defanzivne bezbednosti}
 
-Jedan od osnovnih zadataka stručnjaka u okviru defanzivne bezbednosti je i da razlikuju prave pretnje u odnosu na lažne uzbune. Problem se javlja jer u okviru defanzivne bezbednosti, ne postoji definisan obrazac odbrane od novih metoda, već samo od poznatih i već proučenih metoda napada. 
+Defanzivna bezbednost gleda na napadača kao na protivnika od koga se treba odbraniti, dok ofanzivna bezbednost gleda kako može da iskoristi napadačeve taktike i primeni ih u svojim rešenjima \cite{defensive_security}.
+
 
 \subsection{Pentesting}
-
-Pentest  \textit{(eng. Penetration Test)} predstavlja jedan od konkretnih procesa identifikacije bezbednosnih propusta unutar ofanzivne bezbednosti. Penetracioni test je autorizovani simulirani napad (iz perspektive napadača) na sistem radi pronalaženja bezbednosnih propusta pre nego što ih napadač pronađe. Pentesting se radi ručno, i samim tim predstavlja sveobuhvatniji proces pronalaženja bezbednosnih propusta gde se takođe i smanjuje rizik od lažne uzbune. Za izvođenje pentestinga se unajmljuju specijalizovane kompanije za pentesting i ofanzivnu bezbednost uopšte. Postoje različiti tipovi pentestinga poput: pentestinga krajnjih aplikacija, pentestinga mreže i IoT \textit{(eng. Internet Of things)} uređaja, pentesting zaposlenih... \\
+Unutar oblasti ofanzivne bezbednosti, jedna od najprihvaćenijih metoda rada jeste upravo penetraciono testiranje  \textit{(eng. Penetration Testing - pentesting)}. Zadaci ofanzivne bezbednosti podrazumevaju širok spektar tehnika za otkrivanje ranjivosti određenih sistema, dok se pentesting fokusira specifično na simulaciju pravih sajbernapada na sisteme, mreže ili aplikacije. Drugim rečima, ofanzivna bezbednost generalno predstavlja pristup "razmišljaj kao napadač", dok je pentest struktuirana, kontrolisana metoda upravo tog pristupa.
+Pentesting se radi ručno, i samim tim predstavlja sveobuhvatniji proces pronalaženja bezbednosnih propusta.
 Kako bi se pristupilo najrazličitijim tipovima informacionih sistema, postoje različiti tipovi penetracionih testova kao i metodologije koje prate penetracione testove. \\
-Različiti tipovi i metodologije penetracionih testova postoje kako bi se obezbedilo da procene bezbednosti budu sistematske, ponovljive i prilagođene specifičnim rizicima organizacije.\\
-Klasifikovanjem testova i praćenjem utvrđenih pristupa, testeri mogu efikasnije otkriti ranjivosti i pružiti praktične smernice za njihovo otklanjanje. 
+% Različiti tipovi i metodologije penetracionih testova postoje kako bi se obezbedilo da procene bezbednosti budu sistematske, ponovljive i prilagođene specifičnim rizicima organizacije.\\
+%Klasifikovanjem testova i praćenjem utvrđenih pristupa, testeri mogu efikasnije otkriti ranjivosti i pružiti praktične smernice za njihovo otklanjanje. 
 
 \section{Tipovi i metodologije u penetracionom testiranju}
+
+Penetraciono testiranje dolazi u više oblika u zavisnosti od toga \textit{šta} se testira i \textit{kako} se test izvršava. Testovi mogu da targetiraju mreže, veb aplikacije, klaud okruženja, uređaje ili čak ljude - i da prate ustanovljene metodologije koje daju strukturu samog testa, odnosno korake i pravila po kojima se test izvršava.
+
 \subsection{Tipovi pentestinga}
+
 Pre nego što kompanija izabere provajdera bitno je biti upućen u tipove bezbednosnih tipova pentestinga. Oni se razlikuju po stavkama na koje se fokusiraju, dubini testiranja i trajanju.
 \subsubsection{Podela prema cilju testiranja}
 \begin{itemize}
-  \item \textbf{Interni i eksterni mrežni pentesting} - procenjuje se infrastruktura mreže u kompaniji i u oblaku. Ovo podrazumeva firewall-ove, serverske sisteme i uređaje koji učestvuju. Interno testiranje se bazira na interne resurse u kompaniji. Eksterno testiranje je testiranje infrastrukture izložene internetu. Za ovaj test je neophodno poznavanje broja internih i eksternih IP adresa, veličinu subnet-a i lokacije. \cite{ibm_offensive_security} \\
-  \item \textbf{Pentestih bežičnih mreža} - ovo je testiranje WAN-a i bežičnih protokola (npr. Bluetooth, ZigBee). Cilj je otkrivanje lažnih pristupnih tačaka, slabosti enkripcije i ranjivosti WPA protokola. Neophodno je poznavanje broja bežičnih i mreža za goste, lokacije i jedinstvene SSID-eve. \\
-  \item \textbf{Pentesting web aplikacija} - otkrivaju se greške u kodiranju, dizajnu i razvoju kod web sajtova i aplikacija povezanih na internet. Potrebno je znati broj aplikacija koje je neophodno testirati,  broj statičkih i dinamičkih stranica i ulaznih polja. \\ 
-  \item \textbf{Pentesting mobilnih aplikacija} - testiranje i proučavanje različitih komponenti mobilne aplikacije koje mogu otkriti potencijalne bezbednosne propuste u izvornom kodu same mobilne aplikacije
-  \item \textbf{Build i konfiguracija sistema} - da bi se utvrdili propusti u konfiguraciji kroz web servere, aplikacione servere, rutere i firewall. Poznavanje sistemskih bulid-ova, operativnih sistema i koji aplikacioni serveri treba da se testiraju. \\
-  \item \textbf{Socijalni inžinjering} - da li sistem ima mogućnost i odgovarajući tim da detektuje i odgovori na phishing napade koji se dešavaju preko email-a. Analize se vrše kroz inicirane phishing napade, spear phishing i BEC napade. \\
+  \item \textbf{Mrežni pentesting} - testira se mrežna infrastruktura na napad \cite{ibm_offensive_security} \\
+  \item \textbf{Pentestih bežičnih mreža} - ovo je testiranje WAN-a i protokola za bežičnu komunikaciju. \\
+  \item \textbf{Pentesting web aplikacija} - otkrivaju se greške u kodu i dizajnu kod web sajtova i aplikacija povezanih na internet. \\ 
+  \item \textbf{Pentesting mobilnih aplikacija} - testiranje i proučavanje različitih komponenti mobilne aplikacije koje mogu otkriti potencijalne bezbednosne propuste u izvornom kodu same mobilne aplikacije.
+   \item \textbf{Build i konfiguracija sistema} - služi za utvrđivanje propusta u konfiguraciji kroz veb servere, aplikacione servere, rutere i fajrvol (\textit{eng. firewall}) \cite{firewall}. \\
+  \item \textbf{Socijalni inžinjering} - testeri pokušavaju da od zaposlenih posredno izvuku osetljive informacije, da kliknu na zlonamerni link ili da im daju pristup sistemu, bez da eksplicitno pre toga hakuju sistem. \\
   \item \textbf{Pentesting cloud-a} - pentesting klauda podrazumeva sistematični proces identifikovanja i zloupotrebljavanja bezbednosnih propusta u klaud okruženjima, koja zbog unikatne arhitekture, deljene odgovornosti i dinamičke prirode zahtevaju poseban proces testiranja. \\
-  \item \textbf{Agilni pentesting} - agilni pentesting dostavlja brze i precizne bezbednosne uviđaje koji ne remete brzi tempo koji zahtevaju Agile i DevOps okruženja\cite{types-of-pentesting}. \\
+  \item \textbf{Agilni pentesting} - agilni pentesting dostavlja brze i precizne bezbednosne uviđaje koji ne remete brzi tempo koji zahtevaju Agile i DevOps okruženja \cite{types-of-pentesting}. \\
 \end{itemize}
 
 \subsubsection{Podela prema količini informacija prilikom testiranja}
@@ -170,18 +182,21 @@ OWASP (eng. \textit{Open Web Application Security Project} - \textbf{OWASP}) je 
 Pentesting alati se koriste kao deo penetracionog testiranja kako bi se određeni procesi automatizovali, povećala efikasnost testiranja kao i za otkrivanje ranjivosti sistema koje je teško otkriti manuelnom analizom. Neki od tipova pentesting alata su sledeći:
 
 \begin{itemize}
-\item \textbf{Port Scanners} - otkrivaju otvorene portove unutar nekog sistema. Otvoreni portovi sugerišu koji vektori napada se dalje mogu koristiti na tom sistemu kao i neke dodatne informacije o sistemu.
-  \item \textbf{Vulnerability Scanning} - traže se poznate slabosti sistema, kao i loša konfiguracija koja može biti zloupotrebljena od strane napadača. 
-  \item \textbf{Network Sniffers} - alati koji slušaju mrežni saobraćaj. Korisno prilikom identifikacije da li su podaci u saobraćaju enkriptovani, kao i da se identifikuju potencijalno nebezbedne putanje komunikacije.
-  \item \textbf{Web Proxies} - testeri uz pomoć veb proksija mogu uticati i menjati saobraćaj između pretraživača i veb servera kompanije. 
-  \item \textbf{Password Cracking} - napadom grube sile korisničkih šifara unutar sistema je jedan od najčešćih sajber napada. Omogućava testeru da zaključi da li zaposleni unutar kompanije koriste slabe ili jake lozinke \cite{pentesting-tools} . 
+\item \textbf{Port skeneri} - otkrivaju otvorene portove unutar nekog sistema. Otvoreni portovi sugerišu koji vektori napada se dalje mogu koristiti na tom sistemu kao i neke dodatne informacije o sistemu.
+  \item \textbf{Skeniranje ranjivosti} - traže se poznate slabosti sistema, kao i loša konfiguracija koja može biti zloupotrebljena od strane napadača. 
+  \item \textbf{Alati za prisluškivanje mrežnog saobraćaja} - alati koji slušaju mrežni saobraćaj. Korisno prilikom identifikacije da li su podaci u saobraćaju enkriptovani, kao i da se identifikuju potencijalno nebezbedne putanje komunikacije.
+  \item \textbf{Veb proksiji} - testeri uz pomoć veb proksija mogu uticati i menjati saobraćaj između pretraživača i veb servera kompanije. 
+  \item \textbf{Pogađanje šifara} - napadom grube sile korisničkih šifara unutar sistema je jedan od najčešćih sajber napada. Omogućava testeru da zaključi da li zaposleni unutar kompanije koriste slabe ili jake lozinke \cite{pentesting-tools} . 
 \end{itemize}
 
 \subsection{Eskalacija privilegija}
 
-Eskalacija privilegija (eng. \textit{Privilege esalation}) predstavlja dobijanje neatuorizovanog pristupa nad osetljivim resursima određenog sistema zloupotrebljavajući bagove, lošu konfiguaciju operativnog sistema ili softvera.
+Eskalacija privilegija (eng. \textit{Privilege esalation}) predstavlja dobijanje neatuorizovanog pristupa nad osetljivim resursima određenog sistema zloupotrebljavajući bagove, lošu konfiguaciju operativnog sistema ili softvera. U pentestingu, eskalacija privilegija je važna jer demonstrira koliki je stvaran uticaj ranjivosti određenog sistema - na primer ukoliko napadač pronađe korisnika i uspe da dobije prava administratora, može čitati sve fajlove, instalirati zlonameran softver i može imati kontrolu nad čitavim sistemom. 
+
+Eskalacija privilegija je u pentestingu potrebna iz više razloga. Zahvaljujući eskalaciji privilegija možemo proceniti koliko štete napad može da napravi ukoliko napadač zloupotrebi određenu ranjivost. Možemo proceniti i \textit{lance napada} - kompromitovanje često počinje od sitne ranjivosti gde se kroz eskalaciju dolazi do ključnih resursa. Na kraju, eskalacija privilegija nam daje konkretne dokaze o ranjivosti i korake za popravku ranjivog sistema.
 
 Dva tipa eskalacije privilegija su sledeća:
+
 \begin{itemize}
   \item \textbf{Horizontalna eskalacija privilegija} - napadač siri svoje privilegije tako što preuzima drugi nalog i preuzima legitimne privilegije dodeljene tom korisniku.
     \item \textbf{Vertikalna eskalacija privilegija} - napadač pokušava da preuzme druge privilegije sa nalogom na kom se već nalazi. Npr. napadač se nalazi na regularnom nalogu korisnika, ali pokušava da dobije privilegije administratora ili root-a. \cite{privilege-escalation}
@@ -224,6 +239,7 @@ Vektori napada koje napadači koriste kako bi došlo do eskalacije privilegija:
   \end{itemize}
 \end{itemize}
 \section{Zakonski i etički aspekti}
+Penetraciono testiranje simulira ofanzivne akcije koje bi u suprotnom bile nelegalne ukoliko bi se radile bez dozvole. Legalni ugovori i etička pravila postoje kako se zaštitio tester, klijent i treća strana. Ovime se takođe osigurava da testiranje pronalazi ranjivosti bez činjenja prave štete i da ispunjava regulative koje zahtevaju rednovno bezbednosno testiranje. 
 
 \subsection{Etički aspekti pentestinga}
 \subsubsection*{Autorizacija} 
@@ -243,7 +259,8 @@ Organizacija mora da osigura da testing vežbe potpadaju pod zakon i regulative,
 \subsubsection*{Obaveza}
 Organizacije moraju da razmišljaju o potencijalnim obavezama koje se mogu pojaviti kao posledica testiranja, kao što je šteta naneta mreži ili sistemu. Ovo može da uključuje gradjanske i kriminalne obaveze, zavisno od prirode i količine šteta koja je nastala. Da se ove obaveze ublaže, organizacije moraju da osiguraju da učestvuju sa kvalifikovanim testerima od poverenja koji imaju neophodne veštine i iskustvo da se izvrši testiranje. Ovo uključuje verifikaciju kredencijala i praćenje zapisnika testera, kao i da osiguraju da prate etičke standarde i najbolje postupke u poslu. Organizacije moraju da osiguraju da imaju odgovarajuće osiguranje da se zaštite od potencijalnih obaveza koje mogu doći kao posledica testiranja\cite{ethical-legal-pentesting}.
 \subsubsection*{Dokumentacija}
-Organizacija mora da vodi detaljan zapisnik svojih testova, uključujući nadgledanje testova, korišćenih metoda i postignutih rezultata. Ova dokumentacija je neophodna da se demonstrira da je organizacija učestvovala na odgovoran i profesionalan način tokom testiranja i da se uklapa u regulative i legalne zahteve. Održavanje detaljnih zapisnika testiranja može da pomogne organizaciji ako se desi da je narušena bezbednost. Podnošenjem dokaza da su preduzeli  sve korake da zaštite svoj sistem i mrežu, organizacija može da smanji potencijalne obaveze i minimizuje štetu\cite{ethical-legal-pentesting}.
+Organizacija mora da vodi detaljan zapisnik svojih testova, uključujući nadgledanje testova, korišćenih metoda i postignutih rezultata. Ova dokumentacija je neophodna da se demonstrira da je organizacija učestvovala na odgovoran i profesionalan način tokom testiranja i da se uklapa u regulative i legalne zahteve. Održavanje detaljnih zapisnika testiranja može da pomogne organizaciji ako se desi da je narušena bezbednost. Podnošenjem dokaza da su preduzeli  sve korake da zaštite svoj sistem i mrežu, organizacija može da smanji potencijalne obaveze i minimizuje štetu \cite{ethical-legal-pentesting}.
+
 \subsubsection*{Certified Ethical Hacker}
 CEH (eng. \textit{Certified Ethical Hacker}) je kvalifikacija izdata od strane EC-Council-a i dobija se demonstriranjem znanja o proceni bezbednosti računarskih sistema traženjem ranjivosti u ciljanim sistemima, koristeći ista znanja i tehnike kao zlonamerni napadač, ali na zakonit i legitiman način. Koristi se za procenu bezbednosnog položaja ciljanog sistema\cite{ceh}.
 \subsubsection*{Offensive Security Certified Professional}
@@ -259,8 +276,7 @@ Ujedinjenje crvenog i plavog tima kao jednu jedinicu nudi dodatne benefite kao �
 \subsection{AI u pentesting napadima i odbrani}
 AI pentestiranje obezbedjuje bezbednost veštacke inteligencije sistema tako što simulira napade koji eksploatišu njihove ranjivosti. Za razliku od tradicionalnog pentestinga koji se fokusira na mrežu, aplikacije i infrastrukturu, AI pentesting otkriva slabosti u AI modelima arhitekture, rada sa podacima i procesom donošenja odluke. AI pentesting pomaže u identifikovanju ranjivosti koje mogu da dozvole hakerima da isfiltriraju osetljive podatke. Ovaj pristup otvara AI model mnogim potencijalnim napadima \cite{ai-pentesting}.
 \begin{itemize}
-  \item \textbf{Trovanje podataka}
-  U ovoj vrsti napada, haker ubacuje zlonamerne podatke u kolekcije podataka za treniranje, korumpirajući model za proces učenja. Kao rezultat, AI sistem prihvata netačne šablone i ponašanja, kompromitujući pouzdanost njegovih izlaza. Validacija podataka i anomalije detektovane pomažu zaštiti treniranih podataka da identifikuju i filtriraju sumnjive ili izmanipulisane ulaze \cite{ai-pentesting}.
+  \item \textbf{Trovanje podataka} - u ovoj vrsti napada, haker ubacuje zlonamerne podatke u kolekcije podataka za treniranje, korumpirajući model za proces učenja. Kao rezultat, AI sistem prihvata netačne šablone i ponašanja, kompromitujući pouzdanost njegovih izlaza. Validacija podataka i anomalije detektovane pomažu zaštiti treniranih podataka da identifikuju i filtriraju sumnjive ili izmanipulisane ulaze \cite{ai-pentesting}.
   \item \textbf{Prompt injection napad}
   Ovo se dešava kada napadači koriste manipulativne prompt-ove da generisu štetan sadržaj, kao što je zlonamerni kod ili diskriminišući jezik. AI pentesting će naći te probleme koji mogu biti popravljeni kroz striktnu ulaznu validaciju i korisničku autentifikaciju \cite{ai-pentesting}.
   \item \textbf{Inverzija modela i ekstrakcija podataka}
