@@ -4,7 +4,11 @@
 \usepackage{fancyhdr} 
 \usepackage{titlesec} 
 \usepackage{tocloft} 
-\usepackage{biblatex} 
+\usepackage[
+    maxbibnames=99,
+    minbibnames=99
+]{biblatex}
+
 \usepackage{csquotes} 
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
@@ -44,26 +48,11 @@
 
 \section{Uvod}
 
-\textbf{Veštačka inteligencija (engl. \textit{Artificial Intelligence - AI})} predstavlja jednu od najznačajnijih oblasti savremene računarske nauke. Njeni počeci vezuju se za sredinu XX veka, kada su istraživači prvi
-put postavili pitanje da li je moguće da mašine imitiraju ljudsko razmišljanje i
-donošenje odluka. Tokom decenija, veštačka inteligencija je prolazila kroz različite
-faze razvoja, od simboličkih i ekspertnih sistema do savremenih metoda zasnovanih na
-mašinskom učenju i obradi velikih količina podataka \cite{russell2020}.
+\textbf{Veštačka inteligencija (engl. \textit{Artificial Intelligence - AI})} predstavlja jednu od najznačajnijih oblasti savremene računarske nauke. Njeni počeci vezuju se za sredinu XX veka, kada su istraživači prvi put postavili pitanje da li je moguće da mašine imitiraju ljudsko razmišljanje i donošenje odluka. Tokom decenija, veštačka inteligencija je prolazila kroz različite faze razvoja, od simboličkih i ekspertnih sistema do savremenih metoda zasnovanih na mašinskom učenju i obradi velikih količina podataka~\cite{russell2020}.
 
-Za razliku od ranijih perioda, veštačka inteligencija danas nije ograničena isključivo
-na istraživačke centre i akademsku zajednicu. Razvoj računarske infrastrukture,
-dostupnost interneta i eksponencijalni rast digitalnih podataka omogućili su da sistemi
-zasnovani na veštačkoj inteligenciji postanu široko dostupni i gotovo neizbežni u
-svakodnevnom životu. Algoritmi veštačke inteligencije danas se koriste u pretraživačima,
-društvenim mrežama, sistemima za preporuku sadržaja, obrazovanju, poslovanju i mnogim
-drugim oblastima.
+Za razliku od ranijih perioda, veštačka inteligencija danas nije ograničena isključivo na istraživačke centre i akademsku zajednicu. Razvoj računarske infrastrukture, dostupnost interneta i eksponencijalni rast digitalnih podataka omogućili su da sistemi zasnovani na veštačkoj inteligenciji postanu široko dostupni i gotovo neizbežni u svakodnevnom životu. Algoritmi veštačke inteligencije danas se koriste u pretraživačima, društvenim mrežama, sistemima za preporuku sadržaja, obrazovanju, poslovanju i mnogim drugim oblastima.
 
-Posebno mesto u savremenom razvoju veštačke inteligencije zauzimaju \textbf{veliki jezički
-modeli (engl. \textit{Large Language Models – LLM})}. Ovi modeli su trenirani na ogromnim
-skupovima tekstualnih podataka i dizajnirani su tako da razumeju, analiziraju i
-generišu prirodni jezik na način koji je blizak ljudima. LLM modeli omogućavaju širok spektar
-primena, od odgovaranja na pitanja i sažimanja tekstova, do asistencije u učenju i
-rešavanju problema \cite{bommasani2021}.
+Posebno mesto u savremenom razvoju veštačke inteligencije zauzimaju \textbf{veliki jezički modeli (engl. \textit{Large Language Models – LLM})}. Ovi modeli su trenirani na ogromnim skupovima tekstualnih podataka i dizajnirani su tako da razumeju, analiziraju i generišu prirodni jezik na način koji je blizak ljudima. LLM modeli omogućavaju širok spektar primena, od odgovaranja na pitanja i sažimanja  ekstova, do asistencije u učenju i rešavanju problema~\cite{bommasani2021}.
 
 U poslednjih nekoliko godina razvijen je veći broj sistema zasnovanih na LLM, među kojima se posebno izdvajaju:
 \begin{itemize}
@@ -74,14 +63,9 @@ U poslednjih nekoliko godina razvijen je veći broj sistema zasnovanih na LLM, m
     \item \textbf{LLaMA} (Meta).
 \end{itemize}
 
-Zajednička karakteristika ovih sistema jeste njihova široka dostupnost i relativna
-jednostavnost korišćenja, što ih je učinilo dostupnim velikom broju korisnika bez
-posebnog tehničkog predznanja. Ovakav razvoj doveo je do toga da alati zasnovani na
-LLM modelima sve češće preuzimaju ulogu izvora informacija, pomoćnika u
-učenju i neke vrste ličnog asistenta koji je uvek dostupan za sve što nam je potrebno.
+Zajednička karakteristika ovih sistema jeste njihova široka dostupnost i relativna jednostavnost korišćenja, što ih je učinilo dostupnim velikom broju korisnika bez posebnog tehničkog predznanja. Ovakav razvoj doveo je do toga da alati zasnovani na LLM modelima sve češće preuzimaju ulogu izvora informacija, pomoćnika u učenju i neke vrste ličnog asistenta koji je uvek dostupan za sve što nam je potrebno.
 
-Cilj ovog seminarskog rada je da se analizira \textbf{ChatGPT}, kao jedan od najkorišćenijih i najpoznatijih LLM modela i ispita njegov uticaj na opšte znanje. Poseban akcenat biće na
-prednostima i ograničenjima korišćenja ChatGPT-a kao izvora informacija, kao i na njegov
+Cilj ovog seminarskog rada je da se analizira \textbf{ChatGPT}, kao jedan od najkorišćenijih i najpoznatijih LLM modela i ispita njegov uticaj na opšte znanje. Poseban akcenat biće na prednostima i ograničenjima korišćenja ChatGPT-a kao izvora informacija, kao i na njegov
 uticaj na obrazovanje, kritičko mišljenje i savremeno društvo u celini.
 
 
@@ -90,27 +74,17 @@ uticaj na obrazovanje, kritičko mišljenje i savremeno društvo u celini.
 \section{LLM modeli i ChatGPT}
 \subsection{Pregled tehnologije}
 
-Razvoj veštačke inteligencije u velikoj meri je oblikovan pojavom
-modela zasnovanih na dubokom učenju, naročito LLM modela, koji su omogućili kvalitativni skok u
-obradi prirodnog jezika \cite{vaswani2017,bommasani2021}.
+Razvoj veštačke inteligencije u velikoj meri je oblikovan pojavom modela zasnovanih na dubokom učenju, naročito LLM modela, koji su omogućili kvalitativni skok u obradi prirodnog jezika~\cite{vaswani2017,bommasani2021}.
 
-Savremeni LLM modeli zasnivaju se na naprednim metodama mašinskog učenja,
-koje omogućavaju računaru da uoči obrasce i zakonitosti u velikim količinama tekstualnih
-podataka. Jedan od ključnih koncepata koji je omogućio ovakav napredak jeste
-\textit{transformer} arhitektura, uvedena 2017. godine, koja omogućava modelima da
-istovremeno obrađuju čitave sekvence teksta i sagledaju odnose između reči u različitim
-delovima rečenice ili dokumenta \cite{vaswani2017}.
+Savremeni LLM modeli zasnivaju se na naprednim metodama mašinskog učenja, koje omogućavaju računaru da uoči obrasce i zakonitosti u velikim količinama tekstualnih podataka. Jedan od ključnih koncepata koji je omogućio ovakav napredak jeste \textit{transformer} arhitektura, uvedena 2017. godine, koja omogućava modelima da istovremeno obrađuju čitave sekvence teksta i sagledaju odnose između reči u različitim delovima rečenice ili dokumenta~\cite{vaswani2017}.
 
 
-Za razliku od ranijih sistema za obradu prirodnog jezika, koji su se oslanjali na
-ručno definisana pravila ili ograničene skupove podataka, LLM modeli poseduju sposobnost generalizacije. To znači da mogu odgovarati na pitanja, objašnjavati pojmove i rešavati probleme čak i u situacijama koje nisu eksplicitno viđene tokom treniranja modela.
+Za razliku od ranijih sistema za obradu prirodnog jezika, koji su se oslanjali na ručno definisana pravila ili ograničene skupove podataka, LLM modeli poseduju sposobnost generalizacije. To znači da mogu odgovarati na pitanja, objašnjavati pojmove i rešavati probleme čak i u situacijama koje nisu eksplicitno viđene tokom treniranja modela.
 
 
 \subsection{ChatGPT kao primer velikog jezičkog modela}
 
-\textbf{ChatGPT} je konverzacijski sistem zasnovan na \textbf{GPT (engl. \textit{Generative Pre-trained Transformer})} arhitekturi, koji je razvila kompanija OpenAI. Ovaj model je dizajniran tako da
-komunicira sa korisnicima putem prirodnog jezika, pružajući odgovore u formi dijaloga
-\cite{openai2023}.
+\textbf{ChatGPT} je konverzacijski sistem zasnovan na \textbf{GPT (engl. \textit{Generative Pre-trained Transformer})} arhitekturi, koji je razvila kompanija OpenAI. Ovaj model je dizajniran tako da komunicira sa korisnicima putem prirodnog jezika, pružajući odgovore u formi dijaloga~\cite{openai2023}.
 
 Osnovne karakteristike ChatGPT-a su:
 \begin{itemize}
@@ -121,23 +95,14 @@ Osnovne karakteristike ChatGPT-a su:
 \end{itemize}
 
 
-Jedna od ključnih prednosti ChatGPT-a jeste njegova \textbf{dostupnost}. Za razliku od
-tradicionalnih izvora znanja, kao što su udžbenici ili naučni članci, ChatGPT omogućava
-brz i neposredan pristup informacijama, bez potrebe za složenim pretragama ili
-posebnim tehničkim znanjem. Upravo ova karakteristika čini ga posebno privlačnim
-širokom krugu korisnika.
+Jedna od ključnih prednosti ChatGPT-a jeste njegova \textbf{dostupnost}. Za razliku od tradicionalnih izvora znanja, kao što su udžbenici ili naučni članci, ChatGPT omogućava brz i neposredan pristup informacijama, bez potrebe za složenim pretragama ili posebnim tehničkim znanjem. Upravo ova karakteristika čini ga posebno privlačnim širokom krugu korisnika.
 
-Međutim, važno je naglasiti da ChatGPT ne poseduje razumevanje u ljudskom smislu,
-već generiše odgovore na osnovu verovatnoće i obrazaca naučenih tokom treniranja.
-Zbog toga njegovi odgovori mogu delovati uverljivo čak i kada sadrže netačne ili
-nepotpune informacije, što otvara značajna pitanja u vezi sa pouzdanošću i načinom
-njegove upotrebe \cite{bender2021}.
+Međutim, važno je naglasiti da ChatGPT ne poseduje svest niti sposobnost razumevanja stvari na način karakterističan za ljude već generiše odgovore na osnovu verovatnoće i obrazaca naučenih tokom treniranja. Zbog toga njegovi odgovori mogu delovati uverljivo čak i kada sadrže netačne ili nepotpune informacije, što otvara značajna pitanja u vezi sa pouzdanošću i načinom njegove upotrebe~\cite{bender2021}.
 
 
 \subsection{Ograničenja i izazovi LLM modela}
 
-Iako veliki jezički modeli predstavljaju značajan tehnološki napredak, oni imaju i
-brojna ograničenja. 
+Iako veliki jezički modeli predstavljaju značajan tehnološki napredak, oni imaju i brojna ograničenja. 
 
 Najčešći izazovi u primeni LLM modela su:
 \begin{itemize}
@@ -148,33 +113,20 @@ Najčešći izazovi u primeni LLM modela su:
 \end{itemize}
 
 
-Ova ograničenja posebno dolaze do izražaja u obrazovnom kontekstu, gde nekritička upotreba ChatGPT-a može dovesti do smanjenja samostalnog razmišljanja i površnog usvajanja znanja. Zbog toga je neophodno posmatrati ChatGPT kao
-alat za podršku učenju, a ne kao zamenu za razumevanje, kritičko mišljenje i proverene izvore informacija.
+Ova ograničenja posebno dolaze do izražaja u obrazovnom kontekstu, gde nekritička upotreba ChatGPT-a može dovesti do smanjenja samostalnog razmišljanja i površnog usvajanja znanja. Zbog toga je neophodno posmatrati ChatGPT kao alat za podršku učenju, a ne kao zamenu za razumevanje, kritičko mišljenje i proverene izvore informacija.
 
 
 \section{ChatGPT kao izvor informacija}
 \subsection{Pristup znanju i dostupnost informacija}
 
-Dostupnost ChatGPT-a putem interneta i jednostavnost korišćenja čine ga privlačnim
-širokom krugu korisnika. Umesto dugotrajnog pretraživanja različitih izvora,
-korisnici mogu dobiti sažete odgovore prilagođene njihovim pitanjima i nivou razumevanja.
-Ovaj aspekt naročito dolazi do izražaja u kontekstu samostalnog učenja i neformalnog
-obrazovanja \cite{openai2023}.
+Dostupnost ChatGPT-a putem interneta i jednostavnost korišćenja čine ga privlačnim širokom krugu korisnika. Umesto dugotrajnog pretraživanja različitih izvora, korisnici mogu dobiti sažete odgovore prilagođene njihovim pitanjima i nivou razumevanja. Ovaj aspekt naročito dolazi do izražaja u kontekstu samostalnog učenja i neformalnog obrazovanja~\cite{openai2023}.
 
-Za razliku od tradicionalnih izvora znanja, poput udžbenika,
-enciklopedija ili naučnih članaka, ChatGPT omogućava korisnicima da do informacija
-dođu brzo i neposredno, kroz interakciju u formi dijaloga. Ovakav način pristupa znanju,
-\textbf{uz pravilnu i promišljenu upotrebu} ChatGPT-a, može značajno olakšati proces učenja i
-razumevanja različitih pojmova. Međutim, \textbf{u slučaju nepažljive ili nekritičke upotrebe},
-postoji rizik od prihvatanja netačnih informacija i površnog usvajanja znanja.
+Za razliku od tradicionalnih izvora znanja, poput udžbenika, enciklopedija ili naučnih članaka, ChatGPT omogućava korisnicima da do informacija dođu brzo i neposredno, kroz interakciju u formi dijaloga. Ovakav način pristupa znanju, \textbf{uz pravilnu i promišljenu upotrebu} ChatGPT-a, može značajno olakšati proces učenja i razumevanja različitih pojmova. Međutim, \textbf{u slučaju nepažljive ili nekritičke upotrebe}, postoji rizik od prihvatanja netačnih informacija i površnog usvajanja znanja.
 
 
 \subsection{Tačnost odgovora i problem halucinacija}
 
-Iako ChatGPT može da generiše uverljive i gramatički ispravne odgovore, važno je naglasiti
-da tačnost tih odgovora nije uvek zagarantovana. Jedan od ključnih problema u primeni
-LLM modela jeste pojava tzv. \textbf{halucinacija}, odnosno generisanja informacija koje
-zvuče uverljivo, ali nisu zasnovane na činjenicama \cite{bender2021}.
+Iako ChatGPT može da generiše uverljive i gramatički ispravne odgovore, važno je naglasiti da tačnost tih odgovora nije uvek zagarantovana. Jedan od ključnih problema u primeni LLM modela jeste pojava tzv. \textbf{halucinacija}, odnosno generisanja informacija koje zvuče uverljivo, ali nisu zasnovane na činjenicama~\cite{bender2021}.
 
 Najčešći problemi u vezi sa pouzdanošću odgovora ChatGPT-a su:
 \begin{itemize}
@@ -185,62 +137,52 @@ Najčešći problemi u vezi sa pouzdanošću odgovora ChatGPT-a su:
     generisanih informacija u realnom vremenu.
 \end{itemize}
 
-Zbog ovih ograničenja, ChatGPT ne bi trebalo posmatrati kao autoritativni izvor znanja,
-već kao pomoćno sredstvo koje zahteva dodatnu proveru informacija kroz pouzdane i
-proverene izvore.
+Zbog ovih ograničenja, ChatGPT ne bi trebalo posmatrati kao autoritativni izvor znanja, već kao pomoćno sredstvo koje zahteva dodatnu proveru informacija kroz pouzdane i proverene izvore.
 
 \subsection{Uticaj na način pretrage i učenja}
 
-Upotreba ChatGPT-a kao izvora informacija utiče i na promenu načina na koji korisnici
-pretražuju i usvajaju znanje. Umesto klasične pretrage putem internet pretraživača,
-korisnici sve češće pribegavaju direktnom postavljanju pitanja ChatGPT-u, očekujući
-konkretne i brze odgovore.
+Upotreba ChatGPT-a kao izvora informacija utiče i na promenu načina na koji korisnici pretražuju i usvajaju znanje. Umesto klasične pretrage putem internet pretraživača, korisnici sve češće pribegavaju direktnom postavljanju pitanja ChatGPT-u, očekujući konkretne i brze odgovore.
 
-Međutim, kvalitet dobijenih odgovora u velikoj meri zavisi od \textbf{načina na koji je zahtev
-formulisan}. Korisnici često podrazumevaju određene aspekte problema koji rešavaju pomoću
-ChatGPT-a, ne navodeći ih eksplicitno u \textbf{upitu (engl. \textit{prompt})}. Budući da ChatGPT
-nema uvid u namere korisnika niti poseduje znanje o kontekstu koji nije jasno i
-eksplicitno naglašen, izostavljanje ključnih informacija može dovesti do nepotpunih ili
-pogrešno interpretiranih odgovora. Poseban problem predstavlja činjenica da takvi
-odgovori često deluju uverljivo i legitimno, što može navesti korisnika da im poveruje
-bez dodatne provere.
+Međutim, kvalitet dobijenih odgovora u velikoj meri zavisi od \textbf{načina na koji je zahtev formulisan}. Korisnici često podrazumevaju određene aspekte problema koji rešavaju pomoću ChatGPT-a, ne navodeći ih eksplicitno u \textbf{upitu (engl. \textit{prompt})}. Budući da ChatGPT nema uvid u namere korisnika niti poseduje znanje o kontekstu koji nije jasno i eksplicitno naglašen, izostavljanje ključnih informacija može dovesti do nepotpunih ili pogrešno interpretiranih odgovora. Poseban problem predstavlja činjenica da takvi odgovori često deluju uverljivo i legitimno, što može navesti korisnika da im poveruje bez dodatne provere.
 
 
-Oslanjanje na ChatGPT kao osnovni izvor informacija i sredstvo za sticanje novih znanja donosi određene prednosti, ali i rizike:
+Oslanjanje na ChatGPT kao osnovni izvor informacija i sredstvo za sticanje novih znanja donosi određene prednosti: 
 \begin{itemize}
     \item \textbf{Ušteda vremena} - brži dolazak do osnovnih informacija i objašnjenja.
     \item \textbf{Personalizovano učenje} - prilagođavanje odgovora potrebama i nivou
     znanja korisnika.
+\end{itemize}
+
+Istovremeno, postoji i ozbiljan rizik:
+\begin{itemize}
     \item \textbf{Smanjenje kritičkog razmišljanja} - rizik da korisnici prihvataju
     odgovore bez dodatne analize i provere.
 \end{itemize}
-
-Istraživanja ukazuju da prekomerno oslanjanje na automatizovane sisteme za dobijanje informacija može dovesti do površnog razumevanja gradiva i smanjenja sposobnosti kritičkog promišljanja \cite{bommasani2021}. Zbog toga je važno razvijati svest oograničenjima ovakvih sistema i podsticati njihovu odgovornu i promišljenu upotrebu.
+Istraživanja ukazuju da prekomerno oslanjanje na automatizovane sisteme za dobijanje informacija može dovesti do površnog razumevanja gradiva i smanjenja sposobnosti kritičkog promišljanja~\cite{bommasani2021}. Zbog toga je važno razvijati svest o ograničenjima ovakvih sistema i podsticati njihovu odgovornu i promišljenu upotrebu.
 
 \section{Uticaj ChatGPT-a na opšte znanje}
 
-\textbf{Opšte znanje} tradicionalno se odnosi na skup osnovnih informacija iz različitih oblasti koje pojedinac poseduje i koristi u svakodnevnom životu. Razvoj digitalnih tehnologija, a naročito alata zasnovanih na LLM modelima, dovodi do transformacije načina na koji se takvo znanje stiče, obnavlja i primenjuje \cite{bommasani2021,bender2021}.
+\textbf{Opšte znanje} tradicionalno se odnosi na skup osnovnih informacija iz različitih oblasti koje pojedinac poseduje i koristi u svakodnevnom životu. Razvoj digitalnih tehnologija, a naročito alata zasnovanih na LLM modelima, dovodi do transformacije načina na koji se takvo znanje stiče, obnavlja i primenjuje~\cite{bommasani2021,bender2021}.
 
 Za razliku od klasičnih izvora informacija, ChatGPT omogućava trenutni pristup velikom broju tema bez potrebe za prethodnim poznavanjem oblasti ili strukture izvora.
-Korisnici više ne moraju da znaju gde da traže informacije, već se fokus pomera na to \textbf{kako da postave pitanje}. Na taj način, dostupnost informacija postaje važnija od njihovog dugoročnog memorisanja, što menja tradicionalnu ulogu opšteg znanja u društvu
-\cite{russell2020}.
+Korisnici više ne moraju da znaju gde da traže informacije, već se fokus pomera na to \textbf{kako da postave pitanje}. Na taj način, dostupnost informacija postaje važnija od njihovog dugoročnog memorisanja, što menja tradicionalnu ulogu opšteg znanja u društvu~\cite{russell2020}.
 
 \subsection{Promena uloge opšteg znanja}
 
 U ranijim periodima, opšte znanje se formiralo postepeno kroz formalno obrazovanje, medije, knjige i lično iskustvo. Danas, uz alate poput ChatGPT-a, deo tog znanja postaje premešten u digitalne sisteme kojima se pristupa po potrebi. 
-Ovakav pristup može doprineti \textbf{većoj informisanosti korisnika}, ali istovremeno postavlja pitanje koliko se znanje zaista usvaja, a koliko se samo \textbf{privremeno koristi} \cite{bender2021}.
+Ovakav pristup može doprineti \textbf{većoj informisanosti korisnika}, ali istovremeno postavlja pitanje koliko se znanje zaista usvaja, a koliko se samo \textbf{privremeno koristi}~\cite{bender2021}.
 
-Ova promena dovodi do situacije u kojoj se opšte znanje sve više posmatra kao veština snalaženja u informacijama, a ne kao skup trajno zapamćenih činjenica. Ovaj "trend" može \textbf{olakšati pristup informacijama} velikom broju korisnika, ali i \textbf{smanjiti motivaciju za dublje razumevanje}, a samim tim i povezivanje znanja iz različitih oblasti.
+Ova promena dovodi do situacije u kojoj se opšte znanje sve više posmatra kao veština snalaženja u informacijama, a ne kao skup trajno zapamćenih činjenica. Ovaj „trend“ može \textbf{olakšati pristup informacijama} velikom broju korisnika, ali i \textbf{smanjiti motivaciju za dublje razumevanje}, a samim tim i povezivanje znanja iz različitih oblasti.
 
 \subsection{Pojednostavljivanje i percepcija znanja}
 
-Jedna od važnih karakteristika ChatGPT-a jeste sposobnost da složene teme predstavi u pojednostavljenoj i pristupačnoj formi. Ovo može imati pozitivan efekat na opšti nivo informisanosti, jer korisnicima omogućava da steknu \textbf{osnovni uvid} u teme sa kojima ranije nisu bili upoznati \cite{openai2023}.
+Jedna od važnih karakteristika ChatGPT-a jeste sposobnost da složene teme predstavi u pojednostavljenoj i pristupačnoj formi. Ovo može imati pozitivan efekat na opšti nivo informisanosti, jer korisnicima omogućava da steknu \textbf{osnovni uvid} u teme sa kojima ranije nisu bili upoznati~\cite{openai2023}.
 
 Međutim, ovakvo pojednostavljivanje nosi i određene rizike. U nastojanju da odgovori budu jasni i sažeti, često se izostavljaju složeniji aspekti problema. Kao posledica toga, korisnici mogu steći \textbf{utisak razumevanja} teme, iako je njihovo znanje ograničeno na površni nivo, što može uticati na kvalitet opšteg znanja.
 
 
 \subsection{Opšte znanje i akademski kontekst}
-Iako se ChatGPT često koristi za pribavljanje informacija koje u datom trenutku nemaju poseban značaj, kao što su opšta pitanja, objašnjenja pojmova ili svakodnevne nedoumice, njegova primena se sve više širi i na \textbf{obrazovanje}, pa čak i na \textbf{akademssku zajednicu}. U tom okruženju, uloga ChatGPT-a prevazilazi nivo površnog informisanja i postaje povezana sa procesima učenja, istraživanja i izrade akademskih radova \cite{openai2023}.
+Iako se ChatGPT često koristi za pribavljanje informacija koje u datom trenutku nemaju poseban značaj, kao što su opšta pitanja, objašnjenja pojmova ili svakodnevne nedoumice, njegova primena se sve više širi i na \textbf{obrazovanje}, pa čak i na \textbf{akademsku zajednicu}. U tom okruženju, uloga ChatGPT-a prevazilazi nivo površnog informisanja i postaje povezana sa procesima učenja, istraživanja i izrade akademskih radova~\cite{openai2023}.
 
 Za razliku od neformalnih situacija, u akademskoj zajednici posledice nepravilnog korišćenja ovakvih alata mogu biti znatno ozbiljnije.
 
@@ -248,20 +190,17 @@ Za razliku od neformalnih situacija, u akademskoj zajednici posledice nepravilno
 
 \subsection{Upotreba ChatGPT-a u nastavi}
 
-Primena ChatGPT-a u obrazovnom procesu postaje sve zastupljenija, naročito u visokom obrazovanju. Ovaj alat se koristi kao pomoć pri razumevanju gradiva, objašnjavanju složenih pojmova, generisanju primera, kao i za podršku pri pisanju i strukturiranju tekstova. U tom smislu, ChatGPT može predstavljati dodatni resurs koji studentima
-olakšava savladavanje nastavnog sadržaja i podstiče samostalno učenje \cite{openai2023}.
+Primena ChatGPT-a u obrazovnom procesu postaje sve zastupljenija, naročito u visokom obrazovanju. Ovaj alat se koristi kao pomoć pri razumevanju gradiva, objašnjavanju složenih pojmova, generisanju primera, kao i za podršku pri pisanju i strukturiranju tekstova. U tom smislu, ChatGPT može predstavljati dodatni resurs koji studentima olakšava savladavanje nastavnog sadržaja i podstiče samostalno učenje~\cite{openai2023}.
 
-Posebna prednost ChatGPT-a u nastavi ogleda se u mogućnosti prilagođavanja odgovora individualnim potrebama korisnika. Studenti mogu postavljati pitanja u skladu sa sopstvenim nivoom znanja i dobijati objašnjenja koja su vremenski i sadržajno prilagođena njihovim potrebama. Na taj način, ChatGPT može doprineti personalizaciji
-učenja i povećanju dostupnosti obrazovnih sadržaja.
+Posebna prednost ChatGPT-a u nastavi ogleda se u mogućnosti \textbf{prilagođavanja odgovora individualnim potrebama korisnika}. Studenti mogu da postavljaju pitanja u skladu sa sopstvenim nivoom znanja i da dobbiju objašnjenja koja su vremenski i sadržajno prilagođena njihovim potrebama. Na taj način, ChatGPT može doprineti personalizaciji učenja i povećanju dostupnosti obrazovnih sadržaja.
 
-Međutim, upotreba ChatGPT-a u nastavi zahteva jasno definisane smernice. Ukoliko se koristi nekritički ili kao zamena za samostalno razmišljanje, postoji rizik da se proces učenja svede na reprodukciju generisanih odgovora, bez dubljeg razumevanja gradiva. Zbog toga je važno da ChatGPT bude posmatran kao pomoćni alat, a ne kao
-zamena za nastavnika, udžbenike i akademske izvore.
+Međutim, upotreba ChatGPT-a u nastavi zahteva jasno definisane smernice. Ukoliko se koristi nekritički ili kao zamena za samostalno razmišljanje, postoji rizik da se proces učenja svede na reprodukciju generisanih odgovora, bez dubljeg razumevanja gradiva. Zbog toga je važno da ChatGPT bude posmatran kao \textbf{pomoćni alat}, a ne kao zamena za nastavnika, udžbenike i akademske izvore.
 
 \subsection{Iskustva i rezultati istraživanja}
 
-Dosadašnja istraživanja ukazuju na to da studenti relativno brzo prihvataju alate poput ChatGPT-a i integrišu ih u svoje obrazovne navike. Studije pokazuju da se ChatGPT najčešće koristi za objašnjavanje gradiva, proveru razumevanja i dobijanje ideja za dalji rad, dok se ređe koristi kao konačni izvor informacija\cite{bommasani2021}.
+Dosadašnja istraživanja ukazuju na to da studenti relativno brzo prihvataju alate poput ChatGPT-a i integrišu ih u svoje obrazovne navike. Studije pokazuju da se ChatGPT najčešće koristi za objašnjavanje gradiva, proveru razumevanja i dobijanje ideja za dalji rad, dok se ređe koristi kao konačni izvor informacija~\cite{bommasani2021}.
 
-Ipak, rezultati istraživanja ukazuju i na određene probleme. Uočeno je da studenti često precenjuju tačnost generisanih odgovora i ne proveravaju dobijene informacije u relevantnim izvorima. Takođe, postoji tendencija da se ChatGPT koristi za rešavanje zadataka bez razumevanja postupka, što može negativno uticati na dugoročno usvajanje znanja i razvoj analitičkih veština \cite{bender2021}.
+Ipak, rezultati istraživanja ukazuju i na određene probleme. Uočeno je da studenti često precenjuju tačnost generisanih odgovora i ne proveravaju dobijene informacije u relevantnim izvorima. Takođe, postoji tendencija da se ChatGPT koristi za rešavanje zadataka bez razumevanja postupka, što može negativno uticati na dugoročno usvajanje znanja i razvoj analitičkih veština~\cite{bender2021}.
 
 Zbog toga se u akademskoj zajednici sve češće naglašava potreba za edukacijom studenata o pravilnoj i odgovornoj upotrebi alata zasnovanih na veštačkoj inteligenciji. Umesto zabrane, akcenat se stavlja na razvoj kritičkog odnosa prema generisanim sadržajima i razumevanje ograničenja ovakvih sistema.
 
@@ -269,23 +208,22 @@ Zbog toga se u akademskoj zajednici sve češće naglašava potreba za edukacijo
 
 Upotreba ChatGPT-a u obrazovanju otvara brojna etička pitanja, posebno u vezi sa akademskim integritetom. Jedan od najvećih izazova odnosi se na mogućnost zloupotrebe ChatGPT-a prilikom izrade domaćih zadataka, seminarskih i završnih radova. U takvim slučajevima, granica između dozvoljene pomoći i neetičkog ponašanja postaje nejasna.
 
-Akademski integritet podrazumeva samostalnost u radu, poštovanje autorstva i transparentnost u korišćenju izvora. Korišćenje ChatGPT-a bez jasnog navođenja njegove uloge može dovesti do plagijata, čak i kada generisani tekst nije direktno preuzet iz postojećih izvora. Zbog toga je neophodno jasno definisati pravila upotrebe ovakvih
-alata u akademskom kontekstu \cite{bender2021}.
+Akademski integritet podrazumeva samostalnost u radu, poštovanje autorstva i transparentnost u korišćenju izvora. Korišćenje ChatGPT-a bez jasnog navođenja njegove uloge može dovesti do plagijata, čak i kada generisani tekst nije direktno preuzet iz postojećih izvora. Zbog toga je neophodno jasno definisati \textbf{pravila upotrebe ovakvih alata u akademskom kontekstu}~\cite{bender2021}.
 
 Sa etičkog stanovišta, odgovorna upotreba ChatGPT-a podrazumeva njegovo korišćenje kao alata za podršku učenju, a ne kao sredstva za zaobilaženje obrazovnog procesa. Uloga obrazovnih institucija je da razvijaju jasne smernice i podstiču studente da razumeju značaj samostalnog rada, kritičkog mišljenja i etičkog ponašanja u digitalnom okruženju.
 
 
 \subsection{Mogućnosti i ograničenja primene ChatGPT-a u obrazovanju}
-Pored rizika i etičkih izazova, važno je istaći da ChatGPT poseduje potencijal da unapredi obrazovni proces kada se koristi na pravilan i promišljen način. Umesto da se posmatra isključivo kao izvor odgovora, ChatGPT može služiti kao alat za podršku kome se pristupa kritički i uz jasno definisane obrazovne ciljeve. Na primer, studenti
-mogu koristiti ChatGPT za generisanje primera zadataka koje sami zatim analiziraju, prepravljaju i rešavaju, čime se jačaju njihove metakognitivne veštine i sposobnost samostalnog mišljenja \cite{openai2023}.
 
-Takođe, asistenti i profesori mogu koristiti ChatGPT kao pomoćno sredstvo prilikom pripreme obrazovnih materijala, testova ili primera, uz obaveznu dodatnu proveru i stručni nadzor \cite{openai2023}. 
+Pored rizika i etičkih izazova, važno je istaći da ChatGPT poseduje \textbf{potencijal da unapredi obrazovni proces} kada se koristi na pravilan i promišljen način. Umesto da se posmatra isključivo kao izvor odgovora, ChatGPT može služiti kao alat za podršku kome se pristupa kritički i uz jasno definisane obrazovne ciljeve. Na primer, studenti mogu koristiti ChatGPT za generisanje primera zadataka koje sami zatim analiziraju, prepravljaju i rešavaju, čime se jačaju njihove metakognitivne veštine i sposobnost samostalnog mišljenja~\cite{openai2023}.
 
-Pored individualne odgovorne upotrebe alata poput ChatGPT-a, sve se češće ističe potreba za pronalaženjem kvalitetnog i sistemskog rešenja za integraciju veštačke inteligencije u obrazovni proces. Umesto oslanjanja na opšte modele namenjene širokoj publici, jedan od mogućih pravaca razvoja jeste kreiranje namenskih AI alata prilagođenih specifičnim edukativnim potrebama \cite{seminarMilos}.
+Takođe, asistenti i profesori mogu koristiti ChatGPT kao pomoćno sredstvo prilikom pripreme obrazovnih materijala, testova ili primera, uz obaveznu dodatnu proveru i stručni nadzor~\cite{openai2023}. 
 
-Takvi sistemi mogli bi biti dizajnirani tako da direktno podržavaju proces učenja,
-razumevanja i vežbanja, a ne samo generisanja gotovih odgovora. Mogući pravci ovakve
-integracije uključuju:
+Pored individualne odgovorne upotrebe alata poput ChatGPT-a, sve se češće ističe potreba za pronalaženjem kvalitetnog i sistemskog rešenja za \textbf{integraciju veštačke inteligencije u obrazovni proces}. Umesto oslanjanja na opšte modele namenjene širokoj publici, jedan od mogućih pravaca razvoja jeste kreiranje namenskih AI alata prilagođenih specifičnim edukativnim~\cite{seminarMilos}.
+
+Takvi sistemi mogli bi biti dizajnirani tako da direktno podržavaju proces učenja, razumevanja i vežbanja, a ne samo generisanja gotovih odgovora. 
+
+Mogući pravci ovakve integracije uključuju:
 \begin{itemize}
     \item \textbf{Razvoj namenskih AI alata za edukativne potrebe}, koji bi bili prilagođeni
     nastavnim planovima i ciljevima učenja.
@@ -294,17 +232,28 @@ integracije uključuju:
     \item \textbf{Treniranje modela na relevantnim nastavnim materijalima}, kao što su
     postavke zadataka i rešenja sa ispitnih rokova, skripte, zbirke zadataka i drugi
     provereni akademski izvori.
-\end{itemize}\cite{seminarMilos}
+\end{itemize}
 
-Na ovaj način, alati zasnovani na veštačkoj inteligenciji mogli bi da doprinesu unapređenju obrazovanja, uz očuvanje akademskog integriteta i podsticanje aktivnog učešća studenata u procesu učenja. 
+Na ovaj način, alati zasnovani na veštačkoj inteligenciji mogli bi da doprinesu unapređenju obrazovanja, uz očuvanje akademskog integriteta i podsticanje aktivnog učešća studenata u procesu učenja~\cite{seminarMilos}. 
 
-U svim slučajevima, ključna komponenta je edukacija o pravilnoj i odgovornoj upotrebi ovakvih alata ne kao zamene za ljudsko razmišljanje ili standardne izvore, već kao dopune koja podstiče kreativnost, efikasnost i dublje razumevanje gradiva. Takav pristup omogućava da se prednosti ChatGPT-a maksimalno iskoriste u unapređenju
-obrazovanja.
+U svim slučajevima, ključna komponenta je \textbf{edukacija o pravilnoj i odgovornoj upotrebi ovakvih alata} ne kao zamene za ljudsko razmišljanje ili standardne izvore, već kao dopune koja podstiče kreativnost, efikasnost i dublje razumevanje gradiva. Takav pristup omogućava da se prednosti ChatGPT-a maksimalno iskoriste u unapređenju obrazovanja.
 
 
 
 \section{Zaključak}
 
+Alati zasnovani na veštačkoj inteligenciji, poput ChatGPT-a i drugih LLM modela, predstavljaju ne samo tehnološku novinu, već i sastavni deo savremenog načina sticanja i korišćenja znanja. Njihova sve veća prisutnost u svakodnevnom životu nameće potrebu da se razumeju mogućnosti, ali i ograničenja njihove upotrebe, kako bi se izbegle negativne posledice i ostvarile stvarne koristi.
+
+Upotreba ChatGPT-a može imati veoma različite efekte u zavisnosti od načina na koji se koristi:
+\begin{itemize}
+    \item \textbf{Nepravilna upotreba} - nekritičko prihvatanje generisanih odgovora, oslanjanje na ChatGPT kao jedini izvor informacija i zanemarivanje provere podataka mogu dovesti do površnog razumevanja, širenja netačnih informacija, ali i do gubitka motivacije za dublje razumevanje problema.
+    \item \textbf{Pravilna upotreba} - korišćenje ChatGPT-a kao pomoćnog alata za objašnjavanje pojmova, usmeravanje daljeg učenja i podsticanje razmišljanja može značajno unaprediti efikasnost učenja i kvalitet usvojenog znanja.
+\end{itemize}
+
+Na osnovu analize predstavljene u ovom radu, može se zaključiti da korišćenje ChatGPT-a ne mora nužno imati negativan uticaj na opšte znanje, kako se to često predstavlja. Naprotiv, uz odgovornu, promišljenu i kritičku upotrebu, ovaj alat može doprineti bržem napretku, boljem razumevanju različitih oblasti i lakšem pristupu informacijama. 
+
+Ključni faktor za postizanje pozitivnih rezultata su korisnici i njihova sposobnost da postavljaju jasna pitanja, proveravaju dobijene informacije i ChatGPT posmatraju kao dopunu, a ne zamenu za sopstveno
+razmišljanje i proverene izvore znanja.
 
 
 \newpage
