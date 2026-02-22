@@ -9,15 +9,24 @@
 	\definecolor{chocolate}{rgb}{0.82, 0.41, 0.12}
 \setbeamercolor{structure}{fg=chocolate}
 \newcommand{\frametitlesection}{
-    \insertsectionhead{} - \insertsubsectionhead{}
+    \raggedright
+    \insertsubsectionhead\\[-2pt]
+    {\small \insertsectionhead}
 }
 
 \def\d{{\fontencoding{T1}\selectfont\dj}}
 \def\D{{\fontencoding{T1}\selectfont\DJ}}
 
+\setbeamertemplate{itemize subitem}{--}
+
 \title{ChatGPT i njegov uticaj na opšte znanje}
 \author{Matija Stanković}
-\institute{Matematički fakultet \\ Univerzitet u Beogradu}
+\institute{
+Matematički fakultet\\
+Univerzitet u Beogradu\\[0.3cm]
+\textbf{Kurs: Računarstvo i društvo}\\
+Predmetni profesor: Sana Stojanović Đurđević
+}
 \date{Februar 2026}
 
 \begin{document}
@@ -36,48 +45,19 @@
 \subsection{Veštačka inteligencija - nekada i danas}
 
 \begin{frame}{\frametitlesection}
-Veštačka inteligencija nekad
+
 \begin{itemize}
-    \item Nastaje sredinom XX veka
-    \item \textbf{Ideja: mašine koje imitiraju ljudsko razmišljanje}
-    \item Prvi sistemi zasnovani na pravilima i simboličkom zaključivanju
-    \item Ograničena primena i mali domet
-\end{itemize}
-
-\vspace{0.3cm}
-
-Veštačka inteligencija danas
-\begin{itemize}
-    \item Razvoj mašinskog učenja i obrade velikih količina podataka
-    \item Veštačka inteligencija dostupna širokom krugu korisnika
-    \item Prisutna u svakodnevnom životu (pretraživači, društvene mreže, obrazovanje, poslovanje...)
-\end{itemize}
-\end{frame}
-
-\subsection{Prelomna tačka razvoja - LLM modeli}
-
-\begin{frame}{\frametitlesection}
-\textbf{Veliki jezički modeli (LLM)}
-\begin{itemize}
-    \item Trenirani na ogromnim količinama tekstualnih podataka
-    \item Omogućavaju:
+    \item Veštačka inteligencija nekad: \textbf{mašine koje imitiraju ljudsko razmišljanje}
     \begin{itemize}
-        \item razumevanje prirodnog jezika
-        \item generisanje smislenih odgovora
-        \item komunikaciju čovek računar
+        \item Ograničena primena i mali domet
     \end{itemize}
+    \item Veštačka inteligencija danas: \textbf{mašinsko učenje i obrada velikih količina podataka}
+    \begin{itemize}
+    \item Prisutna u svakodnevnom životu (pretraživači, društvene mreže, obrazovanje, poslovanje...)
+    \end{itemize}
+    \item Prelomna tačka razvoja: \textbf{LLM modeli}
 \end{itemize}
 
-\vspace{0.3cm}
-
-Primeri najpoznatijih LLM modela
-\begin{itemize}
-    \item ChatGPT (OpenAI)
-    \item GPT-4 (OpenAI)
-    \item Gemini (Google)
-    \item Claude (Anthropic)
-    \item LLaMA (Meta)
-\end{itemize}
 \end{frame}
 
 \section{LLM modeli i ChatGPT}
@@ -88,396 +68,216 @@ Primeri najpoznatijih LLM modela
 
 \begin{itemize}
     \item Razvoj LLM modela zasnovan je na \textbf{dubokom učenju}
-    \item Omogućavaju značajan napredak u \textbf{obradi prirodnog jezika}
-    \item Trenirani na velikim količinama tekstualnih podataka
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{itemize}
-    \item Ključni tehnološki koncept:
     \begin{itemize}
-        \item \textbf{Transformer arhitektura} (2017)
+        \item Značajan napredak u \textbf{obradi prirodnog jezika}
+        \item Trenirani na velikim količinama tekstualnih podataka
+    \end{itemize}
+    \item \textbf{Transformer arhitektura}
+    \begin{itemize}
         \item Obrada čitavih sekvenci teksta odjednom
         \item Uočavanje odnosa između reči u različitim delovima teksta
     \end{itemize}
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{itemize}
-    \item Za razliku od ranijih sistema:
+    \item Razlike u odnosu na ranije sisteme:
     \begin{itemize}
-        \item nisu zasnovani na ručno definisanim pravilima
-        \item poseduju sposobnost \textbf{generalizacije}
+            \item Nisu zasnovani na ručno definisanim pravilima
+            \item Poseduju sposobnost \textbf{generalizacije}
     \end{itemize}
 \end{itemize}
 
 \end{frame}
 
-\subsection{ChatGPT kao primer LLM modela}
+\subsection{ChatGPT i nedostaci LLM modela}
 
 \begin{frame}{\frametitlesection}
 
 \begin{itemize}
-    \item Konverzacijski sistem zasnovan na \textbf{GPT arhitekturi}
-    \item Razvijen od strane kompanije \textbf{OpenAI}
-    \item Komunikacija sa korisnicima putem prirodnog jezika
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{itemize}
-    \item Osnovne karakteristike:
+    \item \textbf{ChatGPT} (OpenAI)
     \begin{itemize}
-        \item razumevanje pitanja izraženih svakodnevnim jezikom
-        \item generisanje koherentnih i kontekstualnih odgovora
-        \item prilagođavanje odgovora toku razgovora
-        \item široka primena (obrazovanje, programiranje, informisanje)
+        \item Zasnovan na GPT arhitekturi
+        \item Komunikacija sa korisnicima putem prirodnog jezika
+        \item Prilagođavanje odgovora toku razgovora
+        \item Široka primena
     \end{itemize}
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{itemize}
     \item Ključna prednost: \textbf{visoka dostupnost i jednostavnost korišćenja}
-    \end{itemize}
-
-\end{frame}
-
-\subsection{Ograničenja i izazovi LLM modela}
-
-\begin{frame}{\frametitlesection}
-
-\begin{itemize}
-    \item \textbf{Nepouzdanost odgovora}
+    \item \textbf{Ograničenja}
     \begin{itemize}
-        \item mogućnost generisanja netačnih ili izmišljenih informacija
-    \end{itemize}
-
-    \item \textbf{Odsustvo stvarnog razumevanja}
-    \begin{itemize}
-        \item modeli nemaju svest niti ljudsko razumevanje značenja
-        \item odgovori se zasnivaju na statističkim obrascima
-    \end{itemize}
-
-    \item \textbf{Pristrasnost u podacima}
-    \begin{itemize}
-        \item pristrasnosti iz trening podataka mogu se preneti na odgovore
-    \end{itemize}
-
-    \item \textbf{Zavisnost korisnika od modela}
-    \begin{itemize}
-        \item smanjenje samostalnog razmišljanja i provere informacija
-    \end{itemize}
+        \item Nepouzdanost i halucinacije
+        \item Odsustvo stvarnog razumevanja
+        \item Pristrasnost u podacima
+        \item Zavisnost korisnika od modela
+\end{itemize}
 \end{itemize}
 
-\vspace{0.3cm}
-
-\textit{Posebno izraženo u obrazovanju - ChatGPT treba posmatrati kao alat za podršku, a ne zamenu za razumevanje i kritičko razmišljanje.}
-
 \end{frame}
-
 
 \section{ChatGPT kao izvor informacija}
-\subsection{Pristup znanju i dostupnost informacija}
+\subsection{Prednosti i rizici}
 
 \begin{frame}{\frametitlesection}
 
 \begin{itemize}
-    \item \textbf{Laka dostupnost}
+    \item \textbf{Prednosti}
     \begin{itemize}
-        \item dostupan putem interneta
-        \item jednostavan za korišćenje bez tehničkog predznanja
+        \item Laka dostupnost
+        \item Brz pristup informacijama
+        \item Prilagođenost pitanjima i nivou znanja korisnika
+        \item Koristan u samostalnom i neformalnom učenju
     \end{itemize}
-
-    \item \textbf{Brz pristup informacijama}
-    \begin{itemize}
-        \item nema potrebe za dugotrajnim pretraživanjem izvora
-        \item odgovori prilagođeni pitanju i nivou korisnika
-    \end{itemize}
-
-    \item \textbf{Prednosti uz pravilnu upotrebu}
-    \begin{itemize}
-        \item olakšava učenje i razumevanje pojmova
-        \item koristan u samostalnom i neformalnom učenju
-    \end{itemize}
-
     \item \textbf{Rizici nekritičke upotrebe}
     \begin{itemize}
-        \item prihvatanje netačnih informacija
-        \item površno usvajanje znanja
+        \item Nekritičko prihvatanje odgovora
+        \item Površno usvajanje znanja
+        \item Privatnosni i bezbednosni problemi
     \end{itemize}
 \end{itemize}
 
 \end{frame}
 
 
-\subsection{Tačnost odgovora i problem halucinacija}
+\subsection{Problem halucinacija i promena načina učenja i pretrage}
 
 \begin{frame}{\frametitlesection}
 
 \begin{itemize}
-    \item \textbf{Uverljivi, ali ne uvek tačni odgovori}
-    \begin{itemize}
-        \item gramatički ispravni i logično formulisani
-        \item tačnost nije garantovana
-    \end{itemize}
-
     \item \textbf{Halucinacije}
     \begin{itemize}
-        \item generisanje informacija koje zvuče uverljivo, ali nisu zasnovane na činjenicama
+        \item Uverljivi, ali netačni odgovori
+        \item Izmišljanje činjenica, izvora ili događaja
+        \item Nemogućnost provere izvora u realnom vremenu
     \end{itemize}
 
-    \item \textbf{Najčešći problemi}
+    \item ChatGPT nije autoritativni izvor znanja: \textbf{neophodna dodatna provera informacija}
+    \item \textbf{Promena načina učenja i pretrage}
     \begin{itemize}
-        \item izmišljanje činjenica, izvora ili događaja
-        \item pogrešno povezivanje tačnih informacija
-        \item nemogućnost provere izvora u realnom vremenu
-    \end{itemize}
-
-    \item \textbf{Zaključak}
-    \begin{itemize}
-        \item ChatGPT nije autoritativni izvor znanja
-        \item neophodna dodatna provera informacija
+        \item Direktna pitanja umesto klasične pretrage
+        \item Značaj formulacije upita (prompt-a)
     \end{itemize}
 \end{itemize}
-
 \end{frame}
-
-\subsection{Uticaj na način pretrage i učenja}
-
-\begin{frame}{\frametitlesection}
-
-\textbf{Promena načina učenja i pretrage}
-\begin{itemize}
-    \item Direktno postavljanje pitanja umesto klasične internet pretrage
-    \item Očekivanje brzih i konkretnih odgovora
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Značaj formulacije upita (prompt-a)}
-\begin{itemize}
-    \item Kvalitet odgovora zavisi od preciznosti pitanja
-    \item Izostavljanje konteksta $\rightarrow$ nepotpuni ili pogrešni odgovori
-\end{itemize}
-
-\vspace{0.3cm}
-\textbf{Prednosti i rizici}
-\begin{itemize}
-    \item \textbf{Prednosti:} ušteda vremena, personalizovano i samostalno učenje
-    \item \textbf{Rizici:} smanjenje kritičkog razmišljanja, iluzija razumevanja,
-    bezbednosni i privatnosni problemi
-\end{itemize}
-
-\end{frame}
-
 
 \section{Uticaj ChatGPT-a na opšte znanje}
 \subsection{Promena uloge opšteg znanja}
 
 \begin{frame}{\frametitlesection}
 \begin{itemize}
-    \item \textbf{Opšte znanje} - skup osnovnih informacija korišćenih u svakodnevnom životu
-    \item Tradicionalno sticano kroz:
+    \item \textbf{Opšte znanje nekada}
     \begin{itemize}
-        \item formalno obrazovanje
-        \item knjige, medije i lično iskustvo
+        \item Skup trajno zapamćenih informacija 
+        \item Sticano kroz formalno obrazovanje, knjige, medije i lično iskustvo
     \end{itemize}
     \item Sa pojavom ChatGPT-a:
     \begin{itemize}
-        \item znanje postaje dostupno „na zahtev“
-        \item \textbf{fokus se pomera sa šta znamo na kako postavljamo pitanje}
+        \item \textbf{Znanje „na zahtev“}
+        \item Fokus se pomera sa \textbf{šta znamo} na \textbf{kako postavljamo pitanje}
     \end{itemize}
-    \item Opšte znanje kao:
+    \item Opšte znanje:
     \begin{itemize}
         \item veština snalaženja u informacijama
-        \item manje oslanjanje skup trajno zapamćenih činjenica
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\subsection{Pojednostavljivanje i percepcija znanja}
+\subsection{Percepcija znanja i akademski kontekst}
 
 \begin{frame}{\frametitlesection}
 \begin{itemize}
-    \item ChatGPT pojednostavljuje složene teme
-    \item Omogućava:
+    \item ChatGPT omogućava:
     \begin{itemize}
-        \item brz i pristupačan \textbf{osnovni uvid}
-        \item upoznavanje sa novim oblastima
+        \item Pojednostavljivanje složenih tema
+        \item Brz i pristupačan \textbf{osnovni uvid}
+        \item Niži prag za ulazak u novu oblast
+        \item Veću informisanost korisnika
     \end{itemize}
-    \item Pozitivan efekat:
+    \item Rizik:
     \begin{itemize}
-        \item veća informisanost korisnika
-        \item niži prag za ulazak u novu temu
-    \end{itemize}
-    \item Potencijalni rizik:
-    \begin{itemize}
-        \item \textbf{iluzija razumevanja}
-        \item izostavljanje složenijih aspekata problema
-        \item površno znanje bez dubljeg uvida
-    \end{itemize}
-\end{itemize}
-\end{frame}
-
-
-\subsection{Opšte znanje i akademski kontekst}
-
-\begin{frame}{\frametitlesection}
-\begin{itemize}
-    \item ChatGPT se često koristi za:
-    \begin{itemize}
-        \item opšta pitanja
-        \item kratka objašnjenja pojmova
-        \item svakodnevne nedoumice
-    \end{itemize}
-    \item Sve češća primena u:
-    \begin{itemize}
-        \item obrazovanju
-        \item akademskoj zajednici
-        \item pisanju i istraživanju
+        \item \textbf{Iluzija razumevanja}: izostavljanje složenijih aspekata problema
+        \item Površno znanje bez dubljeg uvida
     \end{itemize}
     \item U akademskom kontekstu:
     \begin{itemize}
-        \item veći uticaj na proces učenja
-        \item veća odgovornost korisnika
-        \item ozbiljnije posledice nepravilne upotrebe
+        \item \textbf{Veća odgovornost}
+        \item Ozbiljnije posledice nepravilne upotrebe 
     \end{itemize}
 \end{itemize}
 \end{frame}
-
 
 \section{ChatGPT u obrazovanju}
 
-\subsection{Upotreba ChatGPT-a u nastavi}
+\subsection{Primena u obrazovanju}
 
 \begin{frame}{\frametitlesection}
 \begin{itemize}
-    \item Sve češća primena u visokom obrazovanju
-    \item Najčešće se koristi za:
+    \item Sve češća primena u visokom obrazovanju 
     \begin{itemize}
-        \item objašnjavanje složenih pojmova
-        \item razumevanje gradiva
-        \item generisanje primera
-        \item pomoć pri pisanju i strukturiranju tekstova
+        \item Objašnjavanje složenih pojmova
+        \item Generisanje primera
+        \item Pomoć pri pisanju i strukturiranju tekstova
     \end{itemize}
-    \item Omogućava \textbf{personalizaciju učenja}:
+    \item \textbf{Personalizacija učenja} 
     \begin{itemize}
-        \item prilagođavanje nivou znanja studenta
-        \item fleksibilan tempo učenja
+        \item Prilagođavanje nivou znanja studenta
+        \item Fleksibilan tempo učenja
     \end{itemize}
     \item Važno ograničenje:
     \begin{itemize}
-        \item nije zamena za nastavnika i samostalno razmišljanje
+        \item Nije zamena za nastavnika i samostalno razmišljanje
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\subsection{Iskustva i rezultati istraživanja}
+\subsection{Iskustva i izazovi}
 
 \begin{frame}{\frametitlesection}
 \begin{itemize}
-    \item Studenti brzo prihvataju ChatGPT i integrišu ga u svakodnevno učenje
+    \item Studenti brzo prihvataju alat 
     \item Najčešće se koristi za:
     \begin{itemize}
-        \item objašnjavanje gradiva
-        \item proveru razumevanja
-        \item dobijanje ideja za dalji rad
+        \item Razumevanje gradiva
+        \item Proveru razumevanja
+        \item Generisanje ideja za dalji rad
     \end{itemize}
     \item Ređe se koristi kao konačni izvor informacija
-    \item Uočeni problemi:
+    \item \textbf{Uočeni problemi:}
     \begin{itemize}
-        \item precenjivanje tačnosti odgovora
-        \item izostanak provere informacija
-        \item rešavanje zadataka bez razumevanja postupka
-    \end{itemize}
-    \item Zaključak istraživanja:
-    \begin{itemize}
-        \item potreba za edukacijom o odgovornoj upotrebi
-        \item fokus na kritički odnos, a ne zabranu
+        \item Precenjivanje tačnosti odgovora
+        \item Izostanak provere informacija
+        \item Rešavanje zadataka bez razumevanja postupka
     \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\subsection{Etika i akademski integritet}
+\subsection{Etika i mogućnosti buduće primene}
 
 \begin{frame}{\frametitlesection}
 \begin{itemize}
-    \item \textbf{Glavni problem:}
+    \item Zloupotreba i plagijat
+    \item Nejasna granica između pomoći i prepisivanja
+    \item \textbf{Akademski integritet}
     \begin{itemize}
-        \item zloupotreba pri izradi domaćih zadataka i seminarskih radova
-        \item nejasna granica između pomoći i neetičkog ponašanja
-    \end{itemize}
-    \item \textbf{Akademski integritet:}
-    \begin{itemize}
-        \item samostalnost u radu
-        \item poštovanje autorstva
-        \item transparentno korišćenje izvora
-    \end{itemize}
-    \item Nekritičko korišćenje ChatGPT-a može dovesti do:
-    \begin{itemize}
-        \item prikrivenog plagijata
-        \item narušavanja akademskog integriteta
+        \item Samostalnost u radu
+        \item Poštovanje autorstva
+        \item Transparentno korišćenje izvora
     \end{itemize}
     \item Rešenje:
     \begin{itemize}
-        \item jasna pravila upotrebe
-        \item ChatGPT kao pomoćni alat, a ne zamena za učenje
+        \item Jasna pravila upotrebe
+        \item \textbf{Edukacija o odgovornom korišćenju}
+        \item Razvoj namenskih AI alata za obrazovanje 
     \end{itemize}
 \end{itemize}
 \end{frame}
-
-
-\subsection{Mogućnosti i ograničenja primene ChatGPT-a u obrazovanju}
-
-\begin{frame}{\frametitlesection}
-\begin{itemize}
-    \item ChatGPT može da unapredi obrazovni proces
-    \item Nije zamena za učenje, već:
-    \begin{itemize}
-        \item alat za podršku učenju i pomoć pri razumevanju i vežbanju gradiva
-    \end{itemize}
-    \item \textbf{Primer pravilne upotrebe:}
-    \begin{itemize}
-        \item generisanje primera zadataka za samostalnu analizu
-    \end{itemize}
-    \item \textbf{Uloga nastavnika:}
-    \begin{itemize}
-        \item korišćenje ChatGPT-a kao pomoćnog alata uz obaveznu stručnu kontrolu i nadzor
-    \end{itemize}
-    \item \textbf{Dugoročni pravac razvoja:}
-    \begin{itemize}
-        \item namenski AI alati za edukaciju
-        \item modeli trenirani na relevantnim nastavnim materijalima
-    \end{itemize}
-    \item Ključ uspeha: \textbf{edukacija o odgovornoj i pravilnoj upotrebi}
-\end{itemize}
-\end{frame}
-
 
 \section{Zaključak}
 
 \begin{frame}{Zaključak}
 \begin{itemize}
-    \item ChatGPT i drugi LLM modeli predstavljaju sadašnjost i budućnost sticanja znanja
-    \item \textbf{Nepravilna upotreba}:
-    \begin{itemize}
-        \item nekritičko prihvatanje odgovora
-        \item oslanjanje na ChatGPT kao jedini izvor znanja
-        \item površno razumevanje i širenje netačnih informacija
-    \end{itemize}
-    \item \textbf{Pravilna upotreba}:
-    \begin{itemize}
-        \item pomoć pri razumevanju i učenju
-        \item usmeravanje daljeg istraživanja
-        \item ubrzavanje procesa sticanja znanja
-    \end{itemize}
+    \item LLM modeli predstavljaju sadašnjost i budućnost sticanja znanja
+    \item Uticaj zavisi od načina korišćenja
+    \item \textbf{Tehnologija nije problem: način korišćenja je ključ} 
 \end{itemize}
-\textbf{Da li ChatGPT utiče pozitivno ili negativno na opšte znanje?}
 \end{frame}
 
 
@@ -514,8 +314,5 @@ M. Pavlović, \textit{Primena veštačke inteligencije u obrazovanju}, Simpoziju
 {\large Pitanja?}
 
 \end{frame}
-
-\end{document}
-
 
 \end{document}
