@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=4cm]{logo.png}\\[1cm]
+
+    {\Large \textbf{UNIVERZITET U BEOGRADU}}\\[0.3cm]
+    {\Large \textbf{MATEMATIČKI FAKULTET}}\\
+
+
+    \vspace{0.5cm}
+    
+    \vfill
+    
+    {\LARGE \textbf{Uticaj veštačke inteligencije na privatnost zdravstvenih podataka} \par}
+    
+    \vspace{1.5cm}
+    
+    {\large Seminarski rad u okviru kursa  \par}
+    {\large Računarstvo i društvo}
+    
+    \vfill
+    
+    \begin{flushleft}
+        \textbf{Student:} Sara Kabić \\
+        \textbf{Profesor:} Sana Stojanović Đurđević \\
+    \end{flushleft}
+    
+    \vfill
+    
+    {\large April 2026 \par}
+    
+\end{titlepage}
+
+\renewcommand{\contentsname}{Sadržaj}
+\tableofcontents
+\newpage
+
+
+\section{Uvod}
+
+Razvoj veštačke inteligencije fundamentalno menja način na koji se zdravstveni podaci prikupljaju, obrađuju i koriste. Algoritmi mašinskog učenja danas mogu analizirati medicinske slike, predviđati ishode lečenja i identifikovati obrasce u ogromnim bazama podataka pacijenata sa preciznošću koja ponekad prevazilazi i procenu vrhunskih stručnjaka \cite{murdoch2021}. Međutim, ova tehnološka revolucija dolazi sa značajnim izazovom: kako zaštititi privatnost pojedinaca čiji podaci pokreću ove sisteme?
+
+Zdravstveni podaci spadaju među najosetljivije kategorije ličnih podataka \cite{abouelmehdi2017}. Oni otkrivaju ne samo trenutno zdravstveno stanje osobe, već mogu ukazivati na genetske predispozicije, mentalno zdravlje, životne navike i druge aspekte koje pojedinci često žele da zadrže za sebe. Kada se takvi podaci koriste za treniranje AI modela ili se dele između institucija, rizik od neovlašćenog pristupa, zloupotrebe ili ponovne identifikacije postaje realan.
+
+Ovaj rad istražuje kompleksan odnos između primene veštačke inteligencije u zdravstvu i zaštite privatnosti podataka. Kroz analizu tehničkih, etičkih i pravnih aspekata, rad identifikuje ključne izazove sa kojima se suočavaju zdravstvene institucije, regulatorna tela i sami pacijenti. Posebna pažnja posvećena je pitanjima informisanog pristanka u kontekstu složenih AI sistema, problemu pristrasnosti algoritama koji može dovesti do diskriminacije, kao i ulozi pravnih okvira poput GDPR-a u definisanju granica dozvoljenog korišćenja zdravstvenih podataka \cite{kumar2025}. 
+
+\subsection{Značaj privatnosti u savremenom zdravstvu}
+
+Privatnost u zdravstvu nije isključivo tehnički ili pravni problem, ona je u osnovi etičko pitanje koje se tiče dostojanstva, autonomije i poverenja pacijenata. Odnos između lekara i pacijenta istorijski počiva na poverenju i poverljivosti: pacijent deli osetljive informacije sa očekivanjem da će one biti zaštićene i korišćene isključivo u svrhu lečenja \cite{murdoch2021}. Digitalizacija zdravstvenih sistema i uvođenje veštačke inteligencije proširuju krug aktera koji imaju pristup tim podacima počevši od bolničkih informacionih sistema, preko istraživačkih institucija, do komercijalnih tehnoloških kompanija.
+
+Savremeni zdravstveni sistemi generišu ogromne količine podataka: elektronske zdravstvene kartone, rezultate laboratorijskih analiza, medicinske snimke, genomske podatke i podatke sa uređaja za praćenje zdravlja \cite{abouelmehdi2017}. Ovi podaci imaju izuzetnu vrednost kako za unapređenje medicine, tako i za komercijalne subjekte, što stvara tenziju između javnog interesa i zaštite privatnosti pojedinca. Bez adekvatnih mehanizama zaštite, pacijenti mogu biti izloženi diskriminaciji od strane poslodavaca ili osiguravajućih društava, socijalnoj stigmatizaciji, pa čak i finansijskim štetama \cite{kumar2025}.
+
+\section{Veštačka inteligencija u zdravstvu}
+\subsection{Primena AI u medicini}
+\subsection{Uloga velikih podataka}
+
+\section{Privatnost zdravstvenih podataka}
+\subsection{Osetljivost i značaj medicinskih podataka}
+\subsection{Rizici po privatnost pacijenata}
+\subsection{Curenje podataka i bezbednosni problemi}
+
+\section{Etički aspekti primene veštačke inteligencije}
+\subsection{Privatnost i informisani pristanak}
+\subsection{Transparentnost i odgovornost AI sistema}
+\subsection{Diskriminacija i pristrasnost algoritama}
+
+\section{Pravna regulativa i zaštita privatnosti}
+\subsection{GDPR i zaštita zdravstvenih podataka}
+\subsection{Potreba za unapređenjem regulative}
+
+\section{Zaključak}
+\subsection{Glavni izazovi i moguća rešenja}
+
+\newpage
+
+\newpage
+\renewcommand{\refname}{Literatura}
+
+\begin{thebibliography}{99}
+
+\bibitem{abdalla2022}
+H. B. Abdalla, ``A brief survey on big data: technologies, terminologies and data-intensive applications,'' \textit{Journal of Big Data}, vol. 9, 2022.
+
+\bibitem{abouelmehdi2017}
+K. Abouelmehdi, A. Beni-Hssane, H. Khaloufi, M. Saadi, ``Big data security and privacy in healthcare: A review,'' \textit{Procedia Computer Science}, 2017.
+
+\bibitem{murdoch2021}
+B. Murdoch, ``Privacy and artificial intelligence: challenges for protecting health information in a new era,'' 2021.
+
+\bibitem{kumar2025}
+A. Kumar et al., ``AI-Driven Medical Diagnosis and Patient Data Privacy: A Legal Analysis under GDPR and Medical Ethics,'' \textit{Journal of Neonatal Surgery}, 2025.
+
+\end{thebibliography}
+
+\end{document}
