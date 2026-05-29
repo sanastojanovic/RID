@@ -1,12 +1,46 @@
-\section{Alati}
+\section{Alat - Glaze}
 \label{sec:alati_id}
 \setlength{\intextsep}{10pt}
 \setcounter{equation}{0}
-    Sada znamo ukratko o tome kako veštačka inteligencija funkcioniše u ovoj sferi. Zbog toga, možemo da govorimo o tome kako da se zaštitimo od njega. Postoji nekoliko alata za zaštitu crteža od AI napada ću konkretno govoriti o Glaze i Nightshade-u.
 
-\subsection{Šta je Glaze?}
+    Glaze predstavlja alat koji štiti umetnike od neovlašćenog korišćenja njihovog stila crtanja za treniranje AI modela i njihovo generisanje slika. Napadi ''style mimicry'' funkcionišu tako što model uradi ''fine-tuning'' na umetničkim delima određenog autora, a zatim generiše nova dela u tom stilu bez dozvole. Ideja je da umesto da blokiramo trening modela, Glaze mami model da nauči pogrešan stil tako što daje nevidljive perturbacije na samom originalnom delu.
 
-\subsection{Šta je Nightshade?}
+    Glaze koristi $\bold{style \;transfer}$ da bi izolovao stilske komponente slike. Ukoliko imamo rad X jednog stila, sistem ga transformiše u sliku koja ima isti sadržaj ali drugačiji stil. Na primer, ako je slika bila u Baroko stilu, možemo je prebaciti u stil klasicizma. Ova transformacija služi kao ciljna ''maska'' za računanje perturbacija. 
+
+    Perturbacija se optimizuje tako da u prostoru karakteristika modela, slika liči na style-transfer verziju. Ovo navodi AI na pogrešne zaključke i učenje.
+
+\subsection{Kako funkcioniše algoritam Glaze-a?}
+    1. Korak - Odabir ciljnog stila\\
+    Algoritam prolazi kroz javni dataset umetnika, računa centroid svakog stila $\Phi$. Zatim, algoritam računa centroid umetnika i na osnovu prethodnih rezultata bira kandidate čija je udaljenost od umetnikovog centroida između 50. i 75. precentila. Nasumično bira stil T iz tog skupa kandidata. 
+
+    2. Korak - Style Transfer\\
+    Za svako delo X se primenjuje trenirani model $\Omega$ koji će generisati style transfer verziju $\Omega(x, T)$. Sadržaj slike ostaje isti, ali stil se menja.
+
+    3. Korak - Računanje perturbacije\\
+    U ovom koraku računamo ogrtač ili cloak. On se dobija rešavanjem sledećeg optimizacionog problema:
+    \begin{equation}
+        min \; over \; \delta_x \; {Dist(\Phi(x+\delta_x), \Phi(\Omega(x, T)))} \; pod \; uslovom \; |\delta_x| < p
+    \end{equation}
+     gde je x input slika, T ciljni stil, $\delta_x$ cloak perturbacije, $\Phi$ karakteristični prostor modela, $\Omega(x, T)$ style transfer verzija modela, $|\delta_x|$ LPIPS metrika i p maksimalno dozvoljena vizuelna promena. 
+
+    Ovo možemo proširiti dodavanjem kaznenog člana. Na originalni račun distance dodajemo $\alpha*max(LPIPS(\delta_x) - p, 0)$ gde je $\alpha$ faktor penalizacije koji kontroliše koliko je jak uslov vidljivosti perturbacije i max(*, 0) koja je RELU funkcija tj. kazna koja postoji samo ako perturbacija preskoči budžet p.
+
+    4. Korak - Objavljivanje \\
+    Umetnik objavljuje $x+\delta_x$ umesto originala. Za ljudsko oko slika izgleda nepromenjeno ali AI modeli je koriste za trening i nauče pogrešan stil.
+    
+\subsection{Zašto ovo funkcioniše?}
+    Generativni modeli imaju kontinualni izlazni prostor tj. svako pomeranje u feature reprezentaciji menja generisanu sliku. Čak i najmanje pomeranje stila može da napravi nekoherentu mešavinu dva stila. P ako pomešamo Van Gogov stil sa realizmom. Ovo direktno ugrožava mimicry jer je ona upotrebljiva samo ako je dovoljno slična originalnom stilu slike. Malo mešanje sa stilom T unosi dovoljno konfuzije mimicry-u da ona postaje neupotrebljiva, čak i kada model ima pristup delovima slike koje nemaju ogrtač oko sebe.\cite{shan2023glaze}
+
+    \begin{figure}[h]
+        \centering
+        \begin{minipage}[b]{0.5\textwidth}
+            \includegraphics[width=\textwidth]{Pictures/fig2.jpg}
+            \caption{Primer rada Glaze-a}
+        \end{minipage}
+    \end{figure}
+
+
+\section{Alat - Nightshade}
     Nightshade predstavlja napredni alat za trovanje podataka koji se koriste za treniranje VI-a. Usmeren je na difuzne modele koji generišu slike iz teksta. Cilj ovog alata je da ubaci mali broj skoro nevidljivo izmenjenih slika u trening skup modela. Samim tim, potencira na pogrešno ponašanje modela. Na primer, ukoliko korisnik traži sliku psa, model će generisati sliku mačke.
 
     Ciljevi napada su sledeći:
@@ -17,7 +51,7 @@
     
     
 
-\subsubsection{Kako funkcioniše algoritam Nightshade-a?}
+\subsection{Kako funkcioniše algoritam Nightshade-a?}
     1. Korak - Izbor otrovnih tekstualnih opisa\\
     Iz skupa prirodnih parova (tekst, slika) koji opisuju ciljni koncept Y, biraju se opisi koji su semantički najbliži tom konceptu. Bliskost se meri kosinusnom sličnošću. Na primer, ako je Y = ''pas'', biraju se opisi ''slika psa'' ili ''portret psa'', tj. oni koji najjasnije aktiviraju taj koncept u modelu. Nasumično uzorkovanje sprečava odbrambene sisteme da otkriju napad. 
 
@@ -26,27 +60,35 @@
     Zatim, napadač uzme fotografiju psa i polako je menja (piksel po piksel, nevidljivo) sve dok njen vektor u prostoru karakteristika ne postane što bliži vektoru sidrene slike. Vizuelno je još uvek pas ali model ga "oseća" kao mačku.
 
     3. Korak - Konstruisanje otrovnih slika\\
-    Za svaki odabrani opis t, koji opisuje Y, uzima se njegova prirodna slika xt i poremetićemo je formulom
-    $min  D( F(xt + \delta),  F(xa) )$ uz uslov:  $\delta$ < p
+    Za svaki odabrani opis t, koji opisuje Y, uzima se njegova prirodna slika xt i poremetićemo je formulom:
+    \begin{equation}
+        min \; D( F(xt + \delta),  \;F(xa) )\; uz \;uslov: \; |\delta| < p
+    \end{equation}
+    
     Gde je xt originalna slika, xa sidrena, $\delta$ nevidljiva izmena vrednosti piksela koja se dodaje na xt, F ekstraktor karakteristika text-to-image modela, D funkcija rastojanja (npr. euklidsko) i p budžet poremećivanja (gornja granica vizelne promene)
 
-    U praksi, umesto striktnog ograničenja koristimo penalizacionu metodu koja pretvara uslov u deo cilja. $min (F(xt +\delta) − F(xa))^2  +  \alpha \cdot max(\delta - p, 0)$\\
-    $(F(xt + \delta) − F(xa))^2$ predstavlja kvadratno rasotanje između karakteristika otrovne i sidrene slike. Minimizovanjem ovog izraza osiguravamo da model vidi otvornu sliku slično kao sidrenu.\\
-    $\alpha \cdot max(\delta − p, 0)$ - Kazneni član koji se aktivira samo kada preturbacija prekorači dozvoljeni prag p.
+    U praksi, umesto striktnog ograničenja koristimo penalizacionu metodu koja pretvara uslov u deo cilja.
+    
+    \begin{equation}
+       \min ||F(xt + \delta) - F(xa)||^2 + \alpha \cdot \max(\delta - p, 0) 
+    \end{equation}
+    
+     $||F(xt + \delta) - F(xa)||^2$ predstavlja kvadratno rasotanje između karakteristika otrovne i sidrene slike. Minimizovanjem ovog izraza osiguravamo da model vidi otvornu sliku slično kao sidrenu.\\
+     $\alpha \cdot \max(\delta - p, 0)$ - Kazneni član koji se aktivira samo kada preturbacija prekorači dozvoljeni prag p.
 
     Rezultat je slika koja izgleda kao normalna fotografija psa, ali čiji unutrašnji zapis u modelu odgovara mački. Kada model nauči na ovakvim podacima, svaki put kada korisnik zatraži "psa", model generiše nešto što liči na mačku.
 
-    \subsubsection{Zašto je toliko potentan?}
-    Obični heterogeni podaci su jako heterogeni i raznovrsni kao na primer različite fotografije pasa snimljene iz različitih uglova, sa različitim osvetljenjem... Gradijentna ažuriranja koji dolaze od tih slika tokom treninga se poništavaju međusobno jer vuku model u različitim pravcima. Nightshade rešava ovaj problem. Svi otrovni tekstualni opisi su skoncentrisani na isti ključni koncept (bez šuma), a sve sidrene slike su generisane na isti način. To znači da svi otrovni uzorci vuku model u identičnom pravcu. Efekat je jako konzistentan, omogućava da i mali broj ovakvih uzoraka može nadjačati stotine hiljada legitimnih slika.\cite{shan2024nightshade}
+    \subsection{Zašto je toliko potentan?}
+    Obični trening podaci su jako heterogeni i raznovrsni kao na primer različite fotografije pasa snimljene iz različitih uglova, sa različitim osvetljenjem... Gradijentna ažuriranja koji dolaze od tih slika tokom treninga se poništavaju međusobno jer vuku model u različitim pravcima. Nightshade rešava ovaj problem. Svi otrovni tekstualni opisi su skoncentrisani na isti ključni koncept (bez šuma), a sve sidrene slike su generisane na isti način. To znači da svi otrovni uzorci vuku model u identičnom pravcu. Efekat je jako konzistentan, omogućava da i mali broj ovakvih uzoraka može nadjačati stotine hiljada legitimnih slika.\cite{shan2024nightshade}
 
     \begin{figure}[h]
         \centering
-        \begin{minipage}[b]{0.4\textwidth}
+        \begin{minipage}[b]{0.3\textwidth}
             \includegraphics[width=\textwidth]{Pictures/filter.png}
             \caption{Primer slika sa filterom}
         \end{minipage}
         \hfill
-        \begin{minipage}[b]{0.5\textwidth}
+        \begin{minipage}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{Pictures/poisoned.png}
             \caption{Primer uticaja slika trovanja}
         \end{minipage}
@@ -55,5 +97,8 @@
 
 
     
-
-\subsection{Kako oni funkcionišu u paru?}
+\section{Kako oni funkcionišu u paru?}
+Kao što kod linearne regresije mere kvaliteta RMSE i $R^2$ nisu samostalno dovoljne i dopunjuju jedno drugog, tako Nightshade i Glaze rade zajedno u paru i preporučuje se da se koriste obe odjednom. \\
+Glaze predstavlja štit iliti ogrtač same slike koja omogućava da zaštiti stil umetnika dok Nightshade direktno truje i napada modele veštačke inteligencije. Zajedno prave dvoslojevitu zaštitu crteža. \\
+Prvo se koristi Nightshade. Umetnik ubacuje svoju sliku u Nightshade i bira nivo trovanja. Zatim se primenjuje Glaze na već otrovanu sliku. Ovim korakom umetnik dodatno maskira svoj stil, čineći ga težim za interpretaciju i imitaciju. Ovaj redosled je važan zato što Glaze štiti stil preko već izmenjene semnatike slike. Ukoliko bismo uradili obrnuto imalo bi malo manjeg uticaja. Glaze bi promenio vizuelne obrasce koje Nightshade koristi da bi zbunio i otrovao model. Na promenjeni stil bismo menjali karakteristike slike i Nightshade bi imao manju kontrolu nad time kako model vidi sadržaj. Efekat trovanja se može smanjiti zbog toga. \\
+Ovi alati nažalost nisu savršeni. Njihov efekat zavisi od toga kako se modeli treniraju i da li prepoznaju ili ignorišu ovakve perturbacije. 
