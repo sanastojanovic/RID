@@ -1,1 +1,33 @@
-\section{Merenje paznje}
+\section{Merenje pažnje: metrike koje platforme optimizuju}
+
+\subsection{Pažnja kao merljiva vrednost}
+
+U prethodnom poglavlju interakcije kao što su klik, gledanje do kraja, zadržavanje i povratak na platformu pominjane su kao primeri signala koje sistemi preporuke i eksperimentalne optimizacije koriste. Međutim, one nisu samo usputni tragovi korisničkog ponašanja — u ekonomiji pažnje, ovakve metrike predstavljaju način empirijskog kvantifikovanja pažnje i tako definisane postaju cilj algoritamske optimizacije.
+
+Digitalna platforma ne može direktno izmeriti da li je sadržaj korisniku zaista vredan, smislen ili kvalitetan. Ono što može da meri jesu vidljivi obrasci ponašanja: da li je korisnik kliknuo, koliko dugo se zadržao, da li je nastavio da skroluje, da li se vratio kasnije i da li je reagovao na sadržaj. Takvi signali zato postaju zamena za mnogo složenije pitanje kvaliteta korisničkog iskustva. Umesto da sistem zna zašto je korisnik ostao, on zna samo da je ostao. Umesto da zna da li je sadržaj korisniku pomogao, uznemirio ga ili samo isprovocirao, sistem beleži da je sadržaj uspeo da izazove reakciju.
+
+Upravo tu nastaje osnovni problem merenja pažnje. Metrike na prvi pogled deluju neutralno, jer samo opisuju ponašanje korisnika. Međutim, kada se koriste kao kriterijumi uspeha, one prestaju da budu samo opis i postaju smernica za dalje oblikovanje sistema - ono što se meri određuje ono što se proizvodi \cite{wu2017returning}.
+
+\subsection{Ključne metrike engagementa}
+
+Jedna od najčešćih metrika je CTR, odnosno click-through rate. Ona meri odnos između broja prikaza nekog sadržaja i broja klikova koje je taj sadržaj dobio. U najjednostavnijem obliku, ako je objava, reklama ili preporuka prikazana velikom broju korisnika, a značajan deo njih je kliknuo na nju, sistem taj sadržaj može protumačiti kao uspešan. CTR je zato privlačan kao metrika jer je jednostavan, brz i lako uporediv. Ipak, klik ne znači nužno da je sadržaj bio kvalitetan, jer je moguće da je nastao kao posledica jednostavne radoznalosti ili neke intenzivne emocije indukovane prvim pogledom na sadržaj.
+
+Zbog toga platforme često ne posmatraju samo klik, već i vreme zadržavanja. U kontekstu video-sadržaja govori se o watch time-u, dok se u širem kontekstu može govoriti o dwell time-u, odnosno vremenu koje korisnik provede na određenom sadržaju ili stranici. Ova metrika daje još relevantniju informaciju od samog klika, jer pokazuje da korisnik nije samo otvorio sadržaj, već se na njemu i zadržao. Međutim, ni ove dve metrike upareno ne daju dovoljno detaljnu informaciju o pažnji korisnika, jer se na sadržaju može zadržati i zato što ga uznemirava i provocira, ili npr. zbog toga što obećava razrešenje koje nikada ne dolazi.
+
+Još jedan oblik merenja pažnje jeste scroll depth, odnosno dubina skrolovanja. Ova metrika pokazuje koliko daleko korisnik ulazi u stranicu, tekst ili feed. U beskonačnom feed-u ona posebno dobija na značaju, jer korisničko kretanje kroz sadržaj nema prirodan kraj. Platforma tako ne meri samo izolovanu reakciju na jednu objavu, već čitav obrazac kretanja kroz tok sadržaja: koliko korisnik nastavlja, gde zastaje, šta preskače i u kom trenutku odustaje.
+
+Posebno važna metrika je i retention, odnosno zadržavanje korisnika kroz vreme. Za platformu nije dovoljno da korisnik jednom klikne ili jednom pogleda sadržaj. Mnogo je važnije da se vraća: kasnije istog dana, sutradan, naredne nedelje i iznova nakon svake pauze. Retention zato pokazuje da li platforma uspeva da postane deo korisnikove rutine. U tom smislu, cilj više nije samo trenutna reakcija, već stvaranje navike \cite{wu2017returning}.
+
+Pored ovih metrika, kao što je i pominjano, često se prate i lajkovi, komentari, deljenja, čuvanja sadržaja, učestalost otvaranja aplikacije i trajanje sesije. One zajedno čine širu sliku engagementa. Ipak, zajednička osobina svih ovih signala jeste to što mere ponašanje koje je vidljivo sistemu. One ne mere unutrašnje stanje korisnika, njegovu dobrobit, razlog zbog kog je ostao, niti posledicu koju sadržaj i količina korišćenja platforme ostavlja na njega.
+
+\subsection{Društvene implikacije merenja pažnje}
+
+Problem nije u tome što platforme mere korisničko ponašanje. Takvo merenje može biti korisno: može pomoći da se sistem ubrza, da se uklone nejasni delovi interfejsa, da se korisniku preporuči relevantniji sadržaj ili da se popravi funkcionalnost koja ne radi dobro. Problem je nastao onog trenutka kada je prethodno definisano merljivo ponašanje postalo najvažniji dokaz uspeha.
+
+Ako je uspeh definisan kroz klikove, sistem uči da proizvodi ono što izaziva klikove. Ako je uspeh definisan kroz vreme zadržavanja, sistem uči da favorizuje ono što korisnika duže drži pred ekranom. Ako je uspeh definisan kroz retention, sistem uči kako da od korisnikovog vraćanja napravi naviku. U takvom okviru platforma ne mora da prati da li su takvi ciljevi korisni, moralni ili dobri za čoveka. Dovoljno je da budu isplativi.
+
+Tu metrike engagementa prestaju da budu samo analitički pokazatelji i postaju uputstvo za izgradnju zavisničkog okruženja. Klik, notifikacija, novi video, novi komentar, automatsko pokretanje sledećeg sadržaja, feed koji se nikada ne završava — sve su to elementi prostora u kome se pažnja ne poštuje, već lovi. Platforma korisnika ne mora da zaključa fizički. Dovoljno je da precizno meri kada ostaje, kada odustaje, kada se vraća i šta ga ponovo povlači unutra.
+
+Zato digitalna adikcija ne može biti posmatrana samo kao slabost pojedinca. Ona nastaje u sistemu u kome se dobrobit čoveka uglavnom ne meri. Ako profit zavisi od toga da korisnik ostane duže, reaguje češće i vrati se brže, onda sistem nema jak razlog da izabere ono što je za korisnika mirnije, zdravije ili smislenije. Naprotiv, ima razlog da bira ono što ga duže drži unutra.
+
+Upravo zato ovakvo okruženje počinje da liči na digitalni zatvor prijatnog dizajna: izlaz formalno postoji, ali je svaki detalj prostora podešen tako da korisnik poželi da ostane još malo. Sledeće poglavlje bavi se upravo psihološkim mehanizmima koji čine da metrike ne ostanu samo brojevi u analitici platforme, već postanu deo svakodnevnog oblikovanja korisnikovih navika, emocija i odnosa prema svetu.

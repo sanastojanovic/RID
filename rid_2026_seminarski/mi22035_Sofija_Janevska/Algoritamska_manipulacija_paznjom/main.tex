@@ -1,12 +1,25 @@
-\documentclass[12pt]{article}
+\documentclass{article}
 
+\usepackage{cmap}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage[serbian]{babel}
+\usepackage[a4paper, margin=2.8cm]{geometry}
+\usepackage{setspace}
 \usepackage{cite}
+\usepackage[hidelinks]{hyperref}
 
-\title{Algoritamska manipulacija pažnjom: tehnike i posledice digitalnog angažovanja}
+\renewcommand{\contentsname}{Sadržaj}
+\setstretch{1.1}
+
+\hypersetup{
+    pdftitle={Algoritamska manipulacija pažnjom: tehnike i posledice maksimizacije engagementa},
+    pdfauthor={Sofija Janevska},
+    unicode=true
+}
+
+\title{Algoritamska manipulacija pažnjom: tehnike i posledice maksimizacije engagementa}
 \author{Sofija Janevska}
 \date{}
 
@@ -22,8 +35,6 @@
 \input{Section/Maksimizacija_engagementa}
 \input{Section/Merenje_paznje}
 \input{Section/Mehanizmi_eksploatacije}
-\input{Section/Posledice}
-\input{Section/Regulative}
 \input{Section/Zakljucak}
 
 \bibliographystyle{plain}
