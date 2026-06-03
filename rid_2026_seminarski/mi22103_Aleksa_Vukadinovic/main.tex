@@ -48,6 +48,44 @@ Situacija se značajno promenila sa pojavom modernog interneta i platformi zasno
 
 U takvom okruženju došlo je do intenzivnog povezivanja softverskog inženjerstva, psihologije i ekonomije. Velike tehnološke kompanije počele su masovno da primenjuju \emph{A/B testiranje}, pri čemu se različitim grupama korisnika prikazuju varijante istog interfejsa kako bi se utvrdilo koje rešenje daje najbolje rezultate. Analiziraju se čak i naizgled sitni detalji, poput boje dugmeta, rasporeda elemenata ili formulacije teksta. Vremenom je postalo jasno da određeni obrasci dizajna mogu značajno povećati broj željenih akcija korisnika. Iz takvih procesa nastali su i tamni obrasci, dizajnerska rešenja koja koriste ljudske kognitivne slabosti kako bi podstakla ponašanja koja prvenstveno odgovaraju interesima platforme, a ne samog korisnika \cite{mathur2019dark}.
 
+\section{Vrste tamnih obrazaca i načini njihovog delovanja}
+
+Jedno od najznačajnijih istraživanja tamnih obrazaca sproveli su Arunesh Mathur i saradnici sa Univerziteta Prinston. U okviru studije analizirano je više od 11.000 platformi za elektronsku trgovinu, sa ciljem identifikacije i klasifikacije manipulativnih elemenata u korisničkim interfejsima \cite{mathur2019dark}. Istraživači su koristili automatizovane alate za prikupljanje i analizu sadržaja veb-stranica, na osnovu čega su razvili sistematizaciju tamnih obrazaca.
+
+Tamni obrasci mogu se grupisati prema načinu na koji utiču na donošenje odluka korisnika i psihološkim mehanizmima koje koriste.
+
+\subsection{Asimetrija izbora i vizuelno usmeravanje pažnje}
+
+Ova kategorija obuhvata obrasce koji koriste vizuelnu organizaciju interfejsa kako bi određene opcije učinili privlačnijim od drugih. Iako korisnik formalno ima mogućnost izbora, način prezentacije opcija može značajno uticati na njegovu odluku. Veliki broj ljudi će se susresti sa ovim taktikama prilikom posete McDonalds-u i korišćenjem mašina za naručivanje hrane koje svojim rasporedom elemenata i boja vuku korisnike da na oređene proizvode.
+
+Čest primer predstavljaju prozori za upravljanje kolačićima i podešavanjima privatnosti. Dugme ,,Prihvati sve'' često je istaknuto kontrastnom bojom i zauzima centralno mesto u interfejsu, dok su opcije poput ,,Odbij sve'' ili ,,Podešavanja'' manje uočljive, prikazane sitnijim fontom ili skrivene iza dodatnih koraka.
+
+Na taj način korisnik se podstiče da izabere opciju koja je najpovoljnija za platformu. Iako su formalni zahtevi propisa, poput GDPR-a, ispunjeni, stvarna sloboda izbora može biti značajno umanjena \cite{mathur2019dark}.
+
+\subsection{Veštački osećaj hitnosti i lažni popusti}
+
+Mnoge internet prodavnice i servisi za rezervaciju koriste poruke poput ,,Još samo 2 artikla na stanju'' ili odbrojavanja do isteka navodnog popusta. Cilj ovakvih elemenata jeste stvaranje utiska da je potrebno brzo reagovati. Ovo se svakodnevno može primetiti na praktično svakom domaćem sajtu za onlajn kupovinu, gde pored obaveštenja koje stvaraju osećaj hitnosti, kupci tu takođe izloženi i lažnim popustima i lažnim ciframa o broju preostalih artikala.
+
+Mathur i saradnici identifikovali su veliki broj slučajeva u kojima ovi lažni popusti i promocije nisu bili povezani sa stvarnim stanjem proizvoda ili ponudom, već su generisani automatski \cite{mathur2019dark}. Takvi obrasci koriste strah od propuštanja prilike (\emph{FOMO -- Fear of Missing Out}) kako bi podstakli korisnika da donese odluku bez detaljnog razmatranja svih dostupnih informacija.
+
+Posledica je povećana verovatnoća impulsivne kupovine ili prihvatanja uslova koje korisnik možda ne bi prihvatio nakon pažljivijeg razmišljanja.
+
+\subsection{Prikriveni troškovi i otežano odustajanje}
+
+Jedan od poznatijih tamnih obrazaca jeste \emph{Sneak into Basket}, kod kojeg se dodatni proizvodi ili usluge automatski uključuju u proces kupovine. To mogu biti osiguranja, produžene garancije ili druge opcione usluge koje korisnik nije eksplicitno izabrao. Ukoliko ne proveri sadržaj korpe ili završni račun, korisnik može platiti više nego što je prvobitno planirao \cite{mathur2019dark}. Ovo je veoma često prilikom preuzimanja besplatnih aplikacija sa interneta na Windows operativnom sistemu, gde su korisnici navikli da bez gledanja potvrdjuju sve korake setup-a instalacije, prilikom čega slučajno instaliraju i dodatan softver (McAfee, Avast, AVG, CCleaner, Opera, ... se često instaliraju upravo na ovakav način).
+
+Sličan problem predstavlja obrazac poznat kao \emph{Roach Motel}. U ovom slučaju registracija ili aktiviranje pretplate obično se obavlja veoma jednostavno, dok je proces otkazivanja znatno složeniji. Korisnik može biti primoran da prolazi kroz više nivoa menija, popunjava dodatne formulare ili kontaktira korisničku podršku kako bi deaktivirao uslugu. Kompanija Adobe (kreatori Photoshop alata, kao i mnogih drugih alata za editovanje videa i slika) su poznati po primeni ove tehnike, zbog čega su EU više puta bili tuženi, i eventualno primorani da omoguće lakše otkazivanje pretplata.
+
+Ovakva asimetrija povećava verovatnoću da će korisnik odustati od pokušaja otkazivanja ili odložiti donošenje te odluke.
+
+\subsection{Lingvistička manipulacija i potvrda kroz sramotu}
+
+Pored vizuelnih elemenata, tamni obrasci mogu koristiti i manipulativne tekstualne formulacije. Jedan od primera je obrazac poznat kao \emph{Confirmshaming}.
+
+Kada korisnik odbije određenu ponudu, opcija za odbijanje često nije predstavljena neutralnim tekstom. Umesto toga, koriste se formulacije poput ,,Ne, hvala, ne želim da uštedim novac'' ili ,,Ne, ne zanima me zdravlje moje dece''. Takve poruke nastoje da kod korisnika izazovu osećaj nelagodnosti ili krivice zbog izabranog odgovora.
+
+Iako ovakve formulacije ne ograničavaju mogućnost izbora, one utiču na način na koji korisnik doživljava ponuđene opcije i predstavljaju primer korišćenja psiholoških tehnika u dizajnu korisničkih interfejsa.
+
 \newpage
 \begin{thebibliography}{99}
 
