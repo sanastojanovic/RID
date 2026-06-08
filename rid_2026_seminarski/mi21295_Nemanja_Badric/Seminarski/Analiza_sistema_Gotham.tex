@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+﻿\documentclass[12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[serbian]{babel}
@@ -105,7 +105,7 @@ Korisnički interfejs je dizajniran tako da maksimalno olakša snalaženje u \te
     \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{Photos/Graph Ontologija u praksi.jpg}
-    \caption{Vizuelizacija ontologije kroz mrežni graf: povezivanje naizgled nepovezanih entiteta u smislenu celinu}
+    \caption{Vizuelizacija ontologije kroz mrežni graf: povezivanje naizgled nepovezanih entiteta u smislenu celinu.}
     \label{fig:graph_analiza}
     \end{figure}
 
@@ -141,7 +141,7 @@ Kako bi se razumeo način na koji \textit{Gotham} obrađuje podatke, neophodno j
 \subsection{Od sirovih podataka do digitalnog blizanca: Koncept ontologije}
 
 U tradicionalnim relacionim sistemima, manipulacija podacima zahteva direktan rad sa tabelama putem kompleksnih \textit{SQL} upita i tvrdo kodirane logike (eng. \textit{hardcoded logic}), što od korisnika iziskuje napredne programerske veštine i otežava intuitivno sagledavanje šire slike.
-Dinamička ontologija u \textit{Gothamu} zapravo funkcioniše kao ”digitalni” mozak' koji heterogene podatke iz različitih baza pretvara u prepoznatljive objekte iz stvarnog sveta, poput ljudi, automobila ili događaja, čime omogućava operateru da vidi celovitu operativnu sliku situacije umesto pukog uvida u izolovane informacije.
+
 Problem sa ovakvim statičnim bazama je što se u realnom svetu, posebno u obaveštajnom i bezbednosnom sektoru, podaci stalno menjaju, a nove vrste informacija pristižu u različitim i često nestrukturiranim formatima.
 
 Da bi prevazišao ovo ograničenje, \textit{Gotham} koristi ontologiju koja suštinski funkcioniše kao napredni graf znanja (eng. \textit{Knowledge Graph}).
@@ -160,7 +160,9 @@ Na ovaj način, kompleksni odnosi između naizgled nepovezanih informacija posta
 Ključni inženjerski problem kod tradicionalnih arhitektura podataka je taj što promena šeme baze podataka ili ažuriranje složenih relacija u hodu zahteva ozbiljne intervencije i programersko znanje (npr. pisanje kompleksnih \textit{SQL Update} upita).
 Na modernom bojištu ili u središtu obaveštajne operacije, podaci se menjaju iz sekunde u sekundu, pa statične šeme jednostavno nisu upotrebljive.
 
-Kako bi rešio ovaj problem, \textit{Palantir} umesto tradicionalnih manipulacija podacima uvodi koncept takozvanih tipova akcija (eng. \textit{Action Types}).
+Upravo ovde dinamička ontologija pokazuje svoju pravu snagu - ona u \textit{Gothamu} zapravo funkcioniše kao „digitalni mozak” koji heterogene podatke iz različitih baza pretvara u prepoznatljive objekte iz stvarnog sveta, poput ljudi, automobila ili događaja, čime omogućava operateru da vidi celovitu operativnu sliku situacije umesto izolovanih informacija.
+
+\textit{Palantir} umesto tradicionalnih manipulacija podacima uvodi koncept takozvanih tipova akcija (eng. \textit{Action Types}).
 Kroz grafički interfejs, analitičar može intuitivno da izmeni svojstvo nekog objekta ili doda novu vezu, a sistem u pozadini samostalno generiše i sprovodi neophodne logičke operacije nad bazom.
 Da bi ovo funkcionisalo, dinamička ontologija je podeljena u tri funkcionalna sloja:
 
@@ -259,18 +261,17 @@ Algoritamska pristrasnost (eng. \textit{algorithmic bias}) u sistemu kao što je
 
 Jedan od najvećih rizika je takozvana uzorkovana pristrasnost (eng. \textit{sampling bias}). Ukoliko su podaci za obuku \textit{Gothama} prikupljani u specifičnim demografskim zonama, sistem može razviti nepravilne obrasce identifikacije.
 U kontekstu modernog ratovanja, gde \textit{Palantir} promoviše \textit{AI}-vođeni lanac targetiranja (eng. \textit{AI-powered kill chain}), ovo može dovesti do tragičnih posledica.
-Ako sistem na osnovu istorijskih podataka određene grupe ljudi ili tipove ponašanja češće označava kao pretnju, operater može dobiti lažno potvrđenu metu, što direktno vodi ka diskriminatornim ishodima na terenu~\cite{icrc2024bias, carnegie2024private}.
+Ako sistem na osnovu istorijskih podataka određene grupe ljudi ili tipova ponašanja češće označava kao pretnju, operater može dobiti lažno potvrđenu metu, što direktno vodi ka diskriminatornim ishodima na terenu~\cite{icrc2024bias, carnegie2024private}.
 
 \subsection{Problem proporcionalnosti: Može li \textit{AI} da vrednuje ljudski život?}
 
-Prema Međunarodnom humanitarnom pravu (eng. \textit{IHL}), svaka vojna odluka mora da zadovolji princip proporcionalnosti - to je pravni standard koji zahteva da očekivana konkretna i direktna vojna prednost napada ne sme biti prekomerna u odnosu na predviđeni nenamerni gubitak civilnih života, povrede civila ili oštećenje civilnih objekata~\cite{woodcock2024human, icrc2024bias}.
-Ovde nastaje fundamentalni inženjerski i etički problem: proporcionalnost zahteva \textit{vrednosni sud}, a ne samo matematičku kalkulaciju.
+Prema Međunarodnom humanitarnom pravu (eng. \textit{IHL}), svaka vojna odluka mora da zadovolji princip proporcionalnosti - to je pravni standard koji zahteva da očekivana konkretna i direktna vojna prednost napada ne sme biti prekomerna u odnosu na predviđeni nenamerni gubitak civilnih života ili oštećenje civilnih objekata~\cite{woodcock2024human, icrc2024bias}.
+Ovde nastaje fundamentalni inženjerski i etički problem: proporcionalnost se ne može svesti na prosto sabiranje i oduzimanje, jer ne postoji univerzalna matematička formula koja može da izmeri moralnu težinu ljudskog života u odnosu na vojnu prednost. Dok softver može precizno da izračuna tehničke parametre, on nije sposoban da razume suštinsku vrednost onoga što bi tom akcijom bilo uništeno.
 
 Softver kao što je \textit{Gotham} operiše u domenu verovatnoće i brojeva.
-On može da izračuna radijus eksplozije ili proceni broj objekata u zoni, ali nije sposoban da razume moralnu težinu gubitka ljudskog života.
 Problem \enquote{crne kutije} ovde postaje kritičan.
 Pošto su algoritmi mašinskog učenja često neprozirni, komandant ne može pravno niti moralno da opravda zašto je sistem procenio da je određena žrtva \enquote{proporcionalna} cilju.
-Autorka \textbf{Tejlor Vudkok} (eng. \textit{Taylor Woodcock})~\cite{woodcock2024human} naglašava da su zbog ove nečitljivosti \textit{AI} sistemi suštinski neadekvatni za samostalno donošenje ovakvih odluka.
+Autorka \textbf{Tejlor Vudkok} (eng. \textit{Taylor Woodcock})~\cite{woodcock2024human, hua2020rethinking} naglašava da su zbog ove nečitljivosti \textit{AI} sistemi suštinski neadekvatni za samostalno donošenje ovakvih odluka.
 
 \subsection{Jaz u odgovornosti (eng. \textit{Accountability Gap})}
 
@@ -285,6 +286,8 @@ U ovom trouglu moći: država, privatna kompanija i operater - odgovornost posta
 \end{itemize}
 
 Ovaj informacioni jaz između onih koji prave softver i onih koji ga koriste dovodi do situacije u kojoj se suvereni državni autoritet prenosi na zatvorene algoritme privatnih korporacija, čime se direktno ugrožava demokratski nadzor i vladavina prava~\cite{carnegie2024private, ulbricht2024palantir, architecture2024}.
+
+U ovom kontekstu, demokratski nadzor podrazumeva obavezu da nezavisna tela - poput parlamentarnih komisija i sudova - imaju pravo uvida u rad algoritama, dok vladavina prava osigurava da ni država ni privatne kompanije ne smeju biti iznad zakona, štiteći time građane od proizvoljne upotrebe tehnološke moći.
 
 \section{Problem privatnosti, nadzora i bezbednosti interneta}
 
@@ -309,7 +312,7 @@ Ovo dovodi do nekoliko ključnih inženjersko-društvenih problema:
     \item \textbf{Efekat „hlađenja” (eng. \textit{chilling effect}):} Kada su ljudi svesni da svaka njihova digitalna interakcija može biti iskorišćena za mrežnu analizu, oni počinju da izbegavaju određene institucije ili oblike komunikacije, što narušava osnovne slobode u demokratskom društvu~\cite{brayne2017big}.
 \end{itemize}
 
-Dakle, inženjerski koncept „spajanja tačkica” (eng. \textit{connecting the dots}) o kojoj \textit{Palantir} ponosno govori u svojoj dokumentaciji, u praksi znači da policijski aparat postaje „širi i dublji”, zahvatajući ogroman broj regularnih (nevinih) ljudi u digitalnu mrežu nadzora~\cite{palantir2024gotham}.
+Dakle, inženjerski koncept „spajanja tačkica” (eng. \textit{connecting the dots}) o kome \textit{Palantir} ponosno govori u svojoj dokumentaciji, u praksi znači da policijski aparat postaje „širi i dublji”, zahvatajući ogroman broj regularnih (nevinih) ljudi u digitalnu mrežu nadzora~\cite{palantir2024gotham}.
 
 \subsection{Slučaj \textit{hessenDATA} i presuda nemačkog Ustavnog suda}
 
@@ -356,7 +359,7 @@ Kako bi odgovorio na kritike o masovnom nadzoru, \textit{Palantir} u arhitekturu
 Umesto da se privatnost posmatra kao naknadni dodatak, ona je ugrađena direktno u logički sloj sistema kroz nekoliko ključnih mehanizama:
 
 \begin{itemize}
-    \item \textbf{kontrole pristupa na osnovu svrhe (eng. \textit{Purpose Based Access Controls - PBAC}):} Za razliku od tradicionalnih sistema gde korisnik ima pristup podacima na osnovu svoje uloge (npr. administrator), \textit{PBAC} zahteva od operatera da navede konkretnu svrhu (eng. \textit{purpose}) za svaku pretragu.
+    \item \textbf{Kontrole pristupa na osnovu svrhe (eng. \textit{Purpose Based Access Controls - PBAC}):} Za razliku od tradicionalnih sistema gde korisnik ima pristup podacima na osnovu svoje uloge (npr. administrator), \textit{PBAC} zahteva od operatera da navede konkretnu svrhu (eng. \textit{purpose}) za svaku pretragu.
     Na primer, analitičar ne može prosto da pretražuje bazu građana; on mora da poveže svoj upit sa aktivnim brojem slučaja ili nalogom suda~\cite{architecture2024, palantir2024privacy}.
     \item \textbf{Nepromenljivi revizioni tragovi (eng. \textit{Immutable Audit Logs}):} Svaka interakcija sa podacima u \textit{Gothamu}, od pregleda objekta do izvoza izveštaja, trajno se beleži.
     Ovi logovi su dizajnirani tako da budu otporni na neovlašćene izmene (eng. \textit{tamper-evident}), čime se omogućava naknadna kontrola i sprečava zloupotreba sistema u privatne svrhe~\cite{palantir2024gotham, architecture2024}.
@@ -370,7 +373,7 @@ Bez stroge eksterne supervizije, napredni tehnički alati mogu postati samo mark
 
 
 \subsection{\textit{Gotham} u širem kontekstu tema kursa Računarstvo i društvo}
-"Analiza sistema \textit{Gotham}"  direktno se nadovezuje na ključne teme kursa, pre svega na \textbf{etiku u računarstvu} i \textbf{privatnost na internetu}~\cite{ulbricht2024palantir}. 
+\enquote{Analiza sistema \textit{Gotham}} direktno se nadovezuje na ključne teme kursa, pre svega na \textbf{etiku u računarstvu} i \textbf{privatnost na internetu}~\cite{ulbricht2024palantir}. 
 Kroz ovaj softver vidimo kako algoritmi prestaju da budu samo tehnički alati i postaju instrumenti moći koji testiraju granice ljudskih prava u digitalnom prostoru. Pored toga, problem \textbf{bezbednosti interneta} ovde dobija novu dimenziju - zavisnost države od zatvorenih algoritama privatnih firmi stvara potencijalne ranjivosti u digitalnom suverenitetu, što je jedna od centralnih dilema modernog informacionog društva~\cite{carnegie2024private}.
 
 \section{Zaključak}
