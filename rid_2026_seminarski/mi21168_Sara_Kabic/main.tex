@@ -55,6 +55,28 @@
   de-mo-graf-ske
   psi-hi-ja-trij-skih
   so-ci-o-e-ko-nom-ski
+  ho-spi-ta-li-za-ci-je
+  ho-spi-ta-li-za-ci-ja
+  una-pre-đe-nje
+  una-pre-đe-nja
+  obo-lje-nja
+  obo-lje-nje
+  za-bra-nje-na
+  za-bra-nje-no
+  po-ve-ća-va-nju
+  po-ve-ća-nju
+  kar-di-o-vas-ku-lar-nih
+  kar-di-o-vas-ku-lar-ne
+  re-pro-duk-tiv-nog
+  auto-ma-ti-zo-va-ne
+  auto-ma-ti-zo-va-nih
+  Ab-da-lla
+  ka-te-go-ri-je
+  ka-te-go-ri-ja
+  ne-o-vla-šće-ni
+  po-no-vne
+  pro-iz-vo-di
+  me-di-cin-ske
 }
 \begin{document}
 
@@ -96,144 +118,155 @@
 
 
 \section{Uvod}
-
-Razvoj veštačke inteligencije fundamentalno menja način na koji se zdravstveni podaci prikupljaju, obrađuju i koriste. Algoritmi mašinskog učenja danas mogu analizirati medicinske slike, predviđati ishode lečenja i identifikovati obrasce u ogromnim bazama podataka pacijenata\hyphenation{pacije-nata} sa preciznošću koja ponekad prevazilazi i procenu vrhunskih stručnjaka \cite{murdoch2021}. Međutim, ova tehnološka revolucija dolazi sa značajnim izazovom: kako zaštititi privatnost pojedinaca čiji podaci pokreću ove sisteme?
-
+ 
+Razvoj veštačke inteligencije fundamentalno menja način na koji se zdravstveni podaci prikupljaju, obrađuju i koriste. Algoritmi mašinskog učenja danas mogu analizirati medicinske slike, predviđati ishode lečenja i identifikovati obrasce u ogromnim bazama podataka pacijenata sa preciznošću koja ponekad prevazilazi i procenu vrhunskih stručnjaka \cite{murdoch2021}. Međutim, ova tehnološka revolucija dolazi sa značajnim izazovom: kako zaštititi privatnost pojedinaca čiji podaci pokreću ove sisteme?
+ 
 Zdravstveni podaci spadaju među najosetljivije kategorije ličnih podataka \cite{abouelmehdi2017}. Oni otkrivaju ne samo trenutno zdravstveno stanje osobe, već mogu ukazivati na genetske predispozicije, mentalno zdravlje, životne navike i druge aspekte koje pojedinci često žele da zadrže za sebe. Kada se takvi podaci koriste za treniranje AI modela ili se dele između institucija, rizik od neovlašćenog pristupa, zloupotrebe ili ponovne identifikacije postaje realan.
-
-Ovaj rad istražuje kompleksan odnos između primene veštačke inteligencije u zdravstvu i zaštite privatnosti podataka. Kroz analizu tehničkih, etičkih i pravnih aspekata, rad identifikuje ključne izazove sa kojima se suočavaju zdravstvene institucije, regulatorna tela i sami pacijenti. Posebna pažnja posvećena je pitanjima informisanog pristanka u kontekstu složenih AI sistema, problemu pristrasnosti algoritama koji može dovesti do diskriminacije, kao i ulozi pravnih okvira poput GDPR-a u definisanju granica dozvoljenog korišćenja zdravstvenih podataka \cite{kumar2025}.Tematika ovog rada direktno se nadovezuje na tri oblasti koje se izučavaju u okviru kursa: \textit{privatnost na internetu}, kroz analizu načina na koji se zdravstveni podaci prikupljaju i izlažu rizicima u digitalnom okruženju; \textit{bezbednost interneta}, kroz razmatranje pretnji poput curenja podataka i neovlašćenog pristupa zdravstvenim sistemima; i \textit{etiku u razvoju računarskih tehnologija}, kroz kritičko 
+ 
+Ovaj rad istražuje kompleksan odnos između primene veštačke inteligencije u zdravstvu i zaštite privatnosti podataka. Kroz analizu tehničkih, etičkih i pravnih aspekata, rad identifikuje ključne izazove sa kojima se suočavaju zdravstvene institucije, regulatorna tela i sami pacijenti. Posebna pažnja posvećena je pitanjima informisanog pristanka u kontekstu složenih AI sistema, problemu pristrasnosti algoritama koji može dovesti do diskriminacije, kao i ulozi pravnih okvira poput GDPR-a u definisanju granica dozvoljenog korišćenja zdravstvenih podataka \cite{kumar2025}. Tematika ovog rada direktno se nadovezuje na tri oblasti koje se izučavaju u okviru kursa: \textit{privatnost na internetu}, kroz analizu načina na koji se zdravstveni podaci prikupljaju i izlažu rizicima u digitalnom okruženju; \textit{bezbednost interneta}, kroz razmatranje pretnji poput curenja podataka i neovlašćenog pristupa zdravstvenim sistemima; i \textit{etiku u razvoju računarskih tehnologija}, kroz kritičko 
 sagledavanje odgovornosti koju nose tvorci i korisnici AI sistema u medicini.
-
+ 
 \subsection{Značaj privatnosti u savremenom zdravstvu}
-
+ 
 Privatnost u zdravstvu nije isključivo tehnički ili pravni problem, ona je u osnovi etičko pitanje koje se tiče dostojanstva, autonomije i poverenja pacijenata. Odnos između lekara i pacijenta istorijski počiva na poverenju i poverljivosti: pacijent deli osetljive informacije sa očekivanjem da će one biti zaštićene i korišćene isključivo u svrhu lečenja \cite{murdoch2021}. Digitalizacija zdravstvenih sistema i uvođenje veštačke inteligencije proširuju krug aktera koji imaju pristup tim podacima počevši od bolničkih informacionih sistema, preko istraživačkih institucija, do komercijalnih tehnoloških kompanija.
-
+ 
 Savremeni zdravstveni sistemi generišu ogromne količine podataka: elektronske zdravstvene kartone, rezultate laboratorijskih analiza, medicinske snimke, genomske podatke i podatke sa uređaja za praćenje zdravlja \cite{abouelmehdi2017}. Ovi podaci imaju izuzetnu vrednost kako za unapređenje medicine, tako i za komercijalne subjekte, što stvara tenziju između javnog interesa i zaštite privatnosti pojedinca. Bez adekvatnih mehanizama zaštite, pacijenti mogu biti izloženi diskriminaciji od strane poslodavaca ili osiguravajućih društava, socijalnoj stigmatizaciji, pa čak i finansijskim štetama \cite{kumar2025}.
 \newpage
 \section{Veštačka inteligencija u zdravstvu}
-
+ 
 \subsection{Primena veštačke inteligencije u medicini}
-
-Veštačka inteligencija u medicini obuhvata širok spektar tehnologija, počevši od algoritama mašinskog učenja koji analiziraju medicinske slike, preko sistema za obradu prirodnog jezika koji interpretiraju kliničke beleške do elektronskih zdravstvenih kartona. Prema Topolu, primena AI u medicini odvija se na tri nivoa: za kliničare, pre svega kroz brzu i preciznu interpretaciju medicinskih snimaka, onda za zdravstvene sisteme, kroz unapređenje radnih tokova i smanjenje grešaka i za pacijente, kroz 
-mogućnost praćenja i upravljanja sopstvenim zdravstvenim podacima \cite{topol2019}.
-
-Posebno značajnu ulogu ima duboko učenje, podvrsta mašinskog 
+ 
+Veštačka inteligencija u medicini obuhvata širok spektar tehnologija, počevši od algoritama mašinskog učenja koji analiziraju medicinske slike, preko sistema za obradu prirodnog jezika koji interpretiraju kliničke beleške do elektronskih zdravstvenih kartona. Prema Topolu \cite{topol2019}, primena AI u medicini odvija se na tri nivoa: za kliničare, pre svega kroz brzu i preciznu interpretaciju medicinskih snimaka, onda za zdravstvene sisteme, kroz unapređenje radnih tokova i smanjenje grešaka i za pacijente, kroz 
+mogućnost praćenja i upravljanja sopstvenim zdravstvenim podacima.
+ 
+Posebno značajnu ulogu ima \textit{duboko učenje} (\textit{deep learning}), podvrsta mašinskog 
 učenja zasnovana na višeslojnim neuronskim mrežama koje oponašaju način na koji ljudski mozak obrađuje informacije. Ovakvi sistemi sposobni su da detektuju maligne promene na radiološkim snimcima, dijagnostikuju dijabetičku retinopatiju iz fotografija očnog dna ili predvide rizik od kardiovaskularnih bolesti na osnovu kombinacije kliničkih parametara \cite{topol2019}. U određenim dijagnostičkim zadacima, ovi sistemi dostižu ili čak i prevazilaze preciznost iskusnih specijalista, što ih čini vrednim alatom naročito u sredinama sa ograničenim pristupom lekarima specijalistima \cite{murdoch2021}.
-
+ 
 Pored dijagnostike, AI se intenzivno primenjuje u oblasti prediktivne analitike, gde algoritmi na osnovu istorije bolesti, laboratorijskih nalaza i demografskih podataka predviđaju verovatnoću pojave određenih oboljenja ili komplikacija. Rani sistemi prediktivne analitike korišćeni su za identifikaciju pacijenata sa visokim rizikom od ponovne hospitalizacije, što bolnicama omogućava pravovremenu intervenciju i smanjenje troškova lečenja \cite{abouelmehdi2017}. Ovakva primena, međutim, zahteva pristup opsežnim ličnim podacima pacijenata tokom dužeg vremenskog perioda, što direktno pokreće pitanja o granicama dozvoljenog korišćenja i čuvanja zdravstvenih informacija.
-
-Veštačka inteligencija se takođe sve više koristi u oblasti personalizovane medicine, gde algoritmi analiziraju genomske podatke pacijenta kako bi predvideli reakciju na određenu terapiju ili identifikovali genetske predispozicije za nasledne bolesti. Genomski podaci predstavljaju posebno osetljivu kategoriju, budući da su po prirodi jedinstveni za svakog pojedinca i nepromenjivi tokom čitavog života. Što znači da jednom otkriveni,ne mogu biti „zaboravljeni" ili izmenjeni kao, na primer, lozinka \cite{murdoch2021}. 
+ 
+Veštačka inteligencija se takođe sve više koristi u oblasti personalizovane medicine, gde algoritmi analiziraju genomske podatke pacijenta kako bi predvideli reakciju na određenu terapiju ili identifikovali genetske predispozicije za nasledne bolesti. Genomski podaci predstavljaju posebno osetljivu kategoriju, budući da su po prirodi jedinstveni za svakog pojedinca i nepromenjivi tokom čitavog života. Što znači da jednom otkriveni, ne mogu biti „zaboravljeni" ili izmenjeni kao, na primer, lozinka \cite{murdoch2021}. 
 Ova karakteristika genomskih podataka čini njihovu zaštitu posebno izazovnom i zahteva poseban tretman u okviru pravnih regulativa.
 \subsection{Uloga velikih podataka u zdravstvu}
-
-Razvoj veštačke inteligencije u medicini neodvojivo je povezan sa pojavom velikih podataka (\textit{big data}). Zdravstveni sistemi danas generišu ogromne količine strukturiranih i nestrukturiranih podataka: elektronske zdravstvene kartone, rezultate laboratorijskih analiza, medicinske snimke, genomske sekvence, podatke sa nosivih uređaja za praćenje zdravlja, pa i podatke sa društvenih mreža koji mogu ukazivati na zdravstveno stanje korisnika \cite{abouelmehdi2017}.
-
-Vrednost ovih podataka leži u njihovoj kombinaciji. Integracija različitih izvora omogućava AI sistemima da uočavaju obrasce koji bi bili nevidljivi pri analizi pojedinačnih skupova podataka. Međutim, ista ta kombinacija podataka iz više izvora predstavlja i najveći bezbednosni rizik: svaki novi izvor podataka proširuje površinu napada i povećava verovatnoću da će anonimizovani podaci moći biti ponovo identifikovani \cite{abouelmehdi2017}. Abdalla ističe da je upravljanje velikim podacima u zdravstvu jedan od ključnih izazova savremene informatike, koji zahteva nove pristupe kako u tehničkom smislu, tako i u pogledu regulacije i etike \cite{abdalla2022}.
-
-Poseban izazov predstavlja činjenica da se zdravstveni veliki podaci često prikuplja i čuva u oblaku, što donosi pitanja o jurisdikciji, odgovornosti i bezbednosti podataka koji prelaze državne granice \cite{topol2019}. U kontekstu evropske regulative, ovo direktno pokreće pitanje primene GDPR-a na zdravstvene podatke koji se obrađuju van teritorije Evropske unije.
-
+ 
+Razvoj veštačke inteligencije u medicini neodvojivo je povezan sa pojavom velikih podataka (engl. \textit{big data}). Zdravstveni sistemi danas generišu ogromne količine strukturiranih i nestrukturiranih podataka: elektronske zdravstvene kartone, rezultate laboratorijskih analiza, medicinske snimke, genomske sekvence, podatke sa nosivih uređaja za praćenje zdravlja, pa i podatke sa društvenih mreža koji mogu ukazivati na zdravstveno stanje korisnika \cite{abouelmehdi2017}.
+ 
+Vrednost ovih podataka leži u njihovoj kombinaciji. Integracija različitih izvora omogućava AI sistemima da uočavaju obrasce koji bi bili nevidljivi pri analizi pojedinačnih skupova podataka. Međutim, ista ta kombinacija podataka iz više izvora predstavlja i najveći bezbednosni rizik: svaki novi izvor podataka proširuje površinu napada i povećava verovatnoću da će anonimizovani podaci moći biti ponovo identifikovani \cite{abouelmehdi2017}. Abdala (eng. Abdalla) ističe da je upravljanje velikim podacima u zdravstvu jedan od ključnih izazova savremene informatike, koji zahteva nove pristupe kako u tehničkom smislu, tako i u pogledu regulacije i etike \cite{abdalla2022}.
+ 
+Poseban izazov predstavlja činjenica da se zdravstveni veliki podaci često prikupljaju i čuvaju u oblaku, što donosi pitanja o jurisdikciji, odgovornosti i bezbednosti podataka koji prelaze državne granice \cite{topol2019}. U kontekstu evropske regulative, ovo direktno pokreće pitanje primene GDPR-a na zdravstvene podatke koji se obrađuju van teritorije Evropske unije.
+ 
 \newpage
 \section{Privatnost zdravstvenih podataka}
 \subsection{Osetljivost i značaj medicinskih podataka}
 Kao što je već napomenuto, zdravstveni podaci predstavljaju jednu od najosetljivijih kategorija ličnih informacija koje savremeni informacioni sistemi obrađuju. Za razliku od finansijskih podataka koji 
 se mogu promeniti, poput broja kreditne kartice ili lozinke, mnogi zdravstveni podaci su permanentni: genetski profil, istorija bolesti, hronična oboljenja ili mentalni poremećaji ostaju vezani za osobu tokom čitavog života \cite{murdoch2021}. Upravo ova karakteristika čini njihovo neovlašćeno otkrivanje posebno ozbiljnom povredom privatnosti, jer posledice ne mogu biti jednostavno otklonjene.
-
+ 
 Medicinski podaci otkrivaju dimenzije ličnosti koje pojedinci najčešće žele da zadrže u strogoj privatnosti: dijagnoze psihijatrijskih oboljenja, zavisnosti, polno prenosivih bolesti, genetskih predispozicija ili reproduktivnog zdravlja. Otkrivanje ovakvih informacija može imati dalekosežne posledice po svakodnevni život pacijenta, počevši od 
 diskriminacije pri zapošljavanju i odbijanja od strane osiguravajućih društava, do socijalne stigmatizacije i narušavanja porodičnih odnosa \cite{abouelmehdi2017}. U digitalnom okruženju, gde se podaci lako umnožavaju i distribuiraju, posledice jednog curenja informacija mogu biti trajne i praktično neopozive.
-
+ 
 Posebnu kategoriju osetljivih podataka čine genomski podaci, čija analiza postaje sve dostupnija i jeftinija zahvaljujući napretku AI tehnologija. Genomski podaci nisu osetljivi samo za konkretnog pojedinca već oni otkrivaju i informacije o biološkim srodnicima koji nisu ni svesni da su njihovi podaci posredno otkriveni \cite{murdoch2021}. Ova kolektivna dimenzija privatnosti genomskih podataka postavlja posebne etičke i 
 pravne izazove koji prevazilaze okvire tradicionalnih modela zaštite podataka zasnovanih na individualnom pristanku.
-
-
+ 
+ 
 \subsection{Rizici po privatnost pacijenata}
 Primena veštačke inteligencije u zdravstvu uvodi nove i složene rizike po privatnost pacijenata koji se kvalitativno razlikuju od rizika karakterističnih za tradicionalne zdravstvene informacione sisteme. Dok su raniji bezbednosni problemi uglavnom podrazumevali neovlašćeni pristup jasno definisanim bazama podataka, savremeni AI sistemi mogu izvoditi zaključke o zdravstvenom stanju pacijenta na osnovu podataka koji 
 naizgled nemaju veze sa medicinom \cite{topol2019}. Na primer, algoritmi dubokog učenja mogu iz fotografija mrežnjače oka predvideti kardiovaskularne rizike, proceniti starost ili čak odrediti pol pacijenta što korisnici prilikom deljenja fotografije nisu ni bili svesni da odaju i takvu vrstu informacija.
-
-Jedan od ključnih rizika predstavlja tzv. sekundarna upotreba podataka odnosno situacija kada se zdravstveni podaci prikupljeni u jednu svrhu koriste u potpuno drugačije svrhe bez znanja ili pristanka pacijenta. Podaci prikupljeni radi lečenja mogu biti iskorišćeni za treniranje komercijalnih AI modela, prodati trećim stranama ili analizirani u istraživačke svrhe koje daleko prevazilaze prvobitni kontekst u kome su 
+ 
+Jedan od ključnih rizika predstavlja tzv. \textit{sekundarna upotreba podataka} odnosno situacija kada se zdravstveni podaci prikupljeni u jednu svrhu koriste u potpuno drugačije svrhe bez znanja ili pristanka pacijenta. Podaci prikupljeni radi lečenja mogu biti iskorišćeni za treniranje komercijalnih AI modela, prodati trećim stranama ili analizirani u istraživačke svrhe koje daleko prevazilaze prvobitni kontekst u kome su 
 dati \cite{kumar2025}. Ovakva praksa direktno narušava princip svrsishodnosti obrade podataka koji je temelj savremene regulative o zaštiti privatnosti.
-
+ 
 Dodatni rizik predstavlja agregacija podataka iz raznovrsnih izvora. Kombinovanjem zdravstvenih kartona, podataka sa nosivih uređaja za praćenje zdravlja, informacija sa društvenih mreža i podataka o kupovini moguće je konstruisati izuzetno detaljan profil pojedinca koji otkriva mnogo više od onoga što je svaki od tih izvora odvojeno sadržao 
 \cite{abouelmehdi2017}. Ovaj fenomen, koji je još poznat kao problem agregacije, posebno je izražen u kontekstu zdravstvenih velikih podataka, gde integracija podataka iz više izvora predstavlja i osnovu za razvoj AI sistema i istovremeno najveću pretnju po privatnost pacijenata.
-
+ 
 \subsection{Curenje podataka i bezbednosni problemi}
-Zdravstveni sektor je u poslednjih nekoliko godina postao jedna od najčešće napadanih industrija u sajber prostoru. Prema izveštajima HIPAA Journal, u 2023. godini evidentirano je skoro dva velika curenja zdravstvenih podataka dnevno u Sjedinjenim Američkim Državama, pri čemu je ukupno kompromitovano oko 168 miliona zdravstvenih kartona. Ransomware napadi, u kojima napadači šifruju bolničke sisteme i zahtevaju otkupninu, postali su posebno rasprostranjeni. Broj ovakvih napada porastao je za 278\% između 2018. i 2023. godine. Ovakvi napadi ne ugrožavaju samo privatnost podataka, već direktno utiču na kontinuitet pružanja zdravstvenih usluga i bezbednost pacijenata.
-
+Zdravstveni sektor je u poslednjih nekoliko godina postao jedna od najčešće napadanih industrija u sajber prostoru. Prema izveštajima \textit{HIPAA Journal}\footnote{\textit{Health Insurance Portability and Accountability Act} (HIPAA) je američki zakon o zaštiti zdravstvenih podataka; više na \url{https://www.hhs.gov/hipaa/index.html}}, u 2023. godini evidentirano je skoro dva velika curenja zdravstvenih podataka dnevno u Sjedinjenim Američkim Državama, pri čemu je ukupno kompromitovano oko 168 miliona zdravstvenih kartona. \textit{Ransomware} napadi, u kojima napadači šifruju bolničke sisteme i zahtevaju otkupninu, postali su posebno rasprostranjeni. Broj ovakvih napada porastao je za 278\% između 2018. i 2023. godine. Ovakvi napadi ne ugrožavaju samo privatnost podataka, već direktno utiču na kontinuitet pružanja zdravstvenih usluga i bezbednost pacijenata.
+ 
 Zdravstveni podaci su na crnom tržištu znatno vredniji od finansijskih informacija, što ih čini posebno primamljivom metom za sajber kriminalce. Za razliku od broja kreditne kartice koji se može blokirati i zameniti, kompromitovani medicinski karton sadrži trajne informacije koje se mogu koristiti za prevare sa osiguranjem, ucenjivanje ili krađu identiteta tokom dužeg vremenskog perioda \cite{abouelmehdi2017}. 
 Ova asimetrija između vrednosti podataka za napadače i nemogućnosti žrtve da povrati privatnost čini zdravstvene podatke posebno osetljivom kategorijom u kontekstu bezbednosti interneta i digitalnih sistema.
-
+ 
 Posebno zabrinjavajući aspekt zaštite zdravstvenih podataka predstavlja problem ponovne identifikacije tj. mogućnosti da se navodno anonimizovani podaci povežu sa konkretnim pojedincima. Pionirska istraživanja Latanje Svini sa Univerziteta Karnegi Melon pokazala su da se čak 87\% stanovništva Sjedinjenih Američkih Država može jedinstveno identifikovati samo na osnovu kombinacije datuma rođenja, pola i poštanskog broja \cite{sweeney2000}. U jednom poznatom eksperimentu, Svini je 
 uspela da identifikuje zdravstveni karton tadašnjeg guvernera Masačusetsa koristeći isključivo javno dostupne podatke iz biračkih spiskova, demonstrirajući da uklanjanje eksplicitnih identifikatora poput imena i adrese nije dovoljno za zaštitu privatnosti.
-
-Problem ponovne identifikacije postaje još izraženiji u kontekstu AI sistema koji mogu obrađivati ogromne količine podataka i uočavati korelacije nevidljive ljudskom oku. Algoritmi mašinskog učenja sposobni su da kombinuju naizgled bezopasne podatke,kao što su podaci o kupovini lekova bez recepta, geografska lokacija ili navike kretanja i iz njih izvuku zaključke o zdravstvenom stanju koji su po svom karakteru ekvivalentni direktnom otkrivanju medicinskih dijagnoza \cite{murdoch2021}. 
+ 
+Problem ponovne identifikacije postaje još izraženiji u kontekstu AI sistema koji mogu obrađivati ogromne količine podataka i uočavati korelacije nevidljive ljudskom oku. Algoritmi mašinskog učenja sposobni su da kombinuju naizgled bezopasne podatke, kao što su podaci o kupovini lekova bez recepta, geografska lokacija ili navike kretanja i iz njih izvuku zaključke o zdravstvenom stanju koji su po svom karakteru ekvivalentni direktnom otkrivanju medicinskih dijagnoza \cite{murdoch2021}. 
 Ovakve sposobnosti AI sistema čine tradicionalne tehnike anonimizacije podataka nedovoljnim, što zahteva razvoj novih pristupa zaštiti privatnosti prilagođenih specifičnostima okruženja velikih podataka i mašinskog učenja \cite{kumar2025}.
-
+ 
 \newpage
 \section{Etički aspekti primene veštačke inteligencije}
 \subsection{Privatnost i informisani pristanak}
 Informisani pristanak predstavlja jedan od temeljnih principa medicinske etike: pacijent ima pravo da zna kako se njegovi podaci prikupljaju, obrađuju i koriste, kao i pravo da odbije učešće bez posledica po kvalitet lečenja. Primena veštačke inteligencije u zdravstvu ozbiljno komplikuje ovaj princip \cite{murdoch2021}. Kada pacijent potpisuje pristanak za lečenje ili učešće u istraživanju, on najčešće nema tehničko znanje potrebno da razume na koji način će njegovi podaci biti iskorišćeni za treniranje algoritama, ni kojim trećim stranama ti podaci mogu biti prosleđeni.
-
+ 
 Problem je dodatno produbljen činjenicom da se AI sistemi često razvijaju u javno-privatnom partnerstvu, gde komercijalne tehnološke kompanije dobijaju pristup zdravstvenim podacima pacijenata u zamenu za razvoj dijagnostičkih alata. Ovakvi aranžmani, kao što je bila saradnja britanskog Nacionalnog zdravstvenog servisa (NHS) sa kompanijom Google DeepMind, izazvali su značajnu javnu kritiku zbog nedovoljno transparentnog tretmana podataka pacijenata \cite{kumar2025}. Pacijenti 
 čiji su podaci korišćeni najčešće nisu bili adekvatno obavešteni o prirodi i obimu te saradnje, što direktno narušava princip informisanog pristanka.
-
+ 
 Poseban izazov predstavlja dinamičnost savremenih AI sistema koji kontinuirano uče na novim podacima. Pristanak dat u jednom trenutku ne pokriva nužno sve buduće načine upotrebe podataka koji nastaju kako se sistem razvija \cite{murdoch2021}. Regulatorna tela i istraživačka zajednica sve više prepoznaju potrebu za novim modelima pristanka prilagođenim specifičnostima AI istraživanja, kao što su 
 dinamički pristanak koji se može povući u svakom trenutku ili gradijentni pristanak koji omogućava pacijentu da odobri određene vrste upotrebe podataka, a zabrani druge.
-
-
-
+ 
+ 
+ 
 \subsection{Transparentnost i odgovornost AI sistema}
 Transparentnost AI sistema u medicini podrazumeva sposobnost da se objasni na koji način je sistem došao do određene dijagnoze ili preporuke. Ovaj zahtev direktno je suprotstavljen tehničkoj prirodi savremenih algoritama dubokog učenja, koji se često opisuju kao sistemi ``crne kutije'' odnosno izuzetno su precizni u svojim predikcijama, ali je gotovo nemoguće rekonstruisati logiku kojom su do njih došli \cite{topol2019}. Lekar koji koristi ovakav sistem može dobiti preporuku za dijagnozu ili terapiju, ali bez ikakve mogućnosti da proveri na kojim obrascima u podacima se ta preporuka zasniva.
-
+ 
 Odsustvo transparentnosti ima direktne implikacije po privatnost pacijenata. Ako se ne zna koje varijable ulaze u model i kako su ponderisane, nemoguće je proveriti da li sistem u svojoj analizi koristi osetljive atribute kao što su rasa, pol, socioekonomski status ili seksualna orijentacija na način koji nije etički opravdan \cite{obermeyer2019}. Pored toga, netransparentnost onemogućava pacijenta 
 da ospori odluku zasnovanu na radu algoritma, što narušava njegovo pravo na pravno sredstvo garantovano GDPR-om.
-
+ 
 Odgovornost je usko povezana sa transparentnošću, ali postavlja drugačije pitanje: ko snosi odgovornost kada AI sistem donese pogrešnu ili 
 štetnu odluku? U klasičnom medicinskom kontekstu, odgovornost leži na lekaru koji donosi odluku. Kada je u lancu donošenja odluka umešan neprozirni algoritam, raspodela odgovornosti između lekara, bolnice, proizvođača softvera i regulatora postaje nejasna \cite{kumar2025}. Ovaj pravni i etički vakuum predstavlja jedan od ključnih izazova koje regulativa mora da reši kako bi se osigurala odgovorna primena AI u medicini.
-
-
+ 
+ 
 \subsection{Diskriminacija i pristrasnost algoritama}
 Algoritamska pristrasnost u zdravstvenim sistemima nastaje kada model sistematski proizvodi netačne ili nepravične rezultate za određene 
 grupe pacijenata. Uzroci su najčešće strukturni: ako su podaci korišćeni za treniranje sistema pretežno prikupljeni od jedne demografske grupe, model će biti manje precizan za grupe koje su bile nedovoljno zastupljene u skupu za obučavanje \cite{abouelmehdi2017}. Ovo nije hipotetički scenario. Istraživanje Obermajera iz 2019. godine dokumentovalo je konkretni slučaj rasne pristrasnosti u komercijalnom algoritmu koji je koristilo više miliona pacijenata u Sjedinjenim Američkim Državama \cite{obermeyer2019}.
-
+ 
 Obermajer je pokazao su da algoritam korišćen za identifikaciju pacijenata kojima je potrebna intenzivnija zdravstvena nega sistematski podcenjuje potrebe afroameričkih pacijenata. Uzrok pristrasnosti bio je metodološki: algoritam je koristio troškove zdravstvene zaštite kao zamenu za merenje zdravstvenih potreba, ne uzimajući u obzir da afroamerički pacijenti istorijski troše manje na zdravstvenu zaštitu usled sistemskih nejednakosti u pristupu 
 medicinskim uslugama, a ne usled toga što su zdraviji \cite{obermeyer2019}. 
 Posledica je bila da je udeo afroameričkih pacijenata koji su identifikovani za proaktivno lečenje bio za više od polovine manji nego što bi bio sa nepristrasnim algoritmom.
-
+ 
 Ovaj primer ilustruje važnu lekciju: pristrasnost AI sistema nije uvek rezultat namerne diskriminacije, već može biti nehotična posledica korišćenja podataka koji odražavaju postojeće društvene nejednakosti \cite{murdoch2021}. Upravo zbog toga tehnički pristup zasnovan samo na pukom povećanjavanju preciznosti modela nije dovoljan za rešavanje problema algoritmske pristrasnosti. Neophodni su i socijalni i etički 
 okviri koji definišu šta pravednost u kontekstu medicinskih algoritama znači i kako je meriti, kao i regulatorni mehanizmi koji obavezuju proizvođače AI sistema da testiraju i javno objavljuju rezultate evaluacije pravičnosti svojih sistema 
 \cite{kumar2025}.
-
+ 
 \newpage
 \section{Pravna regulativa i zaštita privatnosti}
 \subsection{GDPR i zaštita zdravstvenih podataka}
-Opšta uredba o zaštiti podataka (\textit{General Data Protection Regulation} GDPR), koja je stupila na snagu u Evropskoj uniji 2018. godine, predstavlja najsveobuhvatniji pravni okvir za zaštitu ličnih podataka u digitalnom dobu. Zdravstveni podaci su u okviru GDPR-a svrstani u posebnu kategoriju osetljivih podataka čija je obrada načelno zabranjena, osim u tačno propisanim izuzecima \cite{gdpr2016}. Član 9 GDPR-a izričito zabranjuje obradu podataka koji otkrivaju rasno ili etničko poreklo, genetskih i biometrijskih podataka, kao i podataka o 
-zdravlju, seksualnom životu ili seksualnoj orijentaciji --- kategorije koje su direktno relevantne za primenu AI u medicini.
-
+Opšta uredba o zaštiti podataka (\textit{General Data Protection Regulation}, GDPR\footnote{\url{https://gdpr-info.eu}}), koja je stupila na snagu u Evropskoj uniji 2018. godine, predstavlja najsveobuhvatniji pravni okvir za zaštitu ličnih podataka u digitalnom dobu. Zdravstveni podaci su u okviru GDPR-a svrstani u posebnu kategoriju osetljivih podataka čija je obrada načelno zabranjena, osim u tačno propisanim izuzecima \cite{gdpr2016}. Član 9 GDPR-a izričito zabranjuje obradu podataka koji otkrivaju rasno ili etničko poreklo, genetskih i biometrijskih podataka, kao i podataka o 
+zdravlju, seksualnom životu ili seksualnoj orijentaciji. To su kategorije koje su direktno relevantne za primenu AI u medicini.
+ 
 Za zdravstvene institucije i kompanije koje razvijaju AI sisteme za medicinsku primenu, GDPR uvodi nekoliko ključnih obaveza. Princip minimizacije podataka nalaže da se prikupljaju samo oni podaci koji su neophodni za konkretnu svrhu obrade, dok princip ograničenja svrhe zabranjuje upotrebu podataka u svrhe drugačije od onih za koje su prvobitno prikupljeni \cite{kumar2025}. Oba ova principa direktno su suprotstavljena logici razvoja AI sistema koji zahtevaju što veće i raznovrsnije skupove podataka za treniranje, što stvara strukturnu 
 tenziju između zahteva GDPR-a i potreba savremenog mašinskog učenja.
-
+ 
 Posebno značajna odredba za primenu AI je pravo na objašnjenje, koje pacijentima garantuje da ne budu predmet odluka donetih isključivo na osnovu automatizovane obrade podataka ako te odluke imaju značajan uticaj na njihov život \cite{gdpr2016}. 
-Ova odredba direktno se tiče opisanog problema netransparentnosti algoritama tj.``crne kutije'': ako lekar ili bolnica koriste AI sistem čija logika nije objašnjiva, pacijent teorijski ima pravno sredstvo da ospori takvu odluku. Međutim, praktična primena ovog prava ostaje izazovna, budući da ni sami proizvođači sistema često ne mogu u potpunosti objasniti način na koji je algoritam došao do određenog zaključka \cite{murdoch2021}.
-
+Ova odredba direktno se tiče opisanog problema netransparentnosti algoritama tj. ``crne kutije'': ako lekar ili bolnica koriste AI sistem čija logika nije objašnjiva, pacijent teorijski ima pravno sredstvo da ospori takvu odluku. Međutim, praktična primena ovog prava ostaje izazovna, budući da ni sami proizvođači sistema često ne mogu u potpunosti objasniti način na koji je algoritam došao do određenog zaključka \cite{murdoch2021}.
+ 
 \subsection{Potreba za unapređenjem regulative}
 Uprkos tome što GDPR predstavlja značajan napredak u zaštiti privatnosti 
 zdravstvenih podataka, njegova primena na specifičnosti AI sistema otkriva brojne praznine i izazove. GDPR je donesen 2016. godine, u periodu kada su savremeni modeli dubokog učenja bili tek na početku svog razvoja, što znači da mnoge njegove odredbe nisu projektovane imajući u vidu specifične karakteristike ovih sistema \cite{kumar2025}. Na primer, zahtev za transparentnošću i pravom na objašnjenje teško je primeniti na modele sa milijardama parametara čije je ponašanje neprozirno.
-
+ 
 Jedan od ključnih nedostataka postojeće regulative je odsustvo jasnih 
 standarda za procenu i sertifikaciju AI sistema koji se koriste u medicini sa aspekta privatnosti i etike \cite{murdoch2021}. Za razliku od medicinskih uređaja i lekova, koji prolaze kroz stroge procese kliničkih ispitivanja pre puštanja u upotrebu, softveri zasnovani na veštačkoj inteligenciji u mnogim jurisdikcijama mogu biti implementirani uz znatno manje regulatorne kontrole. Evropska unija je pokušala da popuni ovu prazninu donošenjem Akta o veštačkoj inteligenciji koji medicinske AI sisteme svrstava u kategoriju visokog rizika i za njih propisuje posebne zahteve transparentnosti, robustnosti i nadzora \cite{kumar2025}.
-
+ 
 Poseban izazov za regulativu predstavlja prekogranična priroda savremenih 
 AI sistema. Zdravstveni podaci pacijenata u Srbiji ili nekoj drugoj evropskoj državi mogu biti obrađivani na serverima u Sjedinjenim Američkim Državama ili Aziji, u jurisdikcijama sa potpuno drugačijim standardima zaštite privatnosti \cite{abouelmehdi2017}. Iako GDPR ima eksteritorijalno dejstvo i primenjuje se na sve kompanije koje obrađuju podatke građana EU bez obzira na to gde su registrovane, mehanizmi za njegovo sprovođenje van granica Unije ostaju ograničeni. Ova regulatorna fragmentacija otvara prostor za tzv. ``trku ka dnu'' u kojoj kompanije selektivno biraju jurisdikcije sa najmanje ograničenja 
 za obradu osetljivih podataka \cite{murdoch2021}.
-
+ 
 Budući razvoj regulative zahteva multidisciplinarni pristup koji će uskladiti tehničke standarde, etičke principe i pravne mehanizme. Istraživači i regulatori sve češće zalažu se za uvođenje obaveznih procena uticaja na privatnost pre implementacije svakog AI 
 sistema koji obrađuje zdravstvene podatke, kao i za uspostavljanje nezavisnih tela za reviziju algoritama koja bi mogla da vrše kontinuirani nadzor nad sistemima u primeni \cite{kumar2025}. Paralelno, razvijaju se i tehničke metode zaštite privatnosti prilagođene kontekstu mašinskog učenja, kao što su federativno učenje, diferencijalna privatnost i kriptografske tehnike za obradu šifrovanih podataka, koje obećavaju mogućnost razvoja moćnih AI modela bez centralizovanog prikupljanja osetljivih podataka \cite{abouelmehdi2017}.
+\newpage
+\section{Ključni radovi}
+ 
+\subsection{Mardok (Murdoch, 2021) Privatnost i veštačka inteligencija}
+ 
+Rad Brenta Mardoka (Brent Murdoch) pod naslovom \textit{Privacy and artificial intelligence: challenges for protecting health information in a new era}, objavljen u časopisu \textit{BMC Medical Ethics} \cite{murdoch2021}, predstavlja najsveobuhvatniji teorijski okvir korišćen u ovom seminarskom radu. Autor sistematično prolazi kroz sve ključne dimenzije problema: od tehničkih karakteristika AI sistema koje otežavaju zaštitu privatnosti, preko etičkih pitanja informisanog pristanka i sekundarne upotrebe podataka, do pravnih nedostataka postojećih regulatornih okvira. Posebna vrednost rada leži u interdisciplinarnom pristupu: Mardok ne ostaje na tehničkom opisu problema, već eksplicitno povlači veze između načina na koji algoritmi rade i konkretnih etičkih i pravnih posledica po pacijente. Upravo zbog ove širine, rad je poslužio kao primarni izvor za gotovo sve tematske celine seminarskog rada.
+ 
+\subsection{Obermajer i dr. (Obermeyer et al., 2019) Rasna pristrasnost algoritma}
+ 
+Istraživanje Zijada Obermajera (Ziad Obermeyer) i saradnika \textit{Dissecting racial bias in an algorithm used to manage the health of populations}, objavljeno u časopisu \textit{Science} \cite{obermeyer2019}, odabrano je kao drugi ključni rad zbog toga što pruža konkretan, empirijski potkrepljen primer centralnog problema seminarskog rada, a to je neetička primena AI u zdravstvu. Za razliku od teorijskih razmatranja, Obermajer analizira komercijalni algoritam koji je koristilo više miliona pacijenata u SAD i pokazuju merljivim podacima kako sistemska pristrasnost nastaje ne iz loše namere, već kao posledica pogrešnog izbora varijabli za treniranje modela. Ovaj rad ilustruje na koji način podaci koji naizgled ne sadrže diskriminatorne elemente mogu u praksi reprodukovati i pojačavati postojeće društvene nejednakosti, što ga čini nezaobilaznim referentnim primerom pri razmatranju etičkih aspekata primene veštačke inteligencije u medicini.
+ 
 \newpage
 \section{Zaključak}
 \subsection{Glavni izazovi i moguća rešenja}
 Razvoj veštačke inteligencije u zdravstvu donosi neosporne koristi: ubrzanu dijagnostiku, personalizovanu terapiju i demokratizaciju medicinske ekspertize u sredinama koje je nikad nisu imale \cite{topol2019}. Međutim, ove koristi dolaze sa strukturnim rizicima po privatnost pacijenata koji zahtevaju sistemski, a ne reaktivan odgovor. Ovaj rad je pokazao da zaštita privatnosti zdravstvenih podataka nije sporedna briga već centralni projektni zahtev koji mora biti ugrađen u temelje svakog AI sistema koji obrađuje medicinske informacije \cite{murdoch2021}.
-
+ 
 Zdravstveni podaci zaslužuju poseban tretman iz nekoliko konkretnih razloga. Za razliku od finansijskih podataka, oni su nepromenjivi i kolektivni tj. otkrivanje genomskih informacija jedne osobe neizbežno otkriva podatke i o njenim biološkim srodnicima. Kompromitovani zdravstveni karton može trajno uticati na zapošljavanje, pristup osiguranju i socijalni status pacijenta \cite{abouelmehdi2017}. Istraživanje Latanje Svini pokazalo je da kombinacija svega tri atributa može jedinstveno identifikovati skoro devet od deset građana, što tradicionalne tehnike anonimizacije čini nedovoljnim odgovorom na savremene pretnje \cite{sweeney2000}.
-
+ 
 Na etičkom planu, dokumentovani slučajevi poput rasne pristrasnosti u 
 algoritmu za trijažu pacijenata ukazuju da AI sistemi mogu nehotice 
 diskriminisati najranjivije grupe, ne iz zlonamerne namere, već kao 
@@ -242,57 +275,55 @@ posledica podataka koji odražavaju postojeće društvene nejednakosti
 raspodela odgovornosti između lekara, institucija i proizvođača softvera 
 predstavljaju izazove koje ni medicinska etika ni pravo još uvek nisu 
 adekvatno razrešili \cite{kumar2025}.
-
+ 
 Rešenja nisu utopijska. Federativno učenje, pristup u kome se AI model 
 trenira lokalno na podacima svake institucije ponaosob, bez njihovog 
 centralnog prikupljanja, i diferencijalna privatnost, matematička 
 tehnika koja u algoritam ugrađuje kontrolisanu količinu statističkog šuma 
-kako bi sprečila rekonstrukciju individualnih podataka iz rezultata modela, pokazuju da nije neophodno birati između moćnih modela i zaštite podataka . Regulatorni okviri poput GDPR-a postavljaju temelje 
+kako bi sprečila rekonstrukciju individualnih podataka iz rezultata modela, pokazuju da nije neophodno birati između moćnih modela i zaštite podataka. Regulatorni okviri poput GDPR-a postavljaju temelje 
 odgovornosti kroz principe minimizacije podataka i pravo na objašnjenje 
 automatizovanih odluka, iako njihova primena još uvek zaostaje za tempom 
 tehnološkog razvoja \cite{gdpr2016}. Ono što nedostaje nije znanje već institucionalni kapacitet da se to znanje dosledno primeni u praksi.
-
+ 
 Etička pitanja koja ostaju otvorena zahtevaju dalju raspravu: da li pristanak za lečenje podrazumeva i pristanak za korišćenje podataka u treniranju algoritama? Kako sprečiti da prednosti AI medicine budu dostupne samo razvijenim zdravstvenim sistemima? Ko snosi odgovornost kada automatizovana odluka našteti pacijentu \cite{murdoch2021}? Ovo nisu pitanja koja tehnologija sama može da reši.
-
+ 
 Privatnost zdravstvenih podataka nije prepreka napretku medicine, ona je 
 uslov pod kojim taj napredak može biti pravedan i vredan poverenja pacijenata čiji podaci ga omogućavaju \cite{kumar2025}.
-
-\newpage
-
+ 
 \newpage
 \renewcommand{\refname}{Literatura}
-
+ 
 \begin{thebibliography}{99}
-
+ 
 \bibitem{abdalla2022}
 H. B. Abdalla, ``A brief survey on big data: technologies, terminologies and data-intensive applications,'' \textit{Journal of Big Data}, vol. 9, 2022. DOI: \url{https://doi.org/10.1186/s40537-022-00659-3}
-
+ 
 \bibitem{abouelmehdi2017}
 K. Abouelmehdi, A. Beni-Hssane, H. Khaloufi, M. Saadi, ``Big data security and privacy in healthcare: A review,'' \textit{Procedia Computer Science}, 2017.  DOI: \url{https://doi.org/10.1016/j.procs.2017.08.292}
-
+ 
 \bibitem{murdoch2021}
 B. Murdoch, ``Privacy and artificial intelligence: challenges for protecting health information in a new era,'' 2021. DOI: \url{https://doi.org/10.1186/s12910-021-00687-3}
-
-
+ 
+ 
 \bibitem{kumar2025}
 A. Kumar et al., ``AI-Driven Medical Diagnosis and Patient Data Privacy: A Legal Analysis under GDPR and Medical Ethics,'' \textit{Journal of Neonatal Surgery}, 2025. Dostupno na: 
 \url{https://www.jneonatalsurg.com/index.php/jns/article/view/8264}
-
+ 
 \bibitem{topol2019}
 E. J. Topol, ``High-performance medicine: the convergence of human and artificial intelligence,'' \textit{Nature Medicine}, vol. 25, pp. 44--56, 2019. DOI: \url{https://doi.org/10.1038/s41591-018-0300-7}
-
+ 
 \bibitem{sweeney2000}
 L. Sweeney, ``Simple Demographics Often Identify People Uniquely,'' 
 Carnegie Mellon University, Data Privacy Working Paper 3, Pittsburgh, 2000. Dostupno na: \url{https://dataprivacylab.org/projects/identifiability/paper1.pdf}
-
+ 
 \bibitem{obermeyer2019}
 Z. Obermeyer, B. Powers, C. Vogeli, S. Mullainathan, ``Dissecting racial bias in an algorithm used to manage the health of populations,'' \textit{Science}, 
 vol. 366, no. 6464, pp. 447--453, 2019. 
 DOI: \url{https://doi.org/10.1126/science.aax2342}
-
+ 
 \bibitem{gdpr2016}
 Evropski parlament i Savet Evropske unije, ``Uredba (EU) 2016/679 o zaštiti fizičkih lica u vezi sa obradom podataka o ličnosti i o slobodnom kretanju takvih podataka (Opšta uredba o zaštiti podataka - GDPR),'' \textit{Službeni list Evropske unije}, L 119, str. 1--88, 2016. Dostupno na: \url{https://gdpr-info.eu}
-
+ 
 \end{thebibliography}
-
+ 
 \end{document}
