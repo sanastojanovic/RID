@@ -133,6 +133,9 @@ Ovaj sistem omogućava da se tradicionalno spori vojni procesi donošenja odluka
 Operater više ne mora da pretražuje desetine različitih baza, on sve vidi na jednom ekranu, donoseći odluke intuitivno, klikom na interaktivne elemente~\cite{wei2024brief, ulbricht2024palantir}.
 
 
+\subsection{Ključni naučni izvori}
+Teorijsku osnovu ovog rada čine dva izvora koja spajaju pravno-etičke okvire sa konkretnim inženjerskim rešenjima. Prvi je rad autorke \textbf{Tejlor Vudkok} (eng. \textit{Taylor Woodcock})~\cite{woodcock2024human}, koji analizira kako sistemi mašinskog učenja utiču na standarde proporcionalnosti u Međunarodnom humanitarnom pravu - njen centralni zaključak je da su \textit{AI} sistemi, zbog neprozirnosti i odsustva moralnog rasuđivanja, suštinski neadekvatni za samostalno donošenje odluka koje uključuju ljudske živote. Drugi ključni izvor je istraživanje \textbf{Lene Ulbriht} (eng. \textit{Lena Ulbricht}) i \textbf{Simona Egberta} (eng. \textit{Simon Egbert})~\cite{ulbricht2024palantir}, koje kroz studiju slučaja sistema \textit{hessenDATA} pokazuje regulatorne izazove integracije privatnih platformi u državni aparat, sa fokusom na digitalni suverenitet i pravnu odgovornost.
+
 \section{Arhitektura sistema \textit{Gotham} i dinamička ontologija}
 
 Kako bi se razumeo način na koji \textit{Gotham} obrađuje podatke, neophodno je napraviti otklon od tradicionalnog posmatranja baza podataka.
@@ -160,7 +163,7 @@ Na ovaj način, kompleksni odnosi između naizgled nepovezanih informacija posta
 Ključni inženjerski problem kod tradicionalnih arhitektura podataka je taj što promena šeme baze podataka ili ažuriranje složenih relacija u hodu zahteva ozbiljne intervencije i programersko znanje (npr. pisanje kompleksnih \textit{SQL Update} upita).
 Na modernom bojištu ili u središtu obaveštajne operacije, podaci se menjaju iz sekunde u sekundu, pa statične šeme jednostavno nisu upotrebljive.
 
-Upravo ovde dinamička ontologija pokazuje svoju pravu snagu - ona u \textit{Gothamu} zapravo funkcioniše kao „digitalni mozak” koji heterogene podatke iz različitih baza pretvara u prepoznatljive objekte iz stvarnog sveta, poput ljudi, automobila ili događaja, čime omogućava operateru da vidi celovitu operativnu sliku situacije umesto izolovanih informacija.
+Upravo ovde dinamička ontologija pokazuje svoju pravu snagu - ona u \textit{Gothamu} zapravo funkcioniše kao „\textit{digitalni mozak}” koji heterogene podatke iz različitih baza pretvara u prepoznatljive objekte iz stvarnog sveta, poput ljudi, automobila ili događaja, čime omogućava operateru da vidi celovitu operativnu sliku situacije umesto izolovanih informacija.
 
 \textit{Palantir} umesto tradicionalnih manipulacija podacima uvodi koncept takozvanih tipova akcija (eng. \textit{Action Types}).
 Kroz grafički interfejs, analitičar može intuitivno da izmeni svojstvo nekog objekta ili doda novu vezu, a sistem u pozadini samostalno generiše i sprovodi neophodne logičke operacije nad bazom.
