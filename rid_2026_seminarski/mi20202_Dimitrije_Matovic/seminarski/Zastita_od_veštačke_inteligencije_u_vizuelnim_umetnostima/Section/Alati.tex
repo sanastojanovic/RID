@@ -28,8 +28,8 @@
     4. Korak - Objavljivanje \\
     Umetnik objavljuje $x+\delta_x$ umesto originala. Za ljudsko oko slika izgleda nepromenjeno ali AI modeli je koriste za trening i nauče pogrešan stil.
     
-\subsection{Zašto ovo funkcioniše?}
-    Generativni modeli imaju kontinualni izlazni prostor tj. svako pomeranje u feature reprezentaciji menja generisanu sliku. Čak i najmanje pomeranje stila može da napravi nekoherentu mešavinu dva stila. P ako pomešamo Van Gogov stil sa realizmom. Ovo direktno ugrožava mimicry jer je ona upotrebljiva samo ako je dovoljno slična originalnom stilu slike. Malo mešanje sa stilom T unosi dovoljno konfuzije mimicry-u da ona postaje neupotrebljiva, čak i kada model ima pristup delovima slike koje nemaju ogrtač oko sebe.\cite{shan2023glaze}
+\subsection{Dokaz funkiconisanja}
+    Generativni modeli imaju kontinualni izlazni prostor tj. svako pomeranje u feature reprezentaciji menja generisanu sliku. Čak i najmanje pomeranje stila može da napravi nekoherentu mešavinu dva stila, kao na primer ako pomešamo Van Gogov stil sa realizmom. Ovo direktno ugrožava mimicry jer je ona upotrebljiva samo ako je dovoljno slična originalnom stilu slike. Malo mešanje sa stilom T unosi dovoljno konfuzije mimicry-u da ona postaje neupotrebljiva, čak i kada model ima pristup delovima slike koje nemaju ogrtač oko sebe.\cite{shan2023glaze}
 
     \begin{figure}[h]
         \centering
@@ -46,7 +46,7 @@
     Ciljevi napada su sledeći:
     \begin{itemize}
         \item Efikasnost uz mali broj uzoraka - Pošto napadač ne kontroliše sa koje stranice model uzima resurse, veliki deo otrovnih slika neće biti preuzet. Zato želimo da otvorne slike koje se preuzmu imaju što veći uticaj na trening skup. 
-        \item Izbegavanje detekcije - Otrovni podaci moraju izgledati prirodno. Tekst i slika moraju biti i vizuelno i semantički usklađeni. U suprotnom, mogu biti prepozanti od strane automatskih algoritama ili od napadača koji ga proverava.
+        \item Izbegavanje detekcije - Otrovni podaci moraju izgledati prirodno. Tekst i slika moraju biti i vizuelno i semantički usklađeni. U suprotnom, mogu biti prepoznati od strane automatskih algoritama ili od napadača koji ga proverava.
     \end{itemize}
     
     
@@ -78,8 +78,8 @@
 
     Rezultat je slika koja izgleda kao normalna fotografija psa, ali čiji unutrašnji zapis u modelu odgovara mački. Kada model nauči na ovakvim podacima, svaki put kada korisnik zatraži "psa", model generiše nešto što liči na mačku.
 
-    \subsection{Zašto je toliko potentan?}
-    Obični trening podaci su jako heterogeni i raznovrsni kao na primer različite fotografije pasa snimljene iz različitih uglova, sa različitim osvetljenjem... Gradijentna ažuriranja koji dolaze od tih slika tokom treninga se poništavaju međusobno jer vuku model u različitim pravcima. Nightshade rešava ovaj problem. Svi otrovni tekstualni opisi su skoncentrisani na isti ključni koncept (bez šuma), a sve sidrene slike su generisane na isti način. To znači da svi otrovni uzorci vuku model u identičnom pravcu. Efekat je jako konzistentan, omogućava da i mali broj ovakvih uzoraka može nadjačati stotine hiljada legitimnih slika.\cite{shan2024nightshade}
+    \subsection{Dokaz funkcionisanja}
+    Obični trening podaci su jako heterogeni i raznovrsni, kao na primer različite fotografije pasa snimljene iz različitih uglova, sa različitim osvetljenjem... Gradijentna ažuriranja koji dolaze od tih slika tokom treninga se poništavaju međusobno jer vuku model u različitim pravcima. Nightshade rešava ovaj problem. Svi otrovni tekstualni opisi su skoncentrisani na isti ključni koncept (bez šuma), a sve sidrene slike su generisane na isti način. To znači da svi otrovni uzorci vuku model u identičnom pravcu. Efekat je jako konzistentan, omogućava da i mali broj ovakvih uzoraka može nadjačati stotine hiljada legitimnih slika.\cite{shan2024nightshade}
 
     \begin{figure}[h]
         \centering
@@ -97,7 +97,7 @@
 
 
     
-\section{Kako oni funkcionišu u paru?}
+\section{Kako Glaze i Nightshade funkcionišu u paru?}
 Kao što kod linearne regresije mere kvaliteta RMSE i $R^2$ nisu samostalno dovoljne i dopunjuju jedno drugog, tako Nightshade i Glaze rade zajedno u paru i preporučuje se da se koriste obe odjednom. \\
 Glaze predstavlja štit iliti ogrtač same slike koja omogućava da zaštiti stil umetnika dok Nightshade direktno truje i napada modele veštačke inteligencije. Zajedno prave dvoslojevitu zaštitu crteža. \\
 Prvo se koristi Nightshade. Umetnik ubacuje svoju sliku u Nightshade i bira nivo trovanja. Zatim se primenjuje Glaze na već otrovanu sliku. Ovim korakom umetnik dodatno maskira svoj stil, čineći ga težim za interpretaciju i imitaciju. Ovaj redosled je važan zato što Glaze štiti stil preko već izmenjene semnatike slike. Ukoliko bismo uradili obrnuto imalo bi malo manjeg uticaja. Glaze bi promenio vizuelne obrasce koje Nightshade koristi da bi zbunio i otrovao model. Na promenjeni stil bismo menjali karakteristike slike i Nightshade bi imao manju kontrolu nad time kako model vidi sadržaj. Efekat trovanja se može smanjiti zbog toga. \\
