@@ -18,7 +18,7 @@
 }
 
 \title{\bf Dark Patterns u dizajnu korisničkog interfejsa}
-\author{Seminarski rad iz predmeta Računarstvo i društvo \\\\ [1cm] {\bf Student:} Aleksa Vukadinović \quad {\bf Indeks:} 103/2022}
+\author{Seminarski rad iz predmeta Računarstvo i društvo \\\\ [1cm] {\bf Student:} Aleksa Vukadinović \quad {\bf Indeks:} 103/2022 \\\\ [0.3cm] {\bf Profesor:} dr Sana Stojanović Đurđević}
 \date{Maj, 2026. godine}
 
 \begin{document}
@@ -38,6 +38,22 @@ Za razliku od tradicionalnih softverskih grešaka (tzv. \emph{bagova}) ili prost
 
 Cilj ovog rada jeste analiza fenomena obmanjujućeg dizajna. Kroz analizu različitih istraživanja na ovu temu, kao i stvarnih primera iz života, rad će istražiti istorijske korene ovih praksi, njihovu tehnološku podlogu, pravne posledice (i propuste), kao i duboke socijalne posledice koje tamni obrasci ostavljaju na različite društvene grupe ljudi na osnovu njihove digitalne pismenosti.
 
+\section{Povezanost teme sa temama kursa}
+
+Tema tamnih obrazaca usko je povezana sa više oblasti koje se obrađuju u okviru kursa Računarstvo i društvo. Pre svega, ona se nadovezuje na pitanja etike u računarstvu, jer postavlja pitanje odgovornosti programera i dizajnera koji svesno kreiraju interfejse usmerene protiv interesa korisnika. Na taj način tamni obrasci predstavljaju konkretan primer etičkih dilema sa kojima se stručnjaci u oblasti računarstva svakodnevno susreću.
+
+Tema je takođe blisko povezana sa oblastima privatnosti i bezbednosti na internetu, budući da se manipulativni dizajn često koristi upravo kako bi se korisnici naveli da pristanu na prikupljanje podataka ili da otkriju više informacija nego što bi to učinili uz potpuno informisan pristanak. Pored toga, tamni obrasci se prepliću sa temama internet prevara i zavisnosti od interneta, jer koriste slične psihološke mehanizme kako bi podstakli impulsivno ponašanje i produženo zadržavanje korisnika na platformi.
+
+Na kraju, ova tema se direktno oslanja na pitanje informatičke pismenosti, koje je posebno značajno u kontekstu Srbije. Sposobnost korisnika da prepoznaju manipulativne elemente u interfejsu u velikoj meri zavisi od njihovog digitalnog obrazovanja, čime se tamni obrasci povezuju sa širim društvenim pitanjima koja se razmatraju tokom kursa.
+
+\section{Pregled najznačajnijih naučnih radova}
+
+Proučavanje tamnih obrazaca oslanja se na veći broj naučnih radova, među kojima se po svom značaju i uticaju izdvajaju dva.
+
+Prvi je rad \emph{Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites}, koji su 2019. godine objavili Arunesh Mathur i saradnici sa Univerziteta Prinston \cite{mathur2019dark}. Ovaj rad predstavlja jedno od prvih sistematskih istraživanja tamnih obrazaca sprovedeno na velikom uzorku. Autori su pomoću automatizovanih alata analizirali više od 11.000 popularnih veb-sajtova za elektronsku trgovinu i na osnovu prikupljenih podataka razvili klasifikaciju tamnih obrazaca. Značaj ovog rada leži u tome što je po prvi put empirijski pokazao koliko su manipulativne tehnike rasprostranjene u praksi, kao i to da mnoge od njih počivaju na obmanjujućim ili lažnim informacijama. Upravo zbog svoje metodologije i obima, ovaj rad se danas smatra jednim od temeljnih izvora u oblasti i često se koristi kao polazna tačka za dalja istraživanja.
+
+Drugi značajan rad jeste \emph{The Dark (Patterns) Side of UX Design}, koji su 2018. godine objavili Colin Gray i saradnici \cite{gray2018the}. Za razliku od Mathurovog rada, koji je usmeren na merenje rasprostranjenosti tamnih obrazaca, ovaj rad problemu pristupa iz ugla dizajna i etike. Autori analiziraju način na koji sami dizajneri razmišljaju o manipulativnim tehnikama i predlažu klasifikaciju tamnih obrazaca zasnovanu na vrstama obmane koje oni koriste. Značaj ovog rada je u tome što pomera fokus sa tehničke detekcije na pitanje profesionalne odgovornosti i etičkih granica u radu dizajnera korisničkih interfejsa, čime se tema tamnih obrazaca direktno povezuje sa širim etičkim razmatranjima u oblasti računarstva.
+
 \section{Istorijski kontekst i evolucija manipulacije interfejsom}
 
 Da bi se tamni obrasci u potpunosti razumeli, potrebno je sagledati njihov razvoj u širem istorijskom kontekstu, odnosno kroz evoluciju trgovine, marketinga i digitalnih tehnologija. Iako se danas najčešće povezuju sa internetom i softverskim proizvodima, manipulativne tehnike usmerene ka potrošačima postojale su mnogo pre pojave digitalnog okruženja. Skriveni troškovi koji postaju vidljivi tek pri završetku kupovine, sitan font u ugovorima ili obmanjujuće pakovanje proizvoda predstavljaju primere praksi koje su decenijama korišćene u tradicionalnoj trgovini \cite{brignull2010dark}.
@@ -56,15 +72,15 @@ Tamni obrasci mogu se grupisati prema načinu na koji utiču na donošenje odluk
 
 \subsection{Asimetrija izbora i vizuelno usmeravanje pažnje}
 
-Ova kategorija obuhvata obrasce koji koriste vizuelnu organizaciju interfejsa kako bi određene opcije učinili privlačnijim od drugih. Iako korisnik formalno ima mogućnost izbora, način prezentacije opcija može značajno uticati na njegovu odluku. Veliki broj ljudi će se susresti sa ovim taktikama prilikom posete McDonalds-u i korišćenjem mašina za naručivanje hrane koje svojim rasporedom elemenata i boja vuku korisnike da na oređene proizvode.
+Ova kategorija obuhvata obrasce koji koriste vizuelnu organizaciju interfejsa kako bi određene opcije učinili privlačnijim od drugih. Iako korisnik formalno ima mogućnost izbora, način prezentacije opcija može značajno uticati na njegovu odluku. Veliki broj ljudi susreće se sa ovim taktikama prilikom posete restoranima brze hrane, poput McDonald's-a, i korišćenja mašina za naručivanje hrane koje svojim rasporedom elemenata i boja usmeravaju korisnike ka određenim proizvodima.
 
-Čest primer predstavljaju prozori za upravljanje kolačićima i podešavanjima privatnosti. Dugme ,,Prihvati sve'' često je istaknuto kontrastnom bojom i zauzima centralno mesto u interfejsu, dok su opcije poput ,,Odbij sve'' ili ,,Podešavanja'' manje uočljive, prikazane sitnijim fontom ili skrivene iza dodatnih koraka.
+Čest primer predstavljaju prozori za upravljanje kolačićima i podešavanjima privatnosti. Dugme \emph{,,Prihvati sve''} često je istaknuto kontrastnom bojom i zauzima centralno mesto u interfejsu, dok su opcije poput \emph{,,Odbij sve''} ili \emph{,,Podešavanja''} manje uočljive, prikazane sitnijim fontom ili skrivene iza dodatnih koraka.
 
 Na taj način korisnik se podstiče da izabere opciju koja je najpovoljnija za platformu. Iako su formalni zahtevi propisa, poput GDPR-a, ispunjeni, stvarna sloboda izbora može biti značajno umanjena \cite{mathur2019dark}.
 
 \subsection{Veštački osećaj hitnosti i lažni popusti}
 
-Mnoge internet prodavnice i servisi za rezervaciju koriste poruke poput ,,Još samo 2 artikla na stanju'' ili odbrojavanja do isteka navodnog popusta. Cilj ovakvih elemenata jeste stvaranje utiska da je potrebno brzo reagovati. Ovo se svakodnevno može primetiti na praktično svakom domaćem sajtu za onlajn kupovinu, gde pored obaveštenja koje stvaraju osećaj hitnosti, kupci tu takođe izloženi i lažnim popustima i lažnim ciframa o broju preostalih artikala.
+Mnoge internet prodavnice i servisi za rezervaciju koriste poruke poput \emph{,,Još samo 2 artikla na stanju''} ili odbrojavanja do isteka navodnog popusta. Cilj ovakvih elemenata jeste stvaranje utiska da je potrebno brzo reagovati. Ovo se svakodnevno može primetiti na praktično svakom domaćem sajtu za onlajn kupovinu, gde pored obaveštenja koja stvaraju osećaj hitnosti, kupci su takođe izloženi i lažnim popustima i lažnim ciframa o broju preostalih artikala.
 
 Mathur i saradnici identifikovali su veliki broj slučajeva u kojima ovi lažni popusti i promocije nisu bili povezani sa stvarnim stanjem proizvoda ili ponudom, već su generisani automatski \cite{mathur2019dark}. Takvi obrasci koriste strah od propuštanja prilike (\emph{FOMO - Fear of Missing Out}) kako bi podstakli korisnika da donese odluku bez detaljnog razmatranja svih dostupnih informacija.
 
@@ -72,9 +88,9 @@ Posledica je povećana verovatnoća impulsivne kupovine ili prihvatanja uslova k
 
 \subsection{Prikriveni troškovi i otežano odustajanje}
 
-Jedan od poznatijih tamnih obrazaca jeste \emph{Sneak into Basket}, kod kojeg se dodatni proizvodi ili usluge automatski uključuju u proces kupovine. To mogu biti osiguranja, produžene garancije ili druge opcione usluge koje korisnik nije eksplicitno izabrao. Ukoliko ne proveri sadržaj korpe ili završni račun, korisnik može platiti više nego što je prvobitno planirao \cite{mathur2019dark}. Ovo je veoma često prilikom preuzimanja besplatnih aplikacija sa interneta na Windows operativnom sistemu, gde su korisnici navikli da bez gledanja potvrdjuju sve korake setup-a instalacije, prilikom čega slučajno instaliraju i dodatan softver (McAfee, Avast, AVG, CCleaner, Opera, ... se često instaliraju upravo na ovakav način).
+Jedan od poznatijih tamnih obrazaca jeste \emph{Sneak into Basket}, kod kojeg se dodatni proizvodi ili usluge automatski uključuju u proces kupovine. To mogu biti osiguranja, produžene garancije ili druge opcione usluge koje korisnik nije eksplicitno izabrao. Ukoliko ne proveri sadržaj korpe ili završni račun, korisnik može platiti više nego što je prvobitno planirao \cite{mathur2019dark}. Ovo je veoma često prilikom preuzimanja besplatnih aplikacija sa interneta na Windows operativnom sistemu, gde su korisnici navikli da bez gledanja potvrđuju sve korake instalacije, prilikom čega slučajno instaliraju i dodatan softver (McAfee, Avast, AVG, CCleaner, Opera, ... se često instaliraju upravo na ovakav način).
 
-Sličan problem predstavlja obrazac poznat kao \emph{Roach Motel}. U ovom slučaju registracija ili aktiviranje pretplate obično se obavlja veoma jednostavno, dok je proces otkazivanja znatno složeniji. Korisnik može biti primoran da prolazi kroz više nivoa menija, popunjava dodatne formulare ili kontaktira korisničku podršku kako bi deaktivirao uslugu. Kompanija Adobe (kreatori Photoshop alata, kao i mnogih drugih alata za editovanje videa i slika) su poznati po primeni ove tehnike, zbog čega su u EU više puta bili tuženi, i eventualno primorani da omoguće lakše otkazivanje pretplata.
+Sličan problem predstavlja obrazac poznat kao \emph{Roach Motel}. U ovom slučaju registracija ili aktiviranje pretplate obično se obavlja veoma jednostavno, dok je proces otkazivanja znatno složeniji. Korisnik može biti primoran da prolazi kroz više nivoa menija, popunjava dodatne formulare ili kontaktira korisničku podršku kako bi deaktivirao uslugu. Kompanija Adobe, tvorac Photoshop-a i mnogih drugih alata za obradu slike i videa, poznata je po primeni ove tehnike. Američka Savezna trgovinska komisija (\emph{Federal Trade Commission - FTC}) tužila je 2024. godine kompaniju Adobe, optužujući je da je korisnike navodila na godišnje pretplate uz skrivene naknade za prevremeno otkazivanje, kao i da im je namerno otežala sam proces otkazivanja \cite{ftc2024adobe}.
 
 Ovakva asimetrija povećava verovatnoću da će korisnik odustati od pokušaja otkazivanja ili odložiti donošenje te odluke.
 
@@ -82,7 +98,7 @@ Ovakva asimetrija povećava verovatnoću da će korisnik odustati od pokušaja o
 
 Pored vizuelnih elemenata, tamni obrasci mogu koristiti i manipulativne tekstualne formulacije. Jedan od primera je obrazac poznat kao \emph{Confirmshaming}.
 
-Kada korisnik odbije određenu ponudu, opcija za odbijanje često nije predstavljena neutralnim tekstom. Umesto toga, koriste se formulacije poput ,,Ne, hvala, ne želim da uštedim novac'' ili ,,Ne, ne zanima me zdravlje moje dece''. Takve poruke nastoje da kod korisnika izazovu osećaj nelagodnosti ili krivice zbog izabranog odgovora.
+Kada korisnik odbije određenu ponudu, opcija za odbijanje često nije predstavljena neutralnim tekstom. Umesto toga, koriste se formulacije poput \emph{,,Ne, hvala, ne želim da uštedim novac''} ili \emph{,,Ne, ne zanima me zdravlje moje dece''}. Takve poruke nastoje da kod korisnika izazovu osećaj nelagodnosti ili krivice zbog izabranog odgovora.
 
 Iako ovakve formulacije ne ograničavaju mogućnost izbora, one utiču na način na koji korisnik doživljava ponuđene opcije i predstavljaju primer korišćenja psiholoških tehnika u dizajnu korisničkih interfejsa.
 
@@ -149,13 +165,19 @@ A List Apart, 318.
 
 \bibitem{gray2018the}
 Gray, C. M., Kou, Y., Battles, B., Hoggatt, J., \& Toombs, A. L. (2018).
-\emph{The Ethics of Undersigned Coercion: Types and Ethics of Dark Patterns}.
+\emph{The Dark (Patterns) Side of UX Design}.
 Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems, 1-14.
+\url{https://doi.org/10.1145/3173574.3174108}
 
 \bibitem{zuboff2019age}
 Zuboff, S. (2019).
 \emph{The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power}.
 PublicAffairs.
+
+\bibitem{ftc2024adobe}
+Federal Trade Commission (2024).
+\emph{FTC Takes Action Against Adobe and Executives for Hiding Fees, Preventing Consumers from Easily Cancelling Software Subscriptions}.
+\url{https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling}
 
 \end{thebibliography}
 
