@@ -15,6 +15,10 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{array}
 
 \title{Can we benefit from our phones? \\ 
 \small{Seminarski rad u okviru kursa \\
@@ -23,6 +27,7 @@ Računarstvo i društvo}}
 
 
 \begin{document}
+\sloppy
 \maketitle
 
 \renewcommand{\contentsname}{Sadržaj}
@@ -59,7 +64,7 @@ Ipak, iako pametni telefoni imaju brojne korisne funkcije, njihova sveprisutnost
 
 
 \section{Prednosti korišćenja pametnih telefona}
-Pametni telefoni, uprkos čestim kritikama, nude brojne prednosti koje mogu značajno doprineti unapređenju svakodnevnog života. Njihova funkcionalnost prevazilazi osnovnu komunikaciju i obuhvata različite aspekte ličnog razvoja, organizacije i pristupa informacijama. Kada se koriste na adekvatan i kontrolisan način, pametni telefoni mogu postati efikasan alat za povećanje produktivnosti, razvoj pozitivnih navika i unapređenje obrazovanja \cite{Smith2015}.
+Pametni telefoni, uprkos čestim kritikama, nude brojne prednosti koje mogu značajno doprineti una\-pređenju svakodnevnog života. Njihova funkcionalnost prevazilazi osnovnu komunikaciju i obuhvata različite aspekte ličnog razvoja, organizacije i pristupa informacijama. Kada se koriste na adekvatan i kontrolisan način, pametni telefoni mogu imati pozitivan uticaj na produktivnost, organizaciju vremena i proces učenja \cite{Smith2015}.
 
 \subsection{Produktivnost i organizacija vremena}
 
@@ -92,6 +97,14 @@ Pametni telefoni su u velikoj meri transformisali način na koji ljudi komunicir
 
 Ova dostupnost komunikacije doprinosi održavanju ličnih i profesionalnih odnosa, kao i efikasnijoj saradnji među ljudima. U poslovnom i obrazovnom okruženju, pametni telefoni omogućavaju bržu razmenu informacija, lakšu organizaciju timskog rada i bolju koordinaciju aktivnosti. Na taj način, oni postaju nezaobilazan alat u savremenim oblicima komunikacije i saradnje.
 
+\subsection{Specijalizovane primene pametnih telefona}
+
+Pored uobičajenih funkcija komunikacije i organizacije vremena, pametni telefoni danas imaju i brojne specijalizovane primene koje na prvi pogled nisu očigledne. Na primer, aplikacija PlantNet omogućava identifikaciju biljaka pomoću fotografije, dok Google Lens omogućava trenutno prevođenje teksta sa stranih jezika korišćenjem kamere telefona.
+
+Pametni telefoni se sve češće koriste i u oblasti zdravstva. Aplikacije za praćenje terapije, podsetnici za uzimanje lekova i sistemi za praćenje fizičke aktivnosti mogu pomoći korisnicima u očuvanju zdravlja i razvijanju zdravijih životnih navika.
+
+Poseban značaj imaju aplikacije namenjene osobama sa invaliditetom. Na primer, aplikacije za pretvaranje govora u tekst ili za prepoznavanje objekata u okruženju mogu značajno olakšati svakodnevni život osobama sa oštećenim sluhom ili vidom.
+
 \begin{table}[h]
 \centering
 \caption{Prednosti pametnih telefona u svakodnevnom životu}
@@ -114,19 +127,21 @@ Komunikacija & WhatsApp, Zoom & Brža razmena informacija \\
 
 Iako pametni telefoni nude brojne prednosti, savremena istraživanja ukazuju na to da njihova upotreba može imati značajne negativne posledice, posebno kada je reč o pažnji, koncentraciji i akademskom uspehu. Ovi efekti su predmet brojnih naučnih studija koje ukazuju na složen odnos između tehnologije i kognitivnih sposobnosti korisnika.
 
-\subsection{Distrakcija i gubitak fokusa}
+\paragraph{Distrakcija i gubitak fokusa}
 
 Jedan od najznačajnijih negativnih efekata pametnih telefona jeste njihov uticaj na pažnju i sposobnost koncentracije. Eksperimentalna istraživanja pokazuju da čak i samo prisustvo telefona može negativno uticati na kognitivne performanse. Naime, korisnici koji imaju telefon u svojoj blizini ostvaruju slabije rezultate na zadacima koji zahtevaju fokus i pažnju u poređenju sa onima koji nemaju pristup telefonu.
 
 Ovaj fenomen može se objasniti činjenicom da telefon predstavlja potencijalni izvor distrakcije, čak i kada nije aktivno korišćen. Deo kognitivnih resursa usmerava se na očekivanje poruka, obaveštenja ili drugih aktivnosti, što dovodi do smanjenja kapaciteta za obradu informacija i rešavanje zadataka. Kao posledica toga, dolazi do slabije koncentracije i povećane sklonosti ka prekidima tokom rada ili učenja.
 
-\subsection{Multitasking i smanjena efikasnost}
+\paragraph{Multitasking i smanjena efikasnost}
 
 Česta upotreba pametnih telefona podstiče multitasking, odnosno istovremeno obavljanje više aktivnosti. Iako se multitasking često smatra poželjnim, istraživanja pokazuju da on zapravo može smanjiti efikasnost i kvalitet obavljenog zadatka. Prekidanje aktivnosti radi provere telefona dovodi do gubitka fokusa i produžava vreme potrebno za završetak zadatka.
 
-Pored toga, korisnici često precenjuju svoju sposobnost da efikasno obavljaju više zadataka istovremeno, što dodatno doprinosi smanjenju produktivnosti. Ovakav način rada otežava dublje razumevanje gradiva i negativno utiče na proces učenja.
+\textit{Rosen} i saradnici \cite{Rosen2013} pokazali su da često prebacivanje pažnje između mobilnog telefona i primarnog zadatka dovodi do smanjenja efikasnosti i povećanja vremena potrebnog za završetak aktivnosti. Slične rezultate dobili su i \textit{Beland i Murphy} \cite{Beland2016}, koji su pokazali da digitalne distrakcije mogu negativno uticati na akademski uspeh učenika i studenata.
 
-\subsection{Uticaj na akademski učinak}
+Pored toga, korisnici često precenjuju svoju sposobnost da efikasno obavljaju više zadataka istovremeno, što dodatno doprinosi smanjenju produktivnosti.
+
+\paragraph{Uticaj na akademski učinak}
 
 Negativni efekti pametnih telefona posebno su izraženi u kontekstu obrazovanja. 
 Brojna empirijska istraživanja ukazuju na postojanje negativne povezanosti između intenzivne upotrebe mobilnih uređaja i akademskog uspeha. 
@@ -135,7 +150,7 @@ Studenti koji češće koriste pametne telefone tokom učenja ili nastave ostvar
 Razlozi za ovakav uticaj povezani su sa čestim prekidima pažnje, smanjenom koncentracijom i nemogućnošću dugotrajnog fokusiranja na zadatke. 
 Upotreba telefona tokom učenja može dovesti do površnog usvajanja gradiva i slabijeg pamćenja informacija, što se direktno odražava na akademske rezultate.
 
-\subsection{Dugoročne posledice po kognitivne sposobnosti}
+\paragraph{Dugoročne posledice po kognitivne sposobnosti}
 
 Kontinuirana izloženost distrakcijama koje izazivaju pametni telefoni može imati i dugoročnije posledice po kognitivne sposobnosti korisnika. Smanjena sposobnost održavanja pažnje i povećana zavisnost od spoljašnjih stimulusa mogu otežati obavljanje zadataka koji zahtevaju duboko razmišljanje i analizu.
 
@@ -143,17 +158,17 @@ U tom kontekstu, pametni telefoni ne utiču samo na trenutne performanse, već m
 
 \section{Kako koristiti pametne telefone na koristan način}
 
-Iako brojna istraživanja ukazuju na negativne efekte pametnih telefona, posebno u kontekstu pažnje i akademskog uspeha, njihov uticaj u velikoj meri zavisi od načina korišćenja. Naučni radovi sugerišu da smanjenje distrakcija i kontrolisano korišćenje mogu značajno ublažiti negativne posledice i omogućiti korisnicima da iskoriste prednosti koje ovi uređaji nude.
+Iako brojna istraživanja ukazuju na negativne efekte pametnih telefona, posebno u kontekstu pažnje i akademskog uspeha, njihov uticaj u velikoj meri zavisi od načina korišćenja. Istraživanja \textit{Kuznekoffa i Titswortha} \cite{Kuznekoff2013}, \textit{Rosena} i saradnika \cite{Rosen2013}, kao i \textit{Belanda i Murphyja} \cite{Beland2016}, ukazuju da smanjenje distrakcija izazvanih proveravanjem telefona i ograničavanje korišćenja tokom učenja mogu značajno smanjiti negativan uticaj na pažnju, koncentraciju i akademski uspeh.
 
 Jedan od ključnih nalaza eksperimentalnih istraživanja jeste da čak i samo prisustvo telefona može smanjiti koncentraciju i kognitivne performanse. Iz toga proizilazi da je fizičko udaljavanje telefona tokom aktivnosti koje zahtevaju fokus, kao što su učenje ili rad, efikasan način za poboljšanje pažnje. Držanje telefona van vidokruga ili u drugoj prostoriji može doprineti boljoj koncentraciji i efikasnijem izvršavanju zadataka.
 
-Pored toga, kontrola notifikacija predstavlja važan korak ka smanjenju distrakcija. Česta obaveštenja prekidaju tok razmišljanja i otežavaju održavanje fokusa, zbog čega se preporučuje isključivanje nepotrebnih notifikacija tokom rada ili učenja. Na taj način se smanjuje broj prekida i omogućava dublja koncentracija na zadatke.
+Pored toga, kontrola notifikacija predstavlja važan korak ka smanjenju distrakcija izazvanih čestim prekidima rada i učenja. Česta obaveštenja prekidaju tok razmišljanja i otežavaju održavanje fokusa, zbog čega se preporučuje isključivanje nepotrebnih notifikacija tokom rada ili učenja. Na taj način se smanjuje broj prekida i omogućava dublja koncentracija na zadatke.
 
 Takođe, istraživanja koja se bave uticajem pametnih telefona na akademski uspeh ukazuju na značaj ograničavanja vremena provedenog na telefonu, posebno tokom učenja. Postavljanje vremenskih ograničenja i svesno planiranje korišćenja telefona može pomoći u smanjenju negativnog uticaja i povećanju produktivnosti. Jedna od efikasnih strategija jeste primena tehnika upravljanja vremenom, kao što je rad u vremenskim intervalima uz planirane pauze, čime se smanjuje potreba za čestim proveravanjem telefona.
 
 Važan aspekt efikasnog korišćenja pametnih telefona jeste i način na koji se oni koriste. Aktivna upotreba, kao što su korišćenje edukativnih aplikacija, organizacionih alata i platformi za učenje, može imati pozitivan efekat na lični razvoj i svakodnevne navike. Nasuprot tome, pasivna upotreba, poput nekontrolisanog pregledanja sadržaja, često dovodi do gubitka vremena i smanjenja produktivnosti.
 
-Dodatno, sve veću pažnju privlači koncept tzv. „digitalne higijene“, koji podrazumeva svesno upravljanje vremenom provedenim uz tehnologiju. Ovo uključuje pravljenje pauza od ekrana, ograničavanje korišćenja telefona pre spavanja, kao i postavljanje jasnih granica između vremena za rad i odmora. Primena ovih principa može doprineti boljoj ravnoteži između digitalnog i stvarnog života.
+Dodatno, sve veću pažnju privlači koncept digitalne higijene, koji podrazumeva svesno upravljanje vremenom provedenim uz tehnologiju. Ovo uključuje pravljenje pauza od ekrana, ograničavanje korišćenja telefona pre spavanja, kao i postavljanje jasnih granica između vremena za rad i odmora. Primena ovih principa može doprineti boljoj ravnoteži između digitalnog i stvarnog života.
 
 Na osnovu navedenog, može se zaključiti da pametni telefoni sami po sebi nisu ni isključivo korisni ni štetni, već njihov uticaj zavisi od načina upotrebe. Razvijanje svesti o sopstvenim navikama i primena strategija za kontrolu korišćenja ključni su faktori koji omogućavaju da telefoni postanu alat za unapređenje svakodnevnog života, a ne izvor distrakcije i smanjenja produktivnosti.
 
@@ -165,7 +180,7 @@ Jedan od ključnih mehanizama povezan je sa sistemom nagrađivanja u mozgu. Noti
 
 Pored toga, značajan faktor predstavlja i takozvani efekat prekida. Svaki put kada korisnik prekine aktivnost kako bi proverio telefon, dolazi do narušavanja kontinuiteta pažnje. Povratak na prethodni zadatak zahteva dodatno vreme i mentalni napor, što smanjuje ukupnu efikasnost i kvalitet obavljenog posla. Ovaj problem je posebno izražen u kontekstu učenja i obavljanja složenih zadataka koji zahtevaju duboku koncentraciju.
 
-Još jedan važan aspekt jeste pojava poznata kao „strah od propuštanja“ (eng. Fear of Missing Out – FoMO). Ovaj fenomen podrazumeva osećaj da korisnik može propustiti važne informacije, događaje ili društvene interakcije ukoliko nije stalno povezan. Na primer, korisnici često osećaju potrebu da odmah provere poruku ili obaveštenje kako ne bi propustili važnu informaciju. Kao rezultat toga, javlja se potreba za učestalim proveravanjem telefona, što dodatno doprinosi distrakciji i smanjenju pažnje.
+Još jedan važan aspekt jeste pojava poznata kao „strah od propuštanja“ (eng. \textit{Fear of Missing Out} – FoMO). Ovaj fenomen podrazumeva osećaj da korisnik može propustiti važne informacije, događaje ili društvene interakcije ukoliko nije stalno povezan. Na primer, korisnici često osećaju potrebu da odmah provere poruku ili obaveštenje kako ne bi propustili važnu informaciju. Kao rezultat toga, javlja se potreba za učestalim proveravanjem telefona, što dodatno doprinosi distrakciji i smanjenju pažnje.
 
 Takođe, istraživanja ukazuju na pojavu tzv. digitalne amnezije, odnosno smanjene sposobnosti pamćenja informacija usled oslanjanja na digitalne uređaje. Kada korisnici znaju da im je određena informacija lako dostupna putem telefona, manja je verovatnoća da će je zapamtiti. Ovakav način obrade informacija može uticati na dugoročno pamćenje i proces učenja.
 
@@ -188,9 +203,9 @@ Jedan od značajnih teorijskih okvira jeste teorija ograničenih kognitivnih res
 
 Pored toga, značajan je i koncept operantnog uslovljavanja, koji objašnjava kako se određena ponašanja razvijaju kroz sistem nagrada. Notifikacije i digitalni sadržaji često deluju kao nepredvidivi podsticaji koji podstiču korisnike da ponavljaju određene radnje, poput proveravanja telefona. Ovakav obrazac ponašanja može doprineti razvoju navike učestalog proveravanja telefona, a kod pojedinih korisnika i problematičnih oblika korišćenja digitalnih uređaja.
 
-Teorija upotrebe i zadovoljenja (Uses and Gratifications Theory) takođe pruža značajan uvid u razloge korišćenja pametnih telefona \cite{Katz1973}. Prema ovoj teoriji, korisnici aktivno biraju medije i tehnologije kako bi zadovoljili određene potrebe, kao što su informisanje, zabava, socijalna interakcija i lični razvoj. U kontekstu pametnih telefona, ova teorija objašnjava zašto korisnici često posežu za uređajima čak i u situacijama kada to nije nužno.
+Teorija upotrebe i zadovoljenja (\textit{Uses and Gratifications Theory}) takođe pruža značajan uvid u razloge korišćenja pametnih telefona \cite{Katz1973}. Prema ovoj teoriji, korisnici aktivno biraju medije i tehnologije kako bi zadovoljili određene potrebe, kao što su informisanje, zabava, socijalna interakcija i lični razvoj. U kontekstu pametnih telefona, ova teorija objašnjava zašto korisnici često posežu za uređajima čak i u situacijama kada to nije nužno.
 
-Još jedan važan koncept jeste kognitivno opterećenje (cognitive load), koje se odnosi na količinu mentalnog napora potrebnog za obradu informacija \cite{Sweller1988}. Česta izloženost velikoj količini sadržaja putem pametnih telefona može povećati kognitivno opterećenje i otežati proces učenja i donošenja odluka.
+Još jedan važan koncept jeste kognitivno opterećenje (\textit{cognitive load}), koje se odnosi na količinu mentalnog napora potrebnog za obradu informacija \cite{Sweller1988}. Česta izloženost velikoj količini sadržaja putem pametnih telefona može povećati kognitivno opterećenje i otežati proces učenja i donošenja odluka.
 
 Na osnovu navedenih teorijskih pristupa može se zaključiti da upotreba pametnih telefona nije samo tehnološko, već i psihološko pitanje. Razumevanje ovih modela omogućava dublji uvid u ponašanje korisnika i predstavlja osnovu za razvoj strategija koje mogu doprineti efikasnijem i odgovornijem korišćenju tehnologije. Na taj način, teorijski modeli ne služe samo za objašnjenje ponašanja korisnika, već i za razvoj pristupa koji mogu pomoći u smanjenju negativnih efekata prekomerne upotrebe pametnih telefona.
 
@@ -201,11 +216,11 @@ Korišćenje pametnih telefona predstavlja značajan faktor koji utiče ne samo 
 
 Jedan od ključnih mehanizama ovog uticaja jeste izloženost plavom svetlu koje emituju ekrani pametnih telefona. Ovo svetlo inhibira lučenje melatonina, hormona koji ima centralnu ulogu u regulaciji cirkadijalnog ritma, odnosno ciklusa spavanja i budnosti. Kao posledica toga dolazi do odlaganja osećaja pospanosti, produženja latencije uspavljivanja i potencijalnog skraćenja ukupnog trajanja sna. Na duži vremenski period, ovakve promene mogu dovesti do umora, smanjene budnosti i otežane koncentracije tokom dana.
 
-Istraživanje Kheirinejad et al. \cite{Kheirinejad2022} pokazuje da korišćenje pametnog telefona u krevetu značajno produžava vreme uspavljivanja, pri čemu je kod ispitanika sa visokom učestalošću upotrebe zabeleženo prosečno povećanje latencije uspavljivanja za 18 do 22 minuta.
+Istraživanje \textit{Kheirinejad} i saradnika \cite{Kheirinejad2022} pokazuje da korišćenje pametnog telefona u krevetu značajno produžava vreme uspavljivanja, pri čemu je kod ispitanika sa visokom učestalošću upotrebe zabeleženo prosečno povećanje latencije uspavljivanja za 18 do 22 minuta.
 
 Pored fizioloških efekata, upotreba pametnih telefona ima i značajan psihološki uticaj. Stalna dostupnost informacija i potreba za kontinuiranom povezanosti mogu doprineti razvoju osećaja preopterećenosti, stresa i anksioznosti.
 
-Velika longitudinalna studija sprovedena u okviru Adolescent Brain Cognitive Development (ABCD) studije \cite{ABCDStudy} pokazuje da je veće ukupno vreme provedeno pred ekranima povezano sa povećanim nivoima depresivnih simptoma, problema u ponašanju i poteškoća sa pažnjom kod adolescenata.
+Velika longitudinalna studija sprovedena u okviru \textit{Adolescent Brain Cognitive Development} (ABCD) studije \cite{ABCDStudy} pokazuje da je veće ukupno vreme provedeno pred ekranima povezano sa povećanim nivoima depresivnih simptoma, problema u ponašanju i poteškoća sa pažnjom kod adolescenata.
 
 Sistemski pregledi literature dodatno ukazuju na konzistentnu povezanost između prekomerne upotrebe ekrana i smanjenog subjektivnog blagostanja kod mladih \cite{Przybylski2019}.
 
@@ -229,33 +244,34 @@ Uzimajući u obzir sve navedene faktore, može se zaključiti da uticaj pametnih
 
 \begin{table}[h]
 \centering
-\caption{Uticaj korišćenja telefona na kvalitet sna (Kheirinejad et al., 2022)}
+\caption{Uticaj korišćenja telefona na kvalitet sna (Kheirinejad et al., 2023)}
 
 \renewcommand{\arraystretch}{1.3}
 
-\begin{tabular}{p{4cm} p{5cm} p{4cm}}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X 
+                            >{\centering\arraybackslash}X 
+                            >{\centering\arraybackslash}X}
 \hline
-\textbf{Nivo korišćenja telefona u krevetu} & 
-\textbf{Udeo vremena na telefonu (\%)} & 
+\textbf{Nivo korišćenja telefona u krevetu} &
+\textbf{Udeo vremena na telefonu pred spavanje (\%)} &
 \textbf{Prosečno vreme uspavljivanja (min)} \\
 \hline
-
 Nisko korišćenje & 0--10\% & 10--12 \\
 Umereno korišćenje & 10--40\% & 12--15 \\
 Visoko korišćenje & 40--60\% & 15--18 \\
 Veoma visoko korišćenje & više od 60\% & 18--22 \\
 \hline
-
-\end{tabular}
+\end{tabularx}
 \end{table}
 
+Procenat predstavlja udeo vremena provedenog na telefonu u odnosu na ukupno vreme koje ispitanik provodi u krevetu pre uspavljivanja.
 
 Rezultati prikazani u tabeli ukazuju na jasan trend povezanosti između intenziteta korišćenja pametnog telefona u krevetu i produženja vremena uspavljivanja. Sa porastom procenta vremena provedenog na telefonu, dolazi do postepenog povećanja latencije uspavljivanja, što potvrđuje negativan uticaj digitalnih uređaja na početne faze sna.
 
 Najizraženije razlike uočavaju se kod ispitanika sa visokim i veoma visokim nivoom korišćenja, gde se vreme uspavljivanja produžava za nekoliko minuta u odnosu na osobe sa niskim nivoom upotrebe. Ovi nalazi su u skladu sa prethodnim istraživanjima koja ističu ulogu stimulacije i izloženosti ekranu u odlaganju početka sna.
 
 
-\newpage
+
 \section{Rezultati sprovedene ankete}
 
 U okviru izrade ovog seminarskog rada sprovedena je anonimna online anketa među studentima (30 ispitanika), sa ciljem ispitivanja njihovih navika i stavova o korišćenju pametnih telefona. Istraživanje je imalo za cilj da pruži uvid u obrasce korišćenja digitalnih uređaja i njihov subjektivno percipiran uticaj na koncentraciju, produktivnost i svakodnevno funkcionisanje.
@@ -317,6 +333,34 @@ Ograničenje ovog istraživanja predstavlja relativno mali uzorak ispitanika, ka
 
 Dobijeni rezultati ukazuju na to da su navike ispitanika u skladu sa nalazima prethodnih istraživanja predstavljenih u radu. Visok procenat korišćenja pametnih telefona tokom dana, kao i njihova upotreba pre spavanja, mogu se dovesti u vezu sa smanjenom koncentracijom i povećanim umorom. Ovi nalazi potvrđuju tezu da način i vreme korišćenja pametnih telefona imaju ključnu ulogu u njihovom uticaju na svakodnevno funkcionisanje korisnika.
 
+
+\newpage 
+\section{Veza sa temama kursa}
+
+Tema ovog seminarskog rada direktno je povezana sa više oblasti obrađenih u okviru kursa Računarstvo i društvo. Pre svega, rad se nadovezuje na temu etike, jer razmatra pitanje odgovorne i balansirane upotrebe tehnologije, kao i posledice koje prekomerno korišćenje pametnih telefona može imati na mentalno zdravlje, pažnju i svakodnevno funkcionisanje korisnika.
+
+Posebno značajna povezanost postoji sa temom internet zavisnosti, budući da rad analizira psihološke mehanizme kao što su stvaranje navika, sistem nagrađivanja i strah od propuštanja (FoMO), koji doprinose učestalom proveravanju telefona i potencijalnoj zavisnosti od digitalnih sadržaja.
+
+Rad se takođe može povezati sa temom privatnosti na internetu, jer savremeni pametni telefoni i aplikacije prikupljaju velike količine ličnih podataka korisnika, uključujući lokaciju, navike i obrasce ponašanja. Ovo otvara važna pitanja o zaštiti privatnosti i bezbednosti podataka.
+
+Na kraju, tema je povezana i sa bezbednošću interneta, s obzirom na to da pametni telefoni predstavljaju jedan od glavnih uređaja preko kojih korisnici pristupaju internetu i mogu biti izloženi različitim bezbednosnim rizicima, poput phishing napada, zlonamernih aplikacija i krađe podataka.
+
+\section{Ključni radovi}
+\subsection{Kuznekoff i Titsworth (2013) – Uticaj mobilnih telefona na učenje}
+
+Rad Jamesa Kuznekoffa i Stephena Titswortha \textit{"The impact of mobile phone usage on student learning"} predstavlja jedan od najvažnijih empirijskih izvora korišćenih u ovom radu. Autori su eksperimentalno ispitivali kako upotreba mobilnih telefona tokom nastave utiče na pažnju, beleženje informacija i razumevanje gradiva.
+
+Rezultati istraživanja pokazali su da studenti koji koriste telefone tokom predavanja beleže manje informacija i postižu slabije rezultate na testovima u odnosu na studente koji nisu koristili telefone. Posebno značajan nalaz ovog rada jeste da čak i kratki prekidi pažnje izazvani proveravanjem telefona mogu imati negativan uticaj na proces učenja.
+
+Ovaj rad je ključan za seminarski jer pruža naučno utemeljen dokaz da pametni telefoni mogu smanjiti koncentraciju i negativno uticati na akademski uspeh, što predstavlja jednu od centralnih tema ovog istraživanja.
+
+\subsection{Kheirinejad i saradnici (2023) – Pametni telefoni i kvalitet sna}
+
+Istraživanje \textit{"Leave your smartphone out of bed: Quantitative analysis of smartphone use effect on sleep quality"} autora Kheirinejad i saradnika predstavlja važan savremeni izvor za analizu uticaja pametnih telefona na san i mentalno zdravlje.
+
+Autori su analizirali vezu između intenziteta korišćenja pametnih telefona pre spavanja i vremena potrebnog za uspavljivanje. Rezultati pokazuju da korisnici koji provode više vremena na telefonu u krevetu imaju dužu latenciju uspavljivanja i lošiji kvalitet sna.
+
+Posebna vrednost ovog rada ogleda se u kvantitativnom pristupu i jasnom prikazu veze između digitalnih navika i fizioloških posledica. Ovaj rad je značajan za seminarski jer podržava tvrdnju da način i vreme korišćenja telefona imaju direktan uticaj na zdravlje korisnika.
 
 \newpage
 \section{Zaključak}
