@@ -10,29 +10,61 @@
 
 \geometry{margin=2.5cm}
 
-\title{\textbf{Monero kao anonimna kriptovaluta}}
-\author{Aleksandar Stojčić \\
-        126/2021}
-\date{jun 2026. godine}
-
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\centering
+
+{\Large Univerzitet u Beogradu\\}
+\vspace{0.5cm}
+{\Large Matematički fakulteta}
+
+\vspace{3cm}
+
+{\large Kurs: Računarstvo i društvo \\}
+\vspace{0.5cm}
+{\LARGE \textbf{Monero kao anonimna kriptovaluta} }
+
+\vfill
+
+\begin{flushleft}
+\textbf{Profesor}: dr Sana Stojanović Đurđević \\
+\textbf{Student}: Aleksandar Stojčič 126/2021
+\end{flushleft}
+
+\vspace{0.5cm}
+
+\centering
+{\large jun 2026. godine}
+
+\end{titlepage}
 
 \newpage
 
 \tableofcontents
+
 \newpage
 
 % --------------------
 \section{Uvod}
 
-U 21. veku kriptovalute su donele promene u načinu plaćanja na internetu. Premda je Bitkoin prva, najpoznatija, i do trenutka pisanja ovog rada najrasprostranjenija kriptovaluta, njegove mane inspirisale su nastanak drugih kriptovaluta.\\
+U 21. veku kriptovalute su donele promene u načinu plaćanja na internetu. Premda je Bitkoin prva, najpoznatija, i do trenutka pisanja ovog rada najrasprostranjenija kriptovaluta, njegove mane inspirisale su nastanak drugih kriptovaluta.
 
-U ovom radu smo na osnovu naučnih radova naučnika iz SAD i Evropske unije, novinskih članaka agencije \textbf{Rojters} (eng. \textit{Reuters}), kompanija \textit{TRM Labs} i \textit{ESET} i institucija poput \textit{Evropola} analizirali kriptovalutu Monero. Poređenjem sa Bitkoinom i njemu sličnim kriptovalutama trudili smo se da objasnimo kako Monero funkcioniše. Analizirali smo kriptografske metode poput Ring Signatures, RingCT i Stealth adresses, novija tehnološka rešenja u domenu mrežne bezbednosti Dandelion++ i inovativan proces rudarenja same kriptovalute RandomX. U prvom delu rada trudili smo se da objasnimo zašto se Monero smatra bezbednijom kriptovalutom u odnosu na konkurenciju.\\
+U prvom delu rada uvedeni su i objašnjeni osnovni pojmovi neophodni za razumevanje kriptovaluta. Poređenjem sa Bitkoinom i njemu sličnim kriptovalutama trudili smo se da objasnimo kako Monero funkcioniše. Analizirane su kriptografske metode poput Ring Signatures, RingCT i Stealth adresses, novija tehnološka rešenja u domenu mrežne bezbednosti Dandelion++ i inovativan proces rudarenja same kriptovalute RandomX. Osim toga, objašnjeno je zašto se Monero smatra bezbednijom kriptovalutom u odnosu na konkurenciju.
 
-U drugom delu rada kontekstualizovali smo Monero u savremenom društvu. Pokazali smo kako Monero utiče na privatnost korisnika na internetu, kao i kako njegovom upotrebom korisnici čuvaju svoju finansijsku slobodu. Dalje, uočili smo potencijalne primene i zloupotrebe Monera i kako iste karakteristike, koje omogućavaju zaštitu privatnosti, mogu biti iskorišćene u legitimne, ali i maliciozne svrhe. Na kraju, predstavili smo njegov uticaj na kriminalne aktivnosti.
+U drugom delu rada kontekstualizovali smo Monero u savremenom društvu. Pokazali smo kako Monero utiče na privatnost korisnika na internetu, kao i kako njegovom upotrebom korisnici čuvaju svoju finansijsku slobodu. Dalje, uočili smo potencijalne primene i zloupotrebe Monera i kako iste karakteristike, koje omogućavaju zaštitu privatnosti, mogu biti iskorišćene u legitimne, ali i maliciozne svrhe. Na kraju, predstavili smo njegov uticaj na kriminalne aktivnosti.\\
 
+Kao seminarski rad iz kursa \textit{Računarstvo i društvo }na Matematičkom Fakultetu, Univerziteta u Beogradu, ovaj rad se bavi tehničkim aspektima funkcionisanja ove tehnologije, ali i njenim uticajem na društvo. Poseban fokus se stavlja na \textit{privatnost} njenih korisnika, \textit{otpornost na cenzuru } i \textit{očuvanje slobode govora}. Razmatrane su prednosti i nedostaci koje ova tehnologija pruža \textit{bezbednosti interneta}.
+
+\subsection{Osvrt na literaturu}
+U ovom radu smo na osnovu naučnih radova naučnika iz SAD i Evropske unije, novinskih članaka agencije \textit{Rojters} (eng. \textit{Reuters}), kompanija \textit{TRM Labs} i \textit{ESET} i institucija poput \textit{Evropola} analizirali kriptovalutu Monero. Ključnu literaturu za ovaj rad podelili smo na deo koji se odnosi na Monero u tehnološkom smislu i deo koji se bavi uticajem Monera u društvu.
+
+\subsubsection{Monero kao tehnologija}
+Rad \textit{„CryptoNote v2.0“} od Nikolasa van Saberhagena\cite{cryptonote} predstavlja teorijski osnov funkcionisanja Monera i njegove razlike od Bitkoina. Pored toga, radovi \textit{"Improving Obfuscation in the CryptoNote Protocol“} autora Adama Mekenzija i Sure Netera, \textit{"Ring Confidential Transactions“} autora Šena Netera i Adama Mekenzija i \textit{"An efficient implementation of Monero subaddresses“} autora Saranga Netera i Brendona Guda, objasnili su teorijski kako funkcionišu algoritmi od kojih je napravljen Monero.
+
+\subsubsection{Monero u društvu}
+Rad \textit{"Navigating Ethical Challenges in Cryptocurrency and Blockchain Technologies"} autora Irene Dondžio
+i Andreasa Kazamijasa objavljen je u časopisu "International Journal of Criminology and Sociology" 2025. godine \cite{ethicalChallenges} i služio je kao primarni izvor u drugom delu rada. Autori su kombinovanjem studija slučaja kao i odgovarajuće literature ispitali etičke posledice korišćenja ove tehnologije. Takođe su napravili razliku između upotrebe Monera u legitimne i u kriminalne svrhe. 
 
 \newpage
 % --------------------
@@ -224,11 +256,11 @@ Prema izveštaju kompanije \textit{TRM Labs} u 2025. godini\cite{trmlabs} je kol
 \newpage
 % --------------------
 \section{Zaključak}
-Smatramo da je glavni benefit Monera privatnost koju pruža korisniku. Iz tog razloga, za njegov dalji razvoj i optimizaciju, zainteresovane su države, eksperti sajber bezbednosti, kao i maliciozni akteri.\\
+Trenutno, Monero je tehnički stabilan, visoko decentralizovan i oslanja se na najnaprednije kriptografske metode.  Smatramo da je glavni benefit Monera privatnost koju pruža korisniku. Iz tog razloga, za njegov dalji razvoj i optimizaciju, zainteresovane su države, eksperti sajber bezbednosti, kao i maliciozni akteri. Posle zatvaranja darknet tržišta AlphaBay 2018. godine, grupe naučnike od kojih je neke finansirala Evropska komisija dale su preporuke kako i u kom smeru da se nastavi dalji razvoj ove valute. Zajedno sa tim, razvoj Monera je nastavljen kroz rad Monero Research Lab, koja kontinuirano radi na unapređivanju protokola.\\
 
-Posle zatvaranja darknet tržišta \textit{AlphaBay} 2018. godine, grupe naučnike, od kojih je neke finansirala \textit{Evropska komisija}, dale su preporuke kako, i u kom smeru da se nastavi dalji razvoj ove valute. Zajedno sa tim, razvoj Monera je nastavljen kroz delovanje \textit{Monero Research Lab}, koja kontinuirano radi na unapređivanju protokola.\\
+Sa druge strane, izveštaj Evropola ukazuje da, iako je Monero prisutan u raznim oblicima sajber kriminala, njegova upotreba nije univerzalna. Faktori kao što su vrsta zločina, nivo tehničke pismenosti i opreznost aktera značajno utiču na njegovu primenu. Uprkos percepciji Monera kao kriptovalute, koja se koristi isključivo za kriminalne aktivnosti, većina korisnika ga koristi u legitimne svrhe. \\
 
-Sa druge strane, pomenuti \textit{Izveštaj Evropola} ukazuje da, iako je Monero prisutan u raznim oblicima sajber kriminala, njegova upotreba nije univerzalna. Faktori kao što su vrsta zločina, nivo tehničke pismenosti i opreznost aktera značajno utiču na njegovu primenu. Uprkos percepciji Monera kao kriptovalute, koja se koristi isključivo za kriminalne aktivnosti, većina korisnika ga koristi u legitimne svrhe. 
+U budućnosti, Monero će verovatno nastaviti da razvija post-kvantne kriptografske metode sa ciljem da postane kvantno ojačan. Njegov dugoročni uspeh će zavisiti u velikoj meri od uticaja vlada i internacionalnih regulatornih tela na kriptovalute i blokčejn tehnologije. Ukoliko uspe da održi ravnotežu između privatnosti i praktične primene, Monero bi mogao postati jedan od glavnih projekata otvorenog koda.
 
 
 \newpage
