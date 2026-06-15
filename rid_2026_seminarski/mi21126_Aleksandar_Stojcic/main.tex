@@ -1,0 +1,242 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{Monero kao anonimna kriptovaluta}}
+\author{Aleksandar Stojčić \\
+        126/2021}
+\date{jun 2026. godine}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+\newpage
+
+% --------------------
+\section{Uvod}
+
+U 21. veku kriptovalute su donele promene u načinu plaćanja na internetu. Premda je Bitkoin prva, najpoznatija, i do trenutka pisanja ovog rada najrasprostranjenija kriptovaluta, njegove mane inspirisale su nastanak drugih kriptovaluta.\\
+
+U ovom radu smo na osnovu naučnih radova naučnika iz SAD i Evropske unije, novinskih članaka agencije \textbf{Rojters} (eng. \textit{Reuters}), kompanija \textit{TRM Labs} i \textit{ESET} i institucija poput \textit{Evropola} analizirali kriptovalutu Monero. Poređenjem sa Bitkoinom i njemu sličnim kriptovalutama trudili smo se da objasnimo kako Monero funkcioniše. Analizirali smo kriptografske metode poput Ring Signatures, RingCT i Stealth adresses, novija tehnološka rešenja u domenu mrežne bezbednosti Dandelion++ i inovativan proces rudarenja same kriptovalute RandomX. U prvom delu rada trudili smo se da objasnimo zašto se Monero smatra bezbednijom kriptovalutom u odnosu na konkurenciju.\\
+
+U drugom delu rada kontekstualizovali smo Monero u savremenom društvu. Pokazali smo kako Monero utiče na privatnost korisnika na internetu, kao i kako njegovom upotrebom korisnici čuvaju svoju finansijsku slobodu. Dalje, uočili smo potencijalne primene i zloupotrebe Monera i kako iste karakteristike, koje omogućavaju zaštitu privatnosti, mogu biti iskorišćene u legitimne, ali i maliciozne svrhe. Na kraju, predstavili smo njegov uticaj na kriminalne aktivnosti.
+
+
+\newpage
+% --------------------
+\section{Kriptovalute: osnovni pojmovi}
+
+Satoši Nakamoto je 2008. godine objavio rad pod nazivom \textit{”Bitcoin: A Peer-to-Peer Electronic Cash System“} u kojem je predstavljen \textbf{Bitkoin} (eng. \textit{Bitcoin}) kao decentralizovana digitalna valuta \cite{satoshi}. Ključni deo rada bila je upotreba \textbf{blokčejn} (eng. \textit{blockchain}) tehnologije, odnosno distribuirane, decentralizovane i lako proverljive \textbf{knjiga transakcija} (eng. \textit{ledger}). Ona omogućava učesnicima mreže da postignu saglasnost o stanju sistema, bez potrebe za centralnom institucijom, zaduženom za regulisanje tog sistema.  Iako je blokčejn tehnologija uzrokovala uspostavljanje zajedničkog konsenzusa i izgradnju poverenja u Bitkoin i ostale kriptovalute, njena javna priroda omogućila je analizu transakcija i protoka sredstava. To je dovelo u pitanje u kojoj meri pseudonimne adrese, koje ove valute pružaju, zaista obezbeđuju privatnost korisnika.\\
+
+Tokom godina predstavljeni su različiti projekti alternativnih valuta (tzv. altkoini), obično sa ciljem da otklone neke od nedostataka Bitkoina, kao što su:
+
+-	nedostatak privatnosti (Monero, Zcash)
+
+-	visoke naknade transakcija (Litecoin)
+
+-	uticaj \textbf{rudarenja} (eng. \textit{mining}) na životnu sredinu (Gridcoin)\\
+
+Pošto je Bitkoin prva široko prihvaćena kriptovaluta, potrebno je objasniti osnovne pojmove na kojima se zasniva njegovo funkcionisanje. Postoje dve komponente koje doprinose istom:
+
+    1.	Peer-to-Peer mreža čvorova, koji razmenjuju transakcijske blokove i učestvuju u njihovoj verifikaciji.
+    
+    2.	Blokčejn, odnosno distribuirana i javno proverljiva baza podataka u koju se dodaju novi podaci u obliku blokova.
+
+\subsection{Peer-to-Peer mreža}
+Akteri koji učestvuju u decentralizovanoj Bitkoin mreži nazivaju se \textbf{čvorovi} (eng. \textit{nodes}). Svaki čvor se povezuje sa podskupom ostalih čvorova i sa njima razmenjuje informacije o transakcijama i blokovima.\\
+    
+Dok svi čvorovi u mreži učestvuju u prenosu i proveri validnosti transakcija i blokova, samo određeni čvorovi, tzv. \textbf{rudari} (eng. \textit{miners}), učestvuju u procesu kreiranja novih blokova.  Rudari koriste \textbf{mehanizam dokazivanja rada} (eng. \textit{Proof of Work}), kojim rešavaju kriptografski težak zadatak, kako bi u blokčejn dodali novi blok, ukoliko ga ostali čvorovi prihvate kao validnog.
+
+\subsection{Blokovi i blokčejn}
+Blokčejn je distribuirana knjiga zapisa čiji je zadatak da evidentira sve transakcije koje su se do tog trenutka dogodile u mreži. Stanja sistema se ne čuva kao jedna centralizovana  vrednost, već se izvodi iz kompletne istorije transakcija. Blokčejn se sastoji od niza lančano povezanih blokova, pri čemu svaki blok sadrži:
+
+    -	\textbf{vremensku oznaku} (eng. \textit{timestamp}) koja predstavlja približno vreme kreiranja bloka;
+    
+    -	\textbf{heš} (eng. \textit{hash}) prethodnog bloka, čime se stvara povezanost sa prvim blokom, tzv. genesis blokom;
+    
+    -	skup transakcija;
+    
+    -	\textbf{nons} (eng. \textit{nonce}) vrednost koja se koristi u procesu rudarenja;
+    
+    -	heš zaglavlja bloka.\\
+
+Povezivanje blokova preko heša prethodnog bloka omogućava da svaka promena u trenutnom bloku dovede do promene hešova svih narednih blokova, čime je osigurano da se lanac ne može prekinuti.
+
+Ukoliko bi čvor pokušao da izmeni sadržaj bloka, postao bi nevažeći. Ako bi se takav blok  prosledio ostatku mreže, ostali čvorovi bi ga odbacili, jer novonastalo stanje ne bi bilo u skladu sa postojećim stanjem blokčejna.
+
+\subsection{Transakcije}
+Bitkoini se prenose sa jednog korisnika na drugi putem transakcija. Model koji se koristi da bi se transakcije realizovale jeste \textbf{model izlaza transakcija} (eng. \textit{Transaction Output, TXO}). U ovom modelu, sredstva se predstavljaju kao skup pojedinačnih izlaza koji mogu biti potrošeni ili nepotrošeni.\\
+
+Svaka transakcija ima jedan ili više ulaza i jedan ili više izlaza. Ulaz u transakciju predstavlja referencu na prethodne nepotrošene TXO-ve i digitalne potpise, koji dokazuju da pošiljalac ima pravo da ih potroši. Izlazi se sastoje iz dva dela: željenog iznosa i skripte koja sadrži heš javnog ključa adrese primaoca. Da bi se izlaz koristio u drugoj transakciji, prethodna mora da se potvrdi kao uspešno izvršena. Ukupan iznos ulaza u transakciju mora biti jednak ili veći od ukupnog iznosa izlaza. Razlika između ova dva iznosa predstavlja transakcijsku naknadu koja se dodeljuje rudaru, kada on uključi transakciju u blok.
+
+\subsection{Rudarenje}
+Svaki blok ima jedinstveni heš, koji se generiše primenom heš funkcije na njegov sadržaj. Ovaj heš mora da ispunjava neki kriterijum težine, odnosno mora biti manji od neke unapred definisane vrednosti. U tu svrhu u zaglavlje bloka se uključuje polje nons, čija se vrednost menja sve dok heš zaglavlja bloka ne ispuni kriterijum. 
+
+Ovaj proces predstavlja implementaciju mehanizma dokazivanja rada, koji obezbeđuje sigurnost mreže i sprečava zloupotrebu, pošto su za kreiranje bloka potrebni značajni računarski resursi i energija.
+
+Ako rudar pronađe nons, čija kombinacija sa hešom zaglavlja bloka ispunjava kriterijum težine, blok se smatra validnim i može biti predložen za dodavanje u blokčejn.\\
+
+Čvorovi su podstaknuti da učestvuju u rudarenju kroz dva mehanizma:
+
+    -	\textbf{Naknada transakcije}: To su naknade koje se dodeljuju rudaru ako uključi specifičnu transakciju u blok. Ovim mehanizmom se ne stvaraju novi Bitkoini.
+    
+    -	\textbf{Nagrada za blok}: To je nagrada koju rudar dobija od mreže ako ubaci ceo blok transakcija u blokčejn. Ovim mehanizmom se stvaraju novi Bitkoini, ali postoji gornja granica od oko 21 miliona Bitkoina.\\
+    
+Ako u nekom trenutku svi Bitkoini budu izrudareni, naknade za transakcije ostaju jedini podsticaj za rudare da nastave sa validiranjem novih transakcija.
+
+
+\newpage
+% --------------------
+\section{Monero: funkcionalnost i prednosti}
+Monero je kriptovaluta zasnovana na \textbf{CryptoNote protokolu} \cite{cryptonote}. Osnovni cilj Monera jeste unapređenje privatnosti u odnosu na transparentne blokčejn sisteme poput Bitkoina. 
+
+Da bismo objasnili razliku između ove dve kriptovalute, prvo želimo da se osvrnemo na neke od bitnih nedostataka Bitkoina.
+
+    -	\textbf{Povezivanje transakcija}: Analizom blokčejna Bitkoina uočljivo je da se adrese koriste više puta od strane istog korisnika, što dovodi do povezivanja korisnika sa njegovim transakcijama.
+    
+    -	\textbf{Praćenje sredstava}: Pošto je moguće pratiti put Bitkoina preko transakcija u kojima je učestvovao, moguće je utvrditi i da li je novac bio korišćen za ilegalne aktivnosti. 
+    
+    -	\textbf{Ograničena ponuda}: Bitkoin ima ograničenu maksimalnu ponudu, pa dugotrajna sigurnost mreže zavisi od transakcijskih naknada, što čini rudarstvo manje profitabilno.\\
+    
+Monero ove nedostatke Bitkoina rešava primenom kriptografskih tehnika, koje korisnicima omogućuju:
+
+    -	skrivanje adresa primaoca, kroz generisanje \textbf{jednokratnih} \textbf{stelt adresa} (eng. \textit{stealth address})
+    
+    -	transakcije koje se ne mogu pratiti, kao i skrivanje adrese pošiljaoca kroz upotrebu \textbf{potpisa prstena} (eng. \textit{ring signature})
+    
+    -	poverljivost iznosa transakcija, kroz mehanizam \textbf{Ring Confidential Transactions (RingCT)}\\
+    
+Problem sa ograničenom ponudom rešen je uklanjanjem fiksne maksimalne ponude i uvođenjem donje granice nagrade za blok, tzv. \textit{„tail emission“}, u okviru koje se mala količina Monera dodeljuje za svaki blok koji je dodat u blokčejn.
+
+
+\subsection{Stelt adrese}
+Svaki Monero nalog se sastoji od \textbf{privatnog ključa za trošenje sredstava} (eng. \textit{spend key}) i \textbf{privatnog ključa za pregledanje sredstava} (eng. \textit{view key}), kao i \textbf{javne Monero adrese} (eng. \textit{real public address}), koja nastaje kombinovanjem javnih verzija pomenutih ključeva. 
+
+Privatni ključ za trošenje sredstava služi kao dokaz vlasništva nad sredstvima i neophodan je da bi se ona trošila. Privatni ključ za pregledanje sredstava služi korisniku da vidi koje transakcije su njemu bile namenjene, kao i da vidi raspoložive i zaključane TXO-ve. Korisnik može da vidi sredstva pomoću ovog ključa, ali je za njihovo trošenje potrebno da ima privatni ključ za trošenje sredstava.
+
+Prilikom kreiranja transakcije, pošiljalac koristi javne verzije ovih ključeva primalaca, kao i slučajno generisane brojeve da kreira jednokratnu javnu adresu (stelt adresu)\cite{mrl6} na kojoj se kreira novi TXO. Primalac preko svog privatnog ključa za pregledanje sredstava može da skenira blokčejn, i tako otkrije da li su određeni TXO-vi namenjeni njemu. Ukoliko jesu, on pomoću privatnog ključa za trošenje sredstava može da dokaže vlasništvo nad njima i da ih kasnije troši u novim transakcijama.
+
+Ovim mehanizmom prava javna adresa primalaca nikada se ne pojavljuje direktno u blokčejnu. Umesto nje koriste se jednokratne adrese, čime se sprečava povezivanje različitih transakcija sa istim korisnikom.
+
+
+
+\subsection{Potpisi prstena}
+Dok stelt adrese štite identitet primaoca, potpisi prstena imaju za cilj da zaštite identitet pošiljaoca. U Bitkoin mreži svaki ulaz transakcije ukazuje na konkretan TXO. Zbog toga je moguće pratiti tok sredstava kroz istoriju transakcija i rekonstruisati putanju novca od njegovog nastanka do trenutnog vlasnika.\\
+
+Nasuprot tome, svaki Monero ulaz transakcije ukazuje na skup mogućih TXO-va, od kojih je samo jedan zaista potrošen, dok su ostali mamci. Posmatrač može da vidi sve izlaze koje učestvuju u transakciji, ali ne može sa sigurnošću da sazna koji je iskorišćen. Ovaj mehanizam ostvaruje se korišćenjem potpisa prstena \cite{mrl4}.
+
+Da bi se sprečilo dvostruko trošenje sredstava, Monero koristi \textbf{slike ključeva} (eng. \textit{key images}). Slika ključa predstavlja jedinstvenu vrednost izvedenu iz privatnog ključa za trošenje sredstava, koji se troši. Mreža proverava da li se ista slika ključa pojavljuje samo jednom u blokčejnu, čime se sprečava da se ista sredstva troše više puta.
+
+Potpis prstena pruža mogućnost korisniku da dokaže da poseduje privatni ključ jednog od svih potencijalnih TXO-va, bez da otkrije na koji se tačno odnosi. Ovim sistemom transakcija se može validirati, ali identitet stvarnog pošiljaoca ostaje sakriven.\\ 
+
+Iako potpisi prstena pomažu kod održavanja anonimnosti korisnika, oni imaju svoje nedostatke. Potreba za dodatnim podacima dovodi do povećanja veličine transakcije, pa i sam blokčejn postaje velik. Nivo anonimnosti takođe zavisi od broja mamaca TXO-va. Premalim brojem mamaca se može sa velikom dozom uspeha pogoditi koji je iskorišćen, dok prevelik broj čini blokčejn nepotrebno velikim. Takođe, zato što nije očigledno koji je konkretan TXO zaista potrošen, čvorovi ne mogu lako da uklanjaju stare podatke, što dodatno zahteva više resursa za pokretanje čvorova.
+
+\subsection{Ring Confidential Transactions (RingCT)}
+Uz pomoć stelt adresa i potpisa prstena održana je anonimnost pošiljaoca i primaoca, ali iznos transakcije ostao je javan. Pre uvođenja RingCT \cite{mrl5} 2017. godine, poslati TXO-vi delili bi se na određene apoene, koji bi se odvojeno slali. Problem sa tim načinom bila je javna dostupnost iznosa svih transakcija.\\ 
+
+Osnovna ideja RingCT mehanizma zasniva se na korišćenju \textbf{Pedersenovih obaveza} (eng. \textit{commitments}) koje omogućavaju da se vrednosti transakcije „zaključaju“. Na taj način, stvarni iznos transakcije se ne prikazuje javno, ali se može matematički proveriti da li je suma ulaznih TXO-va jednaka sumi izlaznih, čime se sprečava kreiranje TXO-va ni iz čega.
+
+Pored ovih obaveza, RingCT takođe koristi \textit{„range proof“} mehanizam, čija je svrha da dokaže da su svi iznosi u dozvoljenom opsegu, tj. da nisu negativni. Ključna osobina ovog mehanizma jeste da učesnici mreže mogu proveriti ispravnost transakcije bez uvida u tačan iznos koji je prenet.
+
+\subsection{Ostale optimizacije}
+Pored ova tri glavna mehanizma za održavanje privatnosti transakcija i korisnika, Monero ima dodatne optimizacije za rudarenje i samu mrežne komunikacije kojima smanjuje centralizaciju.\\
+
+\textbf{RandomX}\cite{randomX} je algoritam za dokazivanje rada namenjen za standardne procesore i Monero ga je implementirao 2019. godine. Njegov osnovni cilj je da spreči centralizaciju rudarenja od strane hardvera specijalizovanog za taj posao, kao što su \textbf{integrisana kola specifične namene} (eng. \textit{Application-specific integrated circuit, ASIC}). To postiže tako što koristi virtuelnu mašinu koja izvršava programe sa posebnim skupom instrukcija, koji se sastoji od grananja, celobrojnog računanja, brojeva sa pokretnim zarezom i sličnim memorijski intenzivnim operacijama.\\
+
+Nedostatak sa Peer-to-Peer mrežama jeste što transakcije brzo propagiraju kroz sve čvorove, pa se analizom tačaka širenja lako može otkriti izvor transakcija. Da bi se to sprečilo, Monero je 2020. godine uveo protokol \textbf{Dandelion++}\cite{dandelion++}.
+
+Dandelion++ implementira dve faze propagacije, \textbf{stem} (eng. \textit{stem}) i \textbf{flaf} (eng. \textit{fluff}) faze:
+
+    -	U stem fazi, čvor koji šalje transakciju bira jednog od povezanih čvorova kome prosleđuje transakciju, bez širenja na celu mrežu. 
+
+    -	U flaf fazi, čvorovi funkcionišu kao u svakoj Peer-to-Peer mreži i šalju informacije svim povezanim čvorovima.\\
+
+Ukoliko za vreme stem faze, neki čvor ne prosledi transakciju, svi prethodni čvorovi imaju tajmer koji otkucava. Kada otkuca, prelazi se automatski u flaf fazu.
+Ovaj pristup otežava identifikaciju originalnog izvora transakcije, jer posmatrač ne može lako da utvrdi gde je transakcija prvobitno nastala.
+
+
+\newpage
+% --------------------
+\section{Privatnost na internetu i uloga Monera}
+Privatnost na internetu jeste jedan od ključnih aspekata savremenog društva, naročito sa pojavom sve većeg prikupljanja korisničkih podataka. U osnovi, \textbf{digitalna privatnost} podrazumeva mogućnost korisnika da kontroliše koje informacije o njemu su dostupne, kao i u kojoj meri se njegovo ponašanje na internetu može pratiti i za koje svrhe se sme analizirati.
+
+Oblast digitalnih finansija je posebno bitna, jer finansijske transakcije otkrivaju ekonomsko stanje i aktivnost korisnika i njegove navike, načine ponašanja i želje. Tako finansijska privatnost ima značajnu ulogu u zaštiti korisnika od nadzora, zloupotrebe podataka i profilisanja.\\ 
+
+Privatne kriptovalute poput Monera omogućavaju korisnicima da očuvaju pravo na finansijsku privatnost, posebno u društvima gde finansijski nadzor može imati posledice. Međutim, one imaju i svoje nedostatke koje potencijalno ugrožavaju privatnost. Pošto se transakcije u blokčejnu ne mogu obrisati ni izmeniti, ova tehnologija je na primer u suprotnosti sa pravom građana Evropske unije na brisanje podataka, predviđenog \textit{„Opštom uredbom o zaštiti podataka (GDPR)“}. Pored toga, čak i kada je blokčejn sam po sebi zaštićen, kao što je slučaj kod Monera, dodatne informacije iz spoljašnjih izvora i nepažnja korisnika mogu dovesti do curenja identiteta\cite{ethicalChallenges}.\\
+
+Netransparentnost blokčejna je primamljiva za kriminalce i često podstiče zloupotrebu u ilegalne svrhe. Monero je postao široko prihvaćen kao sredstvo plaćanja na \textbf{darknet tržištima}, sajtovima na kojima se prodaju ilegalne supstance, oružje i usluge. Članak novinske agencije \textit{Rojters} iz 2019. godine \cite{reutersMonero} pokazuje da je oko četiri odsto svih Monero novčića korišćen u ilegalne svrhe.\\ 
+
+Dok u razvijenim državama Monero predstavlja prepreku u borbi protiv kriminala, u manje razvijenim državama, gde su povrede ljudskih prava česte, ova valuta je jedini način za finansijsku slobodu. U tim državama korišćenje kriptovaluta korisnike štiti od targetiranja režima, pošto ne postoje regulatorna tela. Istovremeno, njihovo nepostojanje korisnike čini lakim metama za prevare. Prevelika finansijska zavisnost od kriptovaluta, posebno Monera, nije poželjna, jer je njihova vrednost u odnosu na dekretne valute nestabilna i zavisi od količine protoka u celoj mreži.
+
+
+\newpage
+% --------------------
+\section{(Zlo)upotrebe Monera}
+Razvoj kriptovaluta doneo je značajne promene u načinu na koji se digitalne transakcije izvršavaju. Najviše pažnje je usmereno na pitanje privatnosti i bezbednosti korisnika. Prethodno smo videli da sistemi poput Bitkoina, zasnovani na javno dostupnom blokčejnu žrtvuju privatnost radi brzine i lakoće izvršavanja transakcija. Sa druge strane, razvoj Monera je bio najpre fokusiran na privatnost korisnika i bezbednost mreže.\\ 
+
+Međutim, iako u teoriji on pruža značajno jaču zaštitu privatnosti u poređenju sa transparentnim kriptovalutama, njegova efikasnost u praksi nije uvek bila u skladu sa postavljenim standardima. Studije kao što su \textit{"An Empirical Analysis of Traceability in the Monero Blockchain"}\cite{traceability} i \textit{"An Empirical Analysis of Monero Cross-chain  Traceability"}\cite{crosschain} pokazale su da su ranije verzije Monera imale određene mane. Analizom primene statističkih metoda, autori ovih studija su otkrili da se veliki broj TXO-va može pratiti na blokčejnu. Iako su kasnije nadogradnje protokola značajno smanjile mogućnost praćenja, ovi radovi nas podsećaju da privatnost u blokčejn sistemima nije apsolutna, već zavisi od implementacije protokola, sposobnosti napadača i opreznosti korisnika.\\
+
+S jedne strane, Monero omogućava zaštitu korisnika od nadzora i finansijskog profilisanja, dok sa druge strane otvara prostor za zloupotrebu u vidu malicioznih aktivnosti. Ova dvostruka priroda Monera čini ga zanimljivim za istraživanje i proučavanje od strane eksperata sajber bezbednosti, kao i vlada država. 
+
+Zbog toga, uticaj Monera na internet je potrebno posmatrati kroz dve perspektive: kao tehnologiju koja unapređuje privatnost i finansijsku slobodu korisnika, ali i kao alat koji pospešuje pojavu kriminala.
+
+
+\newpage
+% --------------------
+\section{Monero i kriminalna aktivnost}
+Kao što je pomenuto u prethodnim poglavljima Monero se široko koristi na tržištima darkneta za kupovinu ilegalnih proizvoda i usluga. Monerova sposobnost da sakrije detalje i učesnike transakcija otežava agencijama za sprovođenje zakona da prate i gone počinioce.\\
+
+Na primer, darknet tržište \textit{Silk Road}, koje je funkcionisalo između 2011. i 2013. godine, za transakcije se uglavnom oslanjalo na Bitkoin. Ova platforma je pokazala potencijal blokčejn tehnologije da olakša anonimne i decentralizovane transakcije, što je predstavljalo značajne izazove za regulatore i organe za sprovođenje zakona. Od njegovog zatvaranja, pojavila su se brojna darknet tržišta sa fokusom na povećanu bezbednost kupaca i prodavaca. Neka od darknet tržišta kao što su \textit{Dark Market} i \textit{DrugHub} koriste isključivo Monero kao sredstvo plaćanja.\\ 
+
+U slučaju kada se ne koristi kao sredstvo plaćanja, Monero se može koristiti i kao međuvaluta. Korisnik svoje transparentne kriptovalute prebaci u Monero na kripto menjačnicama, najčešće kod onih koje ne zahtevaju \textbf{podatke o klijentima} (eng. \textit{Know Your Customer, KYC}). Takav Monero se onda dalje koristi za plaćanje sredstava ili se menja za keš pomoću servisa.
+
+Po istraživanju \textit{Evropola} iz 2021. godine\cite{europol} najčešća krivična dela u kojima se koriste kriptovalute su:
+
+    -	Pranje novca, gde se kriptovalute kao Monero koriste za sakrivanje sredstava;
+    
+    -	Utaja poreza;
+    
+    -	Kupovina ilegalnih supstanci, oružja, dečije pornografije i ostalih malicioznih usluga;
+    
+    -	Malver za iznudu (eng. \textit{ransomware}), koji primarno zahtevaju isplate u Moneru i sličnim privatnih kriptovalutama, poput \textit{WannaCry virusa}.
+    
+    -	Finansiranje terorizma i ekstremizma; 
+    
+    -	Izbegavanje sankcija.\\
+    
+Jedan od najčešćih tipova virusa vezan specifično za Monero jeste \textbf{kriptodžeking} (eng. \textit{cryptojacking}). Zbog paradigme Monera da svaki procesor može da rudari sam, virusi ovog tipa eksploatišu tu mogućnost. Oni zaraze računar čime ga priključe botnetu rudara, koriste resurse procesora da bi u pozadini rudarili Monero, i zatim šalju dobijene novčiće vlasniku botneta. Upravo je 2017. godine otkriven jedan takav virus koji je targetirao ranjive \textit{Windows veb servere} i uspeo da ukrade količinu Monera u vrednosti od preko 63.000 američkih dolara\cite{eset}.\\
+
+Prema izveštaju kompanije \textit{TRM Labs} u 2025. godini\cite{trmlabs} je količina kriptovaluta u vrednosti od preko 150 milijardi američkih dolara bila iskorišćena za ilegalne aktivnosti. Za države kao što su Rusija, Iran, Mjanmar i Venecuela, kriptovalute su pretežno bile korišćene da bi se izbegle sankcije. Monero je imao stabilan rast udela na tržištu, ali precizni podaci su nedostupni, zbog privatnosti transakcija samog protokola.
+
+
+\newpage
+% --------------------
+\section{Zaključak}
+Smatramo da je glavni benefit Monera privatnost koju pruža korisniku. Iz tog razloga, za njegov dalji razvoj i optimizaciju, zainteresovane su države, eksperti sajber bezbednosti, kao i maliciozni akteri.\\
+
+Posle zatvaranja darknet tržišta \textit{AlphaBay} 2018. godine, grupe naučnike, od kojih je neke finansirala \textit{Evropska komisija}, dale su preporuke kako, i u kom smeru da se nastavi dalji razvoj ove valute. Zajedno sa tim, razvoj Monera je nastavljen kroz delovanje \textit{Monero Research Lab}, koja kontinuirano radi na unapređivanju protokola.\\
+
+Sa druge strane, pomenuti \textit{Izveštaj Evropola} ukazuje da, iako je Monero prisutan u raznim oblicima sajber kriminala, njegova upotreba nije univerzalna. Faktori kao što su vrsta zločina, nivo tehničke pismenosti i opreznost aktera značajno utiču na njegovu primenu. Uprkos percepciji Monera kao kriptovalute, koja se koristi isključivo za kriminalne aktivnosti, većina korisnika ga koristi u legitimne svrhe. 
+
+
+\newpage
+
+% --------------------
+\section{Literatura}
+
+\bibliographystyle{unsrt}
+\bibliography{literatura}
+
+\end{document}
