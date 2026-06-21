@@ -9,6 +9,10 @@
 \usepackage{setspace}
 \usepackage{hyperref}
 \usepackage{tocloft}
+\usepackage{float}
+\usepackage{array}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.2}
 
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
@@ -76,6 +80,8 @@ Takođe, fenomen poznat kao \textit{attention residue} (ostatak pažnje) ukazuje
 
 \subsection{Uticaj multitaskinga na pažnju i kognitivnu kontrolu}
 
+Kognitivna kontrola predstavlja skup mentalnih procesa koji omogućavaju usmeravanje i regulisanje mišljenja i ponašanja u skladu sa ciljevima, posebno u situacijama kada postoji više konkurentnih informacija ili zadataka. Ona uključuje sposobnosti kao što su održavanje pažnje na relevantnom zadatku, inhibicija distrakcija, prebacivanje između zadataka i ažuriranje radne memorije.
+
 Istraživanje koje su sproveli Ophir i saradnici ispitivalo je razlike između osoba koje često istovremeno koriste više medija (engl. \textit{heavy media multitaskers}) i osoba koje to čine ređe (engl. \textit{light media multitaskers}). Rezultati istraživanja pokazali su da osobe sklone čestom media multitaskingu imaju veće poteškoće u filtriranju nevažnih informacija iz okruženja i teže održavaju pažnju na relevantnim zadacima \cite{ophir2009}.
 
 Pored toga, utvrđeno je da osobe koje često praktikuju media multitasking imaju slabiju sposobnost ignorisanja nebitnih informacija koje su već uskladištene u memoriji, kao i manju efikasnost pri prebacivanju između različitih zadataka. Ovi rezultati ukazuju na to da česta istovremena upotreba više medija može biti povezana sa promenama u načinu na koji pojedinci upravljaju pažnjom i kognitivnom kontrolom.
@@ -86,7 +92,7 @@ Autori pretpostavljaju da osobe sklone intenzivnom media multitaskingu imaju izr
 
 Loh i Kanai su utvrdili da osobe sa višim nivoom media multitaskinga imaju manju gustinu sive mase u anteriornom cingularnom korteksu (ACC), regionu mozga koji je povezan sa kognitivnom kontrolom, donošenjem odluka i održavanjem pažnje (Slika \ref{fig:lohkanai}). Ovaj nalaz sugeriše da intenzivno korišćenje više medija istovremeno može biti povezano sa promenama u moždanim strukturama odgovornim za kontrolu pažnje \cite{loh2014}.
 
-Anteriorni cingularni korteks (ACC) igra ključnu ulogu u kognitivnoj kontroli, održavanju pažnje i inhibiciji distrakcija. Zbog toga se promene u strukturi ovog regiona mogu povezati sa razlikama u efikasnosti upravljanja pažnjom i obradom konkurentnih informacija.
+Anteriorni cingularni korteks (ACC) igra ključnu ulogu u kognitivnoj kontroli, održavanju pažnje i inhibiciji distrakcija. Zbog toga se promene u strukturi ovog regiona mogu povezati sa razlikama u efikasnosti upravljanja pažnjom i obradom konkurentnih informacija \cite{devinsky1995}.
 
 \begin{figure}[h]
     \centering
@@ -113,7 +119,49 @@ Osnovna ideja monotaskinga jeste da ljudski mozak postiže bolje rezultate kada 
 
 \section{Poređenje monotaskinga i multitaskinga}
 
-...
+Iako se multitasking u savremenom društvu često povezuje sa većom produktivnošću, brojna istraživanja ukazuju da često prebacivanje pažnje između zadataka može dovesti do povećanog kognitivnog opterećenja i smanjenja efikasnosti \cite{ophir2009, rubinstein2001}. 
+
+Nasuprot tome, monotasking omogućava kontinuirano usmeravanje pažnje na jedan zadatak, čime se smanjuju kognitivni troškovi povezani sa prebacivanjem između aktivnosti.
+
+Tabela \ref{tab:poredjenje} prikazuje najvažnije razlike između monotaskinga i multitaskinga.
+
+\begin{table}[H]
+\centering
+\caption{Poređenje monotaskinga i multitaskinga}
+\label{tab:poredjenje}
+
+\begin{tabular}{|
+>{\RaggedRight\arraybackslash}p{3.8cm}|
+>{\RaggedRight\arraybackslash}p{5cm}|
+>{\RaggedRight\arraybackslash}p{5cm}|}
+\hline
+
+\textbf{Karakteristika} & \textbf{Monotasking} & \textbf{Multitasking} \\
+\hline
+
+Upravljanje pažnjom & Fokus je usmeren na jedan zadatak tokom dužeg vremenskog perioda. & Pažnja se često prebacuje između više zadataka ili izvora informacija. \\
+\hline
+
+Kognitivno opterećenje & Manje kognitivno opterećenje usled odsustva čestog preusmeravanja pažnje. & Povećano kognitivno opterećenje zbog učestalog \textit{task switching}-a. \\
+\hline
+
+Kvalitet izvršavanja zadataka & Omogućava dublju obradu informacija i manji broj grešaka. & Može dovesti do površnije obrade informacija i većeg broja grešaka. \\
+\hline
+
+Pamćenje i učenje & Pogodniji za usvajanje složenih informacija i dugoročno pamćenje. & Česti prekidi pažnje mogu negativno uticati na procese učenja i pamćenja. \\
+\hline
+
+Pogodne situacije za primenu & Složeni zadaci koji zahtevaju visok nivo koncentracije i kreativnosti. & Jednostavne ili rutinske aktivnosti koje ne zahtevaju značajne kognitivne resurse. \\
+\hline
+
+\end{tabular}
+\end{table}
+
+Monotasking se pokazuje kao efikasniji pristup u situacijama koje zahtevaju kontinuiranu koncentraciju, rešavanje složenih problema i obradu većeg broja informacija. Odsustvo čestih prekida omogućava stabilniji tok razmišljanja i kvalitetnije izvršavanje zadataka \cite{rubinstein2001,leroy2009}.
+
+Sa druge strane, određeni oblici multitaskinga mogu biti korisni kada je potrebno obavljati više jednostavnih ili visoko automatizovanih aktivnosti istovremeno. Pored toga, pojedina savremena radna okruženja zahtevaju upravljanje većim brojem informacionih tokova i komunikacionih kanala, zbog čega potpuno izbegavanje multitaskinga često nije moguće.
+
+Ipak, rezultati većine istraživanja ukazuju da se kod kognitivno zahtevnih aktivnosti monotasking pokazuje kao efikasniji pristup, prvenstveno zbog smanjenja kognitivnih troškova povezanih sa prebacivanjem pažnje i boljeg održavanja fokusa \cite{ophir2009, rubinstein2001}.
 
 % ------------- STRATEGIJA ZA UMANJENJE -------------
 
@@ -135,7 +183,17 @@ Sve navedene metode ukazuju na to da unapređenje koncentracije ne predstavlja i
 
 \section{Zaključak}
 
-...
+Analiza multitaskinga i monotaskinga pokazuje da se veći deo svakodnevnih aktivnosti koje se percipiraju kao istovremeno obavljanje više zadataka u praksi zapravo svodi na brzo prebacivanje pažnje između različitih aktivnosti. Ovakav oblik rada povezan je sa kognitivnim troškovima, smanjenjem efikasnosti i povećanim opterećenjem izvršnih funkcija, što je potvrđeno u istraživanjima iz oblasti kognitivne psihologije.
+
+Nasuprot tome, monotasking omogućava stabilnije usmeravanje pažnje na jedan zadatak, čime se smanjuju negativni efekti povezani sa čestim prebacivanjem fokusa. Literatura ukazuje da ovakav pristup pogoduje dubljoj obradi informacija, boljem pamćenju i kvalitetnijem izvršavanju složenih kognitivnih zadataka.
+
+Neurokognitivna istraživanja dodatno ukazuju da su strukture uključene u kognitivnu kontrolu i regulaciju pažnje, poput anteriornog cingularnog korteksa, značajne za uspešno upravljanje konkurentnim informacijama i održavanje fokusa. Razlike u ovim mehanizmima mogu doprineti individualnim razlikama u sposobnosti upravljanja multitasking situacijama.
+
+Iako multitasking može biti funkcionalan u situacijama koje uključuju jednostavne ili automatizovane aktivnosti, rezultati većine istraživanja ukazuju da za kompleksne zadatke monotasking predstavlja efikasniji pristup. U tom smislu, izbor između ova dva pristupa zavisi od prirode zadatka, ali i od kognitivnih zahteva koje on postavlja.
+
+Sveukupno posmatrano, rezultati rada ukazuju na to da savremeno digitalno okruženje podstiče učestalu fragmentaciju pažnje, dok strukturisanje rada kroz principe monotaskinga može doprineti stabilnijem kognitivnom funkcionisanju i većoj efikasnosti u obradi informacija.
+
+\newpage
 
 % -------------------- LITERATURA --------------------
 
@@ -161,6 +219,10 @@ Leroy S. Why is it so hard to do my work? The challenge of attention residue whe
 \bibitem{loh2014}
 
 Loh KK, Kanai R (2014) Higher Media Multi-Tasking Activity Is Associated with Smaller Gray-Matter Density in the Anterior Cingulate Cortex. PLoS ONE 9(9): e106698. https://doi.org/10.1371/journal.pone.0106698
+
+\bibitem{devinsky1995}
+
+Devinsky O, Morrell MJ, Vogt BA. Contributions of anterior cingulate cortex to behaviour. Brain. 1995;118(1):279-306. doi:10.1093/brain/118.1.27
 
 \bibitem{schumann2022}
 
