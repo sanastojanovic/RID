@@ -1,0 +1,489 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── Paketi ─────────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage{mdframed}
+
+% ── Margine ────────────────────────────────────────────────────────────────────
+\geometry{
+  top=2.5cm, bottom=2.5cm,
+  left=3cm,  right=2.5cm,
+  headheight=15pt
+}
+
+% ── Prored ─────────────────────────────────────────────────────────────────────
+\onehalfspacing
+
+% ── Zaglavlje i podnožje ───────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Uticaj veštačke inteligencije na prirodu}
+\lhead{\small Nikola Milović}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Boje ───────────────────────────────────────────────────────────────────────
+\definecolor{forestgreen}{RGB}{44, 95, 45}
+\definecolor{mossgreen}{RGB}{151, 188, 98}
+\definecolor{lightmoss}{RGB}{212, 237, 170}
+\definecolor{warningred}{RGB}{180, 50, 50}
+
+% ── Naslovi sekcija ────────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{forestgreen}}
+  {\thesection.}{0.5em}{}[\vspace{-0.3em}\rule{\linewidth}{0.4pt}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{forestgreen!80!black}}
+  {\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\itshape\color{forestgreen!60!black}}
+  {\thesubsubsection}{0.5em}{}
+
+% ── Istaknuti okvir ────────────────────────────────────────────────────────────
+\newmdenv[
+  backgroundcolor=lightmoss!40,
+  linecolor=forestgreen,
+  linewidth=1pt,
+  leftmargin=0pt,
+  rightmargin=0pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  skipabove=8pt,
+  skipbelow=8pt
+]{greenbox}
+
+% ── Hiperlinks ─────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=forestgreen,
+  citecolor=forestgreen,
+  urlcolor=forestgreen
+}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Naslovna strana ────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+
+  {\Large \textbf{Univerzitet u Beogradu}\\[0.3em]
+  \large Matematički fakultet}
+
+  \vspace{1.5cm}
+
+  \rule{\linewidth}{1pt}\\[0.4em]
+  {\LARGE \textbf{Uticaj veštačke inteligencije na prirodu}}\\[0.3em]
+  \rule{\linewidth}{1pt}
+
+  \vspace{0.5cm}
+  {\large \textit{Seminarski rad iz predmeta Računarstvo i društvo (RID)}}
+
+  \vspace{2.5cm}
+
+  \begin{tabular}{rl}
+    \textbf{Student:}        & Nikola Milović \\[0.3em]
+    \textbf{Broj indeksa:}   & mi21107 \\[0.3em]
+    \textbf{Studijska god.:} & 2025/2026 \\[0.3em]
+    \textbf{Mentor:}         & prof.\ dr Sana Stojanović \\
+  \end{tabular}
+
+  \vfill
+  {\large Beograd, jun 2026.}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Uvod}
+
+Veštačka inteligencija (VI) jedno je od najbrže rastućih tehnoloških polja
+21.\ veka. Njena primena proširila se na gotovo sve oblasti ljudskog delanja
+--- od medicine i obrazovanja, do transporta i zabave. Svakodnevno se pojavljuju
+novi načini primene koji menjaju industrije i društvene navike, a tempo razvoja
+čini se sve bržim. Međutim, jedno od najvažnijih i istovremeno
+najkontroverznijih pitanja savremenog doba jeste: \textbf{kakav uticaj
+veštačka inteligencija ima na prirodu i životnu sredinu?}
+
+Ekološka kriza --- od klimatskih promena i gubitka biodiverziteta, do
+zagađenja tla, vode i vazduha --- zahteva hitna i efikasna rešenja. Postavlja
+se pitanje da li VI može biti deo tih rešenja, ili je sama deo problema.
+Odgovor, kao što ćemo videti, nije jednoznačan.
+
+Ovaj seminarski rad bavi se upravo tom temom. Cilj je da istražimo kako VI
+može biti moćan saveznik u zaštiti planete, ali i kako njena nekontrolisana
+upotreba može naneti ozbiljnu štetu ekosistemima. Rad sagledava obe strane
+medalje: benefite koje VI pruža u oblastima poput monitoringa biodiverziteta,
+pametne poljoprivrede i klimatskog modeliranja, ali i negativne posledice koje
+prate razvoj VI sistema --- pre svega ogroman ugljenični otisak, potrošnju
+vode i elektronski otpad.
+
+Posebna pažnja posvećena je Jevons paradoksu --- fenomenu koji objašnjava
+zašto tehnološka efikasnost ne vodi nužno do smanjenja ukupne potrošnje
+resursa --- i etičkim dilemama oko kontrole podataka i greenwashinga. Na
+kraju, razmatramo budućnost Zelene VI i mere koje su potrebne da bi VI zaista
+postala saveznik, a ne neprijatelj planete.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Veštačka inteligencija --- kratak pregled}
+
+\subsection{Definicija i paradigme}
+
+Veštačka inteligencija odnosi se na sposobnost računarskih sistema da
+obavljaju zadatke koji tipično zahtevaju ljudsku inteligenciju: učenje,
+rezonovanje, prepoznavanje obrazaca, donošenje odluka i razumevanje prirodnog
+jezika. Termin je skovao John McCarthy 1956.\ godine, ali prava revolucija
+nastupila je tek u poslednjoj deceniji, kada su dostupnost ogromnih skupova
+podataka i napredni hardver omogućili dramatičan napredak.
+
+Glavne paradigme savremene VI uključuju:
+
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Mašinsko učenje (Machine Learning)} --- algoritmi koji uče iz
+        podataka bez eksplicitnog programiranja, pronalazeći obrasce u
+        ogromnim skupovima informacija;
+  \item \textbf{Duboko učenje (Deep Learning)} --- višeslojne neuronske mreže
+        sposobne za prepoznavanje izuzetno kompleksnih obrazaca u slici, zvuku
+        i tekstu;
+  \item \textbf{Obrada prirodnog jezika (NLP)} --- razumevanje i generisanje
+        ljudskog teksta, što je osnova velikih jezičkih modela;
+  \item \textbf{Računarska vizija} --- interpretacija i analiza vizuelnih
+        podataka, od prepoznavanja lica do detekcije bolesti na satelitskim
+        snimcima.
+\end{itemize}
+
+\subsection{Veliki jezički modeli i ekološki otisak}
+
+Ubrzani razvoj velikih jezičkih modela (LLM --- Large Language Models),
+poput GPT i Claude serije, doneo je revoluciju u načinu na koji interagujemo
+sa tehnologijom. Ovi modeli treniraju se na ogromnim skupovima podataka koji
+mogu sadržati stotine milijardi reči, a sam proces treniranja zahteva mesece
+rada na hiljadama specijalizovanih procesora \cite{strubell2019energy}.
+
+Paradoks savremene VI leži u tome što isti sistemi koji mogu pomoći u zaštiti
+planete istovremeno ostavljaju ogroman ekološki otisak. Razumevanje ovog
+paradoksa ključno je za svaku ozbiljnu raspravu o ulozi VI u ekologiji.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Pozitivni uticaji VI na prirodu}
+
+\subsection{Praćenje i zaštita biodiverziteta}
+
+Jedna od najznačajnijih primena VI u zaštiti prirode jeste monitoring
+biodiverziteta. Tradicionalne metode praćenja životinjskih vrsta bile su
+spore, skupe i ograničene geografskim dometom istraživača --- tim naučnika
+mogao je pokriti svega nekoliko kvadratnih kilometara u jednoj ekspediciji.
+Veštačka inteligencija menja ovu sliku radikalno.
+
+\subsubsection{BirdNET --- prepoznavanje vrsta po zvuku}
+
+Projekat \textit{BirdNET}, razvijen na Cornell Lab of Ornithology u saradnji
+sa Chemnitz University of Technology, koristi duboko učenje za identifikaciju
+ptičjih vrsta na osnovu zvuka \cite{kahl2021birdnet}. Sistem je do 2024.\
+godine identifikovao više od 6.000 vrsta ptica u više od 190 zemalja i pomogao
+naučnicima da mapiraju migracije i procene stanja populacija u realnom
+vremenu. Ono što bi timu ornitologa oduzelo mesece terenskog rada, BirdNET
+obavlja automatski analizom audio snimaka postavljenih senzora.
+
+\subsubsection{Global Forest Watch --- satelitski nadzor šuma}
+
+Organizacija \textit{Global Forest Watch}, uz pomoć VI algoritama, analizira
+satelitske snimke i detektuje krčenje šuma gotovo u realnom vremenu ---
+ažuriranja stižu svakih 48 sati. Ovo omogućuje vlastima i ekološkim
+organizacijama da brzo reaguju na ilegalne seče i požare. Do 2024.\ godine,
+sistem je pokrio praktično sve šumske površine planete, pružajući dragoceni
+uvid u trend gubitka šuma koji inače ne bi bio dostupan decenijama.
+
+\subsubsection{Zaštita ugroženih vrsta i borba protiv krivolova}
+
+VI modeli koriste se za predviđanje kretanja divljih životinja i identifikaciju
+krivolova. Sistem PAWS (\textit{Protection Assistant for Wildlife Security})
+analizira istorijske podatke o krivolovu zajedno sa klimatskim uslovima i
+karakteristikama terena kako bi predvideo verovatne lokacije budućih
+incidenata. Čuvari parkova dobijaju preporuke gde da patroliraju, drastično
+povećavajući efikasnost zaštite. Slično, Microsoft AI for Earth finansirao je
+projekte koji su pomogli u identifikaciji više od 30.000 kitova u okeanima,
+koristeći VI analizu hidroakustičkih snimaka \cite{norouzzadeh2018automatically}.
+
+\subsection{Borba protiv klimatskih promena}
+
+Klimatske promene predstavljaju jednu od najvećih egzistencijalnih pretnji po
+planet. VI igra sve važniju ulogu u razumevanju i ublažavanju ove pretnje
+\cite{rolnick2019tackling}.
+
+\textbf{Klimatsko modeliranje:} Moderni klimatski modeli oslanjaju se na VI
+da procesiraju ogromne količine podataka sa meteoroloških stanica, satelita i
+okeanskih bova. Ovakvi modeli su daleko precizniji od prethodnih generacija i
+omogućuju bolje predviđanje ekstremnih vremenskih pojava. Google Flood Hub
+koristi VI za predviđanje poplava do sedam dana unapred i već pokriva 80
+zemalja, direktno upozoravajući lokalno stanovništvo.
+
+\textbf{Optimizacija energetskih sistema:} DeepMind (Google) primenio je VI
+za optimizaciju sistema za hlađenje u serverskim centrima, postižući smanjenje
+energetske potrošnje za hlađenje do \textbf{40\%}. Isti princip se primenjuje
+za upravljanje vetroelektranama --- VI predviđa produkciju vetra 36 sati
+unapred, povećavajući vrednost energije za oko 20\%.
+
+\subsection{Pametna poljoprivreda}
+
+Poljoprivreda je jedan od najvećih potrošača vode i jednih od najvećih
+emitera gasova staklene bašte. VI transformiše ovaj sektor kroz preciznu
+poljoprivredu na više načina:
+
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Precizno navodnjavanje:} Senzori u kombinaciji sa VI
+        algoritmima mere vlažnost zemljišta i vremensku prognozu, dozirajući
+        vodu tačno tamo gde je potrebna. Studije pokazuju da ovakvi sistemi
+        smanjuju potrošnju vode do \textbf{50\%} u poređenju sa tradicionalnim
+        metodama navodnjavanja;
+  \item \textbf{Ciljana primena pesticida:} John Deere See \& Spray koristi
+        računarsku viziju da identifikuje korove i primeni herbicide samo na
+        zaražena mesta --- smanjujući upotrebu hemikalija za \textbf{66\%};
+  \item \textbf{Dijagnostika bolesti useva:} Aplikacija Plantix koristi VI
+        za prepoznavanje bolesti biljaka na osnovu fotografija, pomažući
+        farmerima u 70+ zemalja i sa više od 10 miliona korisnika.
+\end{itemize}
+
+\subsection{Upravljanje otpadom i reciklažom}
+
+Roboti opremljeni VI sistemima računarske vizije mogu sortirati reciklabilni
+materijal znatno brže i tačnije od ljudskih radnika. Kompanija AMP Robotics
+razvila je sistem koji sortira do 80 predmeta u minuti, što je daleko iznad
+ljudskih mogućnosti. Pored toga, VI analizira podatke o potrošnji u
+maloprodajnim lancima i restoranima, pomažući u predviđanju tražnje i
+smanjenju bacanja hrane --- što ima značajan ekološki i ekonomski efekat.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Negativni uticaji VI na prirodu}
+
+\subsection{Energetska potrošnja i ugljenični otisak}
+
+Razvoj i eksploatacija VI sistema zahtevaju ogromne količine energije. Ovo je
+možda najznačajniji i najčešće zanemarivan negativni uticaj VI na prirodu.
+
+Istraživanje iz 2019.\ godine (Strubell et al.) pokazalo je da treniranje
+jednog velikog NLP modela može emitovati toliko CO\textsubscript{2} koliko
+\textbf{pet automobila u toku celog veka upotrebe} \cite{strubell2019energy}.
+Noviji modeli poput GPT-4 su daleko veći i zahtevaju još više resursa. Prema
+procenama, globalni serverski centri troše između \textbf{200 i 250
+teravat-sati} električne energije godišnje --- što odgovara godišnjoj potrošnji
+pojedinih zemalja srednje veličine \cite{patterson2021carbon}.
+
+Studija objavljena 2024.\ u Nature časopisu analizirala je podatke iz 67
+zemalja i zaključila da, iako VI može smanjiti ekološki otisak kroz
+optimizaciju, njen sopstveni ugljenični trag raste eksponencijalnom brzinom
+\cite{nature2024ecological}.
+
+\subsection{Elektronski otpad i retki metali}
+
+Hardver neophodan za VI --- GPU čipovi, memorijski moduli, specijalizovani
+procesori (TPU, NPU) --- ima relativno kratak životni vek i teško se reciklira.
+
+\textbf{Rudarenje retkih metala:} Proizvodnja naprednih čipova zahteva čak 17
+različitih retkih metala, uključujući kobalt, litijum, tantal i neodim.
+Rudarenje ovih materijala uzrokuje devastaciju ekosistema --- na primer, oko
+70\% svetskog kobalta potiče iz Demokratske Republike Kongo, gde rudnici
+nanose ozbiljne ekološke i socijalne štete.
+
+\textbf{Brza zastarelost:} Brz tempo razvoja VI hardvera znači da oprema
+zastareva u roku od svega 3 do 5 godina, doprinoseći rastućoj krizi
+elektronskog otpada. Procenjuje se da globalna količina e-otpada premašuje
+\textbf{60 miliona tona} godišnje --- više nego što iznosi težina Velikog
+kineskog zida.
+
+\subsection{Potrošnja vode}
+
+Serverski centri troše ogromne količine vode za hlađenje --- problem koji je
+dugo ostajao u senci energetskih pitanja. Istraživanje Li et al.\ (2023)
+pokazuje da trening jednog velikog jezičkog modela može potrošiti i do
+\textbf{700.000 litara} vode \cite{li2023thirsty}. Na operativnom nivou,
+procenjuje se da korisnik potroši oko 500 ml vode za svakih 20--50 upita
+prosečnom VI asistentumu. Ovo je posebno problematično za serverske centre
+locirane u regionima koji se suočavaju sa nestašicom vode.
+
+\subsection{Jevons paradoks --- kada efikasnost povećava potrošnju}
+
+Jedan od najvažnijih, a često zanemarenih fenomena u diskusiji o VI i ekologiji
+jeste \textbf{Jevons paradoks}. William Stanley Jevons primetio je 1865.\
+godine da povećanje efikasnosti korišćenja resursa paradoksalno dovodi do
+povećanja ukupne potrošnje tog resursa.
+
+\begin{greenbox}
+\textit{,,Povećanje efikasnosti korišćenja resursa paradoksalno dovodi do
+povećanja ukupne potrošnje tog resursa.''} \\
+\hfill --- William Stanley Jevons, 1865.
+\end{greenbox}
+
+U kontekstu VI, ovaj paradoks se manifestuje na više načina. Efikasniji VI
+modeli za optimizaciju transporta ne smanjuju ukupan broj prevoženih
+kilometara --- naprotiv, čine prevoz pristupačnijim, što povećava tražnju.
+Jeftiniji letovi zahvaljujući VI optimizaciji cena dovode do više putnika i
+više letova, a time i do većih ukupnih emisija. Sami VI modeli --- kako
+postaju efikasniji --- primenjuju se u sve više oblasti, pa ukupna potrošnja
+energije raste uprkos manjoj potrošnji po jednom upitu.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Poređenje VI i tradicionalnih pristupa}
+
+Da bismo bolje razumeli vrednost VI u ekologiji, korisno je direktno uporediti
+efikasnost VI rešenja sa tradicionalnim metodama u ključnim oblastima:
+
+\begin{table}[h!]
+\centering
+\caption{Poređenje VI i tradicionalnih metoda u zaštiti životne sredine}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{>{\bfseries\color{forestgreen}}p{2.8cm} p{4cm} p{5cm}}
+\toprule
+Oblast & Tradicionalno & Sa VI \\
+\midrule
+Monitoring šuma     & Terenske ekspedicije (meseci) & Sateliti + VI, ažuriranje svaka 48h \\
+Identifikacija vrsta & Ekspert na terenu, ograničen doseg & BirdNET: 6.000+ vrsta automatski \\
+Navodnjavanje       & Fiksni vremenski rasporedi & Senzori + VI, ušteda do 50\% vode \\
+Prognoza poplava    & 1--2 dana unapred & 7 dana unapred, 80 zemalja \\
+Sortiranje otpada   & $\sim$30 predmeta/min (čovek) & $\sim$80 predmeta/min (robot) \\
+Otkrivanje krivolova & Nasumične patrole & PAWS: prediktivno patroliranje \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tabela jasno pokazuje da VI u gotovo svim oblasticama donosi merljivo poboljšanje
+efikasnosti. Ipak, važno je naglasiti da ova poboljšanja dolaze uz ekološke
+troškove koji moraju biti uzeti u obzir pri donošenju odluka o implementaciji.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Etička razmatranja}
+
+Primena VI u zaštiti prirode nameće brojna etička pitanja koja se ne smeju
+zanemariti \cite{vinuesa2020role}.
+
+\subsection{Ko kontroliše podatke o prirodi?}
+
+Sakupljanje podataka o biodiverzitetu i ekosistemima često se odvija u
+zemljama Globalnog juga --- u Africi, Aziji i Latinskoj Americi, gde se
+nalazi najveći deo svetskog biodiverziteta. Međutim, koristi od VI analize
+ovih podataka uglavnom ubiru korporacije i institucije Globalnog severa.
+Ovo stvara neravnopravan odnos koji mora biti adresiran kroz pravedne modele
+deljenja prihoda i uključivanje lokalnih zajednica u donošenje odluka.
+
+\subsection{Greenwashing --- zeleni imidž nasuprot stvarnom uticaju}
+
+Postoji rastuća zabrinutost da neke kompanije naglašavaju ekološke primene
+VI kako bi odvratile pažnju od ogromnog ekološkog otiska njihove
+infrastrukture. Ovaj fenomen --- poznat kao \textit{greenwashing} --- posebno
+je opasan jer može usporiti donošenje regulatornih mera. Tipičan primer je
+situacija u kojoj kompanija objavljuje projekat za zaštitu koraljnih grebena
+koristeći VI, dok istovremeno njeni serverski centri emituju milione tona
+CO\textsubscript{2} godišnje.
+
+\subsection{Autonomne odluke i odgovornost}
+
+Kada VI sistemi donose autonomne odluke o upravljanju ekosistemima ---
+na primer, o doziranju hemikalija u preciznoj poljoprivredi ili o lokacijama
+patroliranja u zaštićenim oblastima --- postavlja se pitanje odgovornosti u
+slučaju neželjenih posledica. Ko snosi odgovornost ako VI sistem pogrešno
+klasifikuje vrstu i preporuči njeno uklanjanje? Ova pitanja još uvek nisu
+pravno razrešena u većini zemalja.
+
+\subsection{Nadzor divljih životinja i privatnost}
+
+Intenzivno praćenje divljih životinja pomoću VI sistema može poremetiti
+njihovo prirodno ponašanje. Postavljanje senzora, kamera i dronova u
+ekosisteme nije bezopasno, a etička granica između korisnog monitoringa i
+invazivnog nadzora nije uvek jasna. Pored toga, podaci prikupljeni o
+kretanju životinja --- naročito ugroženih vrsta --- mogu biti zloupotrebljeni
+od strane krivolovaca ako ne budu adekvatno zaštićeni.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Budući pravci --- put ka Zelenoj VI}
+
+Da bi VI zaista postala snaga za dobro u zaštiti planete, potrebni su koraci
+na više fronova. Evo ključnih pravaca za narednu deceniju:
+
+\subsection{Zelena VI (Green AI)}
+
+Akademska zajednica i industrija moraju staviti veći naglasak na energetsku
+efikasnost algoritama --- ne samo na njihovu tačnost i performanse. Istraživanja
+u oblasti \textit{neuromorphic computing} --- računarskih sistema koji
+oponašaju energetsku efikasnost ljudskog mozga --- i kvantnih računara
+obećavaju dramatično smanjenje energetske potrošnje. Već sada postoji trend
+ka manjim, efikasnijim modelima koji postižu slične rezultate uz daleko manji
+ekološki trag.
+
+\subsection{Obnovljivi izvori energije}
+
+Serverski centri treba da budu napajani isključivo obnovljivim izvorima
+energije --- solarnom, vetro i hidroenergijom. Neke kompanije već idu tim
+putem: Google je od 2017.\ odgovarao za 100\% potrošnje energije kupovinom
+obnovljive energije, a Microsoft se obavezao na ugljičnu negativnost do 2030.\
+Međutim, tempo ove tranzicije u celoj industriji ostaje nedovoljan.
+
+\subsection{Regulativa i transparentnost}
+
+Potreban je zakonodavni okvir koji će propisati obavezno izveštavanje o
+ugljeničnom otisku VI sistema, slično kao što se to čini za emisije u
+industriji. Evropski AI Act iz 2023.\ sadrži neke odredbe u tom smeru, ali
+su one još uvek nedovoljne. Potrebni su globalni standardi koji obuhvataju
+ceo životni ciklus VI sistema --- od rudarenja sirovina do zbrinjavanja
+hardvera.
+
+\subsection{Međunarodna saradnja}
+
+Ekološki problemi ne poznaju granice, pa ni rešenja ne smeju biti ograničena
+na nacionalne okvire. Potrebni su globalni sporazumi o standardima za
+„ekološku VI" --- sporazumi koji uključuju i razvijene i zemlje u razvoju,
+i koji obezbeđuju pravičnu raspodelu koristi i tereta zelene tranzicije.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\section{Zaključak}
+
+Veštačka inteligencija stoji pred nama kao jedna od najznačajnijih tehnologija
+u istoriji čovečanstva --- sa potencijalom da pomogne u rešavanju nekih od
+najtežih ekoloških izazova sa kojima se suočavamo. Od praćenja ugroženih vrsta
+i predviđanja klimatskih katastrofa, do optimizacije energetskih sistema i
+precizne poljoprivrede --- primene su raznovrsne, impresivne i sve dostupnije.
+
+Međutim, ova ista tehnologija dolazi sa sopstvenim, često potcenjenim ekološkim
+cehom. Ugljenični otisak treniranja modela, potrošnja vode u serverskim
+centrima, elektronski otpad i devastacija ekosistema u rudnicima retkih metala
+--- sve su to stvarni, merljivi problemi koji zahtevaju sistemska rešenja.
+Jevons paradoks nas upozorava da tehnološka efikasnost sama po sebi nije
+dovoljna --- neophodni su svesne politike i regulativa.
+
+\begin{greenbox}
+Odgovor ne leži u odbacivanju VI, već u \textbf{svesnom i odgovornom razvoju}
+ove tehnologije. Budućnost mora biti ona u kojoj VI sistemi troše minimalnu
+energiju, rade na obnovljivim izvorima, i čiji je pun životni ciklus ---
+od rudarenja sirovina do zbrinjavanja otpada --- ekološki odgovoran.
+\end{greenbox}
+
+Planeta ne može čekati. Veštačka inteligencija može biti deo rešenja ---
+ali samo ako sebi kao društvo postavimo visoke standarde i budemo spremni
+da ih sprovedemo u delo.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+\newpage
+\bibliographystyle{plain}
+\bibliography{literatura}
+
+\end{document}
