@@ -1,0 +1,278 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{top=25mm, bottom=25mm, left=30mm, right=25mm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue,
+    citecolor=black,
+}
+
+\title{\bf Pregled tema}
+\author{
+    {\bf Student:} Aleksa Vukadinović \quad {\bf Indeks:} 103/2022 \\[0.3cm]
+    {\bf Profesor:} dr Sana Stojanović Đurđević \\[0.3cm]
+    {\bf Seminarska tema:} \emph{Dark Patterns u dizajnu korisničkog interfejsa}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% -----------------------------------------------------------------------
+\section{Tema 1 -- Istorijski pregled razvoja računarstva}
+
+Razvoj računarstva od mehaničkih računskih mašina, preko prvih elektronskih računara,
+do interneta i mobilnih platformi. Cilj teme je da se savremeni problemi sagledaju u
+istorijskom kontekstu i da se razume kako su društvene okolnosti oblikovale tehnologiju
+(i obrnuto).
+
+\textbf{Predlog teme za seminarski:}
+\emph{Od ENIAC-a do veštačke inteligencije: kako je svaka generacija računara menjala
+društvo}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Ada Lavlejs (Ada Lovelace) i prvi algoritam -- ideja programa pre postojanja
+          računara.
+    \item Alan Tjuring (Alan Turing) i pojam izračunljivosti; Tjuringov test kao rana
+          veza računarstva i filozofije uma.
+    \item Murov zakon (Moore's Law) -- eksponencijalni rast i njegove društvene posledice.
+    \item Prelazak sa Web 1.0 na Web 2.0: korisnik postaje proizvođač sadržaja.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://view.genial.ly/62213fa1797ddc00194500dc/interactive-content-chronological-line}%
+{Interaktivni istorijski pregled razvoja računarstva (genially)}
+
+% -----------------------------------------------------------------------
+\section{Tema 2 -- Etika u računarstvu}
+
+Etička pitanja sa kojima se susreću programeri, inženjeri i kompanije: profesionalna
+odgovornost, etički kodeksi i posledice tehnoloških odluka na pojedinca i društvo.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Etički kodeksi u softverskom inženjerstvu: da li ACM/IEEE smernice utiču na
+realne odluke programera?}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item ACM/IEEE etički kodeks -- princip ,,izbegavaj nanošenje štete``.
+    \item Studija slučaja: Volkswagen ,,Dieselgate`` -- softver koji vara testove
+          emisije.
+    \item Therac-25 -- softverska greška sa smrtnim posledicama kao primer odgovornosti.
+    \item Dileme razvoja: algoritamska pristrasnost, automatizacija i gubitak radnih
+          mesta.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://view.genial.ly/62304dfe2abb7a00182329b0/interactive-content-etika}%
+{Interaktivna prezentacija ,,Etika`` (genially)}\\
+i preporučeni udžbenik \emph{Michael J.\ Quinn -- Ethics for the Information Age
+(Pearson, 2017)}
+
+% -----------------------------------------------------------------------
+\section{Tema 3 -- Upotreba interneta, mrežna komunikacija i spam}
+
+Načini komunikacije preko mreže, evolucija e-pošte i servisa, kao i problem neželjenih
+poruka (spam) i zloupotrebe komunikacionih kanala.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Anatomija spama: od Nigerijskih prevara do modernog phishing-a kao usluge}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Istorijat: prva spam poruka (1978, ARPANET) i nastanak termina ,,spam``.
+    \item Tehničke odbrane: SPF, DKIM, DMARC i Bajesovi (Bayesian) filteri.
+    \item Društveni inženjering: phishing, ,,spear phishing`` i lažni CEO mejlovi.
+    \item Ekonomija spama -- zašto se isplati i kada je profitabilno slati milione
+          poruka.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://www.microsoft.com/en-us/research/publication/why-do-nigerian-scammers-say-they-are-from-nigeria/}%
+{Herley, C. (2012). \emph{Why Do Nigerian Scammers Say They are from Nigeria?}
+Microsoft Research}
+
+% -----------------------------------------------------------------------
+\section{Tema 4 -- Cenzura, sloboda govora i neprikladan sadržaj}
+
+Granica između slobode govora i potrebe za moderacijom sadržaja; zaštita dece od
+neprikladnog sadržaja; uloga platformi kao ,,arbitara`` javnog govora.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Ko odlučuje šta sme da se kaže? Moderacija sadržaja na društvenim mrežama
+između slobode govora i odgovornosti platforme}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Section 230 (SAD) -- zašto platforme nisu odgovorne za sadržaj korisnika.
+    \item Algoritamska vs.\ ljudska moderacija; problem ,,shadow banning``-a.
+    \item Veliki Kineski zaštitni zid (Great Firewall) kao primer državne cenzure.
+    \item Roditeljska kontrola, starosna verifikacija i zaštita maloletnika.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18141_Marko_Bura/1_predavanje/cenzura_sloboda_govora_i_neprikladan_sadrzaj.pdf}%
+{Seminarski rad ,,Cenzura, sloboda govora i neprikladan sadržaj`` (PDF, RID)}
+
+% -----------------------------------------------------------------------
+\section{Tema 5 -- Internet prevare i zavisnost od interneta}
+
+Mehanizmi prevara na internetu i psihološki obrasci koji vode ka zavisnosti od
+digitalnih platformi i društvenih mreža.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Dizajn koji stvara zavisnost: kako aplikacije koriste psihologiju da nas zadrže
+(i kako da se odbranimo)}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Promenljive nagrade (variable rewards) -- ,,povlačenje ručice`` kao kod
+          kockanja.
+    \item Beskonačno skrolovanje i automatsko učitavanje (autoplay) sadržaja.
+    \item Prevare: lažne nagradne igre, ,,romance scam``, lažne investicije u
+          kriptovalute.
+    \item Pokret ,,Time Well Spent`` i alati za digitalni wellbeing (Screen Time,
+          Digital Wellbeing).
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://view.genial.ly/62431d6917ac64001885c51c/presentation-problemi-na-internetu}%
+{Interaktivna prezentacija ,,Problemi na internetu -- prevare i zavisnost`` (genially)}\\
+i dokumentarac \emph{The Social Dilemma (Netflix, 2020)}
+
+% -----------------------------------------------------------------------
+\section{Tema 6 -- Bezbednost interneta (hakovanje i malver)}
+
+Računarska bezbednost, vrste napada i odbrane, malver, kao i etičko hakovanje kao
+legitimna profesija.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Etičko hakovanje i penetraciono testiranje: zašto ,,dobri momci`` moraju da
+razmišljaju kao napadači}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Vrste malvera: virusi, ransomware (npr.\ WannaCry, 2017), trojanci,
+          špijunski softver.
+    \item CIA trijada: poverljivost, integritet, dostupnost (confidentiality,
+          integrity, availability).
+    \item Penetraciono testiranje i Capture The Flag (CTF) takmičenja.
+    \item Napadi nultog dana (zero-day) i tržište eksploita.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18083_Andrija_Urosevic/predavanje_1/cybersec.pdf}%
+{Seminarski rad o sajber bezbednosti ,,cybersec.pdf`` (RID)}\\
+i predavanje \emph{Capture The Flag (CTF) kao uvod u računarsku bezbednost}
+
+% -----------------------------------------------------------------------
+\section{Tema 7 -- Privatnost na internetu}
+
+Zaštita ličnih podataka, praćenje korisnika, kolačići i pravna regulativa (GDPR).
+Pitanje ravnoteže između personalizacije i privatnosti.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Kapitalizam nadzora: kako su lični podaci postali najvrednija roba digitalne
+ekonomije}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Kolačići (cookies), praćenje preko više sajtova (cross-site tracking) i
+          ,,fingerprinting``.
+    \item GDPR (EU) i pravo na zaborav; uloga banera za saglasnost o kolačićima.
+    \item Šošana Zubof (Shoshana Zuboff) i pojam ,,surveillance capitalism``.
+    \item Skandal Cambridge Analytica -- zloupotreba podataka u političke svrhe.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+\href{https://view.genial.ly/6258686f17af9f0011537dc1/presentation-kolacici-koriscenje-i-regulativa}%
+{Interaktivna prezentacija ,,Kolačići -- korišćenje i regulativa`` (genially)}\\
+i knjiga \emph{Shoshana Zuboff -- The Age of Surveillance Capitalism (2019)}
+
+% -----------------------------------------------------------------------
+\section{Tema 8 -- Informatička pismenost u Srbiji}
+
+Sposobnost građana da razumeju, kritički procene i bezbedno koriste digitalne
+tehnologije; digitalni jaz između različitih društvenih i starosnih grupa.
+
+\textbf{Predlog teme za seminarski:}
+\emph{Digitalni jaz u Srbiji: zašto je informatička pismenost pitanje društvene
+pravde, a ne samo tehnologije}
+
+\textbf{Ključne tačke i primeri:}
+\begin{itemize}
+    \item Razlike u digitalnim veštinama između mlađih i starijih korisnika.
+    \item Ranjivost na prevare zbog nedostatka iskustva (npr.\ reklame maskirane u
+          dugme ,,Preuzmi``).
+    \item Uloga obrazovnog sistema i programa doživotnog učenja.
+    \item Podaci Republičkog zavoda za statistiku o korišćenju IKT u domaćinstvima.
+\end{itemize}
+
+\textbf{Izvor inspiracije:}\\
+Predavanje \emph{Informatička pismenost u Srbiji} (kurs 2022) i izveštaji
+\href{https://www.stat.gov.rs/}{Republičkog zavoda za statistiku o upotrebi IKT}
+
+% -----------------------------------------------------------------------
+\section{Pregled veza moje seminarske teme sa temama kursa}
+
+Tema mog seminarskog rada -- \textbf{tamni obrasci (Dark Patterns)} -- direktno se
+povezuje sa više tema kursa, što je u skladu sa zahtevom da rad ostvari očiglednu vezu
+sa najmanje tri teme:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.28\textwidth} p{0.62\textwidth}}
+\toprule
+\textbf{Tema kursa} & \textbf{Veza sa tamnim obrascima} \\
+\midrule
+2. Etika u računarstvu &
+    Tamni obrasci su konkretan primer etičke dileme: dizajner svesno kreira interfejs
+    protiv interesa korisnika (ACM kodeks). \\[6pt]
+5. Internet prevare i zavisnost &
+    Obrasci poput veštačke hitnosti i FOMO koriste iste psihološke mehanizme kao
+    prevare i dizajn koji stvara zavisnost. \\[6pt]
+7. Privatnost na internetu &
+    Manipulativni baneri za kolačiće (,,Prihvati sve`` istaknuto) navode korisnike da
+    pristanu na prikupljanje podataka. \\[6pt]
+8. Informatička pismenost &
+    Sposobnost prepoznavanja tamnih obrazaca direktno zavisi od digitalne pismenosti
+    -- stariji korisnici su ranjiviji. \\[6pt]
+6. Bezbednost interneta &
+    Obrazac \emph{Sneak into Basket} često instalira neželjeni softver (McAfee, Avast)
+    tokom instalacije besplatnih aplikacija. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% -----------------------------------------------------------------------
+\section*{Reference}
+
+\begin{itemize}
+    \item \href{https://poincare.matf.bg.ac.rs/~sana.stojanovic.djurdjevic/rid.htm}%
+          {Sajt predmeta -- Računarstvo i društvo}
+    \item \href{https://github.com/sanastojanovic/RID/blob/main/rid_2025_seminarski/uputstvo_2025.txt}%
+          {Uputstvo za izradu seminarskog rada (2025)}
+    \item \href{https://github.com/sanastojanovic/RID}{RID repozitorijum}
+    \item Michael J.\ Quinn -- \emph{Ethics for the Information Age}, Pearson, 2017.
+          (preporučeni udžbenik)
+    \item \href{https://technologyandsociety.org/technology-and-society-magazine/}%
+          {IEEE Technology and Society Magazine}
+    \item \href{https://www.technologyreview.com/}{MIT Technology Review}
+\end{itemize}
+
+\end{document}
