@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{caption}
+
+\renewcommand*\contentsname{Sadržaj}
+
+\title{\textbf{Sistemski gubitak podataka u velikim jezičkim modelima: kolaps modela i algoritamska diskriminacija}\\[0.8cm] 
+	\large Kurs: Računarstvo i društvo \\[0.3cm] 
+	\large Profesor: Sana Stojanović Đurđević}
+\author{\textbf{Mila Gligorić 82/22}}
+\date{Jul 2026}
+
+\begin{document}
+	
+	\maketitle
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Uvod}
+	
+	Veliki jezički modeli nastali u poslednjih nekoliko godina, kao što su GPT, Gemini i slični, pokazali su se i više nego odlično u rešavanju raznih jezičkih zadataka. Postalo je sasvim očigledno da će ova tehnologija, u nekom obliku, ostati trajni i relevantan igrač u ekosistemu online teksta i slika. S obzirom na to, prirodno se nameće pitanje: šta se dešava kada tekstovi generisani na ovaj način preplave, a po mnogima i zagade, internet? Takođe, kakvu ulogu u održavanju nepristrasnog i raznolikog interneta kakav želimo imaju podaci kojima je čovek doprineo direktno, a kakvu oni nastali korišćenjem samih AI modela?
+	
+	Ovaj rad se bavi fenomenom kolapsa modela (Model Collapse), koji je nedavno definisan pri istraživanjima naučnika sa Stanforda i drugih univerziteta, a koji se smatra jednim od najvećih izazova u razvoju veštačke inteligencije danas. Njegovo razumevanje i rešavanje ključno je za očuvanje interneta, ali i za održivost samog treniranja modela podacima prikupljenim sa mreže (tehnikom web scraping-a). Istraživači su dokazali da je ovako brzo zagađenje digitalnog prostora sintetičkim podacima matematički pogubno za kvalitet samih podataka, ali i za sve nas koji ih koristimo - naročito na duže staze.
+	
+	Drugi deo rada fokusiran je na šire socio-tehničke posledice kolapsa modela. Spomenute posledice su pre svega društvene, podrazumevaju diskriminaciju manjina, potiskivanje retkih jezika i dijalekata, i generalno uticaj koji gubitak prirodne entropije u podacima ima na dalji razvoj interneta i očuvanje ljudskog znanja. Do samog kolapsa dolazi kada se AI modeli iznova i iznova treniraju na sintetičkim podacima, pri čemu se vremenom ireverzibilno gubi varijansa: događaji niske verovatnoće bivaju potcenjeni i potisnuti, oni visoke verovatnoće se predimenzioniraju, dok se autentična ljudska iskustva i retke informacije neretko trajno gube.
+	
+	\section{Tehnička pozadina kolapsa modela}
+	
+	\subsection{Rekurzivne petlje i akumulacija greške}
+	Da bi se objasnio kolaps modela, posmatraćemo proces rekurzivnog treniranja kroz matematički okvir. U početnoj tački, model se obučava na skupu $H_0$ koji sadrži isključivo ljudski tekst uzorkovan iz stvarne raspodele $p_0(x)$. Prvi model $\theta_0$ optimizuje svoju funkciju gubitka nad ovim skupom:
+	
+	$$\theta_0 = \arg\min_{\theta} \mathcal{L}(H_0, \theta)$$
+	
+	Kada sintetički tekst preplavi internet, naredne generacije modela više nemaju pristup čistom skupu $H_0$. Umesto toga, ulazi se u rekurzivnu petlju $t \in \{1, 2, \dots, n\}$, gde model $\theta_{t-1}$ stvara skup podataka $H_t$ na kome se obučava naredni model $\theta_t$. Model $\theta_t$ tretira ove sintetičke podatke kao tačnu osnovu (\textit{ground truth}).
+	
+	Prema nalazima istraživanja Shumailov et al., raspodela $p_{\theta_t}(x)$ vremenom odstupa od početne raspodele $p_0(x)$. Razlog za to je prenošenje i uvećavanje tri osnovne vrste grešaka:
+	
+	\begin{enumerate}
+		\item \textbf{Greška statističkog uzorkovanja:} Pošto svaki skup $H_t$ ima konačan broj uzoraka ($N$), retki događaji (\textit{tail events}) imaju manju verovatnoću da budu izabrani i ispadaju iz narednih generacija.
+		\item \textbf{Greška funkcionalne aproksimacije:} Modelima nedostaje kapacitet (konačan broj parametara) da savršeno opišu složene raspodele iz stvarnog sveta, zbog čega uvek postoji prisutna sistemska pristrasnost.
+		\item \textbf{Greška funkcionalne ekspresivnosti:} Nastaje usled ograničenja samih algoritama treniranja, poput zaglavljivanja u lokalnim minimumima pri optimizaciji gradijenta.
+	\end{enumerate}
+	
+	Ove greške se ne potiru, već se tokom sukcesivnih generacija sabiraju. Svaki novi model prihvata greške i izmene prethodnika kao činjenice, pa se raspodela $p_t(x)$ trajno udaljava od početne raspodele $p_0(x)$.
+	
+	\subsection{Sažimanje raspodele verovatnoće i potkresivanje „dugačkog repa”}
+	Ljudski jezik i znanje ne prate prost oblik Gausove raspodele, već ih odlikuju raspodele sa „teškim” ili „dugačkim repom” (\textit{long-tailed distribution}). U njima se česti pojmovi nalaze u središtu gustine, dok se retke informacije, stručna terminologija i manjinski jezici nalaze u dugim krajevima (repovima) raspodele.
+	
+	Tokom rekurzivnog učenja, model nastoji da smanji ukupnu grešku tako što pridaje veću težinu delovima gde je gustina verovatnoće najveća. Ishodi visoke frekvencije dobijaju još veći značaj, dok se retki događaji potiskuju.
+	
+	Istraživanja pokazuju da ovaj proces prolazi kroz dve faze:
+	\begin{enumerate}
+		\item \textbf{Pomeranje gustine ka sredini:} Masa verovatnoće se koncentriše oko prosečnih vrednosti. Varijansa opada sa svakom generacijom $t$, pa izlazi modela postaju sve uniformniji.
+		\item \textbf{Potkresivanje dugačkog repa:} Informacije sa malom verovatnoćom pojavljivanja ispadaju iz generisanog skupa $H_t$. Naredni model $\theta_{t+1}$ stoga procenjuje njihovu verovatnoću kao nultu ($p_{\theta_{t+1}}(x_{\text{tail}}) \to 0$).
+	\end{enumerate}
+	
+	Jednom odsečen rep raspodele u generaciji $t$ ne može se povratiti u generaciji $t+1$ bez unosa novih ljudskih podataka $H_0$.
+	
+	\subsection{Informaciona entropija u funkciji degradacije modela}
+	Gubitak lingvističke i sadržajne raznolikosti u praksi se direktno meri preko opadanja Šanonove informacione entropije $H(X)$:
+	
+	$$H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i)$$
+	
+	U kontekstu generisanja teksta, entropija pokazuje koliko je odziv modela nepredvidiv, bogat i raznovrstan. Kada se modeli rekurzivno obučavaju jedni na drugima, entropija stabilno opada ($H(X_0) > H(X_1) > \dots > H(X_n)$), pri čemu se taj slom odvija kroz dve faze.
+	
+	Prva faza je takozvani rani kolaps. U njoj tekst i dalje deluje potpuno gramatički ispravan i tečan, ali se ispod površine tiho gube stilske varijacije, retke reči i specifični izrazi. Model počinje da ponavlja uvek iste, proseku sklone fraze. Ova faza je zapravo i najopasnija, jer površinska fluentnost prikriva činjenicu da podaci ubrzano gube na kvalitetu, pa klasični automatski testovi retko primete problem na vreme.
+	
+	Nakon toga nastupa kasni kolaps, kada entropija skroz padne ka nuli ($H(X) \to 0$). U ovom trenutku model gubi bilo kakvu sposobnost smislenog izražavanja. Ulazi u beskonačne petlje ponavljanja identičnih rečenica ili počinje da generiše potpunu besmislicu, čime praktično postaje neupotrebljiv.
+	
+	\section{Nuspojave statističke optimizacije: homogenizacija i cenzura}
+	
+	Ovo matematičko odsecanje „repa” raspodele ne ostaje samo u domenu teorije, već stvara ozbiljne praktične i društvene probleme u realnom svetu.
+	
+	\subsection{Marginalizacija manje zastupljenih jezika}
+	Kako internetom ubedljivo dominira engleski jezik, svi manji jezici — uključujući i srpski — zajedno sa svojim dijalektima i lokalnim izrazima, u startu spadaju u onaj ređi deo raspodele. Kada se optimizacioni algoritam pokrene nad takvim podacima, on te manje zastupljene jezičke oblike vremenom počinje da tretira kao šum i polako ih potiskuje.
+	
+	Kao posledica toga, tekstovi generisani na manje zastupljenim jezicima gube svoju prirodnu sintaksu i lokalne idiome. Umesto autentičnog jezika, dobijaju se suvoparni, mehanizovani izlazi koji deluju kao doslovni prevodi sa engleskog. Bender i Gebru upozoravaju da ovo vodi ka globalnoj lingvističkoj homogenizaciji, gde centralizovani AI modeli polako brišu raznolikost svetskih jezika i kultura.
+	
+	\subsection{Strukturna algoritamska cenzura}
+	Pored samog jezika, ovakva optimizacija dovodi i do nečega što se može nazvati tihom ili strukturalnom algoritamskom cenzurom. Za razliku od klasične cenzure gde neko namerno zabrani određeni sadržaj, ovde do potiskivanja dolazi potpuno nesvesno, kao nusproizvod samog mašinskog učenja. 
+	
+	Model prosto daje prednost onome što je najčešće, pa samim tim izbačeni bivaju specifični stručni stavovi, nekonvencionalna mišljenja i ređe perspektive. Kada se takav generisani sadržaj vrati natrag na internet, stvara se efekat eho-komore: naredne generacije modela uče na tekstovima koji su već prošli kroz filter prosečnosti, čime se javna debata sužava, a mišljenje homogenizuje.
+	
+	\section{Sociotehnički aspekti: LLM kao stohastički papagaj}
+	
+	U svom radu, Bender i Gebru objašnjavaju da veliki jezički modeli nisu nikakvi misleći mehanizmi koji razumeju značenje onoga što pišu. Oni su u svojoj suštini kompleksni statistički sistemi čiji je jedini zadatak da procene verovatnoću sledeće reči:
+	
+	$$P(W_n \mid W_1, W_2, \dots, W_{n-1})$$
+	
+	Zbog odsustva pravog razumevanja konteksta, u kombinaciji sa obukom na zagađenim ili osiromašenim podacima, dolazi do ozbiljnih etičkih rizika. Pre svega, ukoliko ulazni podaci u startu sadrže istorijske predrasude ili društvene stereotipe, rekurzivno treniranje ih neće ispraviti — ono će ih kroz smanjenje varijanse samo učvrstiti kao jedine „tačne” obrasce. 
+	
+	Pored toga, rutinsko i nevidljivo filtriranje skupova za trening izbacuje specifične socio-kulturne kontekste bez ikakvog traga o tome šta je i zašto uklonjeno. Na kraju, kako su podaci o manjinskim i marginalizovanim zajednicama po definiciji ređi na internetu, rekurzivni kolaps ih prvi briše iz optike modela. Time početna nejednakost u podacima prerasta u trajno brisanje tih grupa iz digitalne budućnosti.
+	
+	\section{Strategije ublažavanja i otvorena pitanja}
+	
+	Očigledno je da se ovaj problem ne može rešiti pkim povećavanjem veličine modela ili dodavanjem još parametara. Jedini pravi izlaz jeste promena načina na koji prikupljamo i vrednujemo podatke. 
+	
+	To pre svega podrazumeva uvođenje pouzdanih mehanizama za praćenje porekla podataka (\textit{Data Provenance}), kako bi se sintetički AI tekst na vreme prepoznao i odvojio od ljudskog pre nego što dospe u trening skup. Takođe, neophodno je primenjivati pametnije tehnike uzorkovanja koje će namerno čuvati manje zastupljene jezike i stručne domene. Na kraju, autentični ljudski tekst na internetu moramo početi da posmatramo kao dragocen i neobnovljiv resurs koji zahteva aktivnu zaštitu od nekontrolisanog zagađenja generičkim AI sadržajem.
+	
+	\section{Zaključak}
+	S obzirom na sve veću količinu podataka na internetu generisanih od strane algoritama veštačke inteligencije (danas više od 50\%), očigledno je zašto je kolaps modela jedan od većih izazova u ovoj oblasti danas. U industriji koja direktno oblikuje našu svakodnevicu, a trenutno se pokreće trendovima i trkom za profitom, postavlja se pitanje: kako obezbediti da se tehnologija razvija u pravcu koji koristi čitavom društvu? Koliko god veštačka inteligencija trenutno bila profitabilna i uzbudljiva, ona se ne sme razvijati u vakuumu i nezavisno od društva čijim se znanjem hrani. To nije samo etički nepravedno, već je i pogubno za samu tehnologiju, koja uprkos raznim tvrdnjama bez stalnog priliva kvalitetnih ljudskih podataka i te kako ima svoje limite. Kako bi se savesno išlo unapred, potrebno je pre svega negovati sopstveno kritičko mišljenje, a pri daljem razvoju veštačke inteligencije imati u vidu da je ponekad potrebno potrošiti malo više snage, novca i talenta na detektovanje i rešavanje problema koji ne doprinose direktno dodatnom profitu, ali obezbeđuju očuvanje onog haotičnog i ljudskog interneta kakav nam je potreban.
+	
+	\newpage
+	\subsection*{Literatura}
+	
+	\begin{enumerate}
+		\item Bender, E. M., Gebru, T., McMillan-Major, A., \& Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?. \textit{Proceedings of the 2021 ACM FAccT Conference}, 610–623. https://doi.org/10.1145/3442188.3445922
+		\item Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., \& Gal, Y. (2024). AI models collapse when trained on recursively generated data. \textit{Nature}, 631(8022), 755–759. https://doi.org/10.1038/s41586-024-07566-y
+		\item Taori, R., \& Hashimoto, T. (2023). Data Feedback Loops: How Training On Generated Data Leads to Collapse in Large Language Models. \textit{Stanford University / arXiv preprint arXiv:2305.17493}.
+	\end{enumerate}
+	
+\end{document}
