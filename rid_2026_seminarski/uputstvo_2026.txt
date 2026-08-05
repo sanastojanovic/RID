@@ -22,8 +22,8 @@ sadrzaj rada treba da bude dovoljno detaljan da moze da se shvati o cemu se radi
 - [OPIS ALATA VESTACKE INTELIGENCIJE]
 - - 10 poena - napraviti jednu stranicu u deljenoj prezentaciji sa opisom alata, kratkim snimkom alata i osnovnim preporukama
 
-- [PRISUSTVO CASOVIMA ILI PREGLED SEMINARSKIH RADOVA PO TEMA KURSA]
-- - svaka tema nosi po 3 poena - 7 * 2 = 21
+- [PRISUSTVO CASOVIMA ILI PREGLED TEMA KURSA I SEMINARSKIH RADOVA PO TEMAMA KURSA]
+- - svaka tema nosi po 3 poena - 7 * 3 = 21
 - - za svaku temu je potrebno pronaci po 2 prethodno uradjena seminarska rada koji obradjuju tu temu kursa
 - - za svaku temu je potrebno navesti predlog nove teme za seminarski (koji bi mogao da obradi tu temu) 
 - - - uz predlog teme za seminarski potrebno je navesti clanak ili link na neki snimak koji Vas je inspirisao da predlozite tu temu
