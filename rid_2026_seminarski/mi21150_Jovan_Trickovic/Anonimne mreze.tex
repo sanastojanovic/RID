@@ -50,81 +50,45 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
+\usepackage{tocloft}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
 \author{}
 \date{}
 
 \begin{document}
 
-\textbf{\hfill\break
-Matematički fakultet\\
-Univerzitet u Beogradu\\
-\strut \\
-\strut \\
-\strut \\
-\strut \\
-Anonimne mreže\\
-}Jovan Tričković 150/2021
+\begin{titlepage}
 
-Kurs: Računarstvo i društvo\\
-Profesor: Sana Stojanović Đurđević\\
-\textbf{\hfill\break
-}
+    \thispagestyle{plain} 
 
-\hypertarget{contents}{%
-\section{Contents}\label{contents}}
+    \centering
+    
+    \vspace*{1cm}
+    {\Huge \textbf{Matematički fakultet
+                Univerzitet u Beogradu}\par}
 
-\protect\hyperlink{_Toc234141038}{\textbf{1. Uvod}
-\protect\hyperlink{_Toc234141038}{3}}
+    \vfill 
 
-\protect\hyperlink{kako-funkcioniux161u-vpn-i-tor}{\textbf{2. Kako
-funkcionišu VPN i Tor}
-\protect\hyperlink{kako-funkcioniux161u-vpn-i-tor}{3}}
+    {\Huge \textbf{Anonimne mreže}\par}
+    \vspace{0.5cm} 
+    {\Large Jovan Tričković 150/2021\par}
 
-\protect\hyperlink{_Toc234141040}{\textbf{2.1 VPN}
-\protect\hyperlink{_Toc234141040}{3}}
+    \vfill 
 
-\protect\hyperlink{_Toc234141041}{\textbf{2.2 Tor mreža}
-\protect\hyperlink{_Toc234141041}{4}}
+    \begin{flushright}
+        {\large
+        Kurs: Računarstvo i društvo\ \\
+        Profesor: Dr. Sana Stojanović Đurđević\par}
+    \end{flushright}
 
-\protect\hyperlink{_Toc234141042}{\textbf{2.3 Onion adrese}
-\protect\hyperlink{_Toc234141042}{5}}
+    \vspace*{1cm}
+\end{titlepage}
 
-\protect\hyperlink{tehnike-privatnosti-kod-tor-mreux17ee}{\textbf{3.
-Tehnike privatnosti kod tor mreže}
-\protect\hyperlink{tehnike-privatnosti-kod-tor-mreux17ee}{5}}
+\tableofcontents
 
-\protect\hyperlink{_Toc234141044}{\textbf{3.1 Operation security OpSec}
-\protect\hyperlink{_Toc234141044}{5}}
-
-\protect\hyperlink{_Toc234141045}{\textbf{3.2 Kako se tor brani od
-fingerprinting a} \protect\hyperlink{_Toc234141045}{5}}
-
-\protect\hyperlink{_Toc234141046}{\textbf{3.3 Deep packet inspection i
-metode cenzure} \protect\hyperlink{_Toc234141046}{7}}
-
-\protect\hyperlink{_Toc234141047}{\textbf{3.4 Kombinovanje tor mreže i
-VPN usluga} \protect\hyperlink{_Toc234141047}{7}}
-
-\protect\hyperlink{_Toc234141048}{\textbf{3.5 Decentralizovani VPN i
-alternativne mreže} \protect\hyperlink{_Toc234141048}{8}}
-
-\protect\hyperlink{pravni-i-etiux10dki-aspekti-tor-mreux17ee-i-vpn-usluga}{\textbf{4.
-Pravni i etički aspekti tor mreže i VPN usluga}
-\protect\hyperlink{pravni-i-etiux10dki-aspekti-tor-mreux17ee-i-vpn-usluga}{8}}
-
-\protect\hyperlink{_Toc234141050}{\textbf{5. Veza sa temama kursa}
-\protect\hyperlink{_Toc234141050}{10}}
-
-\protect\hyperlink{_Toc234141051}{\textbf{6. Ključni radovi}
-\protect\hyperlink{_Toc234141051}{11}}
-
-\protect\hyperlink{_Toc234141052}{\textbf{7. Zaključak}
-\protect\hyperlink{_Toc234141052}{11}}
-
-\textbf{\hfill\break
-}
-
-\protect\hypertarget{_Toc234141038}{}{}\textbf{1. Uvod}
+\section{1. Uvod}
+\label{sec:t1}
 
 U dobu veštačke inteligencije najbitniji resurs su podaci i samim tim
 kompanije ulažu dosta novca u razne metode prikupljanja podataka.
@@ -142,24 +106,32 @@ njihovog stila pisanja {[}1{]}.
 
 Dodatni pokazatelj je da većina ljudi ne zna kako politike privatnosti
 funkcionišu i kako kompanije koriste njihove lične podatke. Anketa od
-``Pew Research Center'' ukazuje i na to. 56\% uvek pritisne ``Slažem
+``Pew Research Center'' ukazuje i na to da 56\% uvek pritisne ``Slažem
 se'', a 67\% je izjavilo da razumeju veoma malo o tome kako kompanije
 koriste njihove podatke {[}14, 17{]}.
 
-\hypertarget{kako-funkcioniux161u-vpn-i-tor}{%
-\subsection{2. Kako funkcionišu VPN i
-Tor}\label{kako-funkcioniux161u-vpn-i-tor}}
-
-\protect\hypertarget{_Toc234141040}{}{}\textbf{2.1 VPN}
+\section{2. Kako funkcionišu VPN i Tor}
+\label{sec:t2}
 
 Za potrebe privatnosti i anonimnosti postoje razni alati koji svaki
 pokriva svoj domen. Zato korisnik ipak treba prvo da razmisli od čega
-hoće da se zaštiti, jer jedan alat ne može da pokrije sve potrebe. Jedan
-od načina da se korisnik zaštiti na nivou IP adresa je VPN. Korisnik
+hoće da se zaštiti, jer jedan alat ne može da pokrije sve potrebe. Na
+nivou IP adresa su posebno značajna dva takva: „VPN`` i „Tor''. VPN
+(\emph{Virtual Private Network}) je tunel koji služi kao posrednik
+između klijenta i servera i time maskira IP adresu klijenta. Tor
+(\emph{The Onion Router}) slično radi kao posrednik, koristeći mrežu
+volontera da preusmeri saobraćaj. VPN pruža bolju brzinu i centralizovan
+je, dok Tor je sporiji i decentralizovan, ali time pruža veću
+privatnost.
+
+\subsection{2.1 VPN}
+\label{sec:t2.1}
+
+Kao što je već rečeno, VPN može da se posmatra kao tunel. Korisnik
 uspostavlja enkriptovanu \emph{point-to-point} konekciju sa serverom.
-Praktično, zamenjuje svoju IP adresu koju mu je dodelio \emph{ISP}
-(Internet Service Provider) sa adresom koju mu je dodelio VPN server.
-\emph{ISP} samo vidi da je korisnik uspostavio vezu sa VPN-om, ali ne
+Praktično, zamenjuje svoju IP adresu koju mu je dodelio ISP
+(\emph{Internet Service Provider}) sa adresom koju mu je dodelio VPN server.
+ISP samo vidi da je korisnik uspostavio vezu sa VPN-om, ali ne
 zna ništa van toga. Ovo može da bude dobro ako korisnik želi da se
 zaštiti od uticaja ISP-a, ali je problem što se ovako ipak odgovornost
 samo prebacuje. Korisnik i dalje mora da veruje centralizovanom
@@ -168,14 +140,18 @@ podataka. Tu sada dolazi u obzir veoma bitan koncept koji se zove
 \emph{no-logs policy} gde provajder tvrdi da ne loguje ni početne IP
 adrese ni protok koji se dešava između izvora i odredišta. Ovo nije
 pravni termin i opet se vraćamo na to da je dobar izbor provajdera i
-vera u njega bitna. Ipak postoje 3rd-party kompanije koje vrše revizije
-(audits) i javno objavljuju svoje rezultate, što služi kao ``dokaz'' da
+vera u njega bitna. Ipak postoje nezavisne kompanije koje vrše revizije
+(\emph{audits}) i javno objavljuju svoje rezultate, što služi kao ``dokaz'' da
 je provajder stvarno ispunio svoje obećanje. Takođe, u zavisnosti od
 toga u kojoj je državi registrovana, kompanija može da bude i pod
-pravnim pritiskom da prikuplja podatke. Zato je bitno da VPN provajderi
-budu registrovani u državama sa jačim zakonima o privatnosti.
+pravnim pritiskom da prikuplja podatke. Primer bi bile Sjedinjene
+Američke Države i FISA 702 (\emph{Foreign Intelligence Surveillance
+Act}) zakon {[}25{]}, koji daje vladi mogućnost da traži podatke od
+kompanija, bez sudskog naloga, radi istrage stranih građana. Zato je
+bolje da VPN provajderi budu registrovani u državama sa jačim zakonima o
+privatnosti.
 
-\textbf{Curenje DNS-a (DNS leakage)} Kada korisnik pretražuje internet,
+\textbf{Curenje DNS-a (\emph{DNS leakage})} Kada korisnik pretražuje internet,
 on ne koristi IP adrese, već imena domena. Zbog toga svaki domen mora da
 se razreši u IP adresu kojoj pripada koristeći DNS server, obično od
 ISP-a ili neke druge popularne opcije kao što je Google, itd. Tokom
@@ -186,71 +162,104 @@ razrešivač od VPN provajdera, ide kroz podrazumevani razrešivač koji je
 podešen na sistemu. Ovo znači da je moguće videti koji su domeni
 posećeni, što ubija poentu uopšte korišćenja VPN-a.
 
-\protect\hypertarget{_Toc234141041}{}{}\textbf{2.2 Tor mreža}
+\subsection{2.2 Tor mreža}
+\label{sec:t2.2}
+
+Tor vodi poreklo iz istraživačkih projekata američke Mornaričke
+istraživačke laboratorije (\emph{Naval Research Laboratory}) s kraja
+devedesetih godina, gde je razvijan koncept \emph{onion routing}-a sa
+ciljem zaštite vladinih komunikacija. 2004. godine je projekat postao
+\emph{open-source} i Fondacija za elektronske granice (\emph{Electronic
+Frontier Foundation}) je počela da investira u njegovo dalje razviće. Te
+iste godine je izbačen i rad "\emph{Tor: The Second-Generation Onion
+Router}", koji opisuje arhitekturu mreže i koncepte koji se i dalje
+koriste.
 
 Tor je decentralizovana i enkriptovana mreža. S obzirom da je
 decentralizovana, faktor poverenja je mnogo manji nego kod VPN-ova. Tor
-mreža sadrži čvorove (nodes) koje pružaju volonteri. Klijent uspostavlja
-3 između sebe i destinacije, gde svaki čvor zna prethodnika i
+mreža sadrži čvorove (\emph{nodes}) koje pružaju volonteri. Klijent uspostavlja
+3 konekcije između sebe i destinacije, gde svaki čvor zna prethodnika i
 sledbenika. Ovo znači da destinacija zna samo krajnji čvor, a čvor zna
 samo za srednji čvor i destinaciju, pa ne može da zna ko je poslao
-zahtev. Ovo se uspostavlja korišćenjem PFS (Perfect Forward Secrecy),
+zahtev. 
+
+\textbf{\emph{Diffie-Hellman} rukovanje i \emph{Perfect Forward Secrecy (PFS)}}
+
+Ovo se uspostavlja korišćenjem PFS (\emph{Perfect Forward Secrecy}),
 tj. klijent ne uspostavlja ceo put sa samo jednim kriptografskim
 korakom. Prvo uspostavlja kratkoročni ključ sesije sa početnim čvorom
-(entry guard) koristeći ``Diffie-Hellman rukovanje''. Diffie-Hellman
-ukratko radi sledeće: klijent i server biraju javne brojeve g
-(generator) i p (veliki prost broj). Onda svaki bira svoj privatni ključ
-(a i b). Onda klijent izračuna svoj javni ključ \(A = g^{a}\ mod\ (p)\)
-(analogno server izračuna B). Na kraju, klijent izračuna
-\(s = \ B^{a}\ mod\ (p)\) (server koristi A i b umesto B i a). Ovo ``s''
-se koristi kao ključ enkripcije. Nakon što je ta veza uspostavljena,
-onda proširuje zahtev na \emph{middle} čvor i na kraju šalje zahtev ka
-\emph{exit} čvoru. Pošto svaki sloj ima svoj ključ koji nestaje nakon
-što se konekcija ugasi, ovo čini da u slučaju da neki od čvorova bude
-kompromitovan kasnije, nije moguće dekriptovati prethodni internet
-saobraćaj. Po ovom modelu slojevanja je Tor i dobio svoje ime ``The
-Onion Router'', gde svaki sloj štiti prethodni, kao kod luka {[}12{]}.
-Ipak, Tor mreža je sporija od VPN-a i sajtovi cešće blokiraju ip adrese
-čvorova nego VPN ip adrese, pa to treba isto uzeti u obzir.
+(\emph{entry guard}) koristeći ``\emph{Diffie-Hellman} rukovanje''. \emph{Diffie-Hellman}
+ukratko radi sledeće: 
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Klijent i server biraju javne brojeve g
+(generator) i p (veliki prost broj).
+\item
+   Svako bira svoj privatni ključ
+(a i b). Onda klijent izračuna svoj javni ključ $A = g^{a}\ mod\ (p)$.
+Analogno server izračuna $B = g^{b}\ mod\ (p)$.
+\item
+  Na kraju, klijent
+izračuna $s = \ B^{a}\ mod\ (p)$, dok server izračuna
+$s = \ A^{b}\ mod\ (p)$. Ovo ``s'' se koristi kao ključ enkripcije.
+\end{enumerate}
 
-\textbf{Internet saobraćaj kroz Tor mrežu} Generalno, moguće je
-analizirati dužinu paketa koji se šalju i time otkriti informacije o
-prirodi tih paketa. Da bi se ovo izbeglo, Tor segmentiše saobraćaj u
-ćelije, gde svaka ima 512 bajtova. Ovo čini bilo kakvo praćenje
-(tracking) težim i jedan je od vidova odbrane koje Tor implementira
-{[}12{]}. Tor je takođe originalno zamišljen da koristi leaky-pipe
-tehnologiju koja bi omogućavala da srednji čvor funkcioniše kao krajnji
-čvor i time procesuira više multipleksovanih TCP protoka, ali se to u
-praksi trenutno ne koristi {[}12{]}. Problem kod Tor mreže je to šta ako
-neko ima pristup početnom i krajnjem čvoru? U tom slučaju je moguće
-pratiti saobraćaj kroz početni i kroz krajnji čvor. Pošto prvi čvor zna
-klijentovu IP adresu, i onaj koji posmatra \emph{entry guard} je isto
-zna. Uz to zna odredišnu IP adresu. Korišćenjem ML modela i statistike,
-moguće je uz pomoć metapodataka, saobraćaja, dužina prenosa itd. da se
-koreliše korisnik sa tim saobraćajem. Ovo se zove \emph{end-to-end
-traffic confirmation attack} i nije ga moguće potpuno zaobići, ali ideja
-je da se smanji rizik tako što se smanjuje skup entry guard-ova {[}8,
-12{]}. Srednji i krajnji čvorovi se mnogo češće smenjuju, ali to nije
-slučaj sa početnim čvorom. Pošto svako može da hostuje Tor čvor, to
-znači da maliciozni učesnik može da bude deo mreže. Smanjenjem početnog
-skupa se ta šansa smanjuje, jer je onda i manja šansa da naiđemo na
-maliciozni čvor. Sledeći problem kod Tor mreže je \emph{exit node
-trust}. Svaki čvor vrši enkripciju, ali krajnji čvor mora da dekriptuje
-poruku kako bi je isporučio odredišnoj IP adresi. Opet se vraćamo na
-problem volontera. Veliki dobitak koji Tor mreža ima u poređenju sa
-VPN-om je to što se ne mora verovati centralizovanom entitetu, ali je to
-u isto vreme i nedostatak. Ako saobraćaj između klijenta i odredišta ne
-koristi enkriptovani protokol kao HTTPS, i umesto toga koristi HTTP, i
-ako je čvor maliciozan, moguće je logovati sav saobraćaj. Takođe je
-moguće izvršiti tehniku ``\emph{SSL stripping}'', gde napadač degradira
-(downgrade-uje) HTTPS konekciju na HTTP konekciju i time može da čita
-saobraćaj {[}8{]}.
+Nakon što je ta veza uspostavljena, onda proširuje zahtev na srednji
+čvor i na kraju šalje zahtev ka \emph{exit} čvoru. Pošto svaki sloj ima
+svoj ključ koji nestaje nakon što se konekcija ugasi, ovo čini da u
+slučaju da neki od čvorova bude kompromitovan kasnije, nije moguće
+dekriptovati prethodni internet saobraćaj. Po ovom modelu slojevanja je
+Tor i dobio svoje ime ``The Onion Router'', gde svaki sloj štiti
+prethodni, kao kod luka {[}12{]}. Ipak, Tor mreža je sporija od VPN-a i
+sajtovi češće blokiraju IP adrese čvorova nego VPN IP adrese, pa to
+treba isto uzeti u obzir.
 
-\protect\hypertarget{_Toc234141042}{}{}\textbf{2.3 Onion adrese}
+\textbf{Internet saobraćaj kroz Tor mrežu}
 
-Internet bi ugrubo mogao da se podeli na 2 dela: na clear web, što
+Generalno, moguće je analizirati dužinu paketa koji se šalju i time
+otkriti informacije o prirodi tih paketa. Da bi se ovo izbeglo, Tor
+segmentiše saobraćaj u ćelije, gde svaka ima 512 bajtova. Ovo čini bilo
+kakvo praćenje (\emph{tracking}) težim i jedan je od vidova odbrane koje Tor
+implementira {[}12{]}. Tor je takođe originalno zamišljen da koristi
+\emph{leaky-pipe} tehnologiju koja bi omogućavala da srednji čvor funkcioniše
+kao krajnji čvor i time procesuira više multipleksovanih TCP protoka,
+ali se to u praksi trenutno ne koristi {[}12{]}.
+
+\textbf{Rizici i napadi na Tor mrežu}
+
+Problem kod Tor mreže
+je to šta ako neko ima pristup početnom i krajnjem čvoru? U tom slučaju
+je moguće pratiti saobraćaj kroz početni i kroz krajnji čvor. Pošto prvi
+čvor zna klijentovu IP adresu, i onaj koji posmatra \emph{entry guard}
+je isto zna. Uz to zna odredišnu IP adresu. Korišćenjem ML modela i
+statistike, moguće je uz pomoć metapodataka, saobraćaja, dužina prenosa
+itd. da se koreliše korisnik sa tim saobraćajem. Ovo se zove
+\emph{end-to-end traffic confirmation attack} i nije ga moguće potpuno
+zaobići, ali ideja je da se smanji rizik tako što se smanjuje skup \emph{entry guard}-ova {[}8, 12{]}. Srednji i krajnji čvorovi se mnogo češće
+smenjuju, ali to nije slučaj sa početnim čvorom. Pošto svako može da
+hostuje Tor čvor, to znači da maliciozni učesnik može da bude deo mreže.
+Smanjenjem početnog skupa se ta šansa smanjuje, jer je onda i manja
+šansa da naiđemo na maliciozni čvor.
+
+Sledeći problem kod Tor mreže je
+\emph{exit node trust}. Svaki čvor vrši enkripciju, ali krajnji čvor
+mora da dekriptuje poruku kako bi je isporučio odredišnoj IP adresi.
+Opet se vraćamo na problem volontera. Veliki dobitak koji Tor mreža ima
+u poređenju sa VPN-om je to što se ne mora verovati centralizovanom
+entitetu, ali je to u isto vreme i nedostatak. Ako saobraćaj između
+klijenta i odredišta ne koristi enkriptovani protokol kao HTTPS, i
+umesto toga koristi HTTP, i ako je čvor maliciozan, moguće je logovati
+sav saobraćaj. Takođe je moguće izvršiti tehniku ``\emph{SSL
+stripping}'', gde napadač degradira (\emph{downgrade-uje}) HTTPS konekciju na
+HTTP konekciju i time može da čita saobraćaj {[}8{]}.
+
+\subsection{2.3 Onion adrese}
+\label{sec:t2.3}
+
+Internet bi ugrubo mogao da se podeli na 2 dela: na \emph{clear web}, što
 podrazumeva sve javne IP adrese kojima se normalno može pristupiti bez
-korišćenja Tor mreže i na deep web koji koristi onion adrese i kojima se
+korišćenja Tor mreže i na \emph{deep web} koji koristi onion adrese i kojima se
 može pristupiti samo kroz Tor mrežu. Krajnja odredišta kojima se
 pristupa imaju onion adrese koje se završavaju sa ``.onion'' i zovu se
 onion serveri. Ideja je sledeća:
@@ -259,15 +268,15 @@ onion serveri. Ideja je sledeća:
 \def\labelenumi{\arabic{enumi}.}
 \item
   Onion server uspostavlja kola, tj. putanje ka više čvorova, i nazove
-  ih introduction points. Onda uzima njihove javne ključeve i stavlja ih
-  u decentralizovanu heš tabelu (\emph{DHT}) {[}12{]}.
+  ih \emph{introduction points}. Onda uzima njihove javne ključeve i stavlja ih
+  u decentralizovanu heš tabelu (DHT) {[}12{]}.
 \item
-  Kada klijent želi da se konektuje na onion server, on čita \emph{DHT}
-  i uzima jedan od introduction points kome šalje enkriptovan zahtev i
-  takođe uzima neki drugi čvor za sebe kao rendezvous point {[}12{]}.
+  Kada klijent želi da se konektuje na onion server, on čita DHT
+  i uzima jedan od \emph{introduction points} kome šalje enkriptovan zahtev i
+  takođe uzima neki drugi čvor za sebe kao \emph{rendezvous point} {[}12{]}.
 \item
-  Server je obavešten kroz introduction point da klijent želi da
-  komunicira sa njim. Server gradi put ka rendezvous point-u gde će se
+  Server je obavešten kroz \emph{introduction point} da klijent želi da
+  komunicira sa njim. Server gradi put ka \emph{rendezvous point}-u gde će se
   vršiti komunikacija {[}12{]}.
 \end{enumerate}
 
@@ -283,73 +292,71 @@ Motivacija za ovo je sledeća:
   ne znaju za tuđu IP adresu {[}12{]}.
 \end{itemize}
 
-\hypertarget{tehnike-privatnosti-kod-tor-mreux17ee}{%
-\subsection{3. Tehnike privatnosti kod tor
-mreže}\label{tehnike-privatnosti-kod-tor-mreux17ee}}
+\section{3. Tehnike privatnosti kod tor mreže}
+\label{sec:t3}
 
-\protect\hypertarget{_Toc234141044}{}{}\textbf{3.1 Operation security
-OpSec}
+\subsection{3.1 \emph{Operation security} OpSec}
+\label{sec:t3.1}
 
 Deanonimizacija se obično ne dešava zbog napadača, već zbog greške u
 rukovanju sigurnosnim alatima. OpSec se odnosi na metode koje korisnik
 treba da koristi da ne bi kompromitovao svoju anonimnost i privatnost
 {[}8{]}. Česta greška bi bila da korisnik koristi lične podatke dok
 koristi Tor mrežu ili da se uloguje na svoje lične naloge koje koristi
-na clear web-u. Idealno bi bilo ne mešati naloge koji se koriste sa
-regularnim pretraživačem sa onima koji se koriste tokom koršćenja Tor
+na \emph{clear web}-u. Idealno bi bilo ne mešati naloge koji se koriste sa
+regularnim pretraživačem sa onima koji se koriste tokom korišćenja Tor
 pretraživača. Drugi način kompromitacije je pomoću dokumenata i fajlova.
 Svi fajlovi sadrže metapodatke, od kojih neki mogu da budu lokacija,
 vreme kreiranja itd. Takođe se može analizirati generalno ponašanje na
 stranici. Način pomeranja miša, brzina i dužina kucanja, posećene
 stranice, vreme provedeno na stranici itd., sve se to može iskoristiti
-da se korisnik fingerprint-uje.
+da se korisnik \emph{fingerprint}-uje.
 
-\protect\hypertarget{_Toc234141045}{}{}\textbf{3.2 Kako se tor brani od
-fingerprinting a}
+\subsection{3.2 Kako se tor brani od \emph{fingerprinting}-a}
+\label{sec:t3.2}
 
 Sakrivanje IP adrese pomoću Tor mreže gubi smisao ako sajtovi i dalje
 mogu da identifikuju specifičnu mašinu kroz napredne tehnike "uzimanja
-otisaka" (browser fingerprinting). Standardni pretraživači (poput
+otisaka" (\emph{browser fingerprinting}). Standardni pretraživači (poput
 Chrome-a ili Edge-a) šalju ogroman broj jedinstvenih parametara hardvera
 i softvera kako bi optimizovali prikazivanje stranica. Pošto je Tor
 pretraživač modifikovana verzija Firefox-a, to znači da ima visok nivo
-opcija koje korisnik može da konfirugiše, što uključuje i plugine. Ipak,
+opcija koje korisnik može da korišćenjakonfiguriše, što uključuje i plugine. Ipak,
 Tor radi suprotno; on pokušava da učini da svi korisnici Tor-a izgledaju
-identično. Ovaj koncept se naziva "efekat krda" (the herd effect)
+identično. Ovaj koncept se naziva "efekat krda" (\emph{the herd effect})
 {[}11{]}.
 
 Postoje razne tehnike ``uzimanja otisaka'', tj. na engleskom
-fingerprinting, gde često korišćenjem JavaScript-a sajt može da zaključi
+\emph{fingerprinting}, gde često korišćenjem JavaScript-a sajt može da zaključi
 neke stvari o korisniku i ako se dovoljno unikatnih osobina može
 izdvojiti, može se izvršiti identifikacija {[}2, 4{]}. Neki tipovi
-fingerprinting-a su:
+\emph{fingerprinting}-a su:
 
 \begin{itemize}
 \item
-  \textbf{Canvas HTML5 fingerprinting:} Koristeći Canvas HTML5 API, u
+  \textbf{Canvas HTML5 \emph{fingerprinting}:} Koristeći Canvas HTML5 API, u
   zavisnosti od operativnog sistema i grafičke kartice, tekst u
   pretraživaču može da ima mikro razlike i samim tim može da služi kao
   unikatni ID {[}2, 4{]}.
 \item
-  \textbf{Audio fingerprinting:} Pretraživači mogu da se razlikuju u
-  audio steku (audio stack) {[}4{]}.
+  \textbf{Audio \emph{fingerprinting}:} Pretraživači mogu da se razlikuju u
+  audio steku (\emph{audio stack}) {[}4{]}.
 \item
-  \textbf{Font fingerprinting:} Instalirani fontovi na OS korisnika mogu
+  \textbf{Font \emph{fingerprinting}:} Instalirani fontovi na OS korisnika mogu
   da smanje skup korisnika koji imaju ili nemaju neki određeni font
   instaliran {[}2, 11{]}.
 \item
-  \textbf{Screen fingerprinting:} Veličina ekrana i dubina boja (color
-  depth) mogu da se iskoriste za deanonimizaciju {[}2, 4{]}.
+  \textbf{Screen \emph{fingerprinting}:} Veličina ekrana i dubina boja (\emph{color
+  depth}) mogu da se iskoriste za deanonimizaciju {[}2, 4{]}.
 \item
-  \textbf{Vreme i sistemski lokalitet (system locale):} Korišćenjem JS-a
+  \textbf{Vreme i sistemski lokalitet (\emph{system locale}):} Korišćenjem JS-a
   sajt može da dobije vremensku zonu i mesto korisnika {[}2, 4, 11{]}.
 \end{itemize}
 
-Svaki pretraživač takođe koristi kolačiće, tj. cookies zarad neophodne
+Svaki pretraživač takođe koristi kolačiće, tj. \emph{cookies} zarad neophodne
 funkcionalnosti sajta. U njima se sadrže npr. informacije o trenutnoj
-login sesiji koje su bitne da ne bismo morali da se stalno logujemo
-svaki put kada promenimo stranicu na istom sajtu i to su first-party
-kolačići, ali takođe postoje i third-party kolačići koje sajtovi dele sa
+\emph{login} sesiji koje su bitne da ne bismo morali da se stalno logujemo
+svaki put kada promenimo stranicu na istom sajtu i to su kolačići prve strane, ali takođe postoje i kolačići treće strane koje sajtovi dele sa
 kupcima i drugim sajtovima koji služe da bi pratili korisnika svuda na
 internetu {[}3{]}.
 
@@ -359,20 +366,20 @@ Neki od tehničkih mehanizama odbrane unutar Tor pretraživača su
 \begin{itemize}
 \item
   \textbf{Letterboxing:} Kada korisnik promeni veličinu prozora
-  pretraživača, rezolucija ekrana postaje unikatna. Da bi to sprečilo,
-  Tor pretraživač koristi tehniku zvanu letterboxing. On dodaje sive
+  pretraživača, rezolucija ekrana postaje unikatna. Da bi se to sprečilo,
+  Tor pretraživač koristi tehniku zvanu \emph{letterboxing}. On dodaje sive
   ivice (margine) oko veb-stranice, prisiljavajući prozor u kome se
   renderuje sadržaj da se uvek drži standardizovanih dimenzija (npr.
   umnožaka od 200x100 piksela). Tada sajt vidi samo generičku rezoluciju
   koju dele milioni drugih Tor korisnika. Ipak, iako su dimenzije
-  standardizovane, preporučuje se da se koristi default dimenzija ekrana
-  i još više je bitno da se izbegava full screen opcija, jer će onda
+  standardizovane, preporučuje se da se koristi \emph{default} dimenzija ekrana
+  i još više je bitno da se izbegava \emph{full screen} opcija, jer će onda
   rezolucija Tor pretraživača odgovarati rezoluciji monitora.
 \item
-  \textbf{Standardizacija korisničkog agenta (User-Agent):} Bez obzira
+  \textbf{Standardizacija korisničkog agenta (\emph{User-Agent}):} Bez obzira
   na to da li korisnik pokreće Tor na Mac-u, Linux-u ili Windows
   kompjuteru, pretraživač aplikacijama javlja potpuno isti niz podataka
-  (User-Agent). Sajtovima se uvek prijavljuje ista verzija Firefox-a i
+  (\emph{User-Agent}). Sajtovima se uvek prijavljuje ista verzija Firefox-a i
   generički operativni sistem.
 \item
   \textbf{Blokiranje Canvas i Audio API-ja:} Kada sajt pokuša da
@@ -385,40 +392,40 @@ Neki od tehničkih mehanizama odbrane unutar Tor pretraživača su
   \textbf{Restrikcija sistemskih fontova:} Tor pretraživač ignoriše
   fontove koji su lokalno instalirani na operativnom sistemu korisnika i
   umesto toga koristi sopstveni set standardnih fontova, čime neutrališe
-  font fingerprinting.
+  \emph{font fingerprinting}.
 \item
   \textbf{Vremenska zona i jezik:} Svi zahtevi se automatski prevode na
   en-US jezički lokal, a sistemska vremenska zona se unutar pretraživača
-  prisilno postavlja na \emph{UTC} (Coordinated Universal Time), bez
+  prisilno postavlja na UTC (\emph{Coordinated Universal Time}), bez
   obzira na geografsku lokaciju korisnika.
 \end{itemize}
 
-\protect\hypertarget{_Toc234141046}{}{}\textbf{3.3 Deep packet
-inspection i metode cenzure}
+\subsection{3.3 \emph{Deep packet inspection} i metode cenzure}
+\label{sec:t3.3}
 
 Iako VPN i Tor pružaju snažnu enkripciju, njihovo korišćenje nije
-nevidljivo. U odredjenim državama, internet provajderi (\emph{ISP}) i
+nevidljivo. U određenim državama, internet provajderi (ISP) i
 državni cenzori koriste tehniku poznatu kao dubinska analiza paketa
-(Deep Packet Inspection - \emph{DPI}). Standardna analiza paketa gleda
-samo "zaglavlje" (header) kako bi saznala izvor i destinaciju
-saobraćaja, dok \emph{DPI} dodatno analizira samu frekvenciju i
+(\emph{Deep Packet Inspection} - DPI). Standardna analiza paketa gleda
+samo "zaglavlje" (\emph{header}) kako bi saznala izvor i destinaciju
+saobraćaja, dok DPI dodatno analizira samu frekvenciju i
 metapodatke sadržaja koji se prenosi. Na ovaj način, softver može da
-prepozna "potpis" (signature) OpenVPN protokola, WireGuard-a ili
+prepozna "potpis" (\emph{signature}) OpenVPN protokola, WireGuard-a ili
 specifičan šablon Tor saobraćaja, iako je sam sadržaj enkriptovan i
 nečitljiv.
 
 Kada se ovakav saobraćaj detektuje, on može biti veštački usporen
-(throttling) ili potpuno blokiran na nivou provajdera. Da bi se ovo
-zaobišlo, razvijeni su dodatni alati za prikrivanje (obfuscation). Kod
-VPN-a se koriste obfuscated serveri koji maskiraju VPN saobraćaj tako da
+(\emph{throttling}) ili potpuno blokiran na nivou provajdera. Da bi se ovo
+zaobišlo, razvijeni su dodatni alati za prikrivanje (\emph{obfuscation}). Kod
+VPN-a se koriste \emph{obfuscated} serveri koji maskiraju VPN saobraćaj tako da
 izgleda kao običan, nasumičan HTTPS saobraćaj. Tor mreža koristi sličan
-koncept kroz pluggable transports (kao što je obfs4 protokol, poznatiji
-kao bridge), koji menja strukturu paketa i otežava cenzorima da
+koncept kroz \emph{pluggable transports} (kao što je obfs4 protokol, poznatiji
+kao \emph{bridge}), koji menja strukturu paketa i otežava cenzorima da
 automatski prepoznaju i blokiraju pristup mreži bez gašenja celokupnog
 HTTPS saobraćaja u državi {[}10{]}.
 
-\protect\hypertarget{_Toc234141047}{}{}\textbf{3.4 Kombinovanje tor
-mreže i VPN usluga}
+\subsection{3.4 Kombinovanje tor mreže i VPN usluga}
+\label{sec:t3.4}
 
 Često se postavlja pitanje da li korisnici treba da koriste VPN i Tor
 istovremeno kako bi postigli maksimalnu sigurnost. U praksi, postoje dva
@@ -430,7 +437,7 @@ zatim preko te zaštićene konekcije pokreće Tor pretraživač. Ova metoda
 je znatno popularnija i jednostavnija za postavljanje. Njena glavna
 prednost je to što internet provajder ne vidi da korisnik koristi Tor
 mrežu, već vidi samo standardni VPN saobraćaj. Takođe, VPN server
-sprečava Tor entry guard čvor da vidi pravu IP adresu korisnika, što
+sprečava Tor \emph{entry guard} čvor da vidi pravu IP adresu korisnika, što
 umanjuje rizik u slučaju kompromitovanja početnog čvora. Međutim,
 korisnik i dalje mora da veruje VPN provajderu da ne beleži njegov
 početni mrežni protok.
@@ -443,12 +450,12 @@ korisnika (vidi samo IP adresu Tor izlaznog čvora), a istovremeno se
 zaobilazi problem zlonamernih Tor izlaznih čvorova jer je saobraćaj
 zaštićen VPN enkripcijom. Ipak, ova metoda drastično usporava internet
 konekciju i ostavlja korisnika ranjivim na globalne analize saobraćaja
-{[}8{]}. Takodje, generalna preporuka je da ovo za veliki procenat
-``threat'' modela nije potrebno i da pogrešna konfiguracija može doneti
+{[}8{]}. Takođe, generalna preporuka je da ovo za veliki procenat
+\emph{threat} modela nije potrebno i da pogrešna konfiguracija može doneti
 više štete nego benefita.
 
-\protect\hypertarget{_Toc234141048}{}{}\textbf{3.5 Decentralizovani VPN
-i alternativne mreže}
+\subsection{3.5 Decentralizovani VPN i alternativne mreže}
+\label{sec:t3.5}
 
 Zbog nedostataka koje imaju centralizovane VPN usluge, razvijaju nove
 tehnologije koje pokušavaju da reše taj problem kod VPN-ova i probleme
@@ -457,24 +464,23 @@ decentralizovanog VPN-a (dVPN). Za razliku od komercijalnog VPN-a gde
 jedna kompanija poseduje i kontroliše sve servere, dVPN mreže se
 oslanjaju na globalnu mrežu volontera koji iznajmljuju svoj višak
 mrežnog protoka. Sistem funkcioniše slično Tor-u po pitanju
-distribucije, ali se često oslanja na blockchain tehnologiju i pametne
-ugovore (smart contracts) kako bi automatizovao kriptografsko rutiranje
+distribucije, ali se često oslanja na \emph{blockchain} tehnologiju i pametne
+ugovore (\emph{smart contracts}) kako bi automatizovao kriptografsko rutiranje
 saobraćaja {[}6{]}. Zbog toga, korisnici ne moraju da veruju centralnom
 autoritetu da neće beležiti njihove logove, jer arhitektura sistema to
 tehnički onemogućava, a ne postoji ni jedan centralni server koji bi
 državne vlasti mogle da ugase.
 
-Pored Tor-a, postoje i druge ``dark web'' mreže koje pristupaju
-privatnosti iz drugog ugla, poput \emph{I2P} (Invisible Internet
-Project). \emph{I2P} je izgrađen isključivo kao zatvoreni ekosistem za
-peer-to-peer (P2P) komunikaciju unutar same mreže, tj. ne može se
-koristiti za noramalan surface web internet. Pošto I2P ne koristi
+Pored Tor-a, postoje i druge ``\emph{dark web}'' mreže koje pristupaju
+privatnosti iz drugog ugla, poput I2P (\emph{Invisible Internet
+Project}). I2P je izgrađen isključivo kao zatvoreni ekosistem za
+\emph{peer-to-peer} (P2P) komunikaciju unutar same mreže, tj. ne može se
+koristiti za normalan \emph{surface web} internet. Pošto I2P ne koristi
 izlazne čvorove ka spoljnom internetu, ta ga čini znatno otpornijim na
 cenzuru i napade nadgledanja izlaznog saobraćaja {[}5{]}.
 
-\hypertarget{pravni-i-etiux10dki-aspekti-tor-mreux17ee-i-vpn-usluga}{%
-\subsection{4. Pravni i etički aspekti tor mreže i VPN
-usluga}\label{pravni-i-etiux10dki-aspekti-tor-mreux17ee-i-vpn-usluga}}
+\section{4. Pravni i etički aspekti tor mreže i VPN usluga}
+\label{sec:t4}
 
 Tehnologije poput VPN-a i Tor mreže su često centar savremenih debata:
 gde treba povući granicu između prava pojedinca na privatnost i potrebe
@@ -482,7 +488,7 @@ države da sprovodi zakone i štiti javnu bezbednost? Ovde je reč najpre o
 etičkom i pravnom problemu, zbog čega su anonimne mreže predmet
 kontinuiranih rasprava među zakonodavcima, bezbednosnim službama,
 aktivistima za ljudska prava i stručnjacima za sajber-bezbednost i samim
-tim nije lako dati odgvor {[}18{]}.
+tim nije lako dati odgovor {[}18{]}.
 
 \textbf{Etička dilema: privatnost kao pravo ili anonimnost kao rizik}\\
 Zagovornici alata za anonimnost polaze od pretpostavke da je privatnost
@@ -494,7 +500,7 @@ nadziru njihove aktivnosti.
 
 Ovakav stav posebno dobija na značaju u državama koje primenjuju strogu
 internet cenzuru ili nadzor komunikacija. Za ljude kao što su novinari,
-političke aktivisti, `whistleblowers', istraživače itd. anonimne mreže
+političke aktivisti, `\emph{whistleblowers}', istraživače itd. anonimne mreže
 mogu predstavljati jedini bezbedan način za pristup informacijama ili
 komunikaciju bez straha od represije. U takvim okolnostima, ove
 tehnologije često se posmatraju kao instrument zaštite građanskih
@@ -527,9 +533,7 @@ prvenstveno za kriminalne aktivnosti. Studija objavljena u časopisu
 Proceedings of the National Academy of Sciences procenjuje da približno
 6,7\% korisnika Tor mreže na prosečan dan pristupa onion servisima koji
 su češće povezani sa nelegalnim sadržajem {[}9{]}. Drugim rečima, velika
-većina korisnika Tor-a koristi mrežu za pristup običnom internetu (clear
-web), a ne za aktivnosti koje se tradicionalno povezuju sa „dark
-web``-om. Autori takođe pokazuju da je procenat potencijalno
+većina korisnika Tor-a koristi mrežu za pristup običnom internetu (\emph{clear web}), a ne za aktivnosti koje se tradicionalno povezuju sa „\emph{dark web}``-om. Autori takođe pokazuju da je procenat potencijalno
 problematične upotrebe viši u politički slobodnim državama (oko 7,8\%)
 nego u represivnijim režimima (oko 4,8\%), što sugeriše da u državama sa
 visokim nivoom cenzure Tor često služi prvenstveno za zaštitu osnovnih
@@ -560,7 +564,7 @@ državi, a kao bezbednosni problem u drugoj.
 \textbf{Debata o „zadnjim vratima`` u enkripciji}\\
 Jedna od kontroverznih tema u ovoj oblasti jeste pitanje da li bi države
 trebalo da imaju mogućnost pristupa enkriptovanim komunikacijama kroz
-„zadnja vrata`` (backdoors). Zagovornici ove ideje tvrde da bi takav
+„zadnja vrata`` (\emph{backdoors}). Zagovornici ove ideje tvrde da bi takav
 pristup omogućio efikasnije istrage terorizma, organizovanog kriminala i
 drugih teških krivičnih dela {[}16{]}. Prema ovom argumentu, potpuno
 neprobojne komunikacije stvaraju „zone nedodirljivosti`` u kojima
@@ -577,73 +581,77 @@ Slabljenje enkripcije radi lakšeg sprovođenja zakona moglo bi
 istovremeno da ugrozi bezbednost miliona legitimnih korisnika interneta
 {[}13, 16{]}.\\
 \strut \\
-\textbf{Debata of verifikaciji godina.}\\
-Aktuelna je i debata o skorašnjem talasu verifikacije godina (age
-verification) za društvene mreže u nekim zapadnim državama kao što su
+\textbf{Debata o verifikaciji godina.}\\
+Aktuelna je i debata o skorašnjem talasu verifikacije godina (\emph{age verification}) za društvene mreže u nekim zapadnim državama kao što su
 Australija i UK {[}19, 20{]}, što je privuklo veliku pažnju i debatu.
 Naime, vlasti i pristalice ovih zakona citiraju razne studije koje su
 pokazale negativni uticaj društvenih mreža na razvoj dece {[}23{]} i
 time apeluju da društvene mreže počnu da verifikuju godine svojih
 korisnika. Time bi korisnici iz tih zemalja morali da pokažu da
-prevazilaze starosnu granicu, i time bi manje dece bile izloženo
+prevazilaze starosnu granicu, i time bi manje dece bilo izloženo
 negativnom uticaju društvenih mreža. Kritičari ovog zastupanja kažu da
 ovo predstavlja veliki problem privatnosti i da se time stvara baza
-ličnih podataka koja je veoma atraktivna za hakovanja tj „data
-breaches`` {[}22{]}. Dodatni argument je to da ovi zakoni nemaju
+ličnih podataka koja je veoma atraktivna za hakovanja tj \emph{data breaches} {[}22{]}. Dodatni argument je to da ovi zakoni nemaju
 dovoljno pozitivnog efekta jer su neefikasni {[}24{]}. Način na koji su
 VPN usluge povezane sa ovim pitanjem je to što popularnost VPN usluga u
-državama porasla nakon ovih zakona {[}21{]}, jer korsnici ne žele da
+državama porasla nakon ovih zakona {[}21{]}, jer korisnici ne žele da
 rizikuju svoju privatnost samo da bi koristili društvene mreže, pa se
 postavlja pitanje: „Da li je to legitimno korišćenje ovih usluga?{}`` i
 da li će to negativno uticati na pravni status VPN-ova. Trenutno,
 nijedna država nije zabranila upotrebu VPN usluga zbog ovih zakona.
 
-\protect\hypertarget{_Toc234141050}{}{}\textbf{5. Veza sa temama kursa}
+\section{5. Veza sa temama kursa}
+\label{sec:t5}
 
 Najveći deo kojim se rad oslanja na teme kursa „Računarstvo i društvo''
-je u pordručju privatnosti na internetu. Ceo rad se zasniva na tome kako
-koristi VPN i Tor da bi se ostvarila veća privatnost na internetu, pa je
-samim tim to i najbitnija veza.\\
-Druga tema se oslanja na etiku, gde je spomenuto kako ovi alati imaju
-dvostruku namenu, pa time povlače i etička pitanja o tome da li treba
-regulisati i koliko ove alate.\\
-Etički deo je i usko povezan sa slobodom govora, jer se Tor koristi u
-zemljama sa većom kontrolom interneta da bi se izbegao državni nadzor.\\
+je u području „Privatnost na internetu``. Ceo rad se zasniva na tome
+kako koristi VPN i Tor da bi se ostvarila veća privatnost na internetu,
+pa je samim tim to i najbitnija veza. deca i neprikladan sadrzaj\\
+Druga tačka se oslanja na temu „Etika``, gde je spomenuto kako ovi alati
+imaju dvostruku namenu, pa time povlače i etička pitanja o tome da li
+treba regulisati i koliko ove alate. Glave "\nameref{sec:t2}" i "\nameref{sec:t3}" diskutuju o tome opširnije.\\
+Etički deo je i usko povezan sa temom „Cenzura i sloboda govora, deca i neprikladan sadržaj'', jer se Tor
+koristi u zemljama sa većom kontrolom interneta da bi se izbegao državni
+nadzor.\\
 Još jedna, ali slabija veza od ostalih se može ostvariti sa temom
-bezbednosti, jer Tor mreža i VPN koriste kritpografske tehinke da bi
-zaštitile podatke tokom prenosa, uključujući i opsec sekciju.
+„Bezbednost interneta``, jer Tor mreža i VPN koriste kriptografske
+tehnike da bi zaštitile podatke tokom prenosa, uključujući i opsec
+sekciju.
 
-\protect\hypertarget{_Toc234141051}{}{}\textbf{6. Ključni radovi}
+\section{6. Ključni radovi}
+\label{sec:t6}
 
 \textbf{6.1 Dingledine et al. (2004) ``Tor: The Second-Generation Onion
 Router''}\\
 \strut \\
-Ovaj rad predstavlja srž cele arhitekture Tor mreže. U njemu je opisan
+Ovaj rad predstavlja srž cele arhitekture Tor mreže. U njemu je opisana
 fundamentalna ideja i kako je Tor mreža zamišljena sa svim volonterskim
 čvorovima i zašto je uopšte bolje i moguće izvršiti ovu strategiju. U
-njemu su opisani svi koncepti kao što su Diffie Hellman rukovanje i
-relay čvorovoa, kao i glavni cilj ove mreže. Takođe su opsiane i druge
+njemu su opisani svi koncepti kao što su \emph{Diffie Hellman} rukovanje i
+\emph{relay} čvorova, kao i glavni cilj ove mreže. Takođe su opisane i druge
 kriptografske metode koje Tor koristi. Iako trenutna verzija Tor
 pretraživača ne implementira sve što je navedeno u ovom radu, ovaj rad
-predstavlja jedan od originalnih modela Tor mreže.\\
+predstavlja jedan od originalnih modela Tor mreže. Podglavlja "\nameref{sec:t2.2}" i "\nameref{sec:t2.3}"
+šire opisuju temu ovog rada.\\
 \strut \\
 \strut \\
 \textbf{6.2 Jardine et al. (2020) ``The potential harms of the Tor
 anonymity network cluster disproportionately in free countries''\\
 \strut \\
 }Ova studija je bitna jer pokazuje da većina saobraćaja koja prolazi
-kroz Tor nije usemerena ka onion adresama, što je često popularno
+kroz Tor nije usmerena ka onion adresama, što je često popularno
 mišljenje. Mada, iako su onion adrese često povezame sa ilegalnim
-aktivonistma, to nije tačno, a ovo dodatno pokazuje da ideja da samo
-krimanlci koriste Tor nije tačna.
+aktivnostima, to nije tačno, a ovo dodatno pokazuje da ideja da samo
+kriminalci koriste Tor nije tačna. Sekcija "\nameref{sec:t4}" se bavi više etičkim i pravnim aspektom.
 
-\protect\hypertarget{_Toc234141052}{}{}\textbf{7. Zaključak}
+\section{7. Zaključak}
+\label{sec:t7}
 
 Alati poput VPN-a i Tor mreže dobijaju na popularnosti kako načini
 profilisanja postaju sve agresivniji. Kako raste sofisticiranost metoda
-praćena, poput fingeprintinga i kolačića, tako i načini da se te metode
+praćenja, poput \emph{fingeprintinga} i kolačića, tako i načini da se te metode
 zaobiđu postaju jače. Generalno, svako decentralizovano i centralizovano
-rešenje ima svoje mane i prednosti, pa je zato bitno da korsnik izabere
+rešenje ima svoje mane i prednosti, pa je zato bitno da korisnik izabere
 alat koji mu najviše odgovara.
 
 Ipak, tehnička rešenja su efikasna samo onoliko koliko korisnik zna
@@ -662,7 +670,7 @@ A Survey" (2019) \url{https://arxiv.org/pdf/1905.01051}
 
 {[}3{]} Federal Trade Commission (FTC) "How Websites and Apps Collect
 and Use Your Information"
-https://consumer.ftc.gov/articles/how-websites-apps-collect-use-your-information
+\url{https://consumer.ftc.gov/articles/how-websites-apps-collect-use-your-information}
 
 {[}4{]} Electronic Frontier Foundation (EFF) "Cover Your Tracks: Learn
 How Trackers Work" \url{https://coveryourtracks.eff.org/learn}
@@ -746,5 +754,8 @@ Media and Youth Mental Health: The U.S. Surgeon General's Advisory"
 {[}24{]} B. Nansen, H. Sandberg, L. Bliss, S. Cohney "From Phreaking to
 Sneaking: Children\textquotesingle s Circumvention of Social Media Age
 Verification Systems" (2026) \url{https://arxiv.org/abs/2605.00368}
+
+{[}25{]} Electronic Frontier Foundation (EFF) "702-spying"
+https://www.eff.org/702-spying
 
 \end{document}
