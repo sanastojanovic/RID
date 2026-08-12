@@ -11,10 +11,14 @@ Matematički fakultet, Univerzitet u Beogradu
 ```
 ├── seminarski/        # LaTeX izvor i PDF seminarskog rada
 │   ├── main.tex
-│   ├── main.pdf
+│   ├── RID.pdf
 │   └── logo.png
 └── prezentacija/       # Prezentacija za odbranu seminarskog rada
     └── RID_prezentacija.pptx
+    └── prezentacija.tex
+    └── logo_icon_color.png
+    └── logo_icon_white.png
+    
 ```
 
 ## O radu
