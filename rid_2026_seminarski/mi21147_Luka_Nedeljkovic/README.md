@@ -23,16 +23,6 @@ Rad istražuje dvostruku prirodu *data mininga* u video igrama, kao tehniku koja
 
 Tema se nadovezuje na sledeće oblasti kursa: **privatnost na internetu**, **etika u razvoju računarskih tehnologija** i **internet prevare i zavisnost od interneta**.
 
-## Kompajliranje seminarskog rada
-
-Iz foldera `seminarski/`:
-
-```bash
-pdflatex main.tex
-pdflatex main.tex
-```
-
-(Pokreće se dva puta zaredom zbog generisanja sadržaja.)
 
 ## Literatura
 
