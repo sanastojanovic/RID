@@ -8,22 +8,27 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 
-
-\title{Korporatizacija interneta}
-\author{Viktor Šević}
-\date{} % Ostavite prazno da se ne bi prikazivao datum, ili upišite npr. {Jun, 2026.}
-
 \begin{document}
 
-\maketitle
-\thispagestyle{empty} % Uklanja broj stranice sa naslovne
-\newpage
+\begin{titlepage}
+    \centering
 
-\tableofcontents
-\thispagestyle{empty} % Opciono: uklanja broj stranice i sa sadržaja
+    \vspace*{3cm}
 
+    {\LARGE\textbf{Korporatizacija interneta}\par}
+    
+    \vspace{0.5cm}
+    
+    {\large Seminarski iz predmeta Računarstvo i društvo\par}
 
-\setcounter{page}{1} % Pokreće brojanje stranica od uvoda
+    \vfill
+
+    {\large
+    Viktor Šević\\[0.2cm]
+    Profesor: Sana Stojanović Đurđević
+    \par}
+
+\end{titlepage}
 
 \newpage
 
@@ -34,40 +39,36 @@ Savremeni internet predstavlja primarni stub globalne komunikacije, trgovine i d
 Ovaj seminarski rad bavi se procesom korporatizacije interneta. Od njegovih vojnih i naučnih korena kroz mreže ARPANET i NSFNET, preko ere privatizacije devedesetih godina i čuvenih „ratova pretraživača”, pa sve do formiranja modernog ekonomskog modela u kom podaci o korisnicima postaju najvredniji tržišni resurs. Kroz analizu ključnih istorijskih prekretnica, analizira se kako su ekonomske zakonitosti i težnja za profitom preoblikovali arhitekturu i digitalni prostor koji danas svakodnevno koristimo.
 
 \section{Koreni interneta}
-\subsection{\textbf{ARPANET – preteča interneta}}
+\subsection{\textbf{ARPANET i NSFNET – preteče modernog interneta}}
 
-Internet vodi poreklo iz SAD pedesetih godina 20. veka. Hladni rat između Zapada i Sovjetskog Saveza bio je na svom vrhuncu. Obe supersile posedovale su nuklearno oružje i strepele da će ga ona druga iskoristiti. Pored nuklearne trke, postojala je i opšta tehnološka trka, pa su obe strane pokušavale da naprave najnaprednije superračunare tog vremena. U SAD se razvila potreba za kompjuterskim sistemom koji bi mogao da preživi nuklearni napad.
+Internet vodi poreklo iz SAD pedesetih godina 20. veka. Hladni rat između Zapada i Sovjetskog Saveza bio je na svom vrhuncu. Obe supersile posedovale su nuklearno oružje i strepele da će ga druga strana iskoristiti. Pored nuklearne trke, postojala je i opšta tehnološka trka, pa su obe strane pokušavale da naprave najnaprednije superračunare tog vremena. U SAD se razvila potreba za kompjuterskim sistemom koji bi mogao da preživi nuklearni napad.
 
 Prvi superračunari dizajnirani su da simuliraju eksplozije, dešifruju kodove i konsoliduju podatke. Bili su teški za korišćenje, nepovezani sa drugim mašinama, ranjivi na napade i dostupni samo nekolicini ljudi. Imalo je smisla uvezati ih u mrežu kako bi se ovi nedostaci rešili.
 
-Predsednik Dvajt D. Ajzenhauer je 1958. godine osnovao Agenciju za napredne istraživačke projekte (Advanced Research Projects Agency – ARPA), okupljajući neke od najboljih naučnih umova u zemlji. Njihov cilj bio je da pomognu američkoj vojnoj tehnologiji da ostane ispred svojih neprijatelja. Među projektima agencije ARPA bio je i zadatak da se testira izvodljivost velike računarske mreže. Tako je 1969. nastala preteča modernog interneta, ARPANET \cite{arpanet_history}.
+Predsednik Dvajt D. Ajzenhauer je 1958. godine osnovao Agenciju za napredne istraživačke projekte (\textit{Advanced Research Projects Agency – ARPA}), okupljajući neke od najboljih naučnih umova u zemlji. Njihov cilj bio je da pomognu američkoj vojnoj tehnologiji da ostane ispred svojih neprijatelja. Među projektima agencije ARPA bio je i zadatak da se testira izvodljivost velike računarske mreže. Tako je 1969. nastala preteča modernog interneta, ARPANET \cite{arpanet_history}.
 
 U tim ranim danima uglavnom se smatrao alatom za akademske inženjere i računarske naučnike, povezujući odeljenja na nekoliko američkih univerziteta. Mreža se brzo širila i do 1973. godine obuhvatala je preko 30 institucija, uključujući državne kancelarije i preduzeća, kao i univerzitete, i povezujući lokacije poput Havaja, Norveške i Velike Britanije \cite{arpanet_history}.
 
-\subsection{\textbf{NSFNET – širenje mreže}}
-
 ARPANET je bio komplikovan, spor i dostupan samo visoko obučenim operaterima u akademskim institucijama. Bio je zasnovan na zastarelim protokolima i imao je malo mogućnosti za povezivanje sa drugim mrežama.
 
-Nacionalna naučna fondacija (National Science Foundation – NSF) je 1985. godine pokrenula inicijativu za izgradnju moćnije, fleksibilnije i inkluzivnije mreže, NSFNET. Za održavanje i unapređivanje mreže angažovani su IBM, MCI i Merit. Mreža je povezivala preko 170 akademskih i istraživačkih zajednica putem brze i pouzdane mrežne usluge prenosa podataka \cite{nsfnet_history}.
-
-\newpage
+Nacionalna naučna fondacija (\textit{National Science Foundation – NSF}) je 1985. godine pokrenula inicijativu za izgradnju moćnije, fleksibilnije i inkluzivnije mreže, NSFNET. Za održavanje i unapređivanje mreže angažovani su IBM, MCI i Merit. Mreža je povezivala preko 170 akademskih i istraživačkih zajednica putem brze i pouzdane mrežne usluge prenosa podataka \cite{nsfnet_history}.
 
 \section{Pojava modernog interneta}
 \subsection{\textbf{Privatizacija NSFNET-a}}
 
 Pored podsticanja akademskih institucija da se povežu na NSFNET putem regionalnih mreža, NSF je takođe podstakao regionalne mreže da pronađu komercijalne korisnike. NSF je obrazložio da bi prihod od novih korisnika omogućio regionalnim mrežama da se prošire i iskoriste ekonomiju obima kako bi smanjile troškove za sve \cite{privatization_backbone}.
 
-Iako je ova mreža imala prvenstveno obrazovnu namenu, postojao je snažan pokret za privatizaciju NSFNET-a. Uz odsustvo javne debate ili protivljenja, početkom 1990-ih telekomunikaciona politika dveju glavnih političkih stranaka u Americi zasnivala se na deregulaciji i konkurenciji. Ova neizbežnost bila je podstaknuta iz dva razloga: prvi je bila želja da se privatni saobraćaj šalje preko interneta, a drugi je bila želja telekomunikacionih kompanija da prodaju povezanost ili infrastrukturu. NSF je prepoznao da bi zabrana komercijalnog saobraćaja podstakla rast for-profit kompanija koje se bave stvaranjem konkurentskih mreža \cite{privatization_backbone}.
+Iako je ova mreža imala prvenstveno obrazovnu namenu, postojao je snažan pokret za privatizaciju NSFNET-a. Uz odsustvo javne debate ili protivljenja, početkom 1990-ih telekomunikaciona politika dveju glavnih političkih stranaka u Americi zasnivala se na deregulaciji i konkurenciji. Ova neizbežnost bila je podstaknuta iz dva razloga: prvi je bila želja da se privatni saobraćaj šalje preko interneta, a drugi je bila želja telekomunikacionih kompanija da prodaju povezanost ili infrastrukturu. NSF je prepoznao da bi zabrana komercijalnog saobraćaja podstakla rast profitno orijentisanih kompanija koje se bave stvaranjem konkurentskih mreža \cite{privatization_backbone}.
 
 U avgustu 1996. godine, NSF je objavio da će okončati podršku svojoj infrastrukturi i ustupiti je privatnom sektoru \cite{privatization_backbone}.
 
-\subsection{\textbf{Posledice komercijalizacije interneta}}
-
-Ubrzo nakon prelaska interneta u privatni sektor, desio se nagli porast broja korisnika, koji je bio praćen čestim zagušenjima mreže. Jedna od metoda koje su se pojavile za rešavanje zagušenja na internetu poznata je kao kvalitet usluge (Quality of Service – QoS). Ova tehnologija modifikuje jedno od osnovnih načela internet saobraćaja, jer upravniku mreže daje mogućnost razdvajanja saobraćaja po aplikacijama, korisnicima ili mrežama. Tehnologija kvaliteta usluge omogućuje im da upravljaju mrežnim saobraćajem kako bi ubrzali isporuku sopstvenog sadržaja, a konkurentski saobraćaj spustili na nivo usluge druge klase. Nakon nekoliko tužbi, Američki kongres je primorao ISP-ove (Internet Service Provider) da ravnopravno tretiraju sav saobraćaj na mreži \cite{privatization_backbone}.
-
 \newpage
 
-\section{Ratovi pretraživača – Browser Wars}
+\subsection{\textbf{Posledice komercijalizacije interneta}}
+
+Ubrzo nakon prelaska interneta u privatni sektor, desio se nagli porast broja korisnika, koji je bio praćen čestim zagušenjima mreže. Jedna od metoda koje su se pojavile za rešavanje zagušenja na internetu poznata je kao kvalitet usluge (\textit{Quality of Service – QoS}). Ova tehnologija modifikuje jedno od osnovnih načela internet saobraćaja, jer upravniku mreže daje mogućnost razdvajanja saobraćaja po aplikacijama, korisnicima ili mrežama. Tehnologija kvaliteta usluge omogućuje im da upravljaju mrežnim saobraćajem kako bi ubrzali isporuku sopstvenog sadržaja, a konkurentski saobraćaj spustili na nivo usluge druge klase. Nakon nekoliko tužbi, Američki kongres je primorao ISP-ove (Internet Service Provider) da ravnopravno tretiraju sav saobraćaj na mreži \cite{privatization_backbone}.
+
+\section{Ratovi pretraživača –  \textit{Browser Wars}}}
 \subsection{\textbf{Prvi internet pretraživači}}
 
 Univerziteti, vlade i privatne korporacije videli su priliku u otvorenom internetu. Svima su bili potrebni novi računarski programi da bi mu pristupili. Nacionalni centar za superračunarske primene (NCSA) na Univerzitetu u Ilinoisu kreirao je pretraživač Mosaic. Bio je to prvi popularni veb pretraživač \cite{browser_history, browser_wars}.
@@ -82,8 +83,7 @@ Američka vlada je tužila Microsoft tvrdeći da su prekršili antimonopolske pr
 
 Iako je presuda kasnije ublažena, ostavila je važan presedan u antimonopolskom pravu, kojim se potvrđuje mogućnost regulatorne kontrole velikih tehnoloških kompanija.
 
-\newpage
-\section{Search engine – novi način pretrage}
+\section{\textit{Search engine}  – novi način pretrage}
 \subsection{\textbf{AOL – pojava dial-up tehnologije}}
 
 Pojava dial-up tehnologije ukazala se kao savršena prilika za kompaniju AOL (America Online) da zauzme svoj deo tržišta. Njihova strategija je bila da učine internet dostupnim svima besplatno preko CD-ROM diska. Disk je bio uključen kao poklon uz časopise, kasete, ulaznice za utakmice ili bilo kakav hardver. Svako ko je imao računar i AOL CD-ROM mogao je preko dial-up tehnologije da pristupi internetu. Videvši uspeh AOL-a, Microsoft je osnovao svoj portal MSN (Microsoft Network), ali nije uspeo da zaustavi dominaciju AOL-a. Međutim, kao i Microsoft pre njih, AOL je počeo da koristi svoju dominaciju tržištem kako bi održao svoju poziciju.
@@ -98,7 +98,7 @@ Umesto da favorizuju sajtove, Yahoo je usvojio model reklame. Kompanije su plać
 
 \subsection{\textbf{Pojava algoritamske pretrage}}
 
-Gledajući kako je Yahoo-ova početna stranica postajala sve pretrpanija i teža za navigaciju, informatičari Leri Pejdž i Sergej Brin odlučuju da naprave svoj pretraživač (search engine) koji su nazvali Google. Za razliku od Yahoo-a i AOL-a koji su imali ljudske moderatore, oni su se odlučili da posao selekcije sajtova vrši algoritam. Algoritam za koji su se odlučili bio je na prvi pogled jednostavan. Računao je povezanost stranice sa ostalim stranicama kako bi ih rangirao i servirao korisniku \cite{google_marketing}.
+Gledajući kako je Yahoo-ova početna stranica postajala sve pretrpanija i teža za navigaciju, informatičari Leri Pejdž i Sergej Brin odlučuju da naprave svoj pretraživač (\textit{search engine}) koji su nazvali Google. Za razliku od Yahoo-a i AOL-a koji su imali ljudske moderatore, oni su se odlučili da posao selekcije sajtova vrši algoritam. Algoritam za koji su se odlučili bio je na prvi pogled jednostavan. Računao je povezanost stranice sa ostalim stranicama kako bi ih rangirao i servirao korisniku \cite{google_marketing}.
 
 Osnivači Google-a bili su skeptični prema modelu reklama koji bi mogao da utiče na objektivnost pretrage. Odlučili su se da licenciraju Google algoritam drugim kompanijama poput Yahoo-a na upotrebu. Iako je Yahoo prepoznao potencijal Google-a, i dalje su insistirali na svom direktorijumu sajtova koje su odabrali pravi ljudi, a ne algoritam.
 
@@ -114,15 +114,17 @@ Nakon što su odbili ponudu da ih Yahoo kupi za 3 milijarde dolara, Leri Pejdž 
 \section{Podaci kao resurs}
 \subsection{\textbf{Google – novi model zarade}}
 
-Pod pritiskom investitora da se ostvari profit, Google implementira reklamni model. Kao i sa svojom pretragom, odlučili su da reklamiranje prepuste algoritmu. Promenjen je način na koji se preduzeća obraćaju svojim kupcima. Uvedeno je plaćanje po kliku (pay per click – PPC) gde su preduzeća svih veličina tako mogla da licitiraju na ključne reči (keywords) i prikazuju personalizovane oglase pored rezultata pretrage. Ovaj model se pokazao izuzetno uspešnim u generisanju prihoda. Umesto da vide ručno postavljenu reklamu koja ih možda zanima samo zato što su u toj sekciji, korisnici bi dobijali reklamu na osnovu svojih pretraga \cite{google_marketing}.
+Pod pritiskom investitora da se ostvari profit, Google implementira reklamni model. Kao i sa svojom pretragom, odlučili su da reklamiranje prepuste algoritmu. Promenjen je način na koji se preduzeća obraćaju svojim kupcima. Uvedeno je plaćanje po kliku (\textit{pay per click – PPC}) gde su preduzeća svih veličina tako mogla da licitiraju na ključne reči (\textit{keywords}) i prikazuju personalizovane oglase pored rezultata pretrage. Ovaj model se pokazao izuzetno uspešnim u generisanju prihoda. Umesto da vide ručno postavljenu reklamu koja ih možda zanima samo zato što su u toj sekciji, korisnici bi dobijali reklamu na osnovu svojih pretraga \cite{google_marketing}.
 
 Nova filozofija reklamiranja postaje da je potrebno znati šta korisniku treba i pre nego što on to pretraži. Podaci o korisnicima postaju najvažniji faktor u odabiru reklama. Kompanije na internetu su sada imale jak povod da prikupe što veću količinu podataka kako bi mogle da poboljšaju svoj PPC model.
 
-\subsection{\textbf{Data Exhaust – prikupljanje podataka}}
+\subsection{\textbf{\textit{Data Exhaust} – prikupljanje podataka}}
 
-Novi model reklamiranja zahtevao je više podataka. Google je tokom 2000-ih godina predstavio mnoštvo novih besplatnih servisa poput Gmail-a, Maps-a, Drive-a, Photos-a, Calendar-a i Google Earth-a. Ovi servisi prikupljaju informacije o tome gde se korisnici kreću, sa kim komuniciraju i šta ih zanima, što su u Google-u interno zvali „Data Exhaust“. Kupovinom društvenih mreža kao što je YouTube 2006. godine, cilj je bio da se isprati svaki momenat korisnika na internetu.
+Novi model reklamiranja zahtevao je više podataka. Google je tokom 2000-ih godina predstavio mnoštvo novih besplatnih servisa poput Gmail-a, Maps-a, Drive-a, Photos-a, Calendar-a i Google Earth-a. Ovi servisi prikupljaju informacije o tome gde se korisnici kreću, sa kim komuniciraju i šta ih zanima, što su u Google-u interno zvali \textit{Data Exhaust}. Kupovinom društvenih mreža kao što je YouTube 2006. godine, cilj je bio da se isprati svaki momenat korisnika na internetu.
 
-Korišćenjem ovih servisa korisnici su u zamenu za pristup tehnologiji davali svoje podatke koji se kasnije mogu koristiti za personalizovane reklame. Pojava kolačića (Cookies) omogućila je kompanijama poput Google-a da prate korisnike i kada ne koriste njihove servise. Prema istraživanju iz 2015. godine, od 1000 najposećenijih sajtova na internetu, Google je imao kolačiće na čak 923 sajta. Jedini drugi entitet koji je imao toliko detaljan uvid u korisnika bio je ISP.
+Korišćenjem ovih servisa korisnici su u zamenu za pristup tehnologiji davali svoje podatke koji se kasnije mogu koristiti za personalizovane reklame. Pojava kolačića (\textit{Cookies}) omogućila je kompanijama poput Google-a da prate korisnike i kada ne koriste njihove servise. Prema istraživanju iz 2015. godine, od 1000 najposećenijih sajtova na internetu, Google je imao kolačiće na čak 923 sajta. Jedini drugi entitet koji je imao toliko detaljan uvid u korisnika bio je ISP.
+
+\newpage
 
 \subsection{\textbf{Posledice gubitka kontrole nad ličnim podacima}}
 
@@ -130,20 +132,119 @@ Masovno i nekontrolisano prikupljanje podataka trajno je promenilo dinamiku odno
 
 Druga ozbiljna posledica ogleda se u manipulaciji ponašanjem i gubitku autonomije pri odlučivanju. Algoritmi koji koriste prikupljene podatke ne služe samo da predvide šta korisnik želi, već imaju moć da aktivno oblikuju njegove želje, stavove i navike. Kroz takozvane „mehurove filtera” (filter bubbles), korisnicima se servira isključivo sadržaj koji potvrđuje njihova postojeća uverenja, što maksimizuje njihovo vreme provedeno na mreži, a time i profit od reklama. Na društvenom nivou, ovo je dovelo do ekstremne polarizacije javnog mnjenja, širenja dezinformacija i direktnog ugrožavanja demokratskih procesa, gde su podaci sa interneta korišćeni za političko profilisanje i manipulaciju glasačima na izborima širom sveta.
 
-\newpage
-
 \section{Iluzija slobode izbora na internetu}
 \subsection{\textbf{Samopreferenciranje}}
 
 Mnoge firme nude sopstvene proizvode pored proizvoda koje prodaje konkurencija. Iako je ova praksa uglavnom prihvaćena u tradicionalnim okruženjima poput supermarketa, ona predstavlja sve veći problem na onlajn tržištima. Velike digitalne platforme kao što su Google i Amazon mogu dati preferencijalni tretman sopstvenim proizvodima poput Google Maps-a ili Amazon Basics linije u odnosu na proizvode konkurenata, što je praksa koja se naziva samopreferenciranje \cite{amazon_self_preferencing}.
 
-\subsection{\textbf{Walled garden effect – Efekat ograđene bašte}}
+\subsection{\textbf{\textit{Walled garden effect} – Efekat ograđene bašte}}
 
 Onlajn kompanije se često suprotstavljaju ovakvim argumentima o samopreferenciranju tvrdeći da je „konkurencija udaljena samo jedan klik“. Prema ovoj tvrdnji, ako korisnici pristupaju njihovoj usluzi, to je zbog vrhunskog kvaliteta, a ne zato što su alternative skrivene. Međutim, ova tvrdnja previđa važne probleme, kao što su troškovi prelaska (Switching Costs), bihevioralne predrasude i nepažnja potrošača – svi faktori koji značajno utiču na usvajanje i kontinuirano korišćenje onlajn usluga \cite{amazon_self_preferencing}.
 
 Asimetrija informacija stvorila je nepremostive monopole na tržištu. Kompanije koje poseduju najveće baze podataka imaju apsolutnu kontrolu nad digitalnom ekonomijom, što praktično onemogućava pojavu bilo kakve konkurencije. Mali biznisi i novi inovatori prisiljeni su da igraju po pravilima nekoliko tehnoloških giganata i da im plaćaju visoke takse za oglašavanje kako bi uopšte postali vidljivi na tržištu. Na taj način, internet je od otvorenog, decentralizovanog prostora koji je obećavao demokratizaciju znanja postao visokocentralizovana korporativna infrastruktura u kojoj su sami korisnici i njihovo ponašanje postali primarni proizvod koji se prodaje.
 
+\section{Povezanost sa temama kursa}
+
+Korporatizacija interneta povezana je sa gotovo svim temama obrađenim na kursu. Najvažnije veze mogu se prikazati kroz sledeće oblasti:
+
+\begin{itemize}
+
+    \item \textbf{Istorijski pregled razvoja računarstva} - Razvoj interneta od
+    ARPANET-a i NSFNET-a do savremenog interneta predstavlja deo šireg istorijskog
+    razvoja računarstva. Posebno je značajan prelazak sa akademske i državne
+    infrastrukture na komercijalni internet, čime su stvoreni uslovi za razvoj
+    velikih tehnoloških kompanija.
+
+    \item \textbf{Etika} - Korporatizacija otvara brojna etička pitanja, poput
+    opravdanosti prikupljanja podataka korisnika radi ostvarivanja profita,
+    odgovornosti tehnoloških kompanija i granica njihovog uticaja na ponašanje
+    korisnika.
+
+    \item \textbf{Cenzura i sloboda govora} - Velike internet platforme imaju
+    značajnu kontrolu nad sadržajem koji korisnici mogu da objavljuju i vide.
+    Zbog toga se postavlja pitanje ravnoteže između odgovornosti platformi da
+    uklanjaju štetan sadržaj i prava korisnika na slobodu govora.
+
+    \item \textbf{Privatnost na internetu} - Savremeni poslovni modeli velikih tehnoloških kompanija
+    često zavise od prikupljanja i analize podataka o korisnicima. Podaci o
+    pretragama, interesovanjima, lokaciji i ponašanju mogu se koristiti za
+    personalizaciju usluga i oglašavanja, čime se otvara pitanje kontrole
+    korisnika nad sopstvenim podacima.
+
+\end{itemize}
+
+Ove povezanosti pokazuju da korporatizacija interneta nije samo ekonomski i
+tehnološki proces, već proces koji ima značajne etičke i društvene posledice.
 \newpage
+
+\section{Relevantni naučni radovi}
+
+\subsection{The Anatomy of a Large-Scale Hypertextual Web Search Engine}
+
+Referentni rad, pod nazivom \textit{The Anatomy of a Large-Scale Hypertextual Web
+Search Engine} (autori: Sergey Brin i Lawrence Page, 1998), predstavlja detaljan
+opis tehnologije koja je stajala iza nastanka Google pretraživača. Značaj ovog
+rada za seminarski ogleda se u sledećem:
+
+\begin{itemize}
+
+    \item \textbf{Tehnološka osnova Google-a:} Autori opisuju način na koji
+    Google indeksira veliki broj veb stranica i koristi strukturu hiperlinkova
+    za njihovo rangiranje. Posebno je značajan algoritam PageRank, koji je
+    predstavljao jednu od ključnih inovacija Google-ovog sistema za pretragu.
+    Ovo pruža naučnu osnovu pojavu algoritamske pretrage i razliku između
+    Google-a i ranijih sistema poput Yahoo-a.
+
+    \item \textbf{Prekretnica u razvoju interneta:} Rad pokazuje kako je
+    rešavanje tehničkog problema efikasne pretrage sve većeg broja informacija
+    omogućilo nastanak platforme koja će kasnije postati jedan od najvažnijih
+    posrednika između korisnika i sadržaja na internetu. Na taj način rad
+    predstavlja vezu između tehnološkog razvoja interneta i kasnije
+    koncentracije moći u rukama velikih tehnoloških kompanija.
+
+    \item \textbf{Veza sa korporatizacijom:} Iako rad nije usmeren na ekonomsku
+    analizu Google-a, njegov značaj za temu korporatizacije proizilazi iz
+    činjenice da opisuje tehnologiju koja je predstavljala osnovu za razvoj
+    jednog od najuticajnijih internet servisa. Kasnija komercijalizacija ove
+    tehnologije omogućila je razvoj poslovnog modela zasnovanog na oglašavanju,
+    podacima korisnika i kontroli pristupa informacijama.
+
+\end{itemize}
+
+\newpage
+
+\subsection{Self-Preferencing at Amazon: Evidence from Search Rankings}
+
+Referentni rad, pod nazivom \textit{Self-Preferencing at Amazon: Evidence from
+Search Rankings}, istražuje pojavu samopreferenciranja na platformi Amazon,
+odnosno pitanje da li platforma daje prednost sopstvenim proizvodima u
+rezultatima pretrage. Značaj ovog rada za seminarski ogleda se u sledećem:
+
+\begin{itemize}
+
+    \item \textbf{Konkretan primer koncentracije tržišne moći:} Rad analizira
+    situaciju u kojoj jedna kompanija istovremeno kontroliše digitalnu
+    platformu i na njoj prodaje sopstvene proizvode. Ovo predstavlja konkretan
+    primer problema samopreferenciranja, gde kompanija može da koristi kontrolu
+    nad platformom kako bi favorizovala sopstvene proizvode u odnosu na konkurenciju.
+
+    \item \textbf{Empirijska analiza ponašanja platforme:} Rad koristi podatke o rezultatima
+    pretrage kako bi ispitao položaj Amazonovih proizvoda u odnosu na
+    konkurentske proizvode. Na taj način pruža konkretnu empirijsku osnovu za
+    tvrdnju da vlasništvo nad platformom može uticati na način na koji su
+    proizvodi predstavljeni korisnicima.
+
+    \item \textbf{Veza sa slobodom izbora korisnika:} Rezultati rada su značajni
+    za pitanje koliko su izbori korisnika na internetu zaista nezavisni kada
+    platforma koja posreduje u pretrazi istovremeno ima sopstvene komercijalne
+    interese. Ovo se direktno nadovezuje na poglavlje o iluziji slobode izbora
+    na internetu i pokazuje kako algoritamsko rangiranje može uticati na
+    vidljivost konkurentskih proizvoda.
+
+\end{itemize}
+
+\newpage
+
 
 \begin{thebibliography}{9}
 
