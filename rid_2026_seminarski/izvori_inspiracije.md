@@ -28,11 +28,13 @@ za predloge seminarskih tema u okviru pregleda tema kursa *Računarstvo i društ
 
 - [Interaktivna prezentacija „Problemi na internetu - prevare i zavisnost" (genially)](https://view.genial.ly/62431d6917ac64001885c51c/presentation-problemi-na-internetu)
 - Dokumentarac [*The Social Dilemma*](https://www.netflix.com/title/81254224) (Netflix, 2020) — [zvanični sajt filma](https://thesocialdilemma.com/)
+- [How Loot Boxes In Children's Video Games Encourage Gambling — Forbes](https://www.forbes.com/sites/jasonwosborne/2023/05/25/how-loot-boxes-in-childrens-video-games-encourage-gambling/)
 
 ## Tema 6 — Bezbednost interneta (hakovanje i malver)
 
 - [Prezentacija o sajber bezbednosti „cybersec.pdf" — Andrija Urošević (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18083_Andrija_Urosevic/predavanje_1/cybersec.pdf)
 - [Predavanje *Capture The Flag (CTF) kao uvod u računarsku bezbednost* — Andrija Urošević (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18083_Andrija_Urosevic/predavanje_2/ctf_main.pdf)
+- [OSINT Framework](https://osintframework.com/)
 
 ## Tema 7 — Privatnost na internetu
 
