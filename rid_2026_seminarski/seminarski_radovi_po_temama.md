@@ -8,6 +8,8 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 
 - **[2023]** [Jana Milutinović — *Pregled razvoja računarstva u 21. veku*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi22448_Jana_Milutinovic/racunarstvo_21_vek.pdf.pdf)
 - **[2022]** [Predrag Mitić — *Informacione tehnologije kroz evoluciju društva*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17116_Predrag_Mitic/predavanje-2/seminarski.pdf)
+- **[2024]** [Mila Lukić — *Ravnopravnost žena u računarstvu i informatici*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi18222_Mila_Lukic/ZeneURacunarstvu/ZeneURacunarskimNaukama.pdf)
+- **[2024]** [Pavle Veličković — *Razvoj kvantnih računara*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi17067_Pavle_Velickovic/Seminarski/Razvoj%20kvantnih%20racunara.pdf)
 
 ## Tema 2 — Etika u računarstvu
 
@@ -15,16 +17,20 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2022]** [Slobodan Jovanović — *Etika video igara*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17186_Slobodan_Jovanovic/drugo_predavanje/The_ethics_of_video_games.pdf)
 - **[2022]** [Jovan Milić — *Etika korišćenja veštačke inteligencije za prepoznavanje emocija u dečjim igračkama*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17127_Milic_Jovan/predavanje_2/seminarski.pdf)
 - **[2026]** [Dimitrije Matović — *Zaštita od veštačke inteligencije u vizuelnim umetnostima*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi20202_Dimitrije_Matovic/seminarski/Zastita_od_ve%C5%A1ta%C4%8Dke_inteligencije_u_vizuelnim_umetnostima.pdf)
+- **[2023]** [Anja Čolić — *Izumi koji se bore protiv tehnologije za prepoznavanje lica*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi19231_Anja_Colic/seminarski/seminarski-RID.pdf)
 
 ## Tema 3 — Upotreba interneta, mrežna komunikacija i spam
 
 - **[2026]** [Viktor Šević — *Korporatizacija interneta*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi22091_Viktor_%C5%A0evi%C4%87/seminarski_1.pdf)
 - **[2026]** [Jovan Tričković — *Anonimne mreže*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21150_Jovan_Trickovic/Anonimne%20mreze.pdf)
 - **[2022]** [Tamara Jevtimijević — *Digitalne urbane mreže i društveni mediji*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17261_Jevtimijevic_Tamara/Predavanje_2/Seminarski/DigitalneUrbaneMrezeIDrustveniMediji.pdf)
+- **[2022]** [Petar Rondović — *Kriptovalute*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17167_Rondovic_Petar/Predavanje_2/Seminarski/kriptovalute.pdf)
 
 ## Tema 4 — Cenzura, sloboda govora i neprikladan sadržaj
 
 - **[2022]** [Bogdan Marković — *Filterski mehur*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18130_Bogdan_Markovic/predavanje_2/BogdanMarkovicSeminarski.pdf)
+- **[2025]** [Danilo Nikolaš — *Kako video igre utiču na malu decu*](https://github.com/sanastojanovic/RID/blob/main/rid_2025_seminarski/mi21112_Danilo_Nikolas/seminarski/seminarski.pdf)
+- **[2026]** [Mila Gligorić — *Sistemski gubitak podataka u velikim jezičkim modelima: kolaps modela i algoritamska diskriminacija*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi22082_Mila_Gligori%C4%87/prezentacija.pdf)
 
 ## Tema 5 — Internet prevare i zavisnost od interneta
 
@@ -36,6 +42,7 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2022]** [Svetlana Bičanin — *Društvene mreže i mentalno zdravlje*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18028_Bicanin_Svetlana/predavanje_2/seminarski.pdf)
 - **[2026]** [Miloš Biočanin — *Monotasking vs multitasking*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi20107_Milos_Biocanin/seminarski/monotasking_vs_multitasking.pdf)
 - **[2026]** [Luka Nedeljković — *Data mining u svetu video igara: od unapređenja igre do nadzora igrača*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21147_Luka_Nedeljkovic/seminarski/RID.pdf)
+- **[2026]** [Tea Pavlović — *Chatbot-ovi i pandemija usamljenosti*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21299_Tea_Pavlovic/seminarski/Chatbot-ovi_i_pandemija_usamljenosti.pdf)
 
 ## Tema 6 — Bezbednost interneta (hakovanje i malver)
 
@@ -45,6 +52,7 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2022]** [Luka Vukotić — *Sajber rat*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi19120_Luka_Vukotic/Predavanje_2/seminarski/SajberRat_seminarski.pdf)
 - **[2024]** [Aleksa Jovanović — *Bezbednost lozinki*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/ai18272_Aleksa_Jovanovic/seminarski/Seminarski.pdf)
 - **[2026]** [Nemanja Badrić — *Analiza sistema Gotham: Integracija velikih podataka i etika AI u vojnim i obaveštajnim sistemima*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21295_Nemanja_Badric/Seminarski/Analiza_sistema_Gotham.pdf)
+- **[2023]** [Vuk Stefanović — *Prednosti tehnologije za prepoznavanje lica*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi19066_Vuk_Stefanovic/seminarski/seminarski-rid.pdf)
 
 ## Tema 7 — Privatnost na internetu
 
@@ -54,6 +62,8 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2022]** [Jovan Stamenković — *Privatnost i vlada*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17148_Stamenkovic_Jovan/Predavanje_2/Seminarski/Privatnost%20i%20vlada.pdf)
 - **[2022]** [Tamara Đukić — *Pametne kuće: Koliko su bezbedni Vaši podaci?*](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17242_Djukic_Tamara/2_predavanje/seminarski.pdf)
 - **[2026]** [Aleksa Vukadinović — *Dark Patterns u dizajnu korisničkog interfejsa*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi22103_Aleksa_Vukadinovic/Dark%20Patterns.pdf)
+- **[2024]** [Anđela Niketić — *Privatni nalozi na društvenim mrežama: Neophodnost ili ne?*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi1092018_Andjela_Niketic/Seminarski/Seminarski.pdf)
+- **[2024]** [Mitar Avramović — *OSINT- Lupa u moru*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi21398_Mitar_Avramovic/Seminarski%20rad/Final.pdf)
 
 ## Tema 8 — Informatička pismenost u Srbiji
 
@@ -61,3 +71,5 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2025]** [Milena Mirković — *ChatGPT u akademskom pisanju i istraživanju studenata*](https://github.com/sanastojanovic/RID/blob/main/rid_2025_seminarski/mi21101_Milena_Mirkovic/seminarski/ChatGPT%20in%20students%20research%20and%20writing.pdf)
 - **[2024]** [Darko Zorić — *Da li bi znanje trebalo da bude besplatno?*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi17225_Darko_Zoric/Seminarski/seminarski.pdf)
 - **[2023]** [Luka Bura — *Should knowledge be free*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi19218_Luka_Bura/seminarski/seminarski.pdf)
+- **[2023]** [Jelena Ivanović — *Zašto znanje ne trba da bude bsplatno*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi19365_Jelena_Ivanovic/seminarski/zasto_znanje_ne_treba_da_je_besplatno.pdf)
+- **[2024]** [Bojan Veličković — *Razvoj ChatGPT sistema i njegov uticaj na društvo*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/mi20373_Bojan_Velickovic/Seminarski/Uticaj_razvoja_ChatGPT_sistema_na_dru%C5%A1tvo.pdf)
