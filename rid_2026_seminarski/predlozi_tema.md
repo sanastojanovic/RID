@@ -16,6 +16,14 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Murov zakon (Moore's Law) — eksponencijalni rast i njegove društvene posledice.
 - Prelazak sa Web 1.0 na Web 2.0: korisnik postaje proizvođač sadržaja.
 
+**Predlog:** *Quantum Computing: Uticaj kvantnih računara na svakodnevni život*
+
+- Farmacija i medicina: precizna simulacija molekularnih struktura za ubrzano otkrivanje lekova i individualizovane terapije.
+- Finansije i optimizacija: kvantno modelovanje rizika, procena portfolija u realnom vremenu i rešavanje složenih logističkih lanaca.
+- Kvantna privatnost i anonimno glasanje: primena kvantne mehanike za matematički dokazanu anonimnost (npr. kvantni protokoli za tajno glasanje).
+- Tranzicija na post-kvantnu bezbednost: zamena ugroženih RSA/ECC standarda i zaštita blockchain mreža radi dugoročne sigurnosti podataka.
+
+
 ## Tema 2 — Etika u računarstvu
 
 **Predlog:** *Etički kodeksi u softverskom inženjerstvu: da li ACM/IEEE smernice utiču na realne odluke programera?*
@@ -24,6 +32,13 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Studija slučaja: Volkswagen „Dieselgate" — softver koji vara testove emisije.
 - Therac-25 — softverska greška sa smrtnim posledicama kao primer odgovornosti.
 - Dileme razvoja: algoritamska pristrasnost, automatizacija i gubitak radnih mesta.
+
+**Predlog:** *Cryptojacking: Skriveno rudarenje kriptovaluta i zloupotreba resursa*
+
+- Metode napada i izvođenje: razlika između napada baziranih na vebu i klasičnog malvera.
+- Tehnike prikrivanja i detekcija: upotreba kontrolisanog opterećenja procesora (throttling), steganografije i obfusciranja koda radi zaobilaženja tradicionalnih antivirusa.
+- Posledice po žrtve i infrastrukturu: drastično skraćivanje veka baterije, pregrevanje, neovlašćeni utrošak električne energije i degradacija performansi sistema/cloud resursa.
+- Strategije odbrane: AI/ML detekcija anomalija u radu CPU/GPU, analiza mrežnog saobraćaja, blokiranje rudarskih skripti i jačanje bezbednosti veb-aplikacija.
 
 ## Tema 3 — Upotreba interneta, mrežna komunikacija i spam
 
@@ -34,6 +49,14 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Društveni inženjering: phishing, „spear phishing" i lažni CEO mejlovi.
 - Ekonomija spama — zašto se isplati i kada je profitabilno slati milione poruka.
 
+**Predlog:** *Digital Archives: Problemi očuvanja zastarelih podataka*
+
+- Zastarevanje formata i nosača (Bit Rot): propadanje fizičkih medijuma, zastarevanje softvera/hardvera i strategije migracije i emulacije.
+- Tehnologije i arhitektura čuvanja: primena OAIS modela (Open Archival Information System), višestruke kopije (LOCKSS) i upotreba cold storage jedinica i optičkih medijuma.
+- Pravni sukob (Skladštenje vs. Zaborav): tenzija između potrebe za trajnošću istorijskih arhiva i prava pojedinca na brisanje podataka (Right to be Forgotten).
+- Integritet i autentičnost: tehnike verifikacije digitalnih zapisa (kriptografski otisci, metapodaci) radi sprečavanja neovlašćenih izmena kroz vreme.
+- Etika i selekcija u digitalnom dobu: kriterijumi za odlučivanje šta treba trajno sačuvati, a šta obrisati u eri eksplozije podataka.
+
 ## Tema 4 — Cenzura, sloboda govora i neprikladan sadržaj
 
 **Predlog:** *Ko odlučuje šta sme da se kaže? Moderacija sadržaja na društvenim mrežama između slobode govora i odgovornosti platforme*
@@ -42,6 +65,13 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Algoritamska vs. ljudska moderacija; problem „shadow banning"-a.
 - Veliki Kineski zaštitni zid (Great Firewall) kao primer državne cenzure.
 - Roditeljska kontrola, starosna verifikacija i zaštita maloletnika.
+
+**Predlog:** *Algoritamska cenzura i shadowbanning: kako platforme suptilno usmeravaju javni govor*
+
+- Od brisanja do potiskivanja - prelazak sa brisanja naloga na moderaciju vidljivosti.
+- Netransparentnost i "granični sadržaj": potiskivanje tema koje ne krše formalna pravila i izostanak obaveštenja korisniku.
+- Odgovor korisnika i algospeak: izmena jezika, simbola i taktika kreatora radi zaobilaženja algoritamskih filtera.
+- Regulacija i etika: uticaj na slobodu govora, aktivizam i potreba za transparentnošću algoritama.
 
 ## Tema 5 — Internet prevare i zavisnost od interneta
 
@@ -52,6 +82,13 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Prevare: lažne nagradne igre, „romance scam", lažne investicije u kriptovalute.
 - Pokret „Time Well Spent" i alati za digitalni wellbeing (Screen Time, Digital Wellbeing).
 
+**Predlog:** *Dark Patterns in Social Media: Manipulativni UX dizajn i zaštita korisnika*
+
+- Obrasci obmanjujućeg dizajna: primeri konkretnih UX trikova — Roach Motel, Confirmshaming i Sneak into Basket.
+- Asimetrija pristanka i privatnost: preprekama opterećeni interfejsi za odbijanje kolačića i skrivena podešavanja deljenja ličnih podataka.
+- Lažni socijalni dokazi i hitnost: veštačko stvaranje pritiska na korisnika (npr. „Još samo 2 preostala mesta”), lažne notifikacije o aktivnostima drugih.
+- Odbrana i zakonodavstvo: alati za prepoznavanje mračnih obrazaca, Ethical UX pokret i zakonske zabrane manipulativnog interfejsa (npr. EU Digital Services Act).
+
 ## Tema 6 — Bezbednost interneta (hakovanje i malver)
 
 **Predlog:** *Etičko hakovanje i penetraciono testiranje: zašto „dobri momci" moraju da razmišljaju kao napadači*
@@ -61,6 +98,12 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - Penetraciono testiranje i Capture The Flag (CTF) takmičenja.
 - Napadi nultog dana (zero-day) i tržište eksploita.
 
+**Predlog:** *Adversarial Machine Learning: Napadi na autonomne sisteme i pametna vozila*
+
+- Napadi na senzore i percepciju: razlika između White-box i Black-box napada na autonomna vozila, fizički napadi na LiDAR i kamere i lažiranje (spoofing) ulaznih signala.
+- Evasion i kompromitovanje modela: manipulacija modelima u realnom vremenu radi izazivanja nesreća ili zaobilaženja bezbednosnih protokola vozila.
+- Odbrambeni mehanizmi: robusno treniranje (adversarial training), detekcija anomalija u ulaznim podacima i sanitizacija modela pre primene u kritičnim sistemima.
+
 ## Tema 7 — Privatnost na internetu
 
 **Predlog:** *Kapitalizam nadzora: kako su lični podaci postali najvrednija roba digitalne ekonomije*
@@ -69,6 +112,13 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 - GDPR (EU) i pravo na zaborav; uloga banera za saglasnost o kolačićima.
 - Šošana Zubof (Shoshana Zuboff) i pojam „surveillance capitalism".
 - Skandal Cambridge Analytica — zloupotreba podataka u političke svrhe.
+
+**Predlog:** *Big brain data: Privatnost moždanih podataka*
+
+- Novi oblici podataka i neuroprivatnost: specifičnosti moždanih zapisa (EEG, fMRI) kao intimnih biometrijskih podataka koji mogu otkriti misli, emocije i kognitivna stanja.
+- Tehnologije i načini prikupljanja: spajanje BCI interfejsa (Brain-Computer Interface), komercijalnih uređaja i AI algoritama za analizu i dekodiranje moždanih signala.
+- Ljudska prava i Neuro-rights: potreba za definisanjem novih ljudskih prava (mentalna privatnost, kognitivna sloboda i psihički integritet) u eri masovne analize moždanih podataka.
+- Etički i pravni izazovi: komercijalizacija, potencijalna zloupotreba u marketingu i nedovoljno postojećih regulativa (poput GDPR-a) za zaštitu neuroloških podataka.
 
 ## Tema 8 — Informatička pismenost u Srbiji
 
