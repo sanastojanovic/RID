@@ -10,44 +10,64 @@ za predloge seminarskih tema u okviru pregleda tema kursa *Računarstvo i društ
 ## Tema 1 — Istorijski pregled razvoja računarstva
 
 - [Interaktivni istorijski pregled razvoja računarstva (genially)](https://view.genial.ly/62213fa1797ddc00194500dc/interactive-content-chronological-line)
+---
+- [From PGP to Mythos: a brief history of export controls that didn't stop anyone](https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/)
 
 ## Tema 2 — Etika u računarstvu
 
 - [Interaktivna prezentacija „Etika" (genially)](https://view.genial.ly/62304dfe2abb7a00182329b0/interactive-content-etika)
 - [Michael J. Quinn — *Ethics for the Information Age*, Pearson, 2017.](https://www.pearson.com/en-us/subject-catalog/p/ethics-for-the-information-age/P200000011623/9780138238759) (preporučeni udžbenik)
+---
+- [Is AI-generated Content Copyrighted?](https://www.techtarget.com/enterprise-software/answer/Is-AI-generated-content-copyrighted)
 
 ## Tema 3 — Upotreba interneta, mrežna komunikacija i spam
 
 - [Herley, C. (2012). *Why Do Nigerian Scammers Say They are from Nigeria?* — Microsoft Research](https://www.microsoft.com/en-us/research/publication/why-do-nigerian-scammers-say-they-are-from-nigeria/)
+---
+- [AI 'slop' is transforming social media - and there's a backlash](https://www.bbc.com/news/articles/c9wx2dz2v44o)
+- [Study: 1 in 2 YouTube Shorts videos are AI slop or brainrot](https://mashable.com/article/study-ai-slop-youtube)
 
 ## Tema 4 — Cenzura, sloboda govora i neprikladan sadržaj
 
 - [Prezentacija „Cenzura, sloboda govora i neprikladan sadržaj" — Marko Bura (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18141_Marko_Bura/1_predavanje/cenzura_sloboda_govora_i_neprikladan_sadrzaj.pdf)
+---
+- [Measuring Political Preferences in AI Systems](https://davidrozado.substack.com/p/political-preferences-in-ai-integrative)
+- [New Report Put ChatGPT, Google Gemini, & Grok to the Test of Political Bias](https://www.ibtimes.com/new-report-put-chatgpt-google-gemini-grok-test-political-bias-heres-what-it-found-3804504)
 
 ## Tema 5 — Internet prevare i zavisnost od interneta
 
 - [Interaktivna prezentacija „Problemi na internetu - prevare i zavisnost" (genially)](https://view.genial.ly/62431d6917ac64001885c51c/presentation-problemi-na-internetu)
 - Dokumentarac [*The Social Dilemma*](https://www.netflix.com/title/81254224) (Netflix, 2020) — [zvanični sajt filma](https://thesocialdilemma.com/)
 - [How Loot Boxes In Children's Video Games Encourage Gambling — Forbes](https://www.forbes.com/sites/jasonwosborne/2023/05/25/how-loot-boxes-in-childrens-video-games-encourage-gambling/)
+---
+- [AI supercharging online scams across Asia, warns Interpol's cybercrime chief](https://www.channelnewsasia.com/asia/interpol-cybercrime-director-neal-jetton-interview-scams-phishing-digital-fraud-cyberthreat-asia-6195641)
+- [AI 'voice cloning' scams are on the rise. Here's how to protect yourself](https://www.cnn.com/2026/05/29/tech/ai-voice-cloning-scams-protect-yourself)
 
 ## Tema 6 — Bezbednost interneta (hakovanje i malver)
 
 - [Prezentacija o sajber bezbednosti „cybersec.pdf" — Andrija Urošević (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18083_Andrija_Urosevic/predavanje_1/cybersec.pdf)
 - [Predavanje *Capture The Flag (CTF) kao uvod u računarsku bezbednost* — Andrija Urošević (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi18083_Andrija_Urosevic/predavanje_2/ctf_main.pdf)
 - [OSINT Framework](https://osintframework.com/)
+---
+- [Vibe Coding Is Causing 'Thousands' of Data Security Vulnerabilities](https://www.pcmag.com/news/vibe-coding-is-causing-thousands-of-data-security-vulnerabilities-says)
+
 
 ## Tema 7 — Privatnost na internetu
 
 - [Interaktivna prezentacija „Kolačići - korišćenje i regulativa" (genially)](https://view.genial.ly/6258686f17af9f0011537dc1/presentation-kolacici-koriscenje-i-regulativa)
 - [Shoshana Zuboff — *The Age of Surveillance Capitalism*, PublicAffairs, 2019.](https://www.hachettebookgroup.com/titles/shoshana-zuboff/the-age-of-surveillance-capitalism/9781610395694/?lens=publicaffairs)
+---
+- [Samsung ChatGPT leak: Samsung workers accidentally leak trade secrets to the AI chatbot](https://mashable.com/article/samsung-chatgpt-leak-details)
+- [Italy's privacy watchdog fines OpenAI €15 million after probe into ChatGPT data collection](https://www.euronews.com/next/2024/12/20/italys-privacy-watchdog-fines-openai-15-million-after-probe-into-chatgpt-data-collection)
 
 ## Tema 8 — Informatička pismenost u Srbiji
 
 - [Predavanje *Informatička pismenost u Srbiji* — Đorđe Mutavdžić (RID 2022)](https://github.com/sanastojanovic/RID/blob/main/rid_2022_seminarski/mi17096_Mutavd%C5%BEi%C4%87_%C4%90or%C4%91e/predavanje_1/Informaticka%20pismenost%20u%20Srbiji.pdf)
 - [Republički zavod za statistiku — izveštaji o upotrebi IKT](https://www.stat.gov.rs/)
+---
+- [Zapadni Balkan najranjiviji na dezinformacije](https://www.danas.rs/svet/zapadni-balkan-dezinformacije-srbija-medijska-pismenost/)
 
 ---
-
 ## Opšte reference
 
 - [Sajt predmeta — Računarstvo i društvo](https://poincare.matf.bg.ac.rs/~sana.stojanovic.djurdjevic/rid.htm)

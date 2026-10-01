@@ -53,6 +53,8 @@ Svi navedeni fajlovi su provereni i jesu seminarski radovi (A4 format), a ne pre
 - **[2024]** [Aleksa Jovanović — *Bezbednost lozinki*](https://github.com/sanastojanovic/RID/blob/main/rid_2024_seminarski/ai18272_Aleksa_Jovanovic/seminarski/Seminarski.pdf)
 - **[2026]** [Nemanja Badrić — *Analiza sistema Gotham: Integracija velikih podataka i etika AI u vojnim i obaveštajnim sistemima*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21295_Nemanja_Badric/Seminarski/Analiza_sistema_Gotham.pdf)
 - **[2023]** [Vuk Stefanović — *Prednosti tehnologije za prepoznavanje lica*](https://github.com/sanastojanovic/RID/blob/main/rid_2023_seminarski/mi19066_Vuk_Stefanovic/seminarski/seminarski-rid.pdf)
+- **[2026]** [Aleksandar Stojčić — *Monero kao anonimna kriptovaluta*](https://github.com/sanastojanovic/RID/blob/main/rid_2026_seminarski/mi21126_Aleksandar_Stojcic/Monero_kao_anonimna_kriptovaluta.pdf)
+
 
 ## Tema 7 — Privatnost na internetu
 
