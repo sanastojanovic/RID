@@ -43,6 +43,13 @@ teme, uz ključne tačke i primere kroz koje se ta tema kursa može obraditi.
 
 **Predlog:** AI i autorsko pravo (da li treniranje krši autorsko pravo? *Zarya of the Dawn* i *Thaler v. Perlmutter*. Da li AI samo kopira ili može da proizvede nešto novo?)
 
+**Predlog:** AI, Open Source i „Zatvoreni kod”: Da li treniranje na javnom kodu krši open-source licence?
+
+- Sukob licenciranja i AI asistenata: Kako AI modeli za pisanje koda (GitHub Copilot, Amazon CodeWhisperer) treniraju na milionima javnih repozitorijuma sa licencama poput GPL, MIT ili Apache.
+- Code Leakage: Kada AI generiše odsečak koda koji je 1:1 kopija tuđeg koda zaštićenog GPL licencom bez navođenja autora ili licence.
+- Pravni presedani u IT industriji: Analiza kolektivne tužbe programera protiv GitHub-a/Microsoft-a/OpenAI-ja u vezi sa automatizovanom identifikacijom i kršenjem open-source licenci.
+- Etičke dileme i budućnost open-source zajednice: Da li će programeri prestati da objavljuju otvoren kod ako znaju da će ga velika korporacija iskoristiti za trening komercijalnog AI modela bez ikakve naknade?
+
 ## Tema 3 — Upotreba interneta, mrežna komunikacija i spam
 
 **Predlog:** *Anatomija spama: od Nigerijskih prevara do modernog phishing-a kao usluge*
